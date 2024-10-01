@@ -13,6 +13,11 @@ public class Vendedor {
 	private String Endereco;
 	private String Password;
 	
+	
+	
+	public Vendedor() {
+		super();
+	}
 	public Vendedor(String idVendedor, String nome, String cPF, String email, String telefone, String dataNasc,
 			String dataCont, String totalVend, String endereco, String password) {
 		super();
