@@ -13,8 +13,6 @@ public class Vendedor {
 	private String Endereco;
 	private String Password;
 	
-	
-	
 	public Vendedor() {
 		super();
 	}

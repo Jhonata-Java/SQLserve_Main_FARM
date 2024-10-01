@@ -1,5 +1,5 @@
 package packageController;
 
-public class controllerTelaFornecedor {
+public class controllerFornecedor {
 
 }
