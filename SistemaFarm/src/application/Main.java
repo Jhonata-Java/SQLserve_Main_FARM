@@ -15,7 +15,7 @@ public class Main extends Application {
 
 	private static Stage stage;
 	private static Scene login;
-	private static Scene main;
+	private static Scene dashboard;
 	private static Scene vendedor;
 	private static Scene produto;
 	private static Scene fornecedor;
@@ -33,7 +33,7 @@ public class Main extends Application {
 			login = new Scene(fxmlLogin);
 
 			Parent fxmlMain = FXMLLoader.load(getClass().getResource("/packageView/viewTelaMain.fxml"));
-			main = new Scene(fxmlMain);
+			dashboard = new Scene(fxmlMain);
 //
 //			Parent fxmlCliente = FXMLLoader.load(getClass().getResource("/packageView/viewCliente.fxml"));
 //			cliente = new Scene(fxmlCliente);
@@ -66,7 +66,7 @@ public class Main extends Application {
 			stage.setScene(login);
 			stage.centerOnScreen();
 		} else if (tela.equals("main")) {
-			stage.setScene(main);
+			stage.setScene(dashboard);
 			stage.centerOnScreen();
 		} else if (tela.equals("vendedor")) {
 			stage.setScene(vendedor);
