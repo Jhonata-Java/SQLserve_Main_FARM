@@ -23,36 +23,36 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			stage = primaryStage;
-
-			primaryStage.setTitle("Blue Pen");
-
-			Parent fxmlLogin = FXMLLoader.load(getClass().getResource("/packageView/viewLogin.fxml"));
-			login = new Scene(fxmlLogin);
-
-			Parent fxmlMain = FXMLLoader.load(getClass().getResource("/packageView/viewMain.fxml"));
-			main = new Scene(fxmlMain);
-
-			Parent fxmlCliente = FXMLLoader.load(getClass().getResource("/packageView/viewCliente.fxml"));
-			cliente = new Scene(fxmlCliente);
-
-			Parent fxmlVendedor = FXMLLoader.load(getClass().getResource("/packageView/viewVendedor.fxml"));
-			vendedor = new Scene(fxmlVendedor);
-
-			Parent fxmlProduto = FXMLLoader.load(getClass().getResource("/packageView/viewProduto.fxml"));
-			produto = new Scene(fxmlProduto);
-
-			Parent fxmlFornecedor = FXMLLoader.load(getClass().getResource("/packageView/viewFornecedor.fxml"));
-			fornecedor = new Scene(fxmlFornecedor);
-			
-//			Parent fxmlRegistraVenda = FXMLLoader.load(getClass().getResource("/packageView/viewRegistraVenda.fxml"));
-//			registraVenda = new Scene(fxmlRegistraVenda);
-			
-			Parent fxmlRelatorioVenda = FXMLLoader.load(getClass().getResource("/packageView/viewRelatorioVenda.fxml"));
-			relatorioVenda = new Scene(fxmlRelatorioVenda);
-
-			primaryStage.setScene(login);
-			primaryStage.show();
+//			stage = primaryStage;
+//
+//			primaryStage.setTitle("Blue Pen");
+//
+//			Parent fxmlLogin = FXMLLoader.load(getClass().getResource("/packageView/viewLogin.fxml"));
+//			login = new Scene(fxmlLogin);
+//
+//			Parent fxmlMain = FXMLLoader.load(getClass().getResource("/packageView/viewMain.fxml"));
+//			main = new Scene(fxmlMain);
+//
+//			Parent fxmlCliente = FXMLLoader.load(getClass().getResource("/packageView/viewCliente.fxml"));
+//			cliente = new Scene(fxmlCliente);
+//
+//			Parent fxmlVendedor = FXMLLoader.load(getClass().getResource("/packageView/viewVendedor.fxml"));
+//			vendedor = new Scene(fxmlVendedor);
+//
+//			Parent fxmlProduto = FXMLLoader.load(getClass().getResource("/packageView/viewProduto.fxml"));
+//			produto = new Scene(fxmlProduto);
+//
+//			Parent fxmlFornecedor = FXMLLoader.load(getClass().getResource("/packageView/viewFornecedor.fxml"));
+//			fornecedor = new Scene(fxmlFornecedor);
+//			
+////			Parent fxmlRegistraVenda = FXMLLoader.load(getClass().getResource("/packageView/viewRegistraVenda.fxml"));
+////			registraVenda = new Scene(fxmlRegistraVenda);
+//			
+//			Parent fxmlRelatorioVenda = FXMLLoader.load(getClass().getResource("/packageView/viewRelatorioVenda.fxml"));
+//			relatorioVenda = new Scene(fxmlRelatorioVenda);
+//
+//			primaryStage.setScene(login);
+//			primaryStage.show();
 
 		} catch (Exception e) {
 			e.printStackTrace();
