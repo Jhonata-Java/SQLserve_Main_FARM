@@ -23,15 +23,15 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-//			stage = primaryStage;
-//
-//			primaryStage.setTitle("FARM");
-//
-//			Parent fxmlLogin = FXMLLoader.load(getClass().getResource("/packageView/viewLogin.fxml"));
-//			login = new Scene(fxmlLogin);
-//
-//			Parent fxmlMain = FXMLLoader.load(getClass().getResource("/packageView/viewMain.fxml"));
-//			main = new Scene(fxmlMain);
+			stage = primaryStage;
+
+			primaryStage.setTitle("FARM");
+
+			Parent fxmlLogin = FXMLLoader.load(getClass().getResource("/packageView/viewTelaLogin.fxml"));
+			login = new Scene(fxmlLogin);
+
+			Parent fxmlMain = FXMLLoader.load(getClass().getResource("/packageView/viewTelaMain.fxml"));
+			main = new Scene(fxmlMain);
 //
 //			Parent fxmlCliente = FXMLLoader.load(getClass().getResource("/packageView/viewCliente.fxml"));
 //			cliente = new Scene(fxmlCliente);
