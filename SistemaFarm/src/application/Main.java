@@ -65,7 +65,7 @@ public class Main extends Application {
 		if (tela.equals("login")) {
 			stage.setScene(login);
 			stage.centerOnScreen();
-		} else if (tela.equals("main")) {
+		} else if (tela.equals("dashboard")) {
 			stage.setScene(dashboard);
 			stage.centerOnScreen();
 		} else if (tela.equals("vendedor")) {
