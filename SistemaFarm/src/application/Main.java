@@ -25,7 +25,7 @@ public class Main extends Application {
 		try {
 //			stage = primaryStage;
 //
-//			primaryStage.setTitle("Blue Pen");
+//			primaryStage.setTitle("FARM");
 //
 //			Parent fxmlLogin = FXMLLoader.load(getClass().getResource("/packageView/viewLogin.fxml"));
 //			login = new Scene(fxmlLogin);
