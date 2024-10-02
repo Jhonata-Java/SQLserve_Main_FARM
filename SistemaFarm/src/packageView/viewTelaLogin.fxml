@@ -1,8 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="1032.0" prefWidth="1447.0">
+         <children>
+            <ImageView fitHeight="1075.0" fitWidth="1493.0" layoutX="-34.0" layoutY="-22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../packageIcons/Login.png" />
+               </image>
+            </ImageView>
+            <TextField layoutX="556.0" layoutY="406.0" prefHeight="49.0" prefWidth="310.0" promptText="Ex: 87364928044" style="-fx-background-radius: 15; -fx-background-color: #313133;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="556.0" layoutY="560.0" prefHeight="49.0" prefWidth="310.0" style="-fx-background-radius: 15; -fx-background-color: #313133;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Text fill="WHITE" layoutX="556.0" layoutY="393.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="556.0" layoutY="554.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Button layoutX="599.0" layoutY="681.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="230.0" style="-fx-background-color: white;" text="Login" textFill="#3c42ff">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>
-
