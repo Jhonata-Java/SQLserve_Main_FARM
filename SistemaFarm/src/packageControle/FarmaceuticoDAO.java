@@ -6,11 +6,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import packageConnectng.ConnectionDATABASE;
-import packageModel.Vendedor;
+import packageModel.Farmaceutico;
 
-public class VendedorDAO {
+public class FarmaceuticoDAO {
 
-	public void create(Vendedor v) {
+	public void create(Farmaceutico v) {
 		Connection con = ConnectionDATABASE.getConnection();
 		PreparedStatement stmt = null;
 
@@ -33,7 +33,7 @@ public class VendedorDAO {
 			ConnectionDATABASE.closeConnection(con, stmt);
 		}
 	}
-	public void update(Vendedor v){
+	public void update(Farmaceutico v){
 		Connection con = ConnectionDATABASE.getConnection();
 		PreparedStatement stmt = null;
 
@@ -72,11 +72,11 @@ public class VendedorDAO {
 			ConnectionDATABASE.closeConnection(con, stmt);
 		}
 	}
-	public Vendedor autenticarUser(String user, String password) {
+	public Farmaceutico autenticarUser(String user, String password) {
 		Connection con = ConnectionDATABASE.getConnection();
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
-		Vendedor vendedor = new Vendedor();
+		Farmaceutico farmaceutico = new Farmaceutico();
 		try {
 			stmt = con.prepareStatement("SELECT*FROM Vendedor WHERE PASSWORD = ? AND CPF = ? OR email = ?");
 			stmt.setString(1, password);
@@ -85,7 +85,7 @@ public class VendedorDAO {
 			rs = stmt.executeQuery();
 
 			while (rs.next()) {
-				Vendedor v = new Vendedor();
+				Farmaceutico v = new Farmaceutico();
 				v.setIdVendedor(rs.getString(1));
 				v.setNome(rs.getString(2));
 				v.setCPF(rs.getString(3));
@@ -97,7 +97,7 @@ public class VendedorDAO {
 				v.setEndereco(rs.getString(9));
 				v.setPassword(rs.getString(10));
 				
-				vendedor = v;
+				farmaceutico = v;
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -105,19 +105,19 @@ public class VendedorDAO {
 		} finally {
 			ConnectionDATABASE.closeConnection(con, stmt, rs);
 		}
-		return vendedor;
+		return farmaceutico;
 	}
-	public ArrayList<Vendedor> read() {
+	public ArrayList<Farmaceutico> read() {
 		Connection con = ConnectionDATABASE.getConnection();
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
-		ArrayList<Vendedor> vendedor = new ArrayList<>();
+		ArrayList<Farmaceutico> farmaceutico = new ArrayList<>();
 		try {
 			stmt = con.prepareStatement("SELECT*FROM Vendedor");
 			rs = stmt.executeQuery();
 
 			while (rs.next()) {
-				Vendedor v = new Vendedor();
+				Farmaceutico v = new Farmaceutico();
 				v.setIdVendedor(rs.getString(1));
 				v.setNome(rs.getString(2));
 				v.setCPF(rs.getString(3));
@@ -127,7 +127,7 @@ public class VendedorDAO {
 				v.setDataCont(rs.getString(7));
 				v.setTotalVend(rs.getString(8));
 				v.setEndereco(rs.getString(9));
-				vendedor.add(v);
+				farmaceutico.add(v);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -135,14 +135,14 @@ public class VendedorDAO {
 		} finally {
 			ConnectionDATABASE.closeConnection(con, stmt, rs);
 		}
-		return vendedor;
+		return farmaceutico;
 	}
-	public ArrayList<Vendedor> search(String search) {
+	public ArrayList<Farmaceutico> search(String search) {
 		search = "%"+search+"%";
 		Connection con = ConnectionDATABASE.getConnection();
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
-		ArrayList<Vendedor> vendedor = new ArrayList<>();
+		ArrayList<Farmaceutico> farmaceutico = new ArrayList<>();
 		try {
 			stmt = con.prepareStatement("SELECT*FROM Vendedor WHERE Nome LIKE ? OR idVendedor LIKE ?");
 			stmt.setString(1, search);
@@ -150,7 +150,7 @@ public class VendedorDAO {
 			rs = stmt.executeQuery();
 
 			while (rs.next()) {
-				Vendedor v = new Vendedor();
+				Farmaceutico v = new Farmaceutico();
 				v.setIdVendedor(rs.getString(1));
 				v.setNome(rs.getString(2));
 				v.setCPF(rs.getString(3));
@@ -160,7 +160,7 @@ public class VendedorDAO {
 				v.setDataCont(rs.getString(7));
 				v.setTotalVend(rs.getString(8));
 				v.setEndereco(rs.getString(9));
-				vendedor.add(v);
+				farmaceutico.add(v);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -168,6 +168,6 @@ public class VendedorDAO {
 		} finally {
 			ConnectionDATABASE.closeConnection(con, stmt, rs);
 		}
-		return vendedor;
+		return farmaceutico;
 	}
 }

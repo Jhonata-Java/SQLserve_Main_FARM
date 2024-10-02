@@ -1,6 +1,6 @@
 package packageModel;
 
-public class Vendedor {
+public class Farmaceutico {
 	
 	private String idVendedor;
 	private String Nome;
@@ -13,10 +13,10 @@ public class Vendedor {
 	private String Endereco;
 	private String Password;
 	
-	public Vendedor() {
+	public Farmaceutico() {
 		super();
 	}
-	public Vendedor(String idVendedor, String nome, String cPF, String email, String telefone, String dataNasc,
+	public Farmaceutico(String idVendedor, String nome, String cPF, String email, String telefone, String dataNasc,
 			String dataCont, String totalVend, String endereco, String password) {
 		super();
 		this.idVendedor = idVendedor;
