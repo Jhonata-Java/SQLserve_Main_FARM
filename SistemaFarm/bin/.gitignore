@@ -1,5 +1,8 @@
-/packageView/
+/application/
+/module-info.class
 /packageConnectng/
-/packageController/
-/packageModel/
 /packageControle/
+/packageController/
+/packageMidia/
+/packageModel/
+/packageView/
