@@ -16,7 +16,6 @@ public class Main extends Application {
 	private static Stage stage;
 	private static Scene login;
 	private static Scene main;
-	private static Scene cliente;
 	private static Scene vendedor;
 	private static Scene produto;
 	private static Scene fornecedor;
@@ -69,9 +68,6 @@ public class Main extends Application {
 		} else if (tela.equals("main")) {
 			stage.setScene(main);
 			stage.centerOnScreen();
-		} else if (tela.equals("cliente")) {
-			stage.setScene(cliente);
-			stage.centerOnScreen();
 		} else if (tela.equals("vendedor")) {
 			stage.setScene(vendedor);
 			stage.centerOnScreen();
@@ -86,32 +82,17 @@ public class Main extends Application {
 			stage.setScene(registraVenda);
 			stage.centerOnScreen();
 		}
-		else if(tela.equals("relatorioVenda")) {
+		else if (tela.equals("relatorioVenda")) {
 			stage.setScene(relatorioVenda);
 			stage.centerOnScreen();
 		}
 	}
 
-	private static Stage cadCliente;
 	private static Stage cadProduto;
 	private static Stage cadRegistra;
 	private static Stage cadFornecedor;
 	private static Stage cadVendedor;
 
-	public static void TelaCadastroCliente() throws IOException {
-		FXMLLoader ClienteCadastro = new FXMLLoader();
-		ClienteCadastro.setLocation(Main.class.getResource("/packageView/viewCadastraCliente.fxml"));
-		Parent cadastroClient = ClienteCadastro.load();
-		Scene scene2 = new Scene(cadastroClient);
-
-		cadCliente = new Stage();
-		cadCliente.setTitle("Cadastro/Edição Cliente - BLUE PEN");
-		cadCliente.initModality(Modality.WINDOW_MODAL);
-		cadCliente.setScene(scene2);
-		cadCliente.centerOnScreen();
-		cadCliente.showAndWait();
-	}
-	
 	public static void TelaCadastroProduto() throws IOException {
 		FXMLLoader ProdutoCadastro = new FXMLLoader();
 		ProdutoCadastro.setLocation(Main.class.getResource("/packageView/viewCadastraProduto.fxml"));
