@@ -1,12 +1,15 @@
 package application;
 
 import java.io.IOException;
+import java.sql.Connection;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import packageConnectng.ConnectionDATABASE;
 
 public class Main extends Application {
 
@@ -51,8 +54,8 @@ public class Main extends Application {
 //			Parent fxmlRelatorioVenda = FXMLLoader.load(getClass().getResource("/packageView/viewRelatorioVenda.fxml"));
 //			relatorioVenda = new Scene(fxmlRelatorioVenda);
 //
-//			primaryStage.setScene(login);
-//			primaryStage.show();
+			primaryStage.setScene(login);
+			primaryStage.show();
 
 		} catch (Exception e) {
 			e.printStackTrace();
