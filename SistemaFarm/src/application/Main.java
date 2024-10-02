@@ -100,7 +100,7 @@ public class Main extends Application {
 		Scene scene2 = new Scene(cadastroProdu);
 
 		cadProduto = new Stage();
-		cadProduto.setTitle("Cadastro/Edição Produto - BLUE PEN");
+		cadProduto.setTitle("Cadastro/Edição Produto - FARM");
 		cadProduto.initModality(Modality.WINDOW_MODAL);
 		cadProduto.setScene(scene2);
 		cadProduto.centerOnScreen();
@@ -114,7 +114,7 @@ public class Main extends Application {
 		Scene scene2 = new Scene(cadastroProdu);
 
 		cadRegistra = new Stage();
-		cadRegistra.setTitle("Registra Venda - BLUE PEN");
+		cadRegistra.setTitle("Registra Venda - FARM");
 		cadRegistra.initModality(Modality.WINDOW_MODAL);
 		cadRegistra.setScene(scene2);
 		cadRegistra.centerOnScreen();
@@ -127,7 +127,7 @@ public class Main extends Application {
 		Scene scene2 = new Scene(cadastroProdu);
 
 		cadFornecedor = new Stage();
-		cadFornecedor.setTitle("Cadastra Fornecedor - BLUE PEN");
+		cadFornecedor.setTitle("Cadastra Fornecedor - FARM");
 		cadFornecedor.initModality(Modality.WINDOW_MODAL);
 		cadFornecedor.setScene(scene2);
 		cadFornecedor.centerOnScreen();
@@ -140,7 +140,7 @@ public class Main extends Application {
 		Scene scene2 = new Scene(cadastroProdu);
 
 		cadVendedor = new Stage();
-		cadVendedor.setTitle("Cadastra Vendedor - BLUE PEN");
+		cadVendedor.setTitle("Cadastra Vendedor - FARM");
 		cadVendedor.initModality(Modality.WINDOW_MODAL);
 		cadVendedor.setScene(scene2);
 		cadVendedor.centerOnScreen();
