@@ -1,21 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21">
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane prefHeight="1024.0" prefWidth="1440.0">
+      <Pane layoutX="-292.0" layoutY="-166.0" prefHeight="800.0" prefWidth="1120.0" style="-fx-background-color: #EAEEF0;">
          <children>
-            <ImageView fitHeight="1123.0" fitWidth="1510.0" layoutX="-18.0" layoutY="-40.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../Downloads/Login.png" />
-               </image>
-            </ImageView>
-         </children>
-      </Pane>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="91.0" layoutX="463.0" layoutY="189.0" stroke="#f2f2f2" strokeType="INSIDE" width="641.0" />
+            <TextField layoutX="475.0" layoutY="221.0" prefHeight="30.0" prefWidth="300.0" promptText="Pesquisar um produto" />
+            <Button layoutX="821.0" layoutY="223.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Cadastrar" textFill="WHITE" />
+            <Button layoutX="1035.0" layoutY="221.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Excluir" textFill="WHITE" />
+            <Button layoutX="975.0" layoutY="221.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Editar" textFill="WHITE" />
+            <Button layoutX="899.0" layoutY="222.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Imprimir" textFill="WHITE" />
+            <Button layoutX="751.0" layoutY="224.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="23.0" style="-fx-background-color: white;" text="X" />
+            <TableView layoutX="465.0" layoutY="292.0" prefHeight="488.0" prefWidth="641.0">
+              <columns>
+                <TableColumn prefWidth="49.60003662109375" text="ID" />
+                <TableColumn prefWidth="45.5999755859375" text="Nome" />
+                  <TableColumn prefWidth="50.39996337890625" text="CNPJ" />
+                  <TableColumn prefWidth="101.5999755859375" text="Inscrição Estadual" />
+                  <TableColumn prefWidth="87.20001220703125" text="Responsável" />
+                  <TableColumn minWidth="0.0" prefWidth="118.4000244140625" text="Ramo de Atuação" />
+                  <TableColumn minWidth="0.0" prefWidth="59.99993896484375" text="E-mail" />
+                  <TableColumn minWidth="0.0" prefWidth="59.99993896484375" text="Telefone" />
+                  <TableColumn minWidth="0.0" prefWidth="65.0" text="Endereço" />
+              </columns>
+            </TableView>
+         </children></Pane>
+      <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="526.0" prefWidth="198.0">
+         <left>
+            <AnchorPane prefHeight="600.0" prefWidth="198.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="-8.0" layoutY="-12.0" prefHeight="634.0" prefWidth="149.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="-96.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="57.0" AnchorPane.topAnchor="-12.0">
+                     <children>
+                        <Pane prefHeight="110.0" prefWidth="166.0">
+                           <children>
+                              <ImageView fitHeight="24.0" fitWidth="102.0" layoutX="32.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../packageIcons/FARM.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="67.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="btHome" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF; -fx-font: Montsserat;" text="Dashboard" textFill="#3c42ff">
+                                 <font>
+                                    <Font name="Arial" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Line endX="-100.0" endY="-24.800018310546875" layoutX="114.0" layoutY="47.0" startX="-100.00001525878906" startY="-5.200019836425781" stroke="#3c42ff" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="10.0" layoutY="96.0" prefHeight="67.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="btRegistrarVenda" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#btRegistrarVenda" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Produtos" textFill="#857e7e">
+                                 <font>
+                                    <Font name="Arial" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="10.0" layoutY="164.0" prefHeight="64.0" prefWidth="124.0">
+                           <children>
+                              <Button fx:id="btProdutos" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#btProdutos" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Fornecedor" textFill="#857e7e">
+                                 <font>
+                                    <Font name="Arial" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="10.0" layoutY="231.0" prefHeight="67.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="btCliente" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="13.0" mnemonicParsing="false" onAction="#btCliente" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Farmaceuticos" textFill="#857e7e">
+                                 <font>
+                                    <Font name="Arial" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="10.0" layoutY="298.0" prefHeight="67.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="btVendedor" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="15.0" layoutY="13.0" mnemonicParsing="false" onAction="#btVendedor" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Relatorio de vendas" textFill="#857e7e">
+                                 <font>
+                                    <Font name="Arial" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="10.0" layoutY="365.0" prefHeight="67.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="btFornecedor" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#btFornecedor" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Fornecedor" textFill="#857e7e">
+                                 <font>
+                                    <Font name="Arial" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="10.0" layoutY="476.0" prefHeight="84.0" prefWidth="230.0" />
+                        <Pane layoutX="10.0" layoutY="543.0" prefHeight="67.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="btFornecedor11" alignment="CENTER" layoutX="43.0" layoutY="10.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#btFornecedor" prefHeight="40.0" prefWidth="73.0" style="-fx-background-color: #FFFFFF;" text="Sair" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Arial" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="21.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../packageIcons/ci_log-out.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </left>
+      </BorderPane>
    </children>
 </AnchorPane>

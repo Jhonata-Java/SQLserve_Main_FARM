@@ -102,7 +102,7 @@ public class Main extends Application {
 		stage.setScene(dashboard);
 		stage.setResizable(false);
 		stage.show();
-		
+	
 	}
 
 	public static void TelaCadastroProduto() throws IOException {
