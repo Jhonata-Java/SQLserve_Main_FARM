@@ -1,5 +1,7 @@
 package packageController;
 
+import java.io.IOException;
+
 import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,8 +20,8 @@ public class controllerLogin {
     private TextField txtUser;
 
     @FXML
-    void btLoginAction(ActionEvent event) {
-    	Main.changeScreen("dashboard");
+    void btLoginAction(ActionEvent event) throws IOException {
+		Main.TelaHome();
     }
 
 }
