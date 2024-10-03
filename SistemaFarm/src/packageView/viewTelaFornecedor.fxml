@@ -43,7 +43,7 @@
          <children>
             <Pane prefHeight="110.0" prefWidth="166.0">
                <children>
-                  <ImageView fitHeight="24.0" fitWidth="102.0" layoutX="32.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="24.0" fitWidth="102.0" layoutX="24.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../packageIcons/FARM.png" />
                      </image>
@@ -54,7 +54,7 @@
                <children>
                   <Button fx:id="btHome" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF; -fx-font: Montsserat;" text="Dashboard" textFill="#3c42ff">
                      <font>
-                        <Font name="Arial" size="12.0" />
+                        <Font name="Arial Bold" size="12.0" />
                      </font>
                   </Button>
                   <Line endX="-100.0" endY="-24.800018310546875" layoutX="114.0" layoutY="47.0" startX="-100.00001525878906" startY="-5.200019836425781" stroke="#3c42ff" />
