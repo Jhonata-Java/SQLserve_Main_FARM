@@ -92,6 +92,18 @@ public class Main extends Application {
 	private static Stage cadRegistra;
 	private static Stage cadFornecedor;
 	private static Stage cadVendedor;
+	
+	public static void TelaHome() throws IOException {
+		
+		FXMLLoader fxmlHome = new FXMLLoader();
+		fxmlHome.setLocation(Main.class.getResource("/packageView/ViewDashboard.fxml"));
+		Parent TelaHome = fxmlHome.load();
+		dashboard = new Scene(TelaHome);
+		stage.setScene(dashboard);
+		stage.setResizable(false);
+		stage.show();
+		
+	}
 
 	public static void TelaCadastroProduto() throws IOException {
 		FXMLLoader ProdutoCadastro = new FXMLLoader();
