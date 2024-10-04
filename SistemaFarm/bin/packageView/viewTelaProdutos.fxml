@@ -63,7 +63,7 @@
                         <Font name="Arial Bold" size="15.0" />
                      </font>
                   </Label>
-                  <TableView fx:id="tabela" layoutY="43.0" prefHeight="445.0" prefWidth="641.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/tabelaEstlo.css">
+                  <TableView fx:id="tabela" layoutY="43.0" prefHeight="457.0" prefWidth="647.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/tabelaEstlo.css">
                      <columns>
                         <TableColumn prefWidth="49.60003662109375" text="ID" />
                         <TableColumn prefWidth="45.5999755859375" text="Nome Comercial" />
@@ -76,6 +76,7 @@
                         <TableColumn minWidth="0.0" prefWidth="61.5999755859375" text="Data Validade" />
                      </columns>
                   </TableView>
+                  <Button fx:id="btCadastrar1" alignment="TOP_LEFT" layoutX="522.0" layoutY="10.0" mnemonicParsing="false" onAction="#btCadastrar" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: black;" text="Mais Informações" textFill="WHITE" />
                </children>
             </Pane>
          </children>
