@@ -1,0 +1,47 @@
+/* Estilo geral da tabela */
+.table-view {
+    -fx-table-cell-border-color: transparent;
+    -fx-background-color: transparent;
+}
+
+/* Estilo do cabeçalho da tabela */
+.table-view .column-header-background {
+    -fx-background-color: #FFFFFF; /* Cor de fundo do cabeçalho */
+}
+
+.table-view .column-header, .table-view .column-header .label {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER;
+    -fx-padding: 8px;
+    -fx-border-width: 0px;
+    -fx-background-color: #FFFFFF; /* Cor de fundo do cabeçalho */
+}
+
+/* Estilo das células da tabela */
+.table-view .cell {
+    -fx-padding: 8px;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+}
+
+/* Alternar cores das linhas */
+.table-view .table-row-cell:odd {
+    -fx-background-color: #E0E0E0; /* Cor das linhas ímpares */
+}
+
+.table-view .table-row-cell:even {
+    -fx-background-color: #F0F0F0; /* Cor das linhas pares */
+}
+
+/* Estilo da linha selecionada */
+.table-view .table-row-cell:selected {
+    -fx-background-color: #666666; /* Cor de fundo da linha selecionada */
+    -fx-text-fill: white; /* Cor do texto da linha selecionada */
+}
+
+/* Estilo específico para a primeira linha */
+.table-view .table-row-cell:first-child {
+    -fx-background-color: #B0B0B0; /* Cor da primeira linha */
+    -fx-text-fill: white; /* Cor do texto da primeira linha */
+}

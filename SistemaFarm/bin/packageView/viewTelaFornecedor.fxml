@@ -58,7 +58,7 @@
             </Pane>
             <Pane layoutX="166.0" layoutY="117.0" prefHeight="502.0" prefWidth="641.0" style="-fx-background-color: white; -fx-background-radius: 10;">
                <children>
-                  <Label layoutX="14.0" layoutY="14.0" text="Relatório de produtos" textFill="#3c42ff">
+                  <Label layoutX="14.0" layoutY="14.0" text="Fornecedores cadastrados" textFill="#3c42ff">
                      <font>
                         <Font name="Arial Bold" size="15.0" />
                      </font>
@@ -93,12 +93,11 @@
             </Pane>
             <Pane prefHeight="67.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="btDashboard" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#btDashboard" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF; -fx-font: Montsserat;" text="Dashboard" textFill="#3c42ff">
+                  <Button fx:id="btDashboard" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#btDashboard" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF; -fx-font: Montsserat;" text="Dashboard" textFill="#9c9c9c">
                      <font>
-                        <Font name="Arial Bold" size="12.0" />
+                        <Font name="Arial" size="12.0" />
                      </font>
                   </Button>
-                  <Line endX="-100.0" endY="-24.800018310546875" layoutX="114.0" layoutY="47.0" startX="-100.00001525878906" startY="-5.200019836425781" stroke="#3c42ff" />
                </children>
             </Pane>
             <Pane layoutX="10.0" layoutY="96.0" prefHeight="67.0" prefWidth="200.0">
@@ -112,11 +111,12 @@
             </Pane>
             <Pane layoutX="10.0" layoutY="164.0" prefHeight="64.0" prefWidth="124.0">
                <children>
-                  <Button fx:id="btFornecedor" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#btFornecedor" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Fornecedor" textFill="#857e7e">
+                  <Button fx:id="btFornecedor" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#btFornecedor" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Fornecedor" textFill="#0009ff">
                      <font>
-                        <Font name="Arial" size="12.0" />
+                        <Font name="Arial Bold" size="12.0" />
                      </font>
                   </Button>
+                  <Line endX="-100.0" endY="-24.800018310546875" layoutX="112.0" layoutY="47.0" startX="-100.00001525878906" startY="-5.200019836425781" stroke="#3c42ff" strokeWidth="2.0" />
                </children>
             </Pane>
             <Pane layoutX="10.0" layoutY="231.0" prefHeight="67.0" prefWidth="200.0">
