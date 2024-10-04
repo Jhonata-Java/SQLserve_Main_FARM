@@ -22,7 +22,7 @@
          <children>
             <Pane layoutX="166.0" layoutY="25.0" prefHeight="82.0" prefWidth="641.0" style="-fx-background-radius: 10; -fx-background-color: #FFFFFF;">
                <children>
-                  <TextField fx:id="txtPesquisar" layoutX="14.0" layoutY="26.0" prefHeight="30.0" prefWidth="300.0" promptText="Pesquisar um produto" />
+                  <TextField fx:id="txtPesquisar" layoutX="14.0" layoutY="26.0" prefHeight="30.0" prefWidth="300.0" promptText="Pesquisar" />
                   <Button fx:id="btLimpar" layoutX="285.0" layoutY="29.0" mnemonicParsing="false" onAction="#btLimpar" prefHeight="25.0" prefWidth="23.0" style="-fx-background-color: white;" text="X" textFill="#817d7d">
                      <font>
                         <Font name="Arial" size="9.0" />
@@ -56,7 +56,7 @@
                   </Button>
                </children>
             </Pane>
-            <Pane layoutX="166.0" layoutY="117.0" prefHeight="502.0" prefWidth="641.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+            <Pane layoutX="166.0" layoutY="117.0" prefHeight="510.0" prefWidth="654.0" style="-fx-background-color: white; -fx-background-radius: 10;">
                <children>
                   <Label layoutX="14.0" layoutY="14.0" text="Relatório de produtos" textFill="#3c42ff">
                      <font>
@@ -66,14 +66,14 @@
                   <TableView fx:id="tabela" layoutY="43.0" prefHeight="445.0" prefWidth="641.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/tabelaEstlo.css">
                      <columns>
                         <TableColumn prefWidth="49.60003662109375" text="ID" />
-                        <TableColumn prefWidth="45.5999755859375" text="Nome" />
-                        <TableColumn prefWidth="50.39996337890625" text="CNPJ" />
-                        <TableColumn prefWidth="101.5999755859375" text="Inscrição Estadual" />
-                        <TableColumn prefWidth="87.20001220703125" text="Responsável" />
-                        <TableColumn minWidth="0.0" prefWidth="118.4000244140625" text="Ramo de Atuação" />
-                        <TableColumn minWidth="0.0" prefWidth="59.99993896484375" text="E-mail" />
-                        <TableColumn minWidth="0.0" prefWidth="59.99993896484375" text="Telefone" />
-                        <TableColumn minWidth="0.0" prefWidth="65.0" text="Endereço" />
+                        <TableColumn prefWidth="45.5999755859375" text="Nome Comercial" />
+                        <TableColumn prefWidth="50.39996337890625" text="Codigo" />
+                        <TableColumn prefWidth="98.4000244140625" text="Dosagem" />
+                        <TableColumn prefWidth="89.5999755859375" text="Estoque" />
+                        <TableColumn minWidth="0.0" prefWidth="104.80007934570312" text="Preco Unitario" />
+                        <TableColumn minWidth="0.0" prefWidth="77.5999755859375" text="Tipo Unitario" />
+                        <TableColumn minWidth="0.0" prefWidth="64.7999267578125" text="Data Fabricação" />
+                        <TableColumn minWidth="0.0" prefWidth="61.5999755859375" text="Data Validade" />
                      </columns>
                   </TableView>
                </children>
@@ -93,21 +93,21 @@
             </Pane>
             <Pane prefHeight="67.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="btDashboard" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#btDashboard" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF; -fx-font: Montsserat;" text="Dashboard" textFill="#3c42ff">
-                     <font>
-                        <Font name="Arial Bold" size="12.0" />
-                     </font>
-                  </Button>
-                  <Line endX="-100.0" endY="-24.800018310546875" layoutX="114.0" layoutY="47.0" startX="-100.00001525878906" startY="-5.200019836425781" stroke="#3c42ff" />
-               </children>
-            </Pane>
-            <Pane layoutX="10.0" layoutY="96.0" prefHeight="67.0" prefWidth="200.0">
-               <children>
-                  <Button fx:id="btProdutos" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#btProdutos" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Produtos" textFill="#857e7e">
+                  <Button fx:id="btDashboard" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#btDashboard" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF; -fx-font: Montsserat;" text="Dashboard" textFill="#857e7e">
                      <font>
                         <Font name="Arial" size="12.0" />
                      </font>
                   </Button>
+               </children>
+            </Pane>
+            <Pane layoutX="10.0" layoutY="96.0" prefHeight="67.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btProdutos" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#btProdutos" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Produtos" textFill="#3c42ff">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Line endX="-100.0000228881836" endY="-24.800018310546875" layoutX="114.0" layoutY="48.0" startX="-100.00001525878906" startY="-5.200019836425781" stroke="#3c42ff" />
                </children>
             </Pane>
             <Pane layoutX="10.0" layoutY="164.0" prefHeight="64.0" prefWidth="124.0">
