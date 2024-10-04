@@ -65,16 +65,16 @@
                   </Label>
                   <TableView fx:id="tabela" layoutY="43.0" prefHeight="445.0" prefWidth="641.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/tabelaEstlo.css">
                      <columns>
-                        <TableColumn prefWidth="48.0" text="ID" />
-                        <TableColumn prefWidth="81.5999755859375" text="Nome" />
+                        <TableColumn fx:id="columnID" prefWidth="48.0" text="ID" />
+                        <TableColumn fx:id="columnNome" prefWidth="81.5999755859375" text="Nome" />
                         <TableColumn minWidth="0.0" prefWidth="0.0" text="CNPJ" />
-                        <TableColumn prefWidth="60.0" text="CPF" />
-                        <TableColumn prefWidth="73.60003662109375" text="E-mail" />
-                        <TableColumn minWidth="0.0" prefWidth="93.60000610351562" text="Telefone" />
-                        <TableColumn minWidth="0.0" prefWidth="77.60003662109375" text="Data de Nascimento" />
-                        <TableColumn minWidth="0.0" prefWidth="82.39996337890625" text="Data de Contratação" />
-                        <TableColumn minWidth="0.0" prefWidth="54.4000244140625" text="Total Vendido" />
-                        <TableColumn minWidth="0.0" prefWidth="65.7999267578125" text="Endereço" />
+                        <TableColumn fx:id="columnCPF" prefWidth="60.0" text="CPF" />
+                        <TableColumn fx:id="columnEmail" prefWidth="73.60003662109375" text="E-mail" />
+                        <TableColumn fx:id="columnFone" minWidth="0.0" prefWidth="93.60000610351562" text="Telefone" />
+                        <TableColumn fx:id="columnDataNac" minWidth="0.0" prefWidth="77.60003662109375" text="Data de Nascimento" />
+                        <TableColumn fx:id="columnDataCont" minWidth="0.0" prefWidth="45.59991455078125" text="Data de Contratação" />
+                        <TableColumn fx:id="columnTotalV" minWidth="0.0" prefWidth="92.0001220703125" text="Total Vendido" />
+                        <TableColumn fx:id="columnEnder" minWidth="0.0" prefWidth="65.7999267578125" text="Endereço" />
                      </columns>
                   </TableView>
                </children>

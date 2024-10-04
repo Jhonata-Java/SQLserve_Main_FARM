@@ -65,15 +65,15 @@
                   </Label>
                   <TableView fx:id="tabela" layoutY="43.0" prefHeight="445.0" prefWidth="641.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/tabelaEstlo.css">
                      <columns>
-                        <TableColumn prefWidth="49.60003662109375" text="ID" />
-                        <TableColumn prefWidth="45.5999755859375" text="Nome" />
-                        <TableColumn prefWidth="50.39996337890625" text="CNPJ" />
-                        <TableColumn prefWidth="101.5999755859375" text="Inscrição Estadual" />
-                        <TableColumn prefWidth="87.20001220703125" text="Responsável" />
-                        <TableColumn minWidth="0.0" prefWidth="118.4000244140625" text="Ramo de Atuação" />
-                        <TableColumn minWidth="0.0" prefWidth="59.99993896484375" text="E-mail" />
-                        <TableColumn minWidth="0.0" prefWidth="59.99993896484375" text="Telefone" />
-                        <TableColumn minWidth="0.0" prefWidth="65.0" text="Endereço" />
+                        <TableColumn fx:id="columnID" prefWidth="49.60003662109375" text="ID" />
+                        <TableColumn fx:id="columnNome" prefWidth="45.5999755859375" text="Nome" />
+                        <TableColumn fx:id="columnCNPJ" prefWidth="73.59991455078125" text="CNPJ" />
+                        <TableColumn fx:id="columnInscricaoEst" prefWidth="78.40008544921875" text="Inscrição Estadual" />
+                        <TableColumn fx:id="columnRespon" prefWidth="87.20001220703125" text="Responsável" />
+                        <TableColumn fx:id="columnRamoAtua" minWidth="0.0" prefWidth="118.4000244140625" text="Ramo de Atuação" />
+                        <TableColumn fx:id="columnEmail" minWidth="0.0" prefWidth="62.4000244140625" text="E-mail" />
+                        <TableColumn fx:id="columnFone" minWidth="0.0" prefWidth="35.199951171875" text="Telefone" />
+                        <TableColumn fx:id="columnEnder" minWidth="0.0" prefWidth="88.800048828125" text="Endereço" />
                      </columns>
                   </TableView>
                </children>
