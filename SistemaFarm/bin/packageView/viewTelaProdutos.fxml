@@ -76,7 +76,12 @@
                         <TableColumn minWidth="0.0" prefWidth="61.5999755859375" text="Data Validade" />
                      </columns>
                   </TableView>
-                  <Button fx:id="btCadastrar1" alignment="TOP_LEFT" layoutX="522.0" layoutY="10.0" mnemonicParsing="false" onAction="#btCadastrar" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: black;" text="Mais Informações" textFill="WHITE" />
+                  <Button fx:id="btCadastrar1" alignment="TOP_RIGHT" layoutX="544.0" layoutY="10.0" mnemonicParsing="false" onAction="#btCadastrar" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: black;" text="Informações" textFill="WHITE" />
+                  <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="548.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../packageIcons/add%20(1).png" />
+                     </image>
+                  </ImageView>
                </children>
             </Pane>
          </children>
