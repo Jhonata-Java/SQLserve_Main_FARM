@@ -15,7 +15,7 @@
       <Pane layoutX="-292.0" layoutY="-166.0" prefHeight="800.0" prefWidth="1120.0" />
       <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="526.0" prefWidth="198.0">
          <left>
-            <AnchorPane prefHeight="600.0" prefWidth="198.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="594.0" prefWidth="198.0" BorderPane.alignment="CENTER">
                <children>
                   <VBox layoutX="-8.0" layoutY="-12.0" prefHeight="634.0" prefWidth="166.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="-96.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="-12.0">
                      <children>
@@ -58,7 +58,7 @@
                         </Pane>
                         <Pane layoutX="10.0" layoutY="231.0" prefHeight="67.0" prefWidth="200.0">
                            <children>
-                              <Button fx:id="btCliente" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="13.0" mnemonicParsing="false" onAction="#btCliente" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #FFFFFF;" text="Farmaceuticos" textFill="#857e7e">
+                              <Button fx:id="btCliente" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#btCliente" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #FFFFFF;" text="Farmaceuticos" textFill="#857e7e">
                                  <font>
                                     <Font name="Arial" size="12.0" />
                                  </font>
