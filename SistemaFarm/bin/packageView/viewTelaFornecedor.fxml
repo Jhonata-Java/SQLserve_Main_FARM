@@ -22,7 +22,7 @@
          <children>
             <Pane layoutX="166.0" layoutY="25.0" prefHeight="82.0" prefWidth="641.0" style="-fx-background-radius: 10; -fx-background-color: #FFFFFF;">
                <children>
-                  <TextField fx:id="txtPesquisar" layoutX="14.0" layoutY="26.0" prefHeight="30.0" prefWidth="300.0" promptText="Pesquisar um produto" />
+                  <TextField fx:id="txtPesquisar" layoutX="14.0" layoutY="26.0" prefHeight="30.0" prefWidth="300.0" promptText="Pesquisar" />
                   <Button fx:id="btLimpar" layoutX="285.0" layoutY="29.0" mnemonicParsing="false" onAction="#btLimpar" prefHeight="25.0" prefWidth="23.0" style="-fx-background-color: white;" text="X" textFill="#817d7d">
                      <font>
                         <Font name="Arial" size="9.0" />
