@@ -5,7 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import packageConnectng.ConnectionDATABASE;
+
+import packageConnecting.ConnectionDATABASE;
 import packageModel.Farmaceutico;
 
 public class FarmaceuticoDAO {
