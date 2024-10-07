@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="634.0" prefWidth="828.0" style="-fx-background-color: EAEEF0;">
+         <children>
+            <Pane layoutX="20.0" layoutY="82.0" prefHeight="541.0" prefWidth="788.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <children>
+                  <Button fx:id="btCadastrar" layoutX="618.0" layoutY="493.0" mnemonicParsing="false" onAction="#btCadastrar" style="-fx-background-color: black;" text="Cadastrar" textFill="WHITE" />
+                  <Button fx:id="btCancelar" layoutX="695.0" layoutY="493.0" mnemonicParsing="false" onAction="#btCancelar" style="-fx-background-color: red;" text="Cancelar" textFill="WHITE" />
+                  <TextField fx:id="textNomeC" layoutX="41.0" layoutY="41.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
+                  <Text layoutX="42.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forma farmacêutica">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="textFormaF" layoutX="41.0" layoutY="103.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
+                  <Text layoutX="42.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome comercial">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="textNomeG" layoutX="292.0" layoutY="41.0" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" />
+                  <TextField fx:id="textCat" layoutX="524.0" layoutY="41.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
+                  <Text layoutX="291.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome genérico">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="523.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="textConc" layoutX="292.0" layoutY="103.0" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" />
+                  <TextField fx:id="textDose" layoutX="524.0" layoutY="103.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
+                  <Text layoutX="523.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dosagem">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="294.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Concentração">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="textContraind" layoutX="41.0" layoutY="173.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
+                  <Text layoutX="41.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraindicações">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="textInd" layoutX="292.0" layoutY="173.0" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" />
+                  <TextField fx:id="textEfeitosCol" layoutX="524.0" layoutY="173.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
+                  <Text layoutX="291.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indicações">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="524.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Efeitos Colaterais">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="textPreca" layoutX="41.0" layoutY="245.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
+                  <TextField fx:id="textPrincAtivo" layoutX="292.0" layoutY="245.0" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" />
+                  <TextField fx:id="textLab" layoutX="524.0" layoutY="245.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
+                  <Text layoutX="523.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Laboratório">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="294.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Principio ativo">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="42.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precauções">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="textRegistroANVISA" layoutX="41.0" layoutY="310.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
+                  <TextField fx:id="textCodigoBar" layoutX="292.0" layoutY="310.0" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" />
+                  <TextField fx:id="textLote" layoutX="524.0" layoutY="310.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
+                  <Text layoutX="524.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lote">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="291.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código de Barras">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="41.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro ANVISA">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="textDataF" layoutX="41.0" layoutY="382.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
+                  <TextField fx:id="textDataVal" layoutX="292.0" layoutY="382.0" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" />
+                  <TextField fx:id="textPrecoUn" layoutX="524.0" layoutY="382.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
+                  <Text layoutX="37.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de fabricação">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="524.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Preço Unitário">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="292.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de validade">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="textDataComp" layoutX="41.0" layoutY="450.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
+                  <TextField fx:id="textQuant" layoutX="292.0" layoutY="450.0" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" />
+                  <TextField fx:id="textTarja" layoutX="524.0" layoutY="450.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
+                  <Text layoutX="41.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data da Compra">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="292.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="522.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tarja">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <ImageView fitHeight="70.0" fitWidth="828.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../packageIcons/Frame%2042.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
