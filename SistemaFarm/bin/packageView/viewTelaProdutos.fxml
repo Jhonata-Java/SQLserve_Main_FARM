@@ -65,15 +65,15 @@
                   </Label>
                   <TableView fx:id="tabela" layoutY="43.0" prefHeight="457.0" prefWidth="647.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/tabelaEstlo.css">
                      <columns>
-                        <TableColumn fx:id="columnID" prefWidth="49.60003662109375" text="ID" />
-                        <TableColumn fx:id="columnNomeC" prefWidth="45.5999755859375" text="Nome Comercial" />
-                        <TableColumn fx:id="columnCod" prefWidth="50.39996337890625" text="Codigo" />
-                        <TableColumn fx:id="columnDose" prefWidth="98.4000244140625" text="Dosagem" />
-                        <TableColumn fx:id="columnEstoq" prefWidth="89.5999755859375" text="Estoque" />
-                        <TableColumn fx:id="columnPrec" minWidth="0.0" prefWidth="104.80007934570312" text="Preco Unitario" />
-                        <TableColumn fx:id="columnTipo" minWidth="0.0" prefWidth="77.5999755859375" text="Tipo Unitario" />
-                        <TableColumn fx:id="columnDataF" minWidth="0.0" prefWidth="51.2000732421875" text="Data Fabricação" />
-                        <TableColumn fx:id="columnDataV" minWidth="0.0" prefWidth="76.7999267578125" text="Data Validade" />
+                        <TableColumn prefWidth="49.60003662109375" text="ID" />
+                        <TableColumn prefWidth="45.5999755859375" text="Nome Comercial" />
+                        <TableColumn prefWidth="50.39996337890625" text="Codigo" />
+                        <TableColumn prefWidth="98.4000244140625" text="Dosagem" />
+                        <TableColumn prefWidth="89.5999755859375" text="Estoque" />
+                        <TableColumn minWidth="0.0" prefWidth="104.80007934570312" text="Preco Unitario" />
+                        <TableColumn minWidth="0.0" prefWidth="77.5999755859375" text="Tipo Unitario" />
+                        <TableColumn minWidth="0.0" prefWidth="64.7999267578125" text="Data Fabricação" />
+                        <TableColumn minWidth="0.0" prefWidth="61.5999755859375" text="Data Validade" />
                      </columns>
                   </TableView>
                   <Button fx:id="btCadastrar1" alignment="TOP_RIGHT" layoutX="544.0" layoutY="10.0" mnemonicParsing="false" onAction="#btCadastrar" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: black;" text="Informações" textFill="WHITE" />

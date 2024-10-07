@@ -47,12 +47,12 @@
                   </Label>
                   <TableView fx:id="tabela" layoutY="43.0" prefHeight="445.0" prefWidth="641.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/tabelaEstlo.css">
                      <columns>
-                        <TableColumn fx:id="columnID" prefWidth="49.60003662109375" text="ID" />
-                        <TableColumn fx:id="columnFarm" prefWidth="121.60003662109375" text="Farmacêutico" />
-                        <TableColumn fx:id="columnProduto" prefWidth="100.79998779296875" text="Produto" />
-                        <TableColumn fx:id="columnQuant" prefWidth="111.20004272460938" text="Quantidade" />
-                        <TableColumn fx:id="columnDataVenda" prefWidth="136.79998779296875" text="Data da Venda" />
-                        <TableColumn fx:id="columnPrecoT" minWidth="0.0" prefWidth="121.599853515625" text="Preço Total" />
+                        <TableColumn prefWidth="49.60003662109375" text="ID" />
+                        <TableColumn prefWidth="121.60003662109375" text="Farmacêutico" />
+                        <TableColumn prefWidth="100.79998779296875" text="Produto" />
+                        <TableColumn prefWidth="111.20004272460938" text="Quantidade" />
+                        <TableColumn prefWidth="136.79998779296875" text="Data da Venda" />
+                        <TableColumn minWidth="0.0" prefWidth="121.599853515625" text="Preço Total" />
                      </columns>
                   </TableView>
                </children>
