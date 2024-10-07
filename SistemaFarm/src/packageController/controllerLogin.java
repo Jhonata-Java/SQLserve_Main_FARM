@@ -1,11 +1,9 @@
 package packageController;
 
-import java.io.IOException;
-
-import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class controllerLogin {
@@ -14,15 +12,15 @@ public class controllerLogin {
     private Button btLogin;
 
     @FXML
-    private TextField txtSenha;
+    private PasswordField txtPassword;
 
     @FXML
     private TextField txtUser;
+    
 
     @FXML
-    void btLoginAction(ActionEvent event) throws IOException {
-		Main.TelaHome();
+    void btLoginAction(ActionEvent event) {
+
     }
 
 }
-
