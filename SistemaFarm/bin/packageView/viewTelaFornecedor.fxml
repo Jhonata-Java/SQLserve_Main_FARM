@@ -39,13 +39,13 @@
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Button fx:id="btCadastrar" mnemonicParsing="false" onAction="#btCadastrar" style="-fx-background-color: black;" text="Cadastrar" textFill="WHITE" />
-                        <Button fx:id="btImprimir" mnemonicParsing="false" onAction="#btImprimir" style="-fx-background-color: black;" text="Imprimir" textFill="WHITE" GridPane.columnIndex="1" />
-                        <Button fx:id="btEditar" mnemonicParsing="false" onAction="#btEditar" style="-fx-background-color: black;" text="Editar" textFill="WHITE" GridPane.columnIndex="2" />
-                        <Button fx:id="btExcluir" mnemonicParsing="false" onAction="#btExcluir" prefHeight="26.0" prefWidth="61.0" style="-fx-background-color: black;" text="Excluir" textFill="WHITE" GridPane.columnIndex="3" />
+                        <Button fx:id="btCadastrarFor" mnemonicParsing="false" onAction="#btCadastrarFor" style="-fx-background-color: black;" text="Cadastrar" textFill="WHITE" />
+                        <Button fx:id="btImprimirFor" mnemonicParsing="false" onAction="#ActionBtImprimirFor" style="-fx-background-color: black;" text="Imprimir" textFill="WHITE" GridPane.columnIndex="1" />
+                        <Button fx:id="btEditarFor" mnemonicParsing="false" onAction="#ActionBtEditar" style="-fx-background-color: black;" text="Editar" textFill="WHITE" GridPane.columnIndex="2" />
+                        <Button fx:id="btExcluirFor" mnemonicParsing="false" onAction="#ActionBtExcluir" prefHeight="26.0" prefWidth="61.0" style="-fx-background-color: black;" text="Excluir" textFill="WHITE" GridPane.columnIndex="3" />
                      </children>
                   </GridPane>
-                  <Button layoutX="321.0" layoutY="30.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="1.0" style="-fx-background-color: #FFFFFF;">
+                  <Button fx:id="BtPesquisarFor" layoutX="321.0" layoutY="30.0" mnemonicParsing="false" onAction="#ActionBtPesquisarFor" prefHeight="25.0" prefWidth="1.0" style="-fx-background-color: #FFFFFF;">
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -63,17 +63,17 @@
                         <Font name="Arial Bold" size="15.0" />
                      </font>
                   </Label>
-                  <TableView fx:id="tabela" layoutY="43.0" prefHeight="445.0" prefWidth="641.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/tabelaEstlo.css">
+                  <TableView fx:id="tabelaFor" layoutY="43.0" prefHeight="445.0" prefWidth="641.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/tabelaEstlo.css">
                      <columns>
-                        <TableColumn prefWidth="49.60003662109375" text="ID" />
-                        <TableColumn prefWidth="45.5999755859375" text="Nome" />
-                        <TableColumn prefWidth="50.39996337890625" text="CNPJ" />
-                        <TableColumn prefWidth="101.5999755859375" text="Inscrição Estadual" />
-                        <TableColumn prefWidth="87.20001220703125" text="Responsável" />
-                        <TableColumn minWidth="0.0" prefWidth="118.4000244140625" text="Ramo de Atuação" />
-                        <TableColumn minWidth="0.0" prefWidth="59.99993896484375" text="E-mail" />
-                        <TableColumn minWidth="0.0" prefWidth="59.99993896484375" text="Telefone" />
-                        <TableColumn minWidth="0.0" prefWidth="65.0" text="Endereço" />
+                        <TableColumn fx:id="FornecedorID" prefWidth="49.60003662109375" text="ID" />
+                        <TableColumn fx:id="NomeFor" prefWidth="50.4000244140625" text="Nome" />
+                        <TableColumn fx:id="CNPJFor" minWidth="0.0" prefWidth="60.0" text="CNPJ" />
+                        <TableColumn fx:id="InscricaoEstadualFor" minWidth="0.0" prefWidth="106.4000244140625" text="Inscrição Estadual" />
+                        <TableColumn fx:id="ResponsavelFor" minWidth="0.0" prefWidth="72.0" text="Responsável" />
+                        <TableColumn fx:id="RamoAtuaFor" minWidth="0.0" prefWidth="97.60000610351562" text="Ramo de Atuação" />
+                        <TableColumn fx:id="EmailFor" minWidth="0.0" prefWidth="80.00006103515625" text="E-mail" />
+                        <TableColumn fx:id="TelefoneFor" minWidth="0.0" prefWidth="53.60009765625" text="Telefone" />
+                        <TableColumn fx:id="EnderecoFor" minWidth="0.0" prefWidth="73.599853515625" text="Endereço" />
                      </columns>
                   </TableView>
                </children>
