@@ -5,7 +5,12 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -17,136 +22,397 @@
                <children>
                   <Button fx:id="btCadastrar" layoutX="618.0" layoutY="493.0" mnemonicParsing="false" onAction="#btCadastrar" style="-fx-background-color: black;" text="Cadastrar" textFill="WHITE" />
                   <Button fx:id="btCancelar" layoutX="695.0" layoutY="493.0" mnemonicParsing="false" onAction="#btCancelar" style="-fx-background-color: red;" text="Cancelar" textFill="WHITE" />
-                  <TextField fx:id="textNomeC" layoutX="41.0" layoutY="41.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
-                  <Text layoutX="42.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forma farmacêutica">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="textFormaF" layoutX="41.0" layoutY="103.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
-                  <Text layoutX="42.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome comercial">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="textNomeG" layoutX="292.0" layoutY="41.0" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" />
-                  <TextField fx:id="textCat" layoutX="524.0" layoutY="41.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
-                  <Text layoutX="291.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome genérico">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="523.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="textConc" layoutX="292.0" layoutY="103.0" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" />
-                  <TextField fx:id="textDose" layoutX="524.0" layoutY="103.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
-                  <Text layoutX="523.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dosagem">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="294.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Concentração">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="textContraind" layoutX="41.0" layoutY="173.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
-                  <Text layoutX="41.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraindicações">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="textInd" layoutX="292.0" layoutY="173.0" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" />
-                  <TextField fx:id="textEfeitosCol" layoutX="524.0" layoutY="173.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
-                  <Text layoutX="291.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indicações">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="524.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Efeitos Colaterais">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="textPreca" layoutX="41.0" layoutY="245.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
-                  <TextField fx:id="textPrincAtivo" layoutX="292.0" layoutY="245.0" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" />
-                  <TextField fx:id="textLab" layoutX="524.0" layoutY="245.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
-                  <Text layoutX="523.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Laboratório">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="294.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Principio ativo">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="42.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precauções">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="textRegistroANVISA" layoutX="41.0" layoutY="310.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
-                  <TextField fx:id="textCodigoBar" layoutX="292.0" layoutY="310.0" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" />
-                  <TextField fx:id="textLote" layoutX="524.0" layoutY="310.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
-                  <Text layoutX="524.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lote">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="291.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código de Barras">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="41.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro ANVISA">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="textDataF" layoutX="41.0" layoutY="382.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
-                  <TextField fx:id="textDataVal" layoutX="292.0" layoutY="382.0" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" />
-                  <TextField fx:id="textPrecoUn" layoutX="524.0" layoutY="382.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
-<<<<<<< HEAD
-                  <Text layoutX="37.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de fabricação">
-=======
-                  <Text layoutX="45.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de fabricação">
->>>>>>> branch 'master' of https://github.com/Jhonata-Java/Sistema-FARM.git
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="524.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Preço Unitário">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="292.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de validade">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="textDataComp" layoutX="41.0" layoutY="450.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
-                  <TextField fx:id="textQuant" layoutX="292.0" layoutY="450.0" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" />
-                  <TextField fx:id="textTarja" layoutX="524.0" layoutY="450.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
-                  <Text layoutX="41.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data da Compra">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="292.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="522.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tarja">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Text>
+                  <VBox layoutX="41.0" layoutY="20.13671875" spacing="25.0">
+                     <children>
+                        <HBox spacing="20.0">
+                           <children>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="textNomeC" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome comercial">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </GridPane>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="textNomeG" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome genérico">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </GridPane>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="textCat" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <HBox spacing="20.0">
+                           <children>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Forma farmacêutica">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="textFormaF" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="textConc" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Concentração">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </GridPane>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="textDose" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dosagem">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <HBox spacing="20.0">
+                           <children>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="textContraind" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contraindicações">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </GridPane>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="textInd" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Indicações">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </GridPane>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="textEfeitosCol" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Efeitos Colaterais">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <HBox spacing="20.0">
+                           <children>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="textPreca" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Precauções">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </GridPane>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="textPrincAtivo" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Principio ativo">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </GridPane>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="textLab" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Laboratório">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <HBox spacing="20.0">
+                           <children>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="textRegistroANVISA" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Registro ANVISA">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </GridPane>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="textCodigoBar" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Código de Barras">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </GridPane>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="textLote" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lote">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <HBox spacing="20.0">
+                           <children>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="textDataF" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                  
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data de fabricação">
+                  
+                                             <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </GridPane>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="textDataVal" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data de validade">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </GridPane>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="textPrecoUn" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Preço Unitário">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <HBox spacing="20.0">
+                           <children>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="textDataComp" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data da Compra">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </GridPane>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="textQuant" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </GridPane>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="textTarja" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tarja">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
                </children>
             </Pane>
             <ImageView fitHeight="70.0" fitWidth="828.0" pickOnBounds="true" preserveRatio="true">
