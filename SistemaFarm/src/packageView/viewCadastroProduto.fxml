@@ -110,7 +110,11 @@
                   <TextField fx:id="textDataF" layoutX="41.0" layoutY="382.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
                   <TextField fx:id="textDataVal" layoutX="292.0" layoutY="382.0" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" />
                   <TextField fx:id="textPrecoUn" layoutX="524.0" layoutY="382.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
+<<<<<<< HEAD
                   <Text layoutX="37.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de fabricação">
+=======
+                  <Text layoutX="45.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de fabricação">
+>>>>>>> branch 'master' of https://github.com/Jhonata-Java/Sistema-FARM.git
                      <font>
                         <Font name="Arial" size="12.0" />
                      </font>
