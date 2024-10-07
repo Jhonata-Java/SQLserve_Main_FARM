@@ -35,8 +35,8 @@
                                     <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <TextField fx:id="textNomeC" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome comercial">
+                                    <TextField fx:id="textNomeLab" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Laboratório">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
@@ -52,8 +52,8 @@
                                     <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <TextField fx:id="textNomeG" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome genérico">
+                                    <TextField fx:id="textCNPJ" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CNPJ">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
@@ -69,8 +69,8 @@
                                     <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <TextField fx:id="textCat" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria">
+                                    <TextField fx:id="textInscEsta" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Inscrição Estadual">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
@@ -90,12 +90,12 @@
                                     <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Forma farmacêutica">
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
                                     </Text>
-                                    <TextField fx:id="textFormaF" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <TextField fx:id="textEmail" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
                                  </children>
                               </GridPane>
                               <GridPane>
@@ -107,8 +107,8 @@
                                     <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <TextField fx:id="textConc" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Concentração">
+                                    <TextField fx:id="textFone" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
@@ -124,8 +124,8 @@
                                     <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <TextField fx:id="textDose" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dosagem">
+                                    <TextField fx:id="textCondPag" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Condições de Pagamento">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
@@ -145,8 +145,8 @@
                                     <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <TextField fx:id="textContraind" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contraindicações">
+                                    <TextField fx:id="textRespons" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Responsável pelo Laboratório">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
@@ -162,8 +162,8 @@
                                     <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <TextField fx:id="textInd" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Indicações">
+                                    <TextField fx:id="textRamoAtuaç" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ramo de Atuação">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
@@ -179,8 +179,8 @@
                                     <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <TextField fx:id="textEfeitosCol" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Efeitos Colaterais">
+                                    <TextField fx:id="textCPF" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CPF">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
@@ -189,68 +189,30 @@
                               </GridPane>
                            </children>
                         </HBox>
-                        <HBox spacing="20.0">
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
                            <children>
-                              <GridPane>
-                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                                 </columnConstraints>
-                                 <rowConstraints>
-                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
-                                 <children>
-                                    <TextField fx:id="textPreca" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Precauções">
-                                       <font>
-                                          <Font name="Arial" size="12.0" />
-                                       </font>
-                                    </Text>
-                                 </children>
-                              </GridPane>
-                              <GridPane>
-                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                                 </columnConstraints>
-                                 <rowConstraints>
-                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
-                                 <children>
-                                    <TextField fx:id="textPrincAtivo" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Principio ativo">
-                                       <font>
-                                          <Font name="Arial" size="12.0" />
-                                       </font>
-                                    </Text>
-                                 </children>
-                              </GridPane>
-                              <GridPane>
-                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                                 </columnConstraints>
-                                 <rowConstraints>
-                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
-                                 <children>
-                                    <TextField fx:id="textLab" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Laboratório">
-                                       <font>
-                                          <Font name="Arial" size="12.0" />
-                                       </font>
-                                    </Text>
-                                 </children>
-                              </GridPane>
+                              <TextField fx:id="textEnder" prefHeight="26.0" prefWidth="716.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Endereço">
+                                 <font>
+                                    <Font name="Arial" size="12.0" />
+                                 </font>
+                              </Text>
                            </children>
-                        </HBox>
+                        </GridPane>
                      </children>
                   </VBox>
                </children>
             </Pane>
             <ImageView fitHeight="70.0" fitWidth="828.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../packageIcons/Frame%2042.png" />
+                  <Image url="@../packageIcons/CadastForneced.png" />
                </image>
             </ImageView>
          </children>
