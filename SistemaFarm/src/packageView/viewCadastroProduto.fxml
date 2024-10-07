@@ -36,7 +36,7 @@
                                  </rowConstraints>
                                  <children>
                                     <TextField fx:id="textNomeC" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome comercial">
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Comercial">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
@@ -53,7 +53,7 @@
                                  </rowConstraints>
                                  <children>
                                     <TextField fx:id="textNomeG" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome genérico">
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Genérico">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
@@ -90,7 +90,7 @@
                                     <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Forma farmacêutica">
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Forma Farmacêutica">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
@@ -218,7 +218,7 @@
                                  </rowConstraints>
                                  <children>
                                     <TextField fx:id="textPrincAtivo" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Principio ativo">
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Principio Ativo">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
@@ -312,7 +312,7 @@
                                  <children>
                                     <TextField fx:id="textDataF" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
                   
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data de fabricação">
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Fabricação">
                   
                                              <font>
                                           <Font name="Arial" size="12.0" />
@@ -330,7 +330,7 @@
                                  </rowConstraints>
                                  <children>
                                     <TextField fx:id="textDataVal" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1" />
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data de validade">
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Validade">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
