@@ -104,8 +104,6 @@ public class FornecedorDAO {
 		}
 		return fornecedor;
 	}
-	
-	
 	public ArrayList<Fornecedor> search(String search) {
 		search = "%"+search+"%";
 		Connection con = ConnectionDATABASE.getConnection();
