@@ -157,9 +157,9 @@
                   <Font name="Arial Bold" size="16.0" />
                </font>
             </Label>
-            <Button fx:id="btFarmaceutico" layoutX="602.0" layoutY="135.0" mnemonicParsing="false" onAction="#btFarmaceutico" style="-fx-background-insets: 999;" text=" ">
+            <Button fx:id="btCadastrarFarmaceutico" layoutX="602.0" layoutY="135.0" mnemonicParsing="false" onAction="#btCadastrarFarmaceutico" style="-fx-background-insets: 999;" text=" ">
                <graphic>
-                  <ImageView fx:id="btCadastrarFarmaceutico" fitHeight="70.0" fitWidth="188.0" onDragDetected="#btCadastrarFarmaceutico" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="70.0" fitWidth="188.0" onDragDetected="#btCadastrarFarmaceutico" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../packageIcons/BotaoCadastrarFarmaceutico.png" />
                      </image>
@@ -200,7 +200,6 @@
                   </TableView>
                </children>
             </Pane>
-            <Button fx:id="btAtualizar" layoutX="288.0" layoutY="216.0" mnemonicParsing="false" onAction="#btAtualizar" style="-fx-background-insets: 999;" />
             <Hyperlink fx:id="btAtualizar" layoutX="296.0" layoutY="217.0" onAction="#btAtualizar" text="Atualizar" />
          </children></Pane>
    </children>
