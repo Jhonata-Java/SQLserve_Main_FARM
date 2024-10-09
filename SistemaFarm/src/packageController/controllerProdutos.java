@@ -135,13 +135,13 @@ public class controllerProdutos implements Initializable{
 			p = tabela.getItems().get(i);
 
 			Alert mensagemDeErro = new Alert(Alert.AlertType.CONFIRMATION);
-			mensagemDeErro.setContentText("Deseja realmente EXCLUIR o produto: " + p.getnomeComercial());
+		//	mensagemDeErro.setContentText("Deseja realmente EXCLUIR o produto: " + p.getnomeComercial());
 
 			Optional<ButtonType> resultado = mensagemDeErro.showAndWait();
 
 			if (resultado.isPresent() && resultado.get() == ButtonType.OK) {
 				ProdutoDAO PR = new ProdutoDAO();
-				PR.delete(p.getcodigo());
+			//	PR.delete(p.getcodigo());
 
 				Alert mensagemDeExclusao = new Alert(Alert.AlertType.INFORMATION);
 				mensagemDeExclusao.setContentText("Produto excluido com sucesso!!!");
@@ -206,6 +206,10 @@ public class controllerProdutos implements Initializable{
     	columnPrecoUn.setCellValueFactory(new PropertyValueFactory<>("precoUn"));
     	columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("TipoUn"));
     
+    }
+    @FXML
+    void btAtualizar(ActionEvent event) {
+
     }
 
 	@Override
