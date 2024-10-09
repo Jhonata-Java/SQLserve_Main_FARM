@@ -50,7 +50,9 @@ public class controllerLogin {
 
 //			Stage stage = (Stage) btnLogin.getScene().getWindow();
 //			stage.close();
-			Main.TelaHome();
+			
+			
+			//PAREI AQUI DEU ERRO - Main.TelaHome();
 		} else {
 			Alert erro = new Alert(Alert.AlertType.ERROR);
 			erro.setTitle("Falha ao realizar o login!");

@@ -66,9 +66,9 @@
                   <TableView fx:id="tabela" layoutY="43.0" prefHeight="445.0" prefWidth="641.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/tabelaEstlo.css">
                      <columns>
                         <TableColumn prefWidth="49.60003662109375" text="ID" />
-                        <TableColumn prefWidth="45.5999755859375" text="Nome" />
-                        <TableColumn prefWidth="50.39996337890625" text="CNPJ" />
-                        <TableColumn prefWidth="101.5999755859375" text="Inscrição Estadual" />
+                        <TableColumn prefWidth="58.4000244140625" text="Nome" />
+                        <TableColumn prefWidth="46.39996337890625" text="CNPJ" />
+                        <TableColumn prefWidth="92.800048828125" text="Inscrição Estadual" />
                         <TableColumn prefWidth="87.20001220703125" text="Responsável" />
                         <TableColumn minWidth="0.0" prefWidth="118.4000244140625" text="Ramo de Atuação" />
                         <TableColumn minWidth="0.0" prefWidth="59.99993896484375" text="E-mail" />
