@@ -111,5 +111,4 @@ public class controllerCadastraFarmaceutico implements Initializable {
 			textEnderecoResidencialCompleto.setText(controllerFarmaceutico.farmaceuticoEditar.getEndereco());
 		}
 	}
-
 }
