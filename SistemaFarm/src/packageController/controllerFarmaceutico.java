@@ -1,5 +1,6 @@
 package packageController;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -91,7 +92,7 @@ public class controllerFarmaceutico implements Initializable{
     public static Farmaceutico farmaceuticoEditar = new Farmaceutico();
 
     @FXML
-    void ActionBtCadastrar(ActionEvent event) {
+    void ActionBtCadastrar(ActionEvent event) throws IOException {
     	farmaceuticoEditar = null;
     	Main.TelaCadastraFarmaceutico();
     	CarregarTableFarmaceudico();
@@ -103,7 +104,7 @@ public class controllerFarmaceutico implements Initializable{
     }
 
     @FXML
-    void ActionBtEditar(ActionEvent event) {
+    void ActionBtEditar(ActionEvent event) throws IOException {
     	if (tabelaFarmaceutico.getSelectionModel().getSelectedIndex() == -1) {
 			Alert mensagemDeErro = new Alert(Alert.AlertType.INFORMATION);
 			mensagemDeErro.setContentText("Selecione um Vendedor para editar primeiro!");

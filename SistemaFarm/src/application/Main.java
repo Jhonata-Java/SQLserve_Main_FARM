@@ -150,14 +150,14 @@ public class Main extends Application {
 		cadFornecedor.centerOnScreen();
 		cadFornecedor.showAndWait();
 	}
-	public static void TelaCadastraVendedor() throws IOException {
+	public static void TelaCadastraFarmaceutico() throws IOException {
 		FXMLLoader CadVendedor = new FXMLLoader();
-		CadVendedor.setLocation(Main.class.getResource("/packageView/viewCadastroVendedor.fxml"));
+		CadVendedor.setLocation(Main.class.getResource("/packageView/viewCadastroFarmaceutico.fxml"));
 		Parent cadastroProdu = CadVendedor.load();
 		Scene scene2 = new Scene(cadastroProdu);
 
 		cadVendedor = new Stage();
-		cadVendedor.setTitle("Cadastra Vendedor - FARM");
+		cadVendedor.setTitle("Cadastra Farmacêutico - FARM");
 		cadVendedor.initModality(Modality.WINDOW_MODAL);
 		cadVendedor.setScene(scene2);
 		cadVendedor.centerOnScreen();

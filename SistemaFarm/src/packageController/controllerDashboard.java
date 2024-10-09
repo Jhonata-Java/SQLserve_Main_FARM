@@ -93,11 +93,12 @@ public class controllerDashboard  implements Initializable {
     private TableView<Produto> tabelaVencer;
     
     private ObservableList<Produto> ArrayProdutos;
+    
     private ProdutoDAO produto = new ProdutoDAO();
 
     @FXML
     void btCadastrarFarmaceutico(MouseEvent event)throws IOException  {
-         Main.TelaCadastraVendedor();
+         Main.TelaCadastraFarmaceutico();
     }
 
     @FXML
@@ -165,12 +166,10 @@ public class controllerDashboard  implements Initializable {
     
     }
     
-
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		 CarregarTable();
 	}
-
 }
 
