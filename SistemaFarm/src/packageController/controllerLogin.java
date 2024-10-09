@@ -1,6 +1,5 @@
 package packageController;
 
-import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -51,8 +50,6 @@ public class controllerLogin {
 //			Stage stage = (Stage) btnLogin.getScene().getWindow();
 //			stage.close();
 			
-			
-			//PAREI AQUI DEU ERRO - Main.TelaHome();
 		} else {
 			Alert erro = new Alert(Alert.AlertType.ERROR);
 			erro.setTitle("Falha ao realizar o login!");
@@ -60,7 +57,6 @@ public class controllerLogin {
 			erro.setContentText("Usuario ou senha incorretos! Verifique as informações e tente novamente.");
 			erro.show();
 		}
-
 	}
 
 	@FXML

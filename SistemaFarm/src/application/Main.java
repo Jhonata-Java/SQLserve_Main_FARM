@@ -1,15 +1,12 @@
 package application;
 
 import java.io.IOException;
-import java.sql.Connection;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import packageConnecting.ConnectionDATABASE;
 
 public class Main extends Application {
 
@@ -21,6 +18,7 @@ public class Main extends Application {
 	private static Scene fornecedor;
 	private static Scene registraVenda;
 	private static Scene relatorioVenda;
+	private static Scene produtoInfo;
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -53,6 +51,9 @@ public class Main extends Application {
 //			Parent fxmlRelatorioVenda = FXMLLoader.load(getClass().getResource("/packageView/viewRelatorioVenda.fxml"));
 //			relatorioVenda = new Scene(fxmlRelatorioVenda);
 //
+			Parent fxmlProdutoInfo = FXMLLoader.load(getClass().getResource("/packageView/viewTelaInfoExtraProdutos.fxml"));
+			produtoInfo = new Scene(fxmlProdutoInfo);
+			
 			primaryStage.setScene(login);
 			primaryStage.show();
 
@@ -84,6 +85,10 @@ public class Main extends Application {
 		}
 		else if (tela.equals("relatorioVenda")) {
 			stage.setScene(relatorioVenda);
+			stage.centerOnScreen();
+		}
+		else if (tela.equals("produtoInfo")) {
+			stage.setScene(produtoInfo);
 			stage.centerOnScreen();
 		}
 	}
