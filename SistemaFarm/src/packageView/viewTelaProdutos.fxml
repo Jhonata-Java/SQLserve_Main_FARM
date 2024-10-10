@@ -16,7 +16,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="packageController.controllerProdutos">
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="packageController.controllerInfoProduto">
    <children>
       <Pane prefHeight="634.0" prefWidth="828.0" style="-fx-background-color: EAEEF0;">
          <children>
@@ -45,7 +45,7 @@
                         <Button fx:id="btExcluir" mnemonicParsing="false" onAction="#btExcluir" prefHeight="26.0" prefWidth="61.0" style="-fx-background-color: black;" text="Excluir" textFill="WHITE" GridPane.columnIndex="3" />
                      </children>
                   </GridPane>
-                  <Button layoutX="321.0" layoutY="30.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="1.0" style="-fx-background-color: #FFFFFF;">
+                  <Button fx:id="btPesquisar" layoutX="321.0" layoutY="30.0" mnemonicParsing="false" onAction="#ActionBtPesquisar" prefHeight="25.0" prefWidth="1.0" style="-fx-background-color: #FFFFFF;">
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
                            <image>
