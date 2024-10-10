@@ -7,9 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ConnectionDATABASE {
-	//DADOS DE ACESSO DO BANCO DE DADOS - NOTEBOOK DA RAFAELA
+	//DADOS DE ACESSO DO BANCO DE DADOS - NOTEBOOK DA RA
 	private final static String Driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-	private final static String URL = "jdbc:sqlserver://192.168.50.67:56594;encrypt=false;databaseName=ProjetoFARM";
+	private final static String URL = "jdbc:sqlserver://192.168.70.116:56594;encrypt=false;databaseName=ProjetoFARM";
 	private final static String User = "sa";
 	private final static String password = "12345678";
 	
