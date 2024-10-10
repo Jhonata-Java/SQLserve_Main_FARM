@@ -8,9 +8,9 @@ import java.sql.SQLException;
 
 public class ConnectionDATABASE {
 	private final static String Driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-	private final static String URL = "jdbc:sqlserver://localhost:51521;encrypt=false;databaseName=SistemaFarm";
+	private final static String URL = "jdbc:sqlserver://192.168.70.106:56594;encrypt=false;databaseName=SistemaFarm";
 	private final static String User = "sa";
-	private final static String password = "Senailab05";
+	private final static String password = "12345678";
 	
 	public static Connection getConnection() {
 		try {
