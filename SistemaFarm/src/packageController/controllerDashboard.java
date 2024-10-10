@@ -163,6 +163,9 @@ public class controllerDashboard  implements Initializable {
     	columnNome2.setCellValueFactory(new PropertyValueFactory<>("nomeComercial"));
     	columnQuantidade.setCellValueFactory(new PropertyValueFactory<>("estoque"));
     	columnVencimento.setCellValueFactory(new PropertyValueFactory<>("dataVal"));
+    	
+    	tabelaEstoque.setItems(ArrayProdutos);
+    	tabelaVencer.setItems(ArrayProdutos);
     
     }
     

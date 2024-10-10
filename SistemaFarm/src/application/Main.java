@@ -1,12 +1,15 @@
 package application;
 
 import java.io.IOException;
+import java.sql.Connection;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import packageConnecting.ConnectionDATABASE;
 
 public class Main extends Application {
 
@@ -32,25 +35,22 @@ public class Main extends Application {
 
 			Parent fxmlMain = FXMLLoader.load(getClass().getResource("/packageView/viewTelaMain.fxml"));
 			dashboard = new Scene(fxmlMain);
-//
-//			Parent fxmlCliente = FXMLLoader.load(getClass().getResource("/packageView/viewCliente.fxml"));
-//			cliente = new Scene(fxmlCliente);
-//
-//			Parent fxmlVendedor = FXMLLoader.load(getClass().getResource("/packageView/viewVendedor.fxml"));
-//			vendedor = new Scene(fxmlVendedor);
-//
-//			Parent fxmlProduto = FXMLLoader.load(getClass().getResource("/packageView/viewProduto.fxml"));
-//			produto = new Scene(fxmlProduto);
-//
-//			Parent fxmlFornecedor = FXMLLoader.load(getClass().getResource("/packageView/viewFornecedor.fxml"));
-//			fornecedor = new Scene(fxmlFornecedor);
-//			
-////			Parent fxmlRegistraVenda = FXMLLoader.load(getClass().getResource("/packageView/viewRegistraVenda.fxml"));
-////			registraVenda = new Scene(fxmlRegistraVenda);
-//			
-//			Parent fxmlRelatorioVenda = FXMLLoader.load(getClass().getResource("/packageView/viewRelatorioVenda.fxml"));
-//			relatorioVenda = new Scene(fxmlRelatorioVenda);
-//
+
+			Parent fxmlVendedor = FXMLLoader.load(getClass().getResource("/packageView/viewVendedor.fxml"));
+			vendedor = new Scene(fxmlVendedor);
+
+			Parent fxmlProduto = FXMLLoader.load(getClass().getResource("/packageView/viewTelaProdutos.fxml"));
+			produto = new Scene(fxmlProduto);
+
+			Parent fxmlFornecedor = FXMLLoader.load(getClass().getResource("/packageView/viewTelaFornecedor.fxml"));
+			fornecedor = new Scene(fxmlFornecedor);
+			
+			Parent fxmlRegistraVenda = FXMLLoader.load(getClass().getResource("/packageView/viewTelaRegistraVenda.fxml"));
+			registraVenda = new Scene(fxmlRegistraVenda);
+			
+			Parent fxmlRelatorioVenda = FXMLLoader.load(getClass().getResource("/packageView/viewRelatorioVenda.fxml"));
+			relatorioVenda = new Scene(fxmlRelatorioVenda);
+
 			Parent fxmlProdutoInfo = FXMLLoader.load(getClass().getResource("/packageView/viewTelaInfoExtraProdutos.fxml"));
 			produtoInfo = new Scene(fxmlProdutoInfo);
 			
@@ -112,7 +112,7 @@ public class Main extends Application {
 
 	public static void TelaCadastroProduto() throws IOException {
 		FXMLLoader ProdutoCadastro = new FXMLLoader();
-		ProdutoCadastro.setLocation(Main.class.getResource("/packageView/viewCadastraProduto.fxml"));
+		ProdutoCadastro.setLocation(Main.class.getResource("/packageView/viewCadastroProduto.fxml"));
 		Parent cadastroProdu = ProdutoCadastro.load();
 		Scene scene2 = new Scene(cadastroProdu);
 
@@ -126,7 +126,7 @@ public class Main extends Application {
 	
 	public static void TelaRegistraVenda() throws IOException {
 		FXMLLoader registraVenda = new FXMLLoader();
-		registraVenda.setLocation(Main.class.getResource("/packageView/viewRegistraCadastraVenda.fxml"));
+		registraVenda.setLocation(Main.class.getResource("/packageView/viewTelaRegistraVenda.fxml"));
 		Parent cadastroProdu = registraVenda.load();
 		Scene scene2 = new Scene(cadastroProdu);
 
@@ -165,9 +165,9 @@ public class Main extends Application {
 	}
 
 	public static void main(String[] args) {
-//		Connection con = ConnectionDATABASE.getConnection();
-//		ConnectionDATABASE.closeConnection(con);
-//		
+		Connection con = ConnectionDATABASE.getConnection();
+		ConnectionDATABASE.closeConnection(con);
+		
 //		ArrayList<Fornecedor> fornecedor = new ArrayList<>();
 //		FornecedorDAO cp = new FornecedorDAO();
 //		Fornecedor p1 = new Fornecedor();

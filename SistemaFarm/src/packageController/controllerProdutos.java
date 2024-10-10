@@ -209,7 +209,7 @@ public class controllerProdutos implements Initializable{
     }
     @FXML
     void btAtualizar(ActionEvent event) {
-
+    	CarregarInfTable();
     }
 
 	@Override
