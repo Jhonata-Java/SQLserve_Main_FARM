@@ -134,18 +134,18 @@
                   <Font name="Arial Bold" size="16.0" />
                </font>
             </Label>
-            <Button fx:id="btCadastrarProduto" alignment="CENTER" layoutX="182.0" layoutY="135.0" mnemonicParsing="false" onAction="#btCadastrarProduto" prefHeight="71.0" prefWidth="3.0" style="-fx-background-insets: 99999;" text=" ">
+            <Button fx:id="btCadastrarProduto" alignment="CENTER" layoutX="182.0" layoutY="135.0" mnemonicParsing="false" onAction="#btCadastrarProduto" prefHeight="71.0" prefWidth="3.0" style="-fx-background-insets: 999;" text=" ">
                <graphic>
-                  <ImageView fx:id="btCadastrarProduto" fitHeight="70.0" fitWidth="188.0" onDragDetected="#btCadastrarProduto" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="70.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../packageIcons/BotaoCadastrarProduto.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btCadastrarFornecedor" alignment="CENTER" layoutX="393.0" layoutY="135.0" mnemonicParsing="false" onAction="#btCadastrarFornecedor" style="-fx-background-insets: 99999;" text=" ">
+            <Button fx:id="btCadastrarFornecedor" alignment="CENTER" layoutX="393.0" layoutY="135.0" mnemonicParsing="false" onAction="#btCadastrarFornecedor" style="-fx-background-insets: 999;" text=" ">
                <graphic>
-                  <ImageView fx:id="btCadastrarFornecedor" fitHeight="63.0" fitWidth="188.0" onDragDetected="#btCadastrarFornecedor" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="63.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../packageIcons/BotaoCadastrarFornecedor.png" />
                      </image>
@@ -159,9 +159,9 @@
             </Label>
             <Button fx:id="btCadastrarFarmaceutico" layoutX="602.0" layoutY="135.0" mnemonicParsing="false" onAction="#btCadastrarFarmaceutico" style="-fx-background-insets: 999;" text=" ">
                <graphic>
-                  <ImageView fx:id="btCadastrarFarmaceutico" fitHeight="70.0" fitWidth="188.0" onDragDetected="#btCadastrarFarmaceutico" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="70.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../packageIcons/BotaoCadastrarFarmaceutico.png" />
+                        <Image url="@../packageIcons/BotaoCadastrarFornecedor.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -200,7 +200,7 @@
                   </TableView>
                </children>
             </Pane>
-            <Hyperlink fx:id="btAtualizar" layoutX="296.0" layoutY="217.0" onAction="#Atualizar" text="Atualizar" />
+            <Hyperlink fx:id="btAtualizar" layoutX="296.0" layoutY="217.0" onAction="#Atualizar" text="Atualizar" textFill="#8e8e8e" />
          </children></Pane>
    </children>
 </AnchorPane>

@@ -27,13 +27,13 @@ public class controllerDashboard  implements Initializable {
     private Hyperlink btAtualizar;
     
     @FXML
-    private ImageView btCadastrarFarmaceutico;
+    private Button btCadastrarFarmaceutico;
 
     @FXML
-    private ImageView btCadastrarFornecedor;
+    private Button btCadastrarFornecedor;
 
     @FXML
-    private ImageView btCadastrarProduto;
+    private Button btCadastrarProduto;
 
     @FXML
     private Button btDashboard;

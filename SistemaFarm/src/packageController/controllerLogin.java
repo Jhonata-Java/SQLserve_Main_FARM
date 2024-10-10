@@ -60,7 +60,7 @@ public class controllerLogin {
 	}
 
 	@FXML
-	void visualizarSenha(ActionEvent event) {
+	void VerSenha(ActionEvent event) {
 		if (VerSenha.isSelected()) {
 			txtSenha.setText(txtPassword.getText());
 			txtPassword.setVisible(false);

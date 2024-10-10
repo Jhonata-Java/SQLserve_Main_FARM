@@ -19,30 +19,30 @@ public class ProdutoDAO {
 		
 		try {
 			comandoSQL = conexão.prepareStatement("INSERT INTO Produto VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-			comandoSQL.setString(1,p.getidFornecedor());
-			comandoSQL.setString(2,p.getnomeComercial());
-			comandoSQL.setString(3,p.getnomeGenerico());
-			comandoSQL.setString(4,p.getcategoria());
-			comandoSQL.setString(5,p.getformaFarmaceutica());
-			comandoSQL.setString(6,p.getconcentracao());
-			comandoSQL.setString(7,p.getdosagem());
-			comandoSQL.setString(8,p.getcodigo());
-			comandoSQL.setString(9,p.getestoque());
-			comandoSQL.setString(10,p.getprecoUn());
-			comandoSQL.setString(11,p.gettipoUn());
-			comandoSQL.setString(12,p.getdataFab());
-			comandoSQL.setString(13,p.getdataVal());
-			comandoSQL.setString(14,p.getregistroAnvisa());
-			comandoSQL.setString(15,p.getlote());
-			comandoSQL.setString(16,p.getendereco());
-			
+//			comandoSQL.setString(1,p.getidFornecedor());
+//			comandoSQL.setString(2,p.getnomeComercial());
+//			comandoSQL.setString(3,p.getnomeGenerico());
+//			comandoSQL.setString(4,p.getcategoria());
+//			comandoSQL.setString(5,p.getformaFarmaceutica());
+//			comandoSQL.setString(6,p.getconcentracao());
+//			comandoSQL.setString(7,p.getdosagem());
+//			comandoSQL.setString(8,p.getcodigo());
+//			comandoSQL.setString(9,p.getestoque());
+//			comandoSQL.setString(10,p.getprecoUn());
+//			comandoSQL.setString(11,p.gettipoUn());
+//			comandoSQL.setString(12,p.getdataFab());
+//			comandoSQL.setString(13,p.getdataVal());
+//			comandoSQL.setString(14,p.getregistroAnvisa());
+//			comandoSQL.setString(15,p.getlote());
+//			comandoSQL.setString(16,p.getendereco());
+//			
 			comandoSQL.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			//Executado independente que o try catch for acionado ou não
 		}finally {
-			ConnectionDATABASEe.closeConnection(conexão, comandoSQL);
+		//	ConnectionDATABASEe.closeConnection(conexão, comandoSQL);
 		}
 	}
      //ResultSet retorna a informação do Banco de Dados(necessario quando se utiliza um select
@@ -61,24 +61,24 @@ public class ProdutoDAO {
 			while(rs.next())
 			{
 				Produto p = new Produto();
-				p.setidProduto(rs.getString(1));
-				p.setidFornecedor(rs.getString(2));
-				p.setnomeComercial(rs.getString(3));
-				p.setnomeGenerico(rs.getString(4));
-				p.setcategoria(rs.getString(5));
-				p.setformaFarmaceutica(rs.getString(6));
-				p.setconcentracao(rs.getString(7));		//coloca as informações dentro do array cliente
-				p.setdosagem(rs.getString(8));
-				p.setcodigo(rs.getString(9));
-				p.setestoque(rs.getString(10));
-				p.setprecoUn(rs.getString(11));
-				p.settipoUn(rs.getString(12));
-				p.setdataFab(rs.getString(13));
-				p.setdataVal(rs.getString(14));
-				p.setregistroAnvisa(rs.getString(15));
-				p.setlote(rs.getString(16));
-				p.setendereco(rs.getString(17));
-				produto.add(p);
+//				p.setidProduto(rs.getString(1));
+//				p.setidFornecedor(rs.getString(2));
+//				p.setnomeComercial(rs.getString(3));
+//				p.setnomeGenerico(rs.getString(4));
+//				p.setcategoria(rs.getString(5));
+//				p.setformaFarmaceutica(rs.getString(6));
+//				p.setconcentracao(rs.getString(7));		//coloca as informações dentro do array cliente
+//				p.setdosagem(rs.getString(8));
+//				p.setcodigo(rs.getString(9));
+//				p.setestoque(rs.getString(10));
+//				p.setprecoUn(rs.getString(11));
+//				p.settipoUn(rs.getString(12));
+//				p.setdataFab(rs.getString(13));
+//				p.setdataVal(rs.getString(14));
+//				p.setregistroAnvisa(rs.getString(15));
+//				p.setlote(rs.getString(16));
+//				p.setendereco(rs.getString(17));
+//				produto.add(p);
 			}
 			
 		} catch (SQLException e) {
@@ -97,24 +97,24 @@ public class ProdutoDAO {
 		
 		try {
 			comandoSQL = conexão.prepareStatement("UPDATE Produto SET idFornecedor = ?,  nomeComercial = ?, nomeGenerico = ?, categoria = ?, formaFarmaceutica = ?, concentracao = ?,dosagem = ?, codigo = ?, estoque = ?, precoUn = ?, tipoUn = ?,dataFab = ?,dataVal = ?, registroAnvisa = ?, lote = ?, endereco = ? WHERE codigo = ?");
-			comandoSQL.setString(1,p.getidFornecedor());
-			comandoSQL.setString(2,p.getnomeComercial());
-			comandoSQL.setString(3,p.getnomeGenerico());
-			comandoSQL.setString(4,p.getcategoria());
-			comandoSQL.setString(5,p.getformaFarmaceutica());
-			comandoSQL.setString(6,p.getconcentracao());
-			comandoSQL.setString(7,p.getdosagem());
-			comandoSQL.setString(8,p.getcodigo());
-			comandoSQL.setString(9,p.getestoque());
-			comandoSQL.setString(10,p.getprecoUn());
-			comandoSQL.setString(11,p.gettipoUn());
-			comandoSQL.setString(12,p.getdataFab());
-			comandoSQL.setString(13,p.getdataVal());
-			comandoSQL.setString(14,p.getregistroAnvisa());
-			comandoSQL.setString(15,p.getlote());
-			comandoSQL.setString(16,p.getendereco());
-			
-			comandoSQL.setString(17,p.getcodigo());
+//			comandoSQL.setString(1,p.getidFornecedor());
+//			comandoSQL.setString(2,p.getnomeComercial());
+//			comandoSQL.setString(3,p.getnomeGenerico());
+//			comandoSQL.setString(4,p.getcategoria());
+//			comandoSQL.setString(5,p.getformaFarmaceutica());
+//			comandoSQL.setString(6,p.getconcentracao());
+//			comandoSQL.setString(7,p.getdosagem());
+//			comandoSQL.setString(8,p.getcodigo());
+//			comandoSQL.setString(9,p.getestoque());
+//			comandoSQL.setString(10,p.getprecoUn());
+//			comandoSQL.setString(11,p.gettipoUn());
+//			comandoSQL.setString(12,p.getdataFab());
+//			comandoSQL.setString(13,p.getdataVal());
+//			comandoSQL.setString(14,p.getregistroAnvisa());
+//			comandoSQL.setString(15,p.getlote());
+//			comandoSQL.setString(16,p.getendereco());
+//			
+//			comandoSQL.setString(17,p.getcodigo());
 			
 			comandoSQL.executeUpdate();
 		} catch (SQLException e) {
@@ -166,24 +166,24 @@ public class ProdutoDAO {
 			while(rs.next())
 			{
 				Produto p = new Produto();
-				p.setidProduto(rs.getString(1));
-				p.setidFornecedor(rs.getString(2));
-				p.setnomeComercial(rs.getString(3));
-				p.setnomeGenerico(rs.getString(4));
-				p.setcategoria(rs.getString(5));
-				p.setformaFarmaceutica(rs.getString(6));
-				p.setconcentracao(rs.getString(7));		//coloca as informações dentro do array cliente
-				p.setdosagem(rs.getString(8));
-				p.setcodigo(rs.getString(9));
-				p.setestoque(rs.getString(10));
-				p.setprecoUn(rs.getString(11));
-				p.settipoUn(rs.getString(12));
-				p.setdataFab(rs.getString(13));
-				p.setdataVal(rs.getString(14));
-				p.setregistroAnvisa(rs.getString(15));
-				p.setlote(rs.getString(16));
-				p.setendereco(rs.getString(17));
-				produto.add(p);
+//				p.setidProduto(rs.getString(1));
+//				p.setidFornecedor(rs.getString(2));
+//				p.setnomeComercial(rs.getString(3));
+//				p.setnomeGenerico(rs.getString(4));
+//				p.setcategoria(rs.getString(5));
+//				p.setformaFarmaceutica(rs.getString(6));
+//				p.setconcentracao(rs.getString(7));		//coloca as informações dentro do array cliente
+//				p.setdosagem(rs.getString(8));
+//				p.setcodigo(rs.getString(9));
+//				p.setestoque(rs.getString(10));
+//				p.setprecoUn(rs.getString(11));
+//				p.settipoUn(rs.getString(12));
+//				p.setdataFab(rs.getString(13));
+//				p.setdataVal(rs.getString(14));
+//				p.setregistroAnvisa(rs.getString(15));
+//				p.setlote(rs.getString(16));
+//				p.setendereco(rs.getString(17));
+//				produto.add(p);
 			}
 			
 		} catch (SQLException e) {
