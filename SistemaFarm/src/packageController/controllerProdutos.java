@@ -205,6 +205,8 @@ public class controllerProdutos implements Initializable{
     	columnNomeC.setCellValueFactory(new PropertyValueFactory<>("nomeComercial"));
     	columnPrecoUn.setCellValueFactory(new PropertyValueFactory<>("precoUn"));
     	columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("TipoUn"));
+    	
+    	tabela.setItems(ArrayProduto);
     
     }
     @FXML

@@ -21,6 +21,7 @@ public class Main extends Application {
 	private static Scene fornecedor;
 	private static Scene registraVenda;
 	private static Scene relatorioVenda;
+	private static Scene produtoInfo;
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -34,27 +35,6 @@ public class Main extends Application {
 
 			Parent fxmlMain = FXMLLoader.load(getClass().getResource("/packageView/viewTelaMain.fxml"));
 			dashboard = new Scene(fxmlMain);
-<<<<<<< HEAD
-//
-//			Parent fxmlCliente = FXMLLoader.load(getClass().getResource("/packageView/viewCliente.fxml"));
-//			cliente = new Scene(fxmlCliente);
-//
-//			Parent fxmlVendedor = FXMLLoader.load(getClass().getResource("/packageView/viewVendedor.fxml"));
-//			vendedor = new Scene(fxmlVendedor);
-//
-//			Parent fxmlProduto = FXMLLoader.load(getClass().getResource("/packageView/viewProduto.fxml"));
-//			produto = new Scene(fxmlProduto);
-//
-//			Parent fxmlFornecedor = FXMLLoader.load(getClass().getResource("/packageView/viewFornecedor.fxml"));
-//			fornecedor = new Scene(fxmlFornecedor);
-//			
-////			Parent fxmlRegistraVenda = FXMLLoader.load(getClass().getResource("/packageView/viewRegistraVenda.fxml"));
-////			registraVenda = new Scene(fxmlRegistraVenda);
-//			
-//			Parent fxmlRelatorioVenda = FXMLLoader.load(getClass().getResource("/packageView/viewRelatorioVenda.fxml"));
-//			relatorioVenda = new Scene(fxmlRelatorioVenda);
-//
-=======
 
 			Parent fxmlVendedor = FXMLLoader.load(getClass().getResource("/packageView/viewVendedor.fxml"));
 			vendedor = new Scene(fxmlVendedor);
@@ -74,7 +54,6 @@ public class Main extends Application {
 			Parent fxmlProdutoInfo = FXMLLoader.load(getClass().getResource("/packageView/viewTelaInfoExtraProdutos.fxml"));
 			produtoInfo = new Scene(fxmlProdutoInfo);
 			
->>>>>>> branch 'master' of https://github.com/Jhonata-Java/Sistema-FARM.git
 			primaryStage.setScene(login);
 			primaryStage.show();
 
@@ -108,6 +87,10 @@ public class Main extends Application {
 			stage.setScene(relatorioVenda);
 			stage.centerOnScreen();
 		}
+		else if (tela.equals("produtoInfo")) {
+			stage.setScene(produtoInfo);
+			stage.centerOnScreen();
+		}
 	}
 
 	private static Stage cadProduto;
@@ -118,7 +101,7 @@ public class Main extends Application {
 	public static void TelaHome() throws IOException {
 		
 		FXMLLoader fxmlHome = new FXMLLoader();
-		fxmlHome.setLocation(Main.class.getResource("/packageView/viewDashboard.fxml"));
+		fxmlHome.setLocation(Main.class.getResource("/packageView/viewTelaMain.fxml"));
 		Parent TelaHome = fxmlHome.load();
 		dashboard = new Scene(TelaHome);
 		stage.setScene(dashboard);
