@@ -7,12 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ConnectionDATABASE {
+	//DADOS DE ACESSO DO BANCO DE DADOS - NOTEBOOK DA RAFAELA
 	private final static String Driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-<<<<<<< HEAD
 	private final static String URL = "jdbc:sqlserver://192.168.50.67:56594;encrypt=false;databaseName=ProjetoFARM";
-=======
-	private final static String URL = "jdbc:sqlserver://192.168.70.106:56594;encrypt=false;databaseName=SistemaFarm";
->>>>>>> branch 'master' of https://github.com/Jhonata-Java/Sistema-FARM.git
 	private final static String User = "sa";
 	private final static String password = "12345678";
 	
