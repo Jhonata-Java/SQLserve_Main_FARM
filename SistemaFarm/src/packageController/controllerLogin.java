@@ -1,5 +1,8 @@
 package packageController;
 
+import java.io.IOException;
+
+import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -8,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
+import javafx.stage.Stage;
 import packageControle.FarmaceuticoDAO;
 import packageModel.Farmaceutico;
 
@@ -32,7 +36,7 @@ public class controllerLogin {
 	static Farmaceutico farmaceutico = new Farmaceutico();
 
 	@FXML
-	void btLoginAction(ActionEvent event) {
+	void btLoginAction(ActionEvent event) throws IOException {
 		txtPassword.setVisible(true);
 
 		farmaceutico = f.autenticarUser(txtUser.getText(), txtPassword.getText());
@@ -45,10 +49,9 @@ public class controllerLogin {
 			saudacao.show();
 			txtUser.setText("");
 			txtPassword.setText("");
-			// Main.changeScreen("main");
+			Main.TelaHome();
 
-//			Stage stage = (Stage) btnLogin.getScene().getWindow();
-//			stage.close();
+			
 			
 		} else {
 			Alert erro = new Alert(Alert.AlertType.ERROR);

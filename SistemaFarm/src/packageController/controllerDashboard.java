@@ -159,8 +159,8 @@ public class controllerDashboard  implements Initializable {
     	columnID2.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
     	columnLocalizacao1.setCellValueFactory(new PropertyValueFactory<>("endereco"));
     	columnLocalizacao2.setCellValueFactory(new PropertyValueFactory<>("endereco"));
-    	columnNome1.setCellValueFactory(new PropertyValueFactory<>("nomeComercial"));
-    	columnNome2.setCellValueFactory(new PropertyValueFactory<>("nomeComercial"));
+    	columnNome1.setCellValueFactory(new PropertyValueFactory<>("nomeComecial"));
+    	columnNome2.setCellValueFactory(new PropertyValueFactory<>("nomeComecial"));
     	columnQuantidade.setCellValueFactory(new PropertyValueFactory<>("estoque"));
     	columnVencimento.setCellValueFactory(new PropertyValueFactory<>("dataVal"));
     	
@@ -172,6 +172,7 @@ public class controllerDashboard  implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
+		labelNome.setText(controllerLogin.farmaceutico.getNome());
 		 CarregarTable();
 	}
 }

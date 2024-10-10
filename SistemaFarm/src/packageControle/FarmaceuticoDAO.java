@@ -78,7 +78,7 @@ public class FarmaceuticoDAO {
 		ResultSet rs = null;
 		Farmaceutico farmaceutico = new Farmaceutico();
 		try {
-			stmt = con.prepareStatement("SELECT*FROM Farmaceutico WHERE PASSWORD = ? AND CPF = ? OR email = ?");
+			stmt = con.prepareStatement("SELECT*FROM Vendedor WHERE senha = ? AND CPF = ? OR email = ?");
 			stmt.setString(1, password);
 			stmt.setString(2, user);
 			stmt.setString(3, user);
@@ -113,7 +113,7 @@ public class FarmaceuticoDAO {
 		ResultSet rs = null;
 		ArrayList<Farmaceutico> farmaceutico = new ArrayList<>();
 		try {
-			stmt = con.prepareStatement("SELECT*FROM Farmaceutico");
+			stmt = con.prepareStatement("SELECT*FROM Vendedor");
 			rs = stmt.executeQuery();
 
 			while (rs.next()) {
@@ -144,7 +144,7 @@ public class FarmaceuticoDAO {
 		ResultSet rs = null;
 		ArrayList<Farmaceutico> farmaceutico = new ArrayList<>();
 		try {
-			stmt = con.prepareStatement("SELECT*FROM Farmaceutico WHERE Nome LIKE ? OR idVendedor LIKE ?");
+			stmt = con.prepareStatement("SELECT*FROM Vendedor WHERE Nome LIKE ? OR idVendedor LIKE ?");
 			stmt.setString(1, search);
 			stmt.setString(2, search);
 			rs = stmt.executeQuery();
