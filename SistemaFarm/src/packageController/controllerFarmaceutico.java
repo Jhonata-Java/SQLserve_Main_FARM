@@ -99,8 +99,8 @@ public class controllerFarmaceutico implements Initializable{
     }
 
     @FXML
-    void ActionBtDashboard(ActionEvent event) {
-    	
+    void ActionBtDashboard(ActionEvent event) throws IOException {
+    	Main.TelaHome();
     }
 
     @FXML
