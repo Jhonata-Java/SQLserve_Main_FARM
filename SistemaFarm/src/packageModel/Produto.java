@@ -19,6 +19,7 @@ public class Produto {
 	private String registroAnvisa;
 	private String lote;
 	private String endereco;
+	private String princAtivo;
 	
 	public Produto() {
 		super();
@@ -27,7 +28,7 @@ public class Produto {
 	public Produto(String idProduto, String idFornecedor, String nomeComecial, String nomeGenerico, String categoria,
 			String formaFarmaceutica, String concentracao, String dosagem, String codigo, String estoque,
 			String preocoUN, String tipoUN, String dataFab, String dataVal, String registroAnvisa, String lote,
-			String endereco) {
+			String endereco, String princAtivo) {
 		super();
 		this.idProduto = idProduto;
 		this.idFornecedor = idFornecedor;
@@ -46,6 +47,7 @@ public class Produto {
 		this.registroAnvisa = registroAnvisa;
 		this.lote = lote;
 		this.endereco = endereco;
+		this.princAtivo = princAtivo;
 	}
 
 	public String getIdProduto() {
@@ -182,5 +184,12 @@ public class Produto {
 
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
+	}
+	public String getPrincAtivo() {
+		return princAtivo;
+	}
+	
+	public void setPrincAtivo(String princAtivo) {
+		this.princAtivo = princAtivo;
 	}
 }

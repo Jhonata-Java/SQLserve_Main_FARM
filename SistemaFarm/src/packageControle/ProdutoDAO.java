@@ -37,6 +37,7 @@ public class ProdutoDAO {
 			comandoSQL.setString(15,p.getLote());
 			comandoSQL.setString(16,p.getEndereco());
 			
+			
 			comandoSQL.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -78,6 +79,7 @@ public class ProdutoDAO {
 				p.setRegistroAnvisa(rs.getString(15));
 				p.setLote(rs.getString(16));
 				p.setEndereco(rs.getString(17));
+
 				produto.add(p);
 			}
 			
@@ -96,7 +98,7 @@ public class ProdutoDAO {
 		PreparedStatement comandoSQL = null;
 		
 		try {
-			comandoSQL = conexão.prepareStatement("UPDATE Produto SET idFornecedor = ?,  nomeComercial = ?, nomeGenerico = ?, categoria = ?, formaFarmaceutica = ?, concentracao = ?,dosagem = ?, codigo = ?, estoque = ?, precoUn = ?, tipoUn = ?,dataFab = ?,dataVal = ?, registroAnvisa = ?, lote = ?, endereco = ? WHERE codigo = ?");
+			comandoSQL = conexão.prepareStatement("UPDATE Produto SET idFornecedor = ?,  nomeComercial = ?, nomeGenerico = ?, categoria = ?, formaFarmaceutica = ?, concentracao = ?,dosagem = ?, codigo = ?, estoque = ?, precoUn = ?, tipoUn = ?,dataFab = ?,dataVal = ?, registroAnvisa = ?, lote = ?, endereco = ?  WHERE codigo = ?");
 			comandoSQL.setString(1,p.getIdFornecedor());
 			comandoSQL.setString(2,p.getNomeComecial());
 			comandoSQL.setString(3,p.getNomeGenerico());
@@ -153,11 +155,12 @@ public class ProdutoDAO {
 		ArrayList <Produto> produto = new ArrayList<>();
 		
 		try {//like significa "se parece com" ?
-			stmt = con.prepareStatement("SELECT*FROM Produto WHERE nomeComercial like ? OR codigo like ? OR nomeGenerico like ? OR formaFarmaceutica = like ? ");
+			stmt = con.prepareStatement("SELECT*FROM Produto WHERE nomeComercial like ? OR codigo like ? OR nomeGenerico like ? OR formaFarmaceutica = like ? OR princAtivo = like ? ");
 			stmt.setString(1, search);
 			stmt.setString(2, search);
 			stmt.setString(3, search);
 			stmt.setString(4, search);
+			stmt.setString(5, search);
 			rs = stmt.executeQuery();
 			//percorre a tabela
 			while(rs.next())
@@ -180,6 +183,7 @@ public class ProdutoDAO {
 				p.setRegistroAnvisa(rs.getString(15));
 				p.setLote(rs.getString(16));
 				p.setEndereco(rs.getString(17));
+				p.setPrincAtivo(rs.getString(18));
 				produto.add(p);
 			}
 			
