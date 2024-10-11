@@ -30,8 +30,8 @@
                   </Button>
                   <GridPane layoutX="360.0" layoutY="29.0" prefHeight="26.0" prefWidth="290.0">
                      <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.19998779296876" minWidth="10.0" prefWidth="76.79996337890626" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="77.59997558593751" minWidth="10.0" prefWidth="75.20001220703126" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="89.600048828125" minWidth="10.0" prefWidth="80.00001220703125" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="87.19995117187501" minWidth="10.0" prefWidth="72.79998779296876" />
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.39995117187499" minWidth="10.0" prefWidth="52.99998779296874" />
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="84.60002441406252" minWidth="7.200048828125006" prefWidth="84.60002441406252" />
                      </columnConstraints>
@@ -39,10 +39,10 @@
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Button fx:id="btCadastrarFor" mnemonicParsing="false" onAction="#ActionBtCadastrarFor" style="-fx-background-color: black;" text="Cadastrar" textFill="WHITE" />
-                        <Button fx:id="btImprimirFor" mnemonicParsing="false" onAction="#BtImprimirFor" style="-fx-background-color: black;" text="Imprimir" textFill="WHITE" GridPane.columnIndex="1" />
                         <Button fx:id="btEditarFor" mnemonicParsing="false" onAction="#ActionBtEditar" style="-fx-background-color: black;" text="Editar" textFill="WHITE" GridPane.columnIndex="2" />
                         <Button fx:id="btExcluirFor" mnemonicParsing="false" onAction="#ActionBtExcluir" prefHeight="26.0" prefWidth="61.0" style="-fx-background-color: black;" text="Excluir" textFill="WHITE" GridPane.columnIndex="3" />
+                        <Button fx:id="btCadastraFor" mnemonicParsing="false" onAction="#ActionBtCadastra" prefHeight="26.0" prefWidth="73.0" style="-fx-background-color: black;" text="Cadastra" textFill="WHITE" />
+                        <Button fx:id="btImprimir" mnemonicParsing="false" onAction="#ActionBtImprimir" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: black;" text="Imprimir" textFill="WHITE" GridPane.columnIndex="1" />
                      </children>
                   </GridPane>
                   <Button fx:id="BtPesquisarFor" layoutX="321.0" layoutY="30.0" mnemonicParsing="false" onAction="#ActionBtPesquisarFor" prefHeight="25.0" prefWidth="1.0" style="-fx-background-color: #FFFFFF;">
@@ -111,7 +111,7 @@
             </Pane>
             <Pane layoutX="10.0" layoutY="164.0" prefHeight="64.0" prefWidth="124.0">
                <children>
-                  <Button fx:id="btFornecedor" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#ActionbtFornecedor" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Fornecedor" textFill="#0009ff">
+                  <Button alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Fornecedor" textFill="#0009ff">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font>
