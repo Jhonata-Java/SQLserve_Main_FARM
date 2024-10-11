@@ -16,17 +16,14 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="packageController.controllerInfoProduto">
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="packageController.controllerProdutos">
    <children>
       <Pane prefHeight="634.0" prefWidth="828.0" style="-fx-background-color: EAEEF0;">
          <children>
-            <Pane layoutX="166.0" layoutY="25.0" prefHeight="82.0" prefWidth="654.0" style="-fx-background-radius: 10; -fx-background-color: #FFFFFF;">
+            <Pane layoutX="166.0" layoutY="25.0" prefHeight="82.0" prefWidth="641.0" style="-fx-background-radius: 10; -fx-background-color: #FFFFFF;">
                <children>
-                  <TextField fx:id="txtPesquisar" layoutX="14.0" layoutY="26.0" prefHeight="30.0" prefWidth="300.0" promptText="Pesquisar">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font></TextField>
-                  <Button fx:id="btLimpar" layoutX="285.0" layoutY="29.0" mnemonicParsing="false" onAction="#btLimpar" prefHeight="25.0" prefWidth="23.0" style="-fx-background-color: #FFFFFF;" text="X" textFill="#817d7d">
+                  <TextField fx:id="txtPesquisar" layoutX="14.0" layoutY="26.0" prefHeight="30.0" prefWidth="300.0" promptText="Pesquisar" />
+                  <Button fx:id="btLimpar" layoutX="285.0" layoutY="29.0" mnemonicParsing="false" onAction="#btLimpar" prefHeight="25.0" prefWidth="23.0" style="-fx-background-color: white;" text="X" textFill="#817d7d">
                      <font>
                         <Font name="Arial" size="9.0" />
                      </font>
@@ -48,7 +45,7 @@
                         <Button fx:id="btExcluir" mnemonicParsing="false" onAction="#btExcluir" prefHeight="26.0" prefWidth="61.0" style="-fx-background-color: black;" text="Excluir" textFill="WHITE" GridPane.columnIndex="3" />
                      </children>
                   </GridPane>
-                  <Button fx:id="btPesquisar" layoutX="321.0" layoutY="30.0" mnemonicParsing="false" onAction="#ActionBtPesquisar" prefHeight="25.0" prefWidth="1.0" style="-fx-background-color: #FFFFFF;">
+                  <Button layoutX="321.0" layoutY="30.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="1.0" style="-fx-background-color: #FFFFFF;">
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -70,8 +67,8 @@
                      <columns>
                         <TableColumn fx:id="columnID" prefWidth="49.60003662109375" text="ID" />
                         <TableColumn fx:id="columnNomeC" prefWidth="45.5999755859375" text="Nome Comercial" />
-                        <TableColumn fx:id="columnCod" prefWidth="50.39996337890625" text="Codigo" />
-                        <TableColumn fx:id="columnDose" prefWidth="98.4000244140625" text="Dosagem" />
+                        <TableColumn fx:id="columnCod" prefWidth="56.79998779296875" text="Codigo" />
+                        <TableColumn fx:id="columnDose" prefWidth="92.79998779296875" text="Dosagem" />
                         <TableColumn fx:id="columnEst" prefWidth="89.5999755859375" text="Estoque" />
                         <TableColumn fx:id="columnPrecoUn" minWidth="0.0" prefWidth="104.80007934570312" text="Preco Unitario" />
                         <TableColumn fx:id="columnTipoUn" minWidth="0.0" prefWidth="77.5999755859375" text="Tipo Unitario" />
@@ -102,7 +99,7 @@
             </Pane>
             <Pane prefHeight="67.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="btDashboard" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#btDashboard" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Dashboard" textFill="#857e7e">
+                  <Button fx:id="btDashboard" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#btDashboard" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF; -fx-font: Montsserat;" text="Dashboard" textFill="#857e7e">
                      <font>
                         <Font name="Arial" size="12.0" />
                      </font>
