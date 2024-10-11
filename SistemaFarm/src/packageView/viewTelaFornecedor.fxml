@@ -39,10 +39,10 @@
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Button fx:id="btCadastrarFor" mnemonicParsing="false" onAction="#BtCadastrarFor" style="-fx-background-color: black;" text="Cadastrar" textFill="WHITE" />
+                        <Button fx:id="btCadastrarFor" mnemonicParsing="false" onAction="#ActionBtCadastrarFor" style="-fx-background-color: black;" text="Cadastrar" textFill="WHITE" />
                         <Button fx:id="btImprimirFor" mnemonicParsing="false" onAction="#BtImprimirFor" style="-fx-background-color: black;" text="Imprimir" textFill="WHITE" GridPane.columnIndex="1" />
-                        <Button fx:id="btEditarFor" mnemonicParsing="false" onAction="#BtEditar" style="-fx-background-color: black;" text="Editar" textFill="WHITE" GridPane.columnIndex="2" />
-                        <Button fx:id="btExcluirFor" mnemonicParsing="false" onAction="#BtExcluir" prefHeight="26.0" prefWidth="61.0" style="-fx-background-color: black;" text="Excluir" textFill="WHITE" GridPane.columnIndex="3" />
+                        <Button fx:id="btEditarFor" mnemonicParsing="false" onAction="#ActionBtEditar" style="-fx-background-color: black;" text="Editar" textFill="WHITE" GridPane.columnIndex="2" />
+                        <Button fx:id="btExcluirFor" mnemonicParsing="false" onAction="#ActionBtExcluir" prefHeight="26.0" prefWidth="61.0" style="-fx-background-color: black;" text="Excluir" textFill="WHITE" GridPane.columnIndex="3" />
                      </children>
                   </GridPane>
                   <Button fx:id="BtPesquisarFor" layoutX="321.0" layoutY="30.0" mnemonicParsing="false" onAction="#ActionBtPesquisarFor" prefHeight="25.0" prefWidth="1.0" style="-fx-background-color: #FFFFFF;">

@@ -36,9 +36,6 @@ public class Main extends Application {
 //			Parent fxmlMain = FXMLLoader.load(getClass().getResource("/packageView/viewTelaMain.fxml"));
 //			dashboard = new Scene(fxmlMain);
 
-			Parent fxmlVendedor= FXMLLoader.load(getClass().getResource("/packageView/ViewTelaVendedor.fxml"));
-			vendedor = new Scene(fxmlVendedor);
-
 			Parent fxmlProduto = FXMLLoader.load(getClass().getResource("/packageView/viewTelaProdutos.fxml"));
 			produto = new Scene(fxmlProduto);
 
