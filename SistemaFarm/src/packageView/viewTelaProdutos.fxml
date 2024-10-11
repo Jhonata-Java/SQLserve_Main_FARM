@@ -67,13 +67,14 @@
                      <columns>
                         <TableColumn fx:id="columnID" prefWidth="49.60003662109375" text="ID" />
                         <TableColumn fx:id="columnNomeC" prefWidth="45.5999755859375" text="Nome Comercial" />
-                        <TableColumn fx:id="columnCod" prefWidth="56.79998779296875" text="Codigo" />
-                        <TableColumn fx:id="columnDose" prefWidth="92.79998779296875" text="Dosagem" />
-                        <TableColumn fx:id="columnEst" prefWidth="89.5999755859375" text="Estoque" />
-                        <TableColumn fx:id="columnPrecoUn" minWidth="0.0" prefWidth="104.80007934570312" text="Preco Unitario" />
-                        <TableColumn fx:id="columnTipoUn" minWidth="0.0" prefWidth="77.5999755859375" text="Tipo Unitario" />
-                        <TableColumn fx:id="columnDataF" minWidth="0.0" prefWidth="64.7999267578125" text="Data Fabricação" />
-                        <TableColumn fx:id="columnDataV" minWidth="0.0" prefWidth="61.5999755859375" text="Data Validade" />
+                        <TableColumn fx:id="columnCod" prefWidth="35.199951171875" text="Codigo" />
+                        <TableColumn fx:id="columnDose" prefWidth="75.20001220703125" text="Dosagem" />
+                        <TableColumn fx:id="columnEst" prefWidth="64.800048828125" text="Estoque" />
+                        <TableColumn fx:id="columnPrecoUn" minWidth="0.0" prefWidth="89.60006713867188" text="Preco Unitario" />
+                        <TableColumn fx:id="columnTipoUn" minWidth="0.0" prefWidth="68.80010986328125" text="Tipo Unitario" />
+                        <TableColumn fx:id="columnDataF" minWidth="0.0" prefWidth="55.199951171875" text="Data Fabricação" />
+                        <TableColumn fx:id="columnDataV" minWidth="0.0" prefWidth="70.4000244140625" text="Data Validade" />
+                        <TableColumn fx:id="colemnPrincAtivo" minWidth="0.0" prefWidth="84.0" text="Princípio Ativo" />
                      </columns>
                   </TableView>
                   <Button fx:id="btInfo" alignment="TOP_RIGHT" layoutX="544.0" layoutY="10.0" mnemonicParsing="false" onAction="#btInfo" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: black;" text="Informações" textFill="WHITE" />

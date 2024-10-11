@@ -111,14 +111,14 @@ public class controllerInfoProduto {
     	labNomeGen.setText(controllerProdutos.produto.getNomeGenerico());
     	labCodBarras.setText(controllerProdutos.produto.getCodigo());
     	labConcent.setText(controllerProdutos.produto.getConcentracao());
-    	labContraInd.setText(controllerProdutos.produto.getNomeGenerico());
+    	labContraInd.setText(controllerProdutos.produto.getContraInd());
     	labFormaFarm.setText(controllerProdutos.produto.getFormaFarmaceutica());
-    	labInd.setText(controllerProdutos.produto.getNomeGenerico());
-    	labLabor.setText(controllerProdutos.produto.getNomeGenerico());
-    	labLote.setText(controllerProdutos.produto.getNomeGenerico());
-    	labPrincAtivo.setText(controllerProdutos.produto.getNomeGenerico());
+    	labInd.setText(controllerProdutos.produto.getIndicacoes());
+    	labLabor.setText(controllerProdutos.produto.getLaboratorio());
+    	labLote.setText(controllerProdutos.produto.getLote());
+    	labPrincAtivo.setText(controllerProdutos.produto.getPrincAtivo());
     	labRegistANVISA.setText(controllerProdutos.produto.getRegistroAnvisa());
-    	labEfeitCol.setText(controllerProdutos.produto.getRegistroAnvisa());
+    	labEfeitCol.setText(controllerProdutos.produto.getEfeitosColaterais());
     	
     }
 

@@ -59,6 +59,10 @@ public class controllerProdutos implements Initializable{
     @FXML
     private Button btSair;
 
+
+    @FXML
+    private TableColumn<Produto,String> colemnPrincAtivo;
+    
     @FXML
     private TableColumn<Produto,String> columnCod;
 
@@ -202,7 +206,8 @@ public class controllerProdutos implements Initializable{
     	columnID.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
     	columnNomeC.setCellValueFactory(new PropertyValueFactory<>("nomeComercial"));
     	columnPrecoUn.setCellValueFactory(new PropertyValueFactory<>("precoUn"));
-    	columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("TipoUn"));
+    	columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("tipoUn"));
+    	colemnPrincAtivo.setCellValueFactory(new PropertyValueFactory<>("princAtivo"));
     	
     	tabela.setItems(ArrayProduto);
     

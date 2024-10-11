@@ -20,7 +20,11 @@ public class Produto {
 	private String lote;
 	private String endereco;
 	private String princAtivo;
-	
+	private String indicacoes;
+	private String contraInd;
+	private String efeitosColaterais;
+	private String laboratorio;
+
 	public Produto() {
 		super();
 	}
@@ -28,7 +32,7 @@ public class Produto {
 	public Produto(String idProduto, String idFornecedor, String nomeComecial, String nomeGenerico, String categoria,
 			String formaFarmaceutica, String concentracao, String dosagem, String codigo, String estoque,
 			String preocoUN, String tipoUN, String dataFab, String dataVal, String registroAnvisa, String lote,
-			String endereco, String princAtivo) {
+			String endereco, String princAtivo, String indicacoes, String contraInd, String efeitosColaterais, String laboratorio) {
 		super();
 		this.idProduto = idProduto;
 		this.idFornecedor = idFornecedor;
@@ -48,6 +52,10 @@ public class Produto {
 		this.lote = lote;
 		this.endereco = endereco;
 		this.princAtivo = princAtivo;
+		this.indicacoes = indicacoes;
+		this.contraInd = contraInd;
+		this.efeitosColaterais = efeitosColaterais;
+		this.laboratorio = laboratorio;
 	}
 
 	public String getIdProduto() {
@@ -191,5 +199,36 @@ public class Produto {
 	
 	public void setPrincAtivo(String princAtivo) {
 		this.princAtivo = princAtivo;
+	}
+
+	public String getIndicacoes() {
+		return indicacoes;
+	}
+
+	public void setIndicacoes(String indicacoes) {
+		this.indicacoes = indicacoes;
+	}
+
+	public String getContraInd() {
+		return contraInd;
+	}
+
+	public void setContraInd(String contraInd) {
+		this.contraInd = contraInd;
+	}
+
+	public String getEfeitosColaterais() {
+		return efeitosColaterais;
+	}
+
+	public void setEfeitosColaterais(String efeitosColaterais) {
+		this.efeitosColaterais = efeitosColaterais;
+	}
+	public String getLaboratorio() {
+		return laboratorio;
+	}
+	
+	public void setLaboratorio(String laboratorio) {
+		this.laboratorio = laboratorio;
 	}
 }
