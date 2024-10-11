@@ -15,7 +15,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="packageController.controllerRelatorioVenda">
    <children>
-      <Pane prefHeight="634.0" prefWidth="828.0" style="-fx-background-color: EAEEF0;">
+      <Pane layoutY="-2.0" prefHeight="634.0" prefWidth="828.0" style="-fx-background-color: EAEEF0;">
          <children>
             <Pane layoutX="166.0" layoutY="25.0" prefHeight="82.0" prefWidth="641.0" style="-fx-background-radius: 10; -fx-background-color: #FFFFFF;">
                <children>
@@ -42,10 +42,10 @@
                <children>
                   <Label layoutX="14.0" layoutY="14.0" text="Relatório de Vendas" textFill="#3c42ff">
                      <font>
-                        <Font name="Arial Bold" size="15.0" />
+                        <Font name="Arial Bold" size="12.0" />
                      </font>
                   </Label>
-                  <TableView fx:id="tabela" layoutY="43.0" prefHeight="445.0" prefWidth="641.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/tabelaEstlo.css">
+                  <TableView fx:id="tabela" layoutY="43.0" prefHeight="445.0" prefWidth="641.0" style="-fx-border-radius: 20;">
                      <columns>
                         <TableColumn fx:id="columnID" prefWidth="49.60003662109375" text="ID" />
                         <TableColumn fx:id="columnFarmaceutico" prefWidth="121.60003662109375" text="Farmacêutico" />

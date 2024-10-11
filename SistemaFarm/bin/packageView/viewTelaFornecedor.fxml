@@ -39,10 +39,10 @@
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Button fx:id="btCadastrarFor" mnemonicParsing="false" onAction="#btCadastrarFor" style="-fx-background-color: black;" text="Cadastrar" textFill="WHITE" />
-                        <Button fx:id="btImprimirFor" mnemonicParsing="false" onAction="#ActionBtImprimirFor" style="-fx-background-color: black;" text="Imprimir" textFill="WHITE" GridPane.columnIndex="1" />
-                        <Button fx:id="btEditarFor" mnemonicParsing="false" onAction="#ActionBtEditar" style="-fx-background-color: black;" text="Editar" textFill="WHITE" GridPane.columnIndex="2" />
-                        <Button fx:id="btExcluirFor" mnemonicParsing="false" onAction="#ActionBtExcluir" prefHeight="26.0" prefWidth="61.0" style="-fx-background-color: black;" text="Excluir" textFill="WHITE" GridPane.columnIndex="3" />
+                        <Button fx:id="btCadastrarFor" mnemonicParsing="false" onAction="#BtCadastrarFor" style="-fx-background-color: black;" text="Cadastrar" textFill="WHITE" />
+                        <Button fx:id="btImprimirFor" mnemonicParsing="false" onAction="#BtImprimirFor" style="-fx-background-color: black;" text="Imprimir" textFill="WHITE" GridPane.columnIndex="1" />
+                        <Button fx:id="btEditarFor" mnemonicParsing="false" onAction="#BtEditar" style="-fx-background-color: black;" text="Editar" textFill="WHITE" GridPane.columnIndex="2" />
+                        <Button fx:id="btExcluirFor" mnemonicParsing="false" onAction="#BtExcluir" prefHeight="26.0" prefWidth="61.0" style="-fx-background-color: black;" text="Excluir" textFill="WHITE" GridPane.columnIndex="3" />
                      </children>
                   </GridPane>
                   <Button fx:id="BtPesquisarFor" layoutX="321.0" layoutY="30.0" mnemonicParsing="false" onAction="#ActionBtPesquisarFor" prefHeight="25.0" prefWidth="1.0" style="-fx-background-color: #FFFFFF;">
@@ -60,10 +60,10 @@
                <children>
                   <Label layoutX="14.0" layoutY="14.0" text="Fornecedores cadastrados" textFill="#3c42ff">
                      <font>
-                        <Font name="Arial Bold" size="15.0" />
+                        <Font name="Arial Bold" size="12.0" />
                      </font>
                   </Label>
-                  <TableView fx:id="tabelaFor" layoutY="43.0" prefHeight="445.0" prefWidth="641.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/tabelaEstlo.css">
+                  <TableView fx:id="tabelaFor" layoutY="43.0" prefHeight="445.0" prefWidth="641.0" style="-fx-border-radius: 10;">
                      <columns>
                         <TableColumn fx:id="ColumnID" prefWidth="49.60003662109375" text="ID" />
                         <TableColumn fx:id="ColumnNome" prefWidth="50.4000244140625" text="Nome" />
@@ -93,7 +93,7 @@
             </Pane>
             <Pane prefHeight="67.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="btDashboard" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#ActionBtDashboard" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Dashboard" textFill="#9c9c9c">
+                  <Button fx:id="btDashboard" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#ActionbtDashboard" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Dashboard" textFill="#9c9c9c">
                      <font>
                         <Font name="Arial" size="12.0" />
                      </font>
@@ -102,7 +102,7 @@
             </Pane>
             <Pane layoutX="10.0" layoutY="96.0" prefHeight="67.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="btProdutos" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#ActionBtProdutos" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Produtos" textFill="#857e7e">
+                  <Button fx:id="btProdutos" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#ActionbtProdutos" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Produtos" textFill="#857e7e">
                      <font>
                         <Font name="Arial" size="12.0" />
                      </font>
@@ -111,7 +111,7 @@
             </Pane>
             <Pane layoutX="10.0" layoutY="164.0" prefHeight="64.0" prefWidth="124.0">
                <children>
-                  <Button alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Fornecedor" textFill="#0009ff">
+                  <Button fx:id="btFornecedor" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#ActionbtFornecedor" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Fornecedor" textFill="#0009ff">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font>
@@ -121,7 +121,7 @@
             </Pane>
             <Pane layoutX="10.0" layoutY="231.0" prefHeight="67.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="btFarmaceuticos" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="13.0" mnemonicParsing="false" onAction="#ActionBtFarmaceuticos" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Farmaceuticos" textFill="#857e7e">
+                  <Button fx:id="btFarmaceuticos" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="13.0" mnemonicParsing="false" onAction="#ActionbtFarmaceuticos" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Farmaceuticos" textFill="#857e7e">
                      <font>
                         <Font name="Arial" size="12.0" />
                      </font>
@@ -130,7 +130,7 @@
             </Pane>
             <Pane layoutX="10.0" layoutY="298.0" prefHeight="67.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="btRelatorioVendas" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="15.0" layoutY="13.0" mnemonicParsing="false" onAction="#ActionBtRelatorioVendas" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Relatorio de vendas" textFill="#857e7e">
+                  <Button fx:id="btRelatorioVendas" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="15.0" layoutY="13.0" mnemonicParsing="false" onAction="#ActionbtRelatorioVendas" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Relatorio de vendas" textFill="#857e7e">
                      <font>
                         <Font name="Arial" size="12.0" />
                      </font>

@@ -22,7 +22,7 @@
    <children>
       <Pane layoutX="27.0" layoutY="200.0" prefHeight="444.0" prefWidth="563.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">
          <children>
-            <TableView layoutY="171.0" prefHeight="266.0" prefWidth="563.0" stylesheets="@../packageStyle/tabelaMinimalista.css">
+            <TableView layoutY="171.0" prefHeight="266.0" prefWidth="563.0">
               <columns>
                 <TableColumn prefWidth="69.59997749328613" text="Código" />
                 <TableColumn prefWidth="73.59996795654297" text="Produto" />
