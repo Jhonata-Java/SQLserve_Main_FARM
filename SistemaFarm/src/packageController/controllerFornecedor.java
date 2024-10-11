@@ -53,7 +53,7 @@ public class controllerFornecedor implements Initializable{
     private TableColumn<Fornecedor, String> ColumnTelefone;
 
     @FXML
-    private Button btCadastrarFor;
+    private Button btCadastraFor;
 
     @FXML
     private Button btDashboard;
@@ -68,7 +68,7 @@ public class controllerFornecedor implements Initializable{
     private Button btFarmaceuticos;
 
     @FXML
-    private Button btImprimirFor;
+    private Button btImprimir;
 
     @FXML
     private Button btLimpar;
@@ -174,7 +174,14 @@ public class controllerFornecedor implements Initializable{
     }
     
     @FXML
-    void ActionBtImprimirFor(ActionEvent event) {
+    void ActionBtCadastra(ActionEvent event)throws IOException {
+    	fornecedorEditar = null;
+    	Main.TelaCadastraFornecedor();
+    	CarregarTableFornecedor();
+    }
+    
+    @FXML
+    void ActionBtImprimir(ActionEvent event) {
     	
     }
     
@@ -183,30 +190,24 @@ public class controllerFornecedor implements Initializable{
     	txtPesquisar.setText("");
     }
     
-    @FXML
-    void btCadastrarFor(ActionEvent event)throws IOException {
-    	fornecedorEditar = null;
-    	Main.TelaCadastraFornecedor();
-    	CarregarTableFornecedor();
-    }
 
     @FXML
-    void ActionBtFarmaceuticos(ActionEvent event) {
+    void ActionbtFarmaceuticos(ActionEvent event) {
     	Main.changeScreen("vendedor");
     }
     
     @FXML
-    void ActionBtDashboard(ActionEvent event) {
+    void ActionbtDashboard(ActionEvent event) {
     	Main.changeScreen("dashboard");
     }
 
     @FXML
-    void ActionBtProdutos(ActionEvent event) {
+    void ActionbtProdutos(ActionEvent event) {
     	Main.changeScreen("produto");
     }
 
     @FXML
-    void ActionBtRelatorioVendas(ActionEvent event) {
+    void ActionbtRelatorioVendas(ActionEvent event) {
     	Main.changeScreen("relatorioVenda");
     }
 
