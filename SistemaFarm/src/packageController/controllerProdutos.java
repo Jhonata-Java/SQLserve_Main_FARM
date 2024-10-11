@@ -21,6 +21,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import packageController.controllerProdutos;
 import packageControle.ProdutoDAO;
+import packageModel.Farmaceutico;
 import packageModel.Produto;
 
 public class controllerProdutos implements Initializable{
@@ -95,8 +96,9 @@ public class controllerProdutos implements Initializable{
     private TextField txtPesquisar;
     
     private ObservableList<Produto> ArrayProduto;
-    private ProdutoDAO produto = new ProdutoDAO();
+    private ProdutoDAO produtos = new ProdutoDAO();
     public static Produto produtoEditar = new Produto();
+    static Produto produto = new Produto();
 
     @FXML
     void btCadastrar(ActionEvent event) throws IOException {
@@ -194,7 +196,7 @@ public class controllerProdutos implements Initializable{
     
     public void CarregarInfTable()
     {
-    	ArrayProduto = FXCollections.observableArrayList(produto.read());
+    	ArrayProduto = FXCollections.observableArrayList(produtos.read());
 
     	columnCod.setCellValueFactory(new PropertyValueFactory<>("codigo"));
     	columnDataF.setCellValueFactory(new PropertyValueFactory<>("dataFab"));
