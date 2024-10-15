@@ -92,6 +92,9 @@ public class controllerProdutos implements Initializable{
 
     @FXML
     private TableView<Produto> tabela;
+    
+    @FXML
+    private Button btPesquisar;
 
     @FXML
     private TextField txtPesquisar;
@@ -99,7 +102,7 @@ public class controllerProdutos implements Initializable{
     private ObservableList<Produto> ArrayProduto;
     private ProdutoDAO produtos = new ProdutoDAO();
     public static Produto produtoEditar = new Produto();
-    static Produto produto = new Produto();
+ 
 
     @FXML
     void btCadastrar(ActionEvent event) throws IOException {
@@ -138,13 +141,13 @@ public class controllerProdutos implements Initializable{
 			p = tabela.getItems().get(i);
 
 			Alert mensagemDeErro = new Alert(Alert.AlertType.CONFIRMATION);
-		//	mensagemDeErro.setContentText("Deseja realmente EXCLUIR o produto: " + p.getnomeComercial());
+			mensagemDeErro.setContentText("Deseja realmente EXCLUIR o produto: " + p.getNomeComecial());
 
 			Optional<ButtonType> resultado = mensagemDeErro.showAndWait();
 
 			if (resultado.isPresent() && resultado.get() == ButtonType.OK) {
 				ProdutoDAO PR = new ProdutoDAO();
-			//	PR.delete(p.getcodigo());
+				PR.delete(p.getCodigo());
 
 				Alert mensagemDeExclusao = new Alert(Alert.AlertType.INFORMATION);
 				mensagemDeExclusao.setContentText("Produto excluido com sucesso!!!");
@@ -153,6 +156,8 @@ public class controllerProdutos implements Initializable{
 			}
 		}
     }
+    
+
 
     @FXML
     void btFarmaceuticos(ActionEvent event) {
@@ -178,7 +183,6 @@ public class controllerProdutos implements Initializable{
     void btLimpar(ActionEvent event) {
     	 txtPesquisar.setText("");
     }
-
     @FXML
     void btProdutos(ActionEvent event) {
     	Main.changeScreen("produto");
@@ -194,6 +198,25 @@ public class controllerProdutos implements Initializable{
    	 Main.changeScreen("dashboard");
     }
     
+    @FXML
+    void btPesquisar(ActionEvent event) {
+    	ArrayProduto = FXCollections.observableArrayList(produtos.search(txtPesquisar.getText()));
+    	
+    	colemnPrincAtivo.setCellValueFactory(new PropertyValueFactory<>("princAtivo"));
+    	columnCod.setCellValueFactory(new PropertyValueFactory<>("codigo"));
+    	columnDataF.setCellValueFactory(new PropertyValueFactory<>("dataFab"));
+    	columnDataV.setCellValueFactory(new PropertyValueFactory<>("dataVal"));
+    	columnDose.setCellValueFactory(new PropertyValueFactory<>("dosagem"));
+    	columnEst.setCellValueFactory(new PropertyValueFactory<>("estoque"));
+    	columnID.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
+    	columnNomeC.setCellValueFactory(new PropertyValueFactory<>("nomeComecial"));
+    	columnPrecoUn.setCellValueFactory(new PropertyValueFactory<>("preocoUN"));
+    	columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("tipoUN"));
+    	
+    	
+    	tabela.setItems(ArrayProduto);
+    	tabela.refresh();
+    }
     public void CarregarInfTable()
     {
     	ArrayProduto = FXCollections.observableArrayList(produtos.read());
@@ -204,9 +227,9 @@ public class controllerProdutos implements Initializable{
     	columnDose.setCellValueFactory(new PropertyValueFactory<>("dosagem"));
     	columnEst.setCellValueFactory(new PropertyValueFactory<>("estoque"));
     	columnID.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
-    	columnNomeC.setCellValueFactory(new PropertyValueFactory<>("nomeComercial"));
-    	columnPrecoUn.setCellValueFactory(new PropertyValueFactory<>("precoUn"));
-    	columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("tipoUn"));
+    	columnNomeC.setCellValueFactory(new PropertyValueFactory<>("nomeComecial"));
+    	columnPrecoUn.setCellValueFactory(new PropertyValueFactory<>("preocoUN"));
+    	columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("tipoUN"));
     	colemnPrincAtivo.setCellValueFactory(new PropertyValueFactory<>("princAtivo"));
     	
     	tabela.setItems(ArrayProduto);
