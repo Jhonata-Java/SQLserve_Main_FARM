@@ -18,7 +18,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import packageControle.ProdutoDAO;
-import packageModel.Farmaceutico;
 import packageModel.Produto;
 
 public class controllerProdutos implements Initializable{
@@ -59,10 +58,6 @@ public class controllerProdutos implements Initializable{
     @FXML
     private Button btSair;
 
-
-    @FXML
-    private TableColumn<Produto,String> colemnPrincAtivo;
-    
     @FXML
     private TableColumn<Produto,String> columnCod;
 
@@ -206,8 +201,7 @@ public class controllerProdutos implements Initializable{
     	columnID.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
     	columnNomeC.setCellValueFactory(new PropertyValueFactory<>("nomeComercial"));
     	columnPrecoUn.setCellValueFactory(new PropertyValueFactory<>("precoUn"));
-    	columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("tipoUn"));
-    	colemnPrincAtivo.setCellValueFactory(new PropertyValueFactory<>("princAtivo"));
+    	columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("TipoUn"));
     	
     	tabela.setItems(ArrayProduto);
     
