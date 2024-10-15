@@ -84,6 +84,9 @@ public class controllerProdutos implements Initializable{
 
     @FXML
     private TableColumn<Produto,String> columnTipoUn;
+    
+    @FXML
+    private TableColumn<Produto, String> colemnPrincAtivo;
 
     @FXML
     private TableView<Produto> tabela;
@@ -222,16 +225,13 @@ public class controllerProdutos implements Initializable{
     	columnDose.setCellValueFactory(new PropertyValueFactory<>("dosagem"));
     	columnEst.setCellValueFactory(new PropertyValueFactory<>("estoque"));
     	columnID.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
-<<<<<<< HEAD
     	columnNomeC.setCellValueFactory(new PropertyValueFactory<>("nomeComercial"));
     	columnPrecoUn.setCellValueFactory(new PropertyValueFactory<>("precoUn"));
     	columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("TipoUn"));
-=======
     	columnNomeC.setCellValueFactory(new PropertyValueFactory<>("nomeComecial"));
     	columnPrecoUn.setCellValueFactory(new PropertyValueFactory<>("preocoUN"));
     	columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("tipoUN"));
     	colemnPrincAtivo.setCellValueFactory(new PropertyValueFactory<>("princAtivo"));
->>>>>>> branch 'master' of https://github.com/Jhonata-Java/Sistema-FARM.git
     	
     	tabela.setItems(ArrayProduto);
     
