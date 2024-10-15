@@ -16,8 +16,8 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.control.cell.PropertyValueFactory;
 import packageControle.ProdutoDAO;
+import packageModel.Farmaceutico;
 import packageModel.Produto;
 
 public class controllerProdutos implements Initializable{
@@ -97,6 +97,7 @@ public class controllerProdutos implements Initializable{
     private ObservableList<Produto> ArrayProduto;
     private ProdutoDAO produtos = new ProdutoDAO();
     public static Produto produtoEditar = new Produto();
+    static Produto produto = new Produto();
  
 
     @FXML
