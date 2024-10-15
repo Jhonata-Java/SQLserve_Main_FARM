@@ -77,65 +77,16 @@ public class controllerCasdastraProduto implements Initializable {
 	private TextField textQuant;
 
 	@FXML
+	private TextField textTipoUn;
+	
+	@FXML
+	private TextField textLocalizacao;
+	@FXML
 	private TextField textRegistroANVISA;
 
 	@FXML
 	private TextField textTarja;
 
-<<<<<<< HEAD
-    @FXML
-    void btCadastrar(ActionEvent event) {
-    	if(controllerProdutos.produtoEditar == null) {
-    		Produto produto = new Produto();
-    		produto.setNomeComecial(textNomeC.getText());
-    		produto.setNomeGenerico(textNomeG.getText());
-    		produto.setCategoria(textCat.getText());
-    		produto.setFormaFarmaceutica(textFormaF.getText());
-    		produto.setConcentracao(textConc.getText());
-    		produto.setDosagem(textDose.getText());
-    		produto.setCodigo(textCodigoBar.getText());
-    		produto.setEstoque(textQuant.getText());
-    		produto.setPreocoUN(textPrecoUn.getText());
-    		produto.setTipoUN(textTipoUn.getText());
-    		produto.setDataFab(textDataF.getText());
-    		produto.setDataFab(textDataVal.getText());
-    		produto.setRegistroAnvisa(textRegistroANVISA.getText());
-    		produto.setLote(textLote.getText());
-    		produto.setEndereco(textLocalizacao.getText());
-    		
-    		ProdutoDAO forn = new ProdutoDAO();
-    		forn.create(produto);
-    		
-    		Stage stage = (Stage) btCancelar.getScene().getWindow();
-    		stage.close();
-    	}
-    	else {
-    		Fornecedor fornecedor = new Fornecedor();
-//    		fornecedor.setNome(textNomeLab.getText());
-//    		fornecedor.setCNPJ(textCNPJ.getText());
-//    		fornecedor.setInscricaoEstadual(textInscEsta.getText());
-//    		fornecedor.setEmail(textEmail.getText());
-//    		fornecedor.setTelefone(textFone.getText());
-//    		fornecedor.setNomeResponsavel(textRespons.getText());
-//    		fornecedor.setRamoAtuacao(textRamoAtuac.getText());
-//    		fornecedor.setEnderco(textEnder.getText());
-//    		
-    		FornecedorDAO forn = new FornecedorDAO();
-    		forn.update(fornecedor);
-    		
-    		Stage stage = (Stage) btCancelar.getScene().getWindow();
-    		stage.close();
-    	}
-    }
-=======
-	@FXML
-	private TextField textTipoUn;
->>>>>>> branch 'master' of https://github.com/Jhonata-Java/Sistema-FARM.git
-
-	@FXML
-	private TextField textLocalizacao;
-
-	@FXML
 	void btCadastrar(ActionEvent event) {
 		if (controllerProdutos.produtoEditar == null) {
 			Produto produto = new Produto();

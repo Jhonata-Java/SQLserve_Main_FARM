@@ -111,7 +111,7 @@ public class controllerInfoProduto {
     void btPesquisar(ActionEvent event) {
     	ArrayProduto = FXCollections.observableArrayList(produto.search(txtPesquisar.getText()));
 
-    	labNomeGen.setText(controllerProdutos.Produto.getNomeGenerico());
+    	labNomeGen.setText(controllerProdutos.produto.getNomeGenerico());
     	labCodBarras.setText(controllerProdutos.produto.getCodigo());
     	labConcent.setText(controllerProdutos.produto.getConcentracao());
     	labContraInd.setText(controllerProdutos.produto.getContraInd());
