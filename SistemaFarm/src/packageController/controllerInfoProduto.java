@@ -77,7 +77,10 @@ public class controllerInfoProduto {
     private TextField txtPesquisar;
     
     private ObservableList<Produto> ArrayProduto;
+    
     private ProdutoDAO produto = new ProdutoDAO();
+    
+
 
     @FXML
     void btDashboard(ActionEvent event) {
@@ -108,7 +111,7 @@ public class controllerInfoProduto {
     void btPesquisar(ActionEvent event) {
     	ArrayProduto = FXCollections.observableArrayList(produto.search(txtPesquisar.getText()));
 
-    	labNomeGen.setText(controllerProdutos.produto.getNomeGenerico());
+    	labNomeGen.setText(controllerProdutos.Produto.getNomeGenerico());
     	labCodBarras.setText(controllerProdutos.produto.getCodigo());
     	labConcent.setText(controllerProdutos.produto.getConcentracao());
     	labContraInd.setText(controllerProdutos.produto.getContraInd());
