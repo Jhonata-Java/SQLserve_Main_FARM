@@ -108,6 +108,7 @@ public class controllerProdutos implements Initializable{
     void btCadastrar(ActionEvent event) throws IOException {
     	produtoEditar = null;
 		Main.TelaCadastroProduto();
+		CarregarInfTable();
     }
 
     @FXML
@@ -126,6 +127,7 @@ public class controllerProdutos implements Initializable{
 			produtoEditar = tabela.getItems().get(i);
 			Main.TelaCadastroProduto();
 		}
+    	CarregarInfTable();
     }
 
     @FXML
