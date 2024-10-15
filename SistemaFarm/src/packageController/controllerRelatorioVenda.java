@@ -12,8 +12,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import packageModel.Compra;
+import packageControle.ProdutoDAO;
 import packageModel.Produto;
+import packageModel.Venda;
 
 public class controllerRelatorioVenda {
 
@@ -74,7 +75,8 @@ public class controllerRelatorioVenda {
     @FXML
     
     private ObservableList<Produto> ArrayProduto;
-    public static Compra CompraEditar = new Compra();
+    public static Venda CompraEditar = new Venda();
+    private ProdutoDAO produto = new ProdutoDAO();
     
     void btCadastrar(ActionEvent event) throws IOException {
     	CompraEditar = null;
@@ -125,17 +127,15 @@ public class controllerRelatorioVenda {
     @FXML
     void btSair(ActionEvent event) {
     	Main.changeScreen("dashboard");
-    }
-
-    @FXML
-    void CarregarTable() {
+    } 
+    
+    public void CarregarTable() {
 
     	ArrayProduto = FXCollections.observableArrayList(produto.read());
 
-    	columnFarmaceutico.setCellValueFactory(new PropertyValueFactory<>("codigo"));
-    	columnDataVenda.setText(controllerLogin.compra.getNome());
-    	
-    	columnID.setCellValueFactory(new PropertyValueFactory<>("dataVal"));
+    	columnDataVenda.setText(controllerProdutos.compra.getDataVenda());
+    	columnFarmaceutico.setCellValueFactory(new PropertyValueFactory<>("idFornecedor"));
+       	columnID.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
     	columnPrecoTotal.setCellValueFactory(new PropertyValueFactory<>("dosagem"));
     	columnProduto.setCellValueFactory(new PropertyValueFactory<>("estoque"));
     	columnQuantidade.setCellValueFactory(new PropertyValueFactory<>("idProduto"));

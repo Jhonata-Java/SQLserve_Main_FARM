@@ -20,6 +20,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import packageControle.ProdutoDAO;
 import packageModel.Produto;
+import packageModel.Venda;
 
 public class controllerProdutos implements Initializable{
 
@@ -102,6 +103,8 @@ public class controllerProdutos implements Initializable{
     private ProdutoDAO produtos = new ProdutoDAO();
     public static Produto produtoEditar = new Produto();
     static Produto produto = new Produto();
+    static Venda compra = new Venda();
+    
  
 
     @FXML
