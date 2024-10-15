@@ -204,7 +204,7 @@ public class controllerFarmaceutico implements Initializable{
 
     @FXML
     void ActionBtSair(ActionEvent event) {
-    	Main.changeScreen("main");
+    	Main.changeScreen("login");
     }
 
 	@Override

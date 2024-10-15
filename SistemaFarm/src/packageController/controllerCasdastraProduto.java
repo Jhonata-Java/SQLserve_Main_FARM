@@ -118,15 +118,15 @@ public class controllerCasdastraProduto implements Initializable{
     	}
     	else {
     		Fornecedor fornecedor = new Fornecedor();
-    		fornecedor.setNome(textNomeLab.getText());
-    		fornecedor.setCNPJ(textCNPJ.getText());
-    		fornecedor.setInscricaoEstadual(textInscEsta.getText());
-    		fornecedor.setEmail(textEmail.getText());
-    		fornecedor.setTelefone(textFone.getText());
-    		fornecedor.setNomeResponsavel(textRespons.getText());
-    		fornecedor.setRamoAtuacao(textRamoAtuac.getText());
-    		fornecedor.setEnderco(textEnder.getText());
-    		
+//    		fornecedor.setNome(textNomeLab.getText());
+//    		fornecedor.setCNPJ(textCNPJ.getText());
+//    		fornecedor.setInscricaoEstadual(textInscEsta.getText());
+//    		fornecedor.setEmail(textEmail.getText());
+//    		fornecedor.setTelefone(textFone.getText());
+//    		fornecedor.setNomeResponsavel(textRespons.getText());
+//    		fornecedor.setRamoAtuacao(textRamoAtuac.getText());
+//    		fornecedor.setEnderco(textEnder.getText());
+//    		
     		FornecedorDAO forn = new FornecedorDAO();
     		forn.update(fornecedor);
     		

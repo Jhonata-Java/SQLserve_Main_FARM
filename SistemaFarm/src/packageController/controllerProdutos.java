@@ -197,17 +197,17 @@ public class controllerProdutos implements Initializable{
     void btPesquisar(ActionEvent event) {
     	ArrayProduto = FXCollections.observableArrayList(produtos.search(txtPesquisar.getText()));
     	
-    	colemnPrincAtivo.setCellValueFactory(new PropertyValueFactory<>("princAtivo"));
-    	columnCod.setCellValueFactory(new PropertyValueFactory<>("codigo"));
-    	columnDataF.setCellValueFactory(new PropertyValueFactory<>("dataFab"));
-    	columnDataV.setCellValueFactory(new PropertyValueFactory<>("dataVal"));
-    	columnDose.setCellValueFactory(new PropertyValueFactory<>("dosagem"));
-    	columnEst.setCellValueFactory(new PropertyValueFactory<>("estoque"));
-    	columnID.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
-    	columnNomeC.setCellValueFactory(new PropertyValueFactory<>("nomeComecial"));
-    	columnPrecoUn.setCellValueFactory(new PropertyValueFactory<>("preocoUN"));
-    	columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("tipoUN"));
-    	
+//    	colemnPrincAtivo.setCellValueFactory(new PropertyValueFactory<>("princAtivo"));
+//    	columnCod.setCellValueFactory(new PropertyValueFactory<>("codigo"));
+//    	columnDataF.setCellValueFactory(new PropertyValueFactory<>("dataFab"));
+//    	columnDataV.setCellValueFactory(new PropertyValueFactory<>("dataVal"));
+//    	columnDose.setCellValueFactory(new PropertyValueFactory<>("dosagem"));
+//    	columnEst.setCellValueFactory(new PropertyValueFactory<>("estoque"));
+//    	columnID.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
+//    	columnNomeC.setCellValueFactory(new PropertyValueFactory<>("nomeComecial"));
+//    	columnPrecoUn.setCellValueFactory(new PropertyValueFactory<>("preocoUN"));
+//    	columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("tipoUN"));
+//    	
     	
     	tabela.setItems(ArrayProduto);
     	tabela.refresh();
@@ -216,23 +216,20 @@ public class controllerProdutos implements Initializable{
     {
     	ArrayProduto = FXCollections.observableArrayList(produtos.read());
 
-    	columnCod.setCellValueFactory(new PropertyValueFactory<>("codigo"));
-    	columnDataF.setCellValueFactory(new PropertyValueFactory<>("dataFab"));
-    	columnDataV.setCellValueFactory(new PropertyValueFactory<>("dataVal"));
-    	columnDose.setCellValueFactory(new PropertyValueFactory<>("dosagem"));
-    	columnEst.setCellValueFactory(new PropertyValueFactory<>("estoque"));
-    	columnID.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
-<<<<<<< HEAD
-    	columnNomeC.setCellValueFactory(new PropertyValueFactory<>("nomeComercial"));
-    	columnPrecoUn.setCellValueFactory(new PropertyValueFactory<>("precoUn"));
-    	columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("TipoUn"));
-=======
-    	columnNomeC.setCellValueFactory(new PropertyValueFactory<>("nomeComecial"));
-    	columnPrecoUn.setCellValueFactory(new PropertyValueFactory<>("preocoUN"));
-    	columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("tipoUN"));
-    	colemnPrincAtivo.setCellValueFactory(new PropertyValueFactory<>("princAtivo"));
->>>>>>> branch 'master' of https://github.com/Jhonata-Java/Sistema-FARM.git
-    	
+//    	columnCod.setCellValueFactory(new PropertyValueFactory<>("codigo"));
+//    	columnDataF.setCellValueFactory(new PropertyValueFactory<>("dataFab"));
+//    	columnDataV.setCellValueFactory(new PropertyValueFactory<>("dataVal"));
+//    	columnDose.setCellValueFactory(new PropertyValueFactory<>("dosagem"));
+//    	columnEst.setCellValueFactory(new PropertyValueFactory<>("estoque"));
+//    	columnID.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
+//    	columnNomeC.setCellValueFactory(new PropertyValueFactory<>("nomeComercial"));
+//    	columnPrecoUn.setCellValueFactory(new PropertyValueFactory<>("precoUn"));
+//    	columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("TipoUn"));
+//    	columnNomeC.setCellValueFactory(new PropertyValueFactory<>("nomeComecial"));
+//    	columnPrecoUn.setCellValueFactory(new PropertyValueFactory<>("preocoUN"));
+//    	columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("tipoUN"));
+//    	columnPrincAtivo.setCellValueFactory(new PropertyValueFactory<>("princAtivo"));
+//    	
     	tabela.setItems(ArrayProduto);
     
     }

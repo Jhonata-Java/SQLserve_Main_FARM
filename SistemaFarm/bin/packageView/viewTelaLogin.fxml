@@ -31,7 +31,7 @@
                               <Font name="Arial" size="14.0" />
                            </font>
                         </Text>
-                        <TextField fx:id="txtUser" prefHeight="49.0" prefWidth="259.0" promptText="Ex: 87364928044" style="-fx-background-insets: 999; -fx-border-color: white; -fx-border-radius: 10; -fx-background-color: white;">
+                        <TextField fx:id="txtUser" prefHeight="49.0" prefWidth="259.0" promptText="Ex: 87364928044" style="-fx-border-color: white; -fx-border-radius: 10; -fx-background-color: white;">
                            <font>
                               <Font name="Arial" size="12.0" />
                            </font>
@@ -48,7 +48,7 @@
                                     <Font name="Arial" size="14.0" />
                                  </font>
                               </Text>
-                              <PasswordField fx:id="txtPassword" layoutY="16.0" prefHeight="49.0" prefWidth="259.0" style="-fx-background-insets: 999; -fx-border-color: white; -fx-border-radius: 10;" />
+                              <PasswordField fx:id="txtPassword" layoutY="16.0" prefHeight="49.0" prefWidth="259.0" style="-fx-border-color: white; -fx-border-radius: 10;" />
                            </children>
                         </Group>
                      </children>
