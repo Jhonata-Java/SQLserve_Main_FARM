@@ -18,7 +18,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="packageController.controllerFornecedor">
    <children>
-      <Pane prefHeight="634.0" prefWidth="828.0" style="-fx-background-color: EAEEF0;">
+      <Pane prefHeight="634.0" prefWidth="828.0" style="-fx-background-color: #eaeef0;">
          <children>
             <Pane layoutX="166.0" layoutY="25.0" prefHeight="82.0" prefWidth="641.0" style="-fx-background-radius: 10; -fx-background-color: #FFFFFF;">
                <children>
@@ -41,7 +41,7 @@
                      <children>
                         <Button fx:id="btEditarFor" mnemonicParsing="false" onAction="#ActionBtEditar" style="-fx-background-color: black;" text="Editar" textFill="WHITE" GridPane.columnIndex="2" />
                         <Button fx:id="btExcluirFor" mnemonicParsing="false" onAction="#ActionBtExcluir" prefHeight="26.0" prefWidth="61.0" style="-fx-background-color: black;" text="Excluir" textFill="WHITE" GridPane.columnIndex="3" />
-                        <Button fx:id="btCadastraFor" mnemonicParsing="false" onAction="#ActionBtCadastra" prefHeight="26.0" prefWidth="73.0" style="-fx-background-color: black;" text="Cadastra" textFill="WHITE" />
+                        <Button fx:id="btCadastraFor" mnemonicParsing="false" onAction="#ActionBtCadastra" prefHeight="26.0" prefWidth="73.0" style="-fx-background-color: black;" text="Cadastrar" textFill="WHITE" />
                         <Button fx:id="btImprimir" mnemonicParsing="false" onAction="#ActionBtImprimir" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: black;" text="Imprimir" textFill="WHITE" GridPane.columnIndex="1" />
                      </children>
                   </GridPane>

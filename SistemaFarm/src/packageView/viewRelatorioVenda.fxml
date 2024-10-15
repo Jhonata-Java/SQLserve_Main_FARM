@@ -15,7 +15,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="packageController.controllerRelatorioVenda">
    <children>
-      <Pane layoutY="-2.0" prefHeight="634.0" prefWidth="828.0" style="-fx-background-color: EAEEF0;">
+      <Pane layoutY="-2.0" prefHeight="634.0" prefWidth="828.0" style="-fx-background-color: #eaeef0;">
          <children>
             <Pane layoutX="166.0" layoutY="25.0" prefHeight="82.0" prefWidth="641.0" style="-fx-background-radius: 10; -fx-background-color: #FFFFFF;">
                <children>
