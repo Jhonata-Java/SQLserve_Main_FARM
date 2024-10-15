@@ -103,7 +103,9 @@ public class Main extends Application {
 		dashboard = new Scene(TelaHome);
 		stage.setScene(dashboard);
 		stage.setResizable(false);
+		stage.centerOnScreen();
 		stage.show();
+
 	
 	}
 
@@ -119,6 +121,9 @@ public class Main extends Application {
 		cadProduto.setScene(scene2);
 		cadProduto.centerOnScreen();
 		cadProduto.showAndWait();
+		cadProduto.centerOnScreen();
+
+
 	}
 	
 	public static void TelaRegistraVenda() throws IOException {
@@ -133,6 +138,7 @@ public class Main extends Application {
 		cadRegistra.setScene(scene2);
 		cadRegistra.centerOnScreen();
 		cadRegistra.showAndWait();
+		cadRegistra.centerOnScreen();
 	}
 	public static void TelaCadastraFornecedor() throws IOException {
 		FXMLLoader CadFornecedor = new FXMLLoader();
@@ -146,6 +152,9 @@ public class Main extends Application {
 		cadFornecedor.setScene(scene2);
 		cadFornecedor.centerOnScreen();
 		cadFornecedor.showAndWait();
+		cadFornecedor.centerOnScreen();
+		
+		
 	}
 	public static void TelaCadastraFarmaceutico() throws IOException {
 		FXMLLoader CadVendedor = new FXMLLoader();
@@ -159,6 +168,7 @@ public class Main extends Application {
 		cadVendedor.setScene(scene2);
 		cadVendedor.centerOnScreen();
 		cadVendedor.showAndWait();
+		cadVendedor.centerOnScreen();
 	}
 
 	public static void main(String[] args) {
