@@ -79,6 +79,7 @@ public class ProdutoDAO {
 				p.setRegistroAnvisa(rs.getString(15));
 				p.setLote(rs.getString(16));
 				p.setEndereco(rs.getString(17));
+				p.setPrincAtivo(rs.getString(18));
 
 				produto.add(p);
 			}
@@ -155,7 +156,7 @@ public class ProdutoDAO {
 		ArrayList <Produto> produto = new ArrayList<>();
 		
 		try {//like significa "se parece com" ?
-			stmt = con.prepareStatement("SELECT*FROM Produto WHERE nomeComercial like ? OR codigo like ? OR nomeGenerico like ? OR formaFarmaceutica = like ? OR princAtivo = like ? ");
+			stmt = con.prepareStatement("SELECT*FROM Produto WHERE nomeComercial like ? OR codigo like ? OR nomeGenerico like ? OR formaFarmaceutica  like ? OR princAtivo  like ? ");
 			stmt.setString(1, search);
 			stmt.setString(2, search);
 			stmt.setString(3, search);
