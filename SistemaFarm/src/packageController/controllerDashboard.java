@@ -138,7 +138,7 @@ public class controllerDashboard  implements Initializable {
 
     @FXML
     void btRelatorioVendas(ActionEvent event) {
-    	 Main.changeScreen("relatorio");
+    	 Main.changeScreen("relatorioVenda");
     }
 
     @FXML
@@ -171,7 +171,7 @@ public class controllerDashboard  implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		labelNome.setText(controllerLogin.farmaceutico.getNome());
-		 CarregarTable();
+		CarregarTable();
 	}
 }
 

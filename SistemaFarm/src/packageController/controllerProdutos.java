@@ -192,7 +192,7 @@ public class controllerProdutos implements Initializable{
 
     @FXML
     void btRelatorioVendas(ActionEvent event) {
-   	 Main.changeScreen("registraVenda");
+   	 Main.changeScreen("relatorioVenda");
     }
 
     @FXML
