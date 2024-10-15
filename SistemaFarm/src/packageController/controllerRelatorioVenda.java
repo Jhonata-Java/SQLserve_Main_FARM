@@ -71,17 +71,15 @@ public class controllerRelatorioVenda {
 
     @FXML
     private TextField txtPesquisar;
-
-    @FXML
     
     private ObservableList<Produto> ArrayProduto;
     public static Venda CompraEditar = new Venda();
     private ProdutoDAO produto = new ProdutoDAO();
     
+    @FXML
     void btCadastrar(ActionEvent event) throws IOException {
     	CompraEditar = null;
 		Main.TelaRegistraVenda();
-		CarregarTable();
     }
 
     @FXML
