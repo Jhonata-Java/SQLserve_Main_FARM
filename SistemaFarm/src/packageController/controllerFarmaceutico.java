@@ -207,11 +207,17 @@ public class controllerFarmaceutico implements Initializable{
     	Main.changeScreen("login");
     }
 
+    @FXML
+    public void btActionFarmaceutico(ActionEvent event) {
+    	Main.changeScreen("vendedor");
+    }
+    
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		CarregarTableFarmaceudico();
 	}
+	
 	
 
 }
