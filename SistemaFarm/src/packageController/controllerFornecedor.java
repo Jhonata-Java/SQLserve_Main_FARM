@@ -105,7 +105,7 @@ public class controllerFornecedor implements Initializable{
     	ColumnRamoAtua.setCellValueFactory(new PropertyValueFactory<>("ramoAtuacao"));
     	ColumnEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
     	ColumnTelefone.setCellValueFactory(new PropertyValueFactory<>("telefone"));
-    	ColumnEndereco.setCellValueFactory(new PropertyValueFactory<>("endereco"));
+    	ColumnEndereco.setCellValueFactory(new PropertyValueFactory<>("enderco"));
     	
     	tabelaFor.setItems(ArrayFornecedor);
     }
@@ -167,7 +167,7 @@ public class controllerFornecedor implements Initializable{
     	ColumnRamoAtua.setCellValueFactory(new PropertyValueFactory<>("ramoAtuacao"));
     	ColumnEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
     	ColumnTelefone.setCellValueFactory(new PropertyValueFactory<>("telefone"));
-    	ColumnEndereco.setCellValueFactory(new PropertyValueFactory<>("endereco"));
+    	ColumnEndereco.setCellValueFactory(new PropertyValueFactory<>("enderco"));
     	
     	tabelaFor.setItems(ArrayFornecedor);
     	tabelaFor.refresh();

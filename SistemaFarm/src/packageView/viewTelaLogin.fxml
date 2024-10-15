@@ -48,7 +48,7 @@
                                     <Font name="Arial" size="14.0" />
                                  </font>
                               </Text>
-                              <PasswordField fx:id="txtPassword" layoutY="16.0" prefHeight="49.0" prefWidth="259.0" promptText="*****" style="-fx-border-color: white; -fx-border-radius: 10;" />
+                              <PasswordField fx:id="txtPassword" layoutY="16.0" prefHeight="49.0" prefWidth="259.0" style="-fx-border-color: white; -fx-border-radius: 10;" />
                            </children>
                         </Group>
                      </children>
