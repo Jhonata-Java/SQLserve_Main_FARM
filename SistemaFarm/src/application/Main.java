@@ -174,49 +174,52 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		Connection con = ConnectionDATABASE.getConnection();
 		ConnectionDATABASE.closeConnection(con);
-		
-//		ArrayList<Fornecedor> fornecedor = new ArrayList<>();
-//		FornecedorDAO cp = new FornecedorDAO();
-//		Fornecedor p1 = new Fornecedor();
-//		
-//		cp.delete("8");
-//		p1.setIdCliente("10");
-//		p1.setIdVendedor("1");
-//		p1.setIdProduto("3");
-//		p1.setQuantidade("22");
-//		p1.setPrecoTotal("300.00");
-//		p1.setDataFab("2006-09-30");
-//		p1.setDataVal("2024-09-30");
-//		cp.update(p1);
-//		System.out.println(compra);
-//		
-//		p1.setNome("Junior");
-//		p1.setIdVendedor("3");
-//		p1.setIdProduto("3");
-//		p1.setQuantidade("22");
-//		p1.setPrecoTotal("400.00");
-//		p1.setDataFab("2006-09-30");
-//		p1.setDataVal("2024-09-30");
-//
-//		VendedorDAO c1 = new VendedorDAO();
-//		cp.create(p1);
-//		
-//		fornecedor = cp.read();
-//		for(int i = 0; i < fornecedor.size(); i++)//Mostra as informações da tabela.
-//		{
-//			Fornecedor plc = fornecedor.get(i);
-//			System.out.println();
-//			System.out.print(plc.getIdFornecedor() + "| ");
-//			System.out.print(plc.getNome() + "| ");
-//			System.out.print(plc.getCNPJ() + "| ");
-//			System.out.print(plc.getEmail() + "| ");
-//			System.out.print(plc.getTelefone() + "| ");
-//			System.out.print(plc.getEndereco() + "| ");
-//			System.out.print(plc.getDataVal() + "| ");
-//		}
-//		ClienteDAO cliente = new ClienteDAO();
-//		System.out.println(cliente.read());
 
 		launch(args);
 	}
 }
+
+
+
+
+//ArrayList<Fornecedor> fornecedor = new ArrayList<>();
+//FornecedorDAO cp = new FornecedorDAO();
+//Fornecedor p1 = new Fornecedor();
+//
+//cp.delete("8");
+//p1.setIdCliente("10");
+//p1.setIdVendedor("1");
+//p1.setIdProduto("3");
+//p1.setQuantidade("22");
+//p1.setPrecoTotal("300.00");
+//p1.setDataFab("2006-09-30");
+//p1.setDataVal("2024-09-30");
+//cp.update(p1);
+//System.out.println(compra);
+//
+//p1.setNome("Junior");
+//p1.setIdVendedor("3");
+//p1.setIdProduto("3");
+//p1.setQuantidade("22");
+//p1.setPrecoTotal("400.00");
+//p1.setDataFab("2006-09-30");
+//p1.setDataVal("2024-09-30");
+//
+//VendedorDAO c1 = new VendedorDAO();
+//cp.create(p1);
+//
+//fornecedor = cp.read();
+//for(int i = 0; i < fornecedor.size(); i++)//Mostra as informações da tabela.
+//{
+//	Fornecedor plc = fornecedor.get(i);
+//	System.out.println();
+//	System.out.print(plc.getIdFornecedor() + "| ");
+//	System.out.print(plc.getNome() + "| ");
+//	System.out.print(plc.getCNPJ() + "| ");
+//	System.out.print(plc.getEmail() + "| ");
+//	System.out.print(plc.getTelefone() + "| ");
+//	System.out.print(plc.getEndereco() + "| ");
+//	System.out.print(plc.getDataVal() + "| ");
+//}
+//ClienteDAO cliente = new ClienteDAO();
+//System.out.println(cliente.read());
