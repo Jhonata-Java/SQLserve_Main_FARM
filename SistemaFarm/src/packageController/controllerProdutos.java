@@ -111,7 +111,6 @@ public class controllerProdutos implements Initializable{
     void btCadastrar(ActionEvent event) throws IOException {
     	produtoEditar = null;
 		Main.TelaCadastroProduto();
-		CarregarInfTable();
     }
 
     @FXML

@@ -16,7 +16,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import packageControle.ProdutoDAO;
 import packageModel.Produto;
@@ -93,7 +92,6 @@ public class controllerDashboard  implements Initializable {
     private TableView<Produto> tabelaVencer;
     
     private ObservableList<Produto> ArrayProdutos;
-    
     private ProdutoDAO produto = new ProdutoDAO();
 
     @FXML
