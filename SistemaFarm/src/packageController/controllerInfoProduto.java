@@ -109,7 +109,10 @@ public class controllerInfoProduto {
 
     @FXML
     void btPesquisar(ActionEvent event) {
-    	ArrayProduto = FXCollections.observableArrayList(produto.search(txtPesquisar.getText()));
+    	
+    	ProdutoDAO produto = new ProdutoDAO();
+    	produto.search(txtPesquisar.getText());
+    	
 
     	labNomeGen.setText(controllerProdutos.produto.getNomeGenerico());
     	labCodBarras.setText(controllerProdutos.produto.getCodigo());

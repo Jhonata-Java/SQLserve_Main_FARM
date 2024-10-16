@@ -48,8 +48,8 @@ public class Main extends Application {
 			Parent fxmlRelatorioVenda = FXMLLoader.load(getClass().getResource("/packageView/viewRelatorioVenda.fxml"));
 			relatorioVenda = new Scene(fxmlRelatorioVenda);
 
-//			Parent fxmlProdutoInfo = FXMLLoader.load(getClass().getResource("/packageView/viewTelaInfoExtraProdutos.fxml"));
-//			produtoInfo = new Scene(fxmlProdutoInfo);
+			Parent fxmlProdutoInfo = FXMLLoader.load(getClass().getResource("/packageView/viewTelaInfoExtraProdutos.fxml"));
+			produtoInfo = new Scene(fxmlProdutoInfo);
 			
 			primaryStage.setScene(login);
 			primaryStage.show();

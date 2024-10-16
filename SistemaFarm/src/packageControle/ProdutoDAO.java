@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import packageConnecting.ConnectionDATABASE;
 import packageModel.Produto;
 
@@ -194,6 +196,34 @@ public class ProdutoDAO {
 		}finally {
 			ConnectionDATABASE.closeConnection(con, stmt, rs);
 		}
+		return produto;
+	}
+	
+	public ObservableList<String> readNome()
+	{
+		Connection con = ConnectionDATABASE.getConnection();
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+		
+		ObservableList <String> produto = FXCollections.observableArrayList();
+		
+		try {
+			stmt = con.prepareStatement("SELECT nomeComercial FROM Produto");
+			rs = stmt.executeQuery();
+			//percorre a tabela
+			while(rs.next())
+			{
+				String f = rs.getString(1);
+				produto.add(f);
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			ConnectionDATABASE.closeConnection(con, stmt, rs);
+		}
+		
 		return produto;
 	}
 }
