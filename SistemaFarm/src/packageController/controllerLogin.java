@@ -50,8 +50,6 @@ public class controllerLogin {
 			txtUser.setText("");
 			txtPassword.setText("");
 			Main.TelaHome();
-
-			
 			
 		} else {
 			Alert erro = new Alert(Alert.AlertType.ERROR);
@@ -63,16 +61,16 @@ public class controllerLogin {
 	}
 
 	@FXML
-	void VerSenha(ActionEvent event) {
-		if (VerSenha.isSelected()) {
-			txtSenha.setText(txtPassword.getText());
-			txtPassword.setVisible(false);
-			txtSenha.setVisible(true);
-			txtSenha.setEditable(true);
-		} else {
-			txtPassword.setText(txtSenha.getText());
-			txtPassword.setVisible(true);
-			txtSenha.setVisible(false);
-		}
+    void ActionVerSenha(ActionEvent event) {
+    	if(VerSenha.isSelected()) {
+    	txtSenha.setText(txtPassword.getText());
+    	txtPassword.setVisible(false);
+    	txtSenha.setVisible(true);
+    	}
+    	else {
+    		txtPassword.setText(txtSenha.getText());
+    		txtPassword.setVisible(true);
+    		txtSenha.setVisible(false);
+    	}
 	}
 }
