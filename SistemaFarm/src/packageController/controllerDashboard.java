@@ -97,17 +97,17 @@ public class controllerDashboard  implements Initializable {
     private ProdutoDAO produto = new ProdutoDAO();
 
     @FXML
-    void btCadastrarFarmaceutico(MouseEvent event)throws IOException  {
+    void btCadastrarFarmaceutico(ActionEvent event)throws IOException  {
          Main.TelaCadastraFarmaceutico();
     }
 
     @FXML
-    void btCadastrarFornecedor(MouseEvent event)throws IOException {
+    void btCadastrarFornecedor(ActionEvent event)throws IOException {
     	Main.TelaCadastraFornecedor();
     }
 
     @FXML
-    void btCadastrarProduto(MouseEvent event)throws IOException {
+    void btCadastrarProduto(ActionEvent event)throws IOException {
     	Main.TelaCadastroProduto() ;
     }
 
