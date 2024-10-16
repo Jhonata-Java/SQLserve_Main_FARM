@@ -1,17 +1,19 @@
 package packageController;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import application.Main;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import packageControle.ProdutoDAO;
-import packageModel.Produto;
 
-public class controllerInfoProduto {
+public class controllerInfoProduto implements Initializable{
 
     @FXML
     private Button btDashboard;
@@ -72,15 +74,13 @@ public class controllerInfoProduto {
     
     @FXML
     private Label labRegistANVISA;
+    
+    @FXML
+    private ChoiceBox<String> txtpesquisaBusca;
 
     @FXML
     private TextField txtPesquisar;
-    
-    private ObservableList<Produto> ArrayProduto;
-    
-    private ProdutoDAO produto = new ProdutoDAO();
-    
-
+   
 
     @FXML
     void btDashboard(ActionEvent event) {
@@ -110,12 +110,8 @@ public class controllerInfoProduto {
     @FXML
     void btPesquisar(ActionEvent event) {
     	
-    	ProdutoDAO produto = new ProdutoDAO();
-    	produto.search(txtPesquisar.getText());
-    	
-
-    	labNomeGen.setText(controllerProdutos.produto.getNomeGenerico());
-    	labCodBarras.setText(controllerProdutos.produto.getCodigo());
+    	labNomeGen.setText(controllerProdutos.produtoEditar.getNomeGenerico());
+    	labCodBarras.setText(controllerProdutos.produtoEditar.getCodigo());
     	labConcent.setText(controllerProdutos.produto.getConcentracao());
     	labContraInd.setText(controllerProdutos.produto.getContraInd());
     	labFormaFarm.setText(controllerProdutos.produto.getFormaFarmaceutica());
@@ -142,5 +138,12 @@ public class controllerInfoProduto {
     void btSair(ActionEvent event) {
     	 Main.changeScreen("produto");
     }
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated method stub
+		ProdutoDAO produto = new ProdutoDAO();
+    	txtpesquisaBusca.setItems(produto.readNome());
+	}
 
 }

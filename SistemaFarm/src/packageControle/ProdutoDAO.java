@@ -199,31 +199,26 @@ public class ProdutoDAO {
 		return produto;
 	}
 	
-	public ObservableList<String> readNome()
-	{
+	public ObservableList<String> readNome() {
 		Connection con = ConnectionDATABASE.getConnection();
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
-		
-		ObservableList <String> produto = FXCollections.observableArrayList();
-		
+		ObservableList<String> produto = FXCollections.observableArrayList();
 		try {
 			stmt = con.prepareStatement("SELECT nomeComercial FROM Produto");
 			rs = stmt.executeQuery();
-			//percorre a tabela
-			while(rs.next())
-			{
+
+			while (rs.next()) {
+			
 				String f = rs.getString(1);
 				produto.add(f);
 			}
-			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}finally {
+		} finally {
 			ConnectionDATABASE.closeConnection(con, stmt, rs);
 		}
-		
 		return produto;
 	}
 }
