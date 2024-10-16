@@ -102,7 +102,6 @@ public class controllerProdutos implements Initializable{
     private ObservableList<Produto> ArrayProduto;
     private ProdutoDAO produtos = new ProdutoDAO();
     public static Produto produtoEditar = new Produto();
-    static Produto produto = new Produto();
     static Venda compra = new Venda();
     
  
@@ -111,7 +110,6 @@ public class controllerProdutos implements Initializable{
     void btCadastrar(ActionEvent event) throws IOException {
     	produtoEditar = null;
 		Main.TelaCadastroProduto();
-		CarregarInfTable();
     }
 
     @FXML

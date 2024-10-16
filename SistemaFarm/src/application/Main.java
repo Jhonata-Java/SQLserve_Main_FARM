@@ -129,8 +129,8 @@ public class Main extends Application {
 	public static void TelaRegistraVenda() throws IOException {
 		FXMLLoader registraVenda = new FXMLLoader();
 		registraVenda.setLocation(Main.class.getResource("/packageView/viewTelaRegistraVenda.fxml"));
-		Parent cadastroProdu = registraVenda.load();
-		Scene scene2 = new Scene(cadastroProdu);
+		Parent cadastroVenda = registraVenda.load();
+		Scene scene2 = new Scene(cadastroVenda);
 
 		cadRegistra = new Stage();
 		cadRegistra.setTitle("Registra Venda - FARM");

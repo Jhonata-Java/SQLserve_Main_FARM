@@ -2,6 +2,7 @@ package packageController;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -86,7 +87,8 @@ public class controllerCasdastraProduto implements Initializable {
 
 	@FXML
 	private TextField textTarja;
-
+	
+	@FXML
 	void btCadastrar(ActionEvent event) {
 		if (controllerProdutos.produtoEditar == null) {
 			Produto produto = new Produto();
@@ -170,6 +172,8 @@ public class controllerCasdastraProduto implements Initializable {
 		textContraind.setText("");
 		textEfeitosCol.setText("");
 		textLab.setText("");
+		
+		controllerProdutos.produtoEditar = null;
 
 		Stage stage = (Stage) btCancelar.getScene().getWindow();
 		stage.close();
