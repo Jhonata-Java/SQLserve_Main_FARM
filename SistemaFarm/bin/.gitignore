@@ -1,15 +1,2 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-/packageConnecting/
-=======
-/packageController/
->>>>>>> branch 'master' of https://github.com/Jhonata-Java/Sistema-FARM.git
-=======
-/application/
-/module-info.class
-/packageConnecting/
 /packageControle/
 /packageController/
-/packageModel/
->>>>>>> branch 'master' of https://github.com/Jhonata-Java/Sistema-FARM.git
-/packageView/

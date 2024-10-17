@@ -146,22 +146,28 @@ public class controllerDashboard  implements Initializable {
     
     @FXML
     void Atualizar(ActionEvent event) {
-    	CarregarTable();
+    	CarregarTableEstoque();
+    	CarregarTableVencer();
     }
     
-    public void CarregarTable()
+    public void CarregarTableEstoque()
     {
-    	ArrayProdutos = FXCollections.observableArrayList(produto.read());
+    	ArrayProdutos = FXCollections.observableArrayList(produto.readEstoqueAcabando());
 
     	columnID1.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
-    	columnID2.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
     	columnLocalizacao1.setCellValueFactory(new PropertyValueFactory<>("endereco"));
-    	columnLocalizacao2.setCellValueFactory(new PropertyValueFactory<>("endereco"));
     	columnNome1.setCellValueFactory(new PropertyValueFactory<>("nomeComecial"));
-    	columnNome2.setCellValueFactory(new PropertyValueFactory<>("nomeComecial"));
     	columnQuantidade.setCellValueFactory(new PropertyValueFactory<>("estoque"));
-    	columnVencimento.setCellValueFactory(new PropertyValueFactory<>("dataVal"));
     	tabelaEstoque.setItems(ArrayProdutos);
+    }
+    public void CarregarTableVencer()
+    {
+    	ArrayProdutos = FXCollections.observableArrayList(produto.readDadaVal());
+
+    	columnID2.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
+    	columnLocalizacao2.setCellValueFactory(new PropertyValueFactory<>("endereco"));
+    	columnNome2.setCellValueFactory(new PropertyValueFactory<>("nomeComecial"));
+    	columnVencimento.setCellValueFactory(new PropertyValueFactory<>("dataVal"));
     	tabelaVencer.setItems(ArrayProdutos);
     }
     
@@ -169,7 +175,8 @@ public class controllerDashboard  implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		labelNome.setText(controllerLogin.farmaceutico.getNome());
-		CarregarTable();
+		CarregarTableEstoque();
+    	CarregarTableVencer();
 	}
 }
 

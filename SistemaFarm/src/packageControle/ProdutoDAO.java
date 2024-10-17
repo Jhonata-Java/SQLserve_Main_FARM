@@ -92,7 +92,6 @@ public class ProdutoDAO {
 		}finally {
 			ConnectionDATABASE.closeConnection(con, stmt, rs);
 		}
-		
 		return produto;
 	}
 	public void update(Produto p )
@@ -217,6 +216,82 @@ public class ProdutoDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
+			ConnectionDATABASE.closeConnection(con, stmt, rs);
+		}
+		return produto;
+	}
+	
+	public ArrayList<Produto> readDadaVal()
+	{
+		Connection con = ConnectionDATABASE.getConnection();
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+		
+		ArrayList <Produto> produto = new ArrayList<>();
+		
+		try {
+			stmt = con.prepareStatement("SELECT*FROM Produto WHERE dataVal BETWEEN GETDATE() AND DATEADD(MONTH, 4, GETDATE());");
+			rs = stmt.executeQuery();
+			while(rs.next())
+			{
+				Produto p = new Produto();
+				p.setIdProduto(rs.getString(1));
+				p.setIdFornecedor(rs.getString(2));
+				p.setNomeComecial(rs.getString(3));
+				p.setNomeGenerico(rs.getString(4));
+				p.setCategoria(rs.getString(5));
+				p.setFormaFarmaceutica(rs.getString(6));
+				p.setConcentracao(rs.getString(7));
+				p.setDosagem(rs.getString(8));
+				p.setCodigo(rs.getString(9));
+				p.setEstoque(rs.getString(10));
+				p.setPreocoUN(rs.getString(11));
+				p.setTipoUN(rs.getString(12));
+				p.setDataFab(rs.getString(13));
+				p.setDataVal(rs.getString(14));
+				p.setRegistroAnvisa(rs.getString(15));
+				p.setLote(rs.getString(16));
+				p.setEndereco(rs.getString(17));
+				p.setPrincAtivo(rs.getString(18));
+
+				produto.add(p);
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			ConnectionDATABASE.closeConnection(con, stmt, rs);
+		}
+		return produto;
+	}
+	
+	public ArrayList<Produto> readEstoqueAcabando()
+	{
+		Connection con = ConnectionDATABASE.getConnection();
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+		
+		ArrayList <Produto> produto = new ArrayList<>();
+		
+		try {
+			stmt = con.prepareStatement("SELECT * FROM Produto WHERE estoque <= 100;");
+			rs = stmt.executeQuery();
+			while(rs.next())
+			{
+				Produto p = new Produto();
+				p.setIdProduto(rs.getString(1));
+				p.setEndereco(rs.getString(2));
+				p.setNomeComecial(rs.getString(3));
+				p.setEstoque(rs.getString(4));
+
+				produto.add(p);
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
 			ConnectionDATABASE.closeConnection(con, stmt, rs);
 		}
 		return produto;
