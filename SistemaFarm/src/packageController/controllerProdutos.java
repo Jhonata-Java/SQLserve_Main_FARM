@@ -193,6 +193,7 @@ public class controllerProdutos implements Initializable {
 	@FXML
 	void btInfo(ActionEvent event) {
 		Main.changeScreen("produtoInfo");
+		
 	}
 
 	@FXML
@@ -285,9 +286,8 @@ public class controllerProdutos implements Initializable {
 				// Inicia o fluxo de conteúdo da página
 				PDPageContentStream contentStream = new PDPageContentStream(document, page);
 
-			// Define a fonte e tamanho do texto
-				contentStream.setFont(PDType1Font., 12);
-
+// Define a fonte e tamanho do texto
+//				contentStream.setFont(, 12);
 	
 				contentStream.beginText();
 				contentStream.setLeading(14.5f); // Espaçamento entre linhas
