@@ -60,12 +60,14 @@
                   </Button>
                </children>
             </VBox>
-            <ToggleButton fx:id="VerSenha" layoutX="684.0" layoutY="443.0" mnemonicParsing="false" onAction="#ActionVerSenha" prefHeight="25.0" prefWidth="7.0" style="-fx-background-insets: 999;" />
-            <ImageView fitHeight="20.0" fitWidth="16.0" layoutX="564.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../packageIcons/Eye.png" />
-               </image>
-            </ImageView>
+            <ToggleButton fx:id="VerSenha" layoutX="558.0" layoutY="357.0" mnemonicParsing="false" onAction="#ActionVerSenha" prefHeight="25.0" prefWidth="7.0" style="-fx-background-insets: 999;">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../packageIcons/Eye.png" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
          </children>
       </Pane>
    </children>
