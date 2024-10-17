@@ -109,7 +109,7 @@ public class controllerInfoProduto implements Initializable{
 
     @FXML
     void btPesquisar(ActionEvent event) {
-    	
+        	
     	labNomeGen.setText(controllerProdutos.produtoEditar.getNomeGenerico());
     	labCodBarras.setText(controllerProdutos.produtoEditar.getCodigo());
     	labConcent.setText(controllerProdutos.produto.getConcentracao());
@@ -144,6 +144,8 @@ public class controllerInfoProduto implements Initializable{
 		// TODO Auto-generated method stub
 		ProdutoDAO produto = new ProdutoDAO();
     	txtpesquisaBusca.setItems(produto.readNome());
+  
+    	
 	}
 
 }
