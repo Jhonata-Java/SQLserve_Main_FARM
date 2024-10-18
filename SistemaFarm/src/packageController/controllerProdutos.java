@@ -200,6 +200,7 @@ public class controllerProdutos implements Initializable {
 		
 	}
 
+	//METODO DE LIMPAR
 	@FXML
 	void btLimpar(ActionEvent event) {
 		txtPesquisar.setText("");
