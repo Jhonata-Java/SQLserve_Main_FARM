@@ -104,7 +104,7 @@ public class controllerRelatorioVenda {
 
     @FXML
     void btLimpar(ActionEvent event) {
-
+     btLimpar.setText("");
     }
 
     @FXML

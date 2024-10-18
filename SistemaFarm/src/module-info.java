@@ -9,8 +9,7 @@ module Sistema_BluePen {
 	exports packageModel;
 	exports packageControle;
 
-
-	opens packageController to javafx.fxml;
+	opens packageController to javafx.fxml, pdfbox.app, commons.logging ;
 	opens packageModel to javafx.fxml;
 	opens packageControle to javafx.fxml;
 

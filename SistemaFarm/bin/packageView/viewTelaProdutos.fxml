@@ -116,7 +116,7 @@
                         <Font name="Arial Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Line endX="-100.0000228881836" endY="-24.800018310546875" layoutX="114.0" layoutY="48.0" startX="-100.00001525878906" startY="-5.200019836425781" stroke="#3c42ff" />
+                  <Line endX="-100.0000228881836" endY="-24.800018310546875" layoutX="114.0" layoutY="48.0" startX="-100.00001525878906" startY="-5.200019836425781" stroke="#3c42ff" strokeWidth="2.0" />
                </children>
             </Pane>
             <Pane layoutX="10.0" layoutY="164.0" prefHeight="64.0" prefWidth="124.0">

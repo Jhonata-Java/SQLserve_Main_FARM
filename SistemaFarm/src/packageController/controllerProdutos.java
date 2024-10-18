@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
-
 import application.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -22,105 +21,103 @@ import packageControle.ProdutoDAO;
 import packageModel.Produto;
 import packageModel.Venda;
 
-public class controllerProdutos implements Initializable{
+public class controllerProdutos implements Initializable {
 
-    @FXML
-    private Button btCadastrar;
+	@FXML
+	private Button btCadastrar;
 
-    @FXML
-    private Button btDashboard;
+	@FXML
+	private Button btDashboard;
 
-    @FXML
-    private Button btEditar;
+	@FXML
+	private Button btEditar;
 
-    @FXML
-    private Button btExcluir;
+	@FXML
+	private Button btExcluir;
 
-    @FXML
-    private Button btFarmaceuticos;
+	@FXML
+	private Button btFarmaceuticos;
 
-    @FXML
-    private Button btFornecedor;
+	@FXML
+	private Button btFornecedor;
 
-    @FXML
-    private Button btImprimir;
+	@FXML
+	private Button btImprimir;
 
-    @FXML
-    private Button btInfo;
+	@FXML
+	private Button btInfo;
 
-    @FXML
-    private Button btLimpar;
+	@FXML
+	private Button btLimpar;
 
-    @FXML
-    private Button btProdutos;
+	@FXML
+	private Button btProdutos;
 
-    @FXML
-    private Button btRelatorioVendas;
+	@FXML
+	private Button btRelatorioVendas;
 
-    @FXML
-    private Button btSair;
+	@FXML
+	private Button btSair;
 
-    @FXML
-    private TableColumn<Produto,String> columnCod;
+	@FXML
+	private TableColumn<Produto, String> columnCod;
 
-    @FXML
-    private TableColumn<Produto,String> columnDataF;
+	@FXML
+	private TableColumn<Produto, String> columnDataF;
 
-    @FXML
-    private TableColumn<Produto,String> columnDataV;
+	@FXML
+	private TableColumn<Produto, String> columnDataV;
 
-    @FXML
-    private TableColumn<Produto,String> columnDose;
+	@FXML
+	private TableColumn<Produto, String> columnDose;
 
-    @FXML
-    private TableColumn<Produto,String> columnEst;
+	@FXML
+	private TableColumn<Produto, String> columnEst;
 
-    @FXML
-    private TableColumn<Produto,String> columnID;
+	@FXML
+	private TableColumn<Produto, String> columnID;
 
-    @FXML
-    private TableColumn<Produto,String> columnNomeC;
+	@FXML
+	private TableColumn<Produto, String> columnNomeC;
 
-    @FXML
-    private TableColumn<Produto,String> columnPrecoUn;
+	@FXML
+	private TableColumn<Produto, String> columnPrecoUn;
 
-    @FXML
-    private TableColumn<Produto,String> columnTipoUn;
-    
-    @FXML
-    private TableColumn<Produto, String> colemnPrincAtivo;
+	@FXML
+	private TableColumn<Produto, String> columnTipoUn;
 
-    @FXML
-    private TableView<Produto> tabela;
-    
-    @FXML
-    private Button btPesquisar;
+	@FXML
+	private TableColumn<Produto, String> colemnPrincAtivo;
 
-    @FXML
-    private TextField txtPesquisar;
-    
-    private ObservableList<Produto> ArrayProduto;
-    private ProdutoDAO produtos = new ProdutoDAO();
-    public static Produto produtoEditar = new Produto();
-    static Produto produto = new Produto();
-    static Venda compra = new Venda();
-    
- 
+	@FXML
+	private TableView<Produto> tabela;
 
-    @FXML
-    void btCadastrar(ActionEvent event) throws IOException {
-    	produtoEditar = null;
+	@FXML
+	private Button btPesquisar;
+
+	@FXML
+	private TextField txtPesquisar;
+
+	private ObservableList<Produto> ArrayProduto;
+	private ProdutoDAO produtos = new ProdutoDAO();
+	public static Produto produtoEditar = new Produto();
+	static Produto produto = new Produto();
+	static Venda compra = new Venda();
+
+	@FXML
+	void btCadastrar(ActionEvent event) throws IOException {
+		produtoEditar = null;
 		Main.TelaCadastroProduto();
-    }
+	}
 
-    @FXML
-    void btDashboard(ActionEvent event) {
-    	 Main.changeScreen("dashboard");
-    }
+	@FXML
+	void btDashboard(ActionEvent event) {
+		Main.changeScreen("dashboard");
+	}
 
-    @FXML
-    void btEditar(ActionEvent event) throws IOException{
-    	if (tabela.getSelectionModel().getSelectedIndex() == -1) {
+	@FXML
+	void btEditar(ActionEvent event) throws IOException {
+		if (tabela.getSelectionModel().getSelectedIndex() == -1) {
 			Alert mensagemDeErro = new Alert(Alert.AlertType.INFORMATION);
 			mensagemDeErro.setContentText("Selecione um vendedor primeiro");
 			mensagemDeErro.show();
@@ -129,12 +126,12 @@ public class controllerProdutos implements Initializable{
 			produtoEditar = tabela.getItems().get(i);
 			Main.TelaCadastroProduto();
 		}
-    	CarregarInfTable();
-    }
+		CarregarInfoTable();
+	}
 
-    @FXML
-    void btExcluir(ActionEvent event) {
-    	int i = tabela.getSelectionModel().getSelectedIndex();
+	@FXML
+	void btExcluir(ActionEvent event) {
+		int i = tabela.getSelectionModel().getSelectedIndex();
 
 		if (i == -1) {
 			Alert mensagemDeErro = new Alert(Alert.AlertType.INFORMATION);
@@ -156,100 +153,100 @@ public class controllerProdutos implements Initializable{
 				Alert mensagemDeExclusao = new Alert(Alert.AlertType.INFORMATION);
 				mensagemDeExclusao.setContentText("Produto excluido com sucesso!!!");
 				mensagemDeExclusao.show();
-				CarregarInfTable();
+				CarregarInfoTable();
 			}
 		}
-    }
-    
+	}
 
+	@FXML
+	void btFarmaceuticos(ActionEvent event) {
+		Main.changeScreen("vendedor");
+	}
 
-    @FXML
-    void btFarmaceuticos(ActionEvent event) {
-    	 Main.changeScreen("vendedor");
-    }
+	@FXML
+	void btFornecedor(ActionEvent event) {
+		Main.changeScreen("fornecedor");
+	}
 
-    @FXML
-    void btFornecedor(ActionEvent event) {
-    	Main.changeScreen("fornecedor");
-    }
+	@FXML
+	void btImprimir(ActionEvent event) {
+		
+	}
 
-    @FXML
-    void btImprimir(ActionEvent event) {
+	@FXML
+	void btInfo(ActionEvent event) {
+		Main.changeScreen("produtoInfo");
+		
+	}
 
-    }
+	@FXML
+	void btLimpar(ActionEvent event) {
+		txtPesquisar.setText("");
+	}
 
-    @FXML
-    void btInfo(ActionEvent event) {
-    	Main.changeScreen("produtoInfo");
-    }
+	@FXML
+	void btProdutos(ActionEvent event) {
+		Main.changeScreen("produto");
+	}
 
-    @FXML
-    void btLimpar(ActionEvent event) {
-    	 txtPesquisar.setText("");
-    }
-    @FXML
-    void btProdutos(ActionEvent event) {
-    	Main.changeScreen("produto");
-    }
+	@FXML
+	void btRelatorioVendas(ActionEvent event) {
+		Main.changeScreen("relatorioVenda");
+	}
 
-    @FXML
-    void btRelatorioVendas(ActionEvent event) {
-   	 Main.changeScreen("relatorioVenda");
-    }
+	@FXML
+	void btSair(ActionEvent event) {
+		Main.changeScreen("dashboard");
+	}
 
-    @FXML
-    void btSair(ActionEvent event) {
-   	 Main.changeScreen("dashboard");
-    }
-    
-    @FXML
-    void btPesquisar(ActionEvent event) {
-    	ArrayProduto = FXCollections.observableArrayList(produtos.search(txtPesquisar.getText()));
-    	
-    	colemnPrincAtivo.setCellValueFactory(new PropertyValueFactory<>("princAtivo"));
-    	columnCod.setCellValueFactory(new PropertyValueFactory<>("codigo"));
-    	columnDataF.setCellValueFactory(new PropertyValueFactory<>("dataFab"));
-    	columnDataV.setCellValueFactory(new PropertyValueFactory<>("dataVal"));
-    	columnDose.setCellValueFactory(new PropertyValueFactory<>("dosagem"));
-    	columnEst.setCellValueFactory(new PropertyValueFactory<>("estoque"));
-    	columnID.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
-    	columnNomeC.setCellValueFactory(new PropertyValueFactory<>("nomeComecial"));
-    	columnPrecoUn.setCellValueFactory(new PropertyValueFactory<>("preocoUN"));
-    	columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("tipoUN"));
-    	
-    	
-    	tabela.setItems(ArrayProduto);
-    	tabela.refresh();
-    }
-    public void CarregarInfTable()
-    {
-    	ArrayProduto = FXCollections.observableArrayList(produtos.read());
+	@FXML
+	void btPesquisar(ActionEvent event) {
+		ArrayProduto = FXCollections.observableArrayList(produtos.search(txtPesquisar.getText()));
 
-    	columnCod.setCellValueFactory(new PropertyValueFactory<>("codigo"));
-    	columnDataF.setCellValueFactory(new PropertyValueFactory<>("dataFab"));
-    	columnDataV.setCellValueFactory(new PropertyValueFactory<>("dataVal"));
-    	columnDose.setCellValueFactory(new PropertyValueFactory<>("dosagem"));
-    	columnEst.setCellValueFactory(new PropertyValueFactory<>("estoque"));
-    	columnID.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
-    	columnNomeC.setCellValueFactory(new PropertyValueFactory<>("nomeComercial"));
-    	columnPrecoUn.setCellValueFactory(new PropertyValueFactory<>("precoUn"));
-    	columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("TipoUn"));
-    	columnNomeC.setCellValueFactory(new PropertyValueFactory<>("nomeComecial"));
-    	columnPrecoUn.setCellValueFactory(new PropertyValueFactory<>("preocoUN"));
-    	columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("tipoUN"));
-    	colemnPrincAtivo.setCellValueFactory(new PropertyValueFactory<>("princAtivo"));
+		colemnPrincAtivo.setCellValueFactory(new PropertyValueFactory<>("princAtivo"));
+		columnCod.setCellValueFactory(new PropertyValueFactory<>("codigo"));
+		columnDataF.setCellValueFactory(new PropertyValueFactory<>("dataFab"));
+		columnDataV.setCellValueFactory(new PropertyValueFactory<>("dataVal"));
+		columnDose.setCellValueFactory(new PropertyValueFactory<>("dosagem"));
+		columnEst.setCellValueFactory(new PropertyValueFactory<>("estoque"));
+		columnID.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
+		columnNomeC.setCellValueFactory(new PropertyValueFactory<>("nomeComecial"));
+		columnPrecoUn.setCellValueFactory(new PropertyValueFactory<>("preocoUN"));
+		columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("tipoUN"));
 
-    	tabela.setItems(ArrayProduto);
-    
-    }
-    @FXML
-    void btAtualizar(ActionEvent event) {
-    	CarregarInfTable();
-    }
+		tabela.setItems(ArrayProduto);
+		tabela.refresh();
+	}
+
+	public void CarregarInfoTable() {
+		ArrayProduto = FXCollections.observableArrayList(produtos.read());
+
+		columnCod.setCellValueFactory(new PropertyValueFactory<>("codigo"));
+		columnDataF.setCellValueFactory(new PropertyValueFactory<>("dataFab"));
+		columnDataV.setCellValueFactory(new PropertyValueFactory<>("dataVal"));
+		columnDose.setCellValueFactory(new PropertyValueFactory<>("dosagem"));
+		columnEst.setCellValueFactory(new PropertyValueFactory<>("estoque"));
+		columnID.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
+		columnNomeC.setCellValueFactory(new PropertyValueFactory<>("nomeComercial"));
+		columnPrecoUn.setCellValueFactory(new PropertyValueFactory<>("precoUn"));
+		columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("TipoUn"));
+		columnNomeC.setCellValueFactory(new PropertyValueFactory<>("nomeComecial"));
+		columnPrecoUn.setCellValueFactory(new PropertyValueFactory<>("preocoUN"));
+		columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("tipoUN"));
+		colemnPrincAtivo.setCellValueFactory(new PropertyValueFactory<>("princAtivo"));
+
+		tabela.setItems(ArrayProduto);
+
+	}
+
+	@FXML
+	void btAtualizar(ActionEvent event) {
+		CarregarInfoTable();
+	}
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
-		CarregarInfTable();
+		CarregarInfoTable();
 	}
 }
