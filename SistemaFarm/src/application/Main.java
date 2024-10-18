@@ -21,7 +21,6 @@ public class Main extends Application {
 	private static Scene fornecedor;
 	private static Scene registraVenda;
 	private static Scene relatorioVenda;
-	private static Scene produtoInfo;
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -41,16 +40,14 @@ public class Main extends Application {
 
 			Parent fxmlFornecedor = FXMLLoader.load(getClass().getResource("/packageView/viewTelaFornecedor.fxml"));
 			fornecedor = new Scene(fxmlFornecedor);
-			
-			Parent fxmlRegistraVenda = FXMLLoader.load(getClass().getResource("/packageView/viewTelaRegistraVenda.fxml"));
+
+			Parent fxmlRegistraVenda = FXMLLoader
+					.load(getClass().getResource("/packageView/viewTelaRegistraVenda.fxml"));
 			registraVenda = new Scene(fxmlRegistraVenda);
-			
+
 			Parent fxmlRelatorioVenda = FXMLLoader.load(getClass().getResource("/packageView/viewRelatorioVenda.fxml"));
 			relatorioVenda = new Scene(fxmlRelatorioVenda);
 
-			Parent fxmlProdutoInfo = FXMLLoader.load(getClass().getResource("/packageView/viewTelaInfoExtraProdutos.fxml"));
-			produtoInfo = new Scene(fxmlProdutoInfo);
-			
 			primaryStage.setScene(login);
 			primaryStage.show();
 
@@ -75,17 +72,11 @@ public class Main extends Application {
 		} else if (tela.equals("fornecedor")) {
 			stage.setScene(fornecedor);
 			stage.centerOnScreen();
-		}
-		else if (tela.equals("registraVenda")) {
+		} else if (tela.equals("registraVenda")) {
 			stage.setScene(registraVenda);
 			stage.centerOnScreen();
-		}
-		else if (tela.equals("relatorioVenda")) {
+		} else if (tela.equals("relatorioVenda")) {
 			stage.setScene(relatorioVenda);
-			stage.centerOnScreen();
-		}
-		else if (tela.equals("produtoInfo")) {
-			stage.setScene(produtoInfo);
 			stage.centerOnScreen();
 		}
 	}
@@ -94,9 +85,10 @@ public class Main extends Application {
 	private static Stage cadRegistra;
 	private static Stage cadFornecedor;
 	private static Stage cadVendedor;
-	
+	private static Stage infoProd;
+
 	public static void TelaHome() throws IOException {
-		
+
 		FXMLLoader fxmlHome = new FXMLLoader();
 		fxmlHome.setLocation(Main.class.getResource("/packageView/viewTelaMain.fxml"));
 		Parent TelaHome = fxmlHome.load();
@@ -106,7 +98,6 @@ public class Main extends Application {
 		stage.centerOnScreen();
 		stage.show();
 
-	
 	}
 
 	public static void TelaCadastroProduto() throws IOException {
@@ -123,9 +114,8 @@ public class Main extends Application {
 		cadProduto.showAndWait();
 		cadProduto.centerOnScreen();
 
-
 	}
-	
+
 	public static void TelaRegistraVenda() throws IOException {
 		FXMLLoader registraVenda = new FXMLLoader();
 		registraVenda.setLocation(Main.class.getResource("/packageView/viewTelaRegistraVenda.fxml"));
@@ -140,6 +130,7 @@ public class Main extends Application {
 		cadRegistra.showAndWait();
 		cadRegistra.centerOnScreen();
 	}
+
 	public static void TelaCadastraFornecedor() throws IOException {
 		FXMLLoader CadFornecedor = new FXMLLoader();
 		CadFornecedor.setLocation(Main.class.getResource("/packageView/viewCadastroFornecedor.fxml"));
@@ -153,9 +144,9 @@ public class Main extends Application {
 		cadFornecedor.centerOnScreen();
 		cadFornecedor.showAndWait();
 		cadFornecedor.centerOnScreen();
-		
-		
+
 	}
+
 	public static void TelaCadastraFarmaceutico() throws IOException {
 		FXMLLoader CadVendedor = new FXMLLoader();
 		CadVendedor.setLocation(Main.class.getResource("/packageView/viewCadastroFarmaceutico.fxml"));
@@ -171,6 +162,20 @@ public class Main extends Application {
 		cadVendedor.centerOnScreen();
 	}
 
+	public static void TelaInfoProduto() throws IOException {
+		FXMLLoader InfoPRODUT = new FXMLLoader();
+		InfoPRODUT.setLocation(Main.class.getResource("/packageView/viewTelaInfoExtraProdutos.fxml"));
+		Parent infoProdu = InfoPRODUT.load();
+		Scene scene2 = new Scene(infoProdu);
+
+		infoProd = new Stage();
+		infoProd.initModality(Modality.WINDOW_MODAL);
+		infoProd.setScene(scene2);
+		infoProd.centerOnScreen();
+		infoProd.showAndWait();
+		infoProd.centerOnScreen();
+	}
+
 	public static void main(String[] args) {
 		Connection con = ConnectionDATABASE.getConnection();
 		ConnectionDATABASE.closeConnection(con);
@@ -178,9 +183,6 @@ public class Main extends Application {
 		launch(args);
 	}
 }
-
-
-
 
 //ArrayList<Fornecedor> fornecedor = new ArrayList<>();
 //FornecedorDAO cp = new FornecedorDAO();

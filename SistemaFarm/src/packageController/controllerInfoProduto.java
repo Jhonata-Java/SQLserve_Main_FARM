@@ -66,16 +66,15 @@ public class controllerInfoProduto  implements Initializable {
 		// TODO Auto-generated method stub
 		labNomeG.setText(controllerProdutos.produto.getNomeGenerico());
 		labCodigoBarras.setText(controllerProdutos.produto.getCodigo());
-		labConcent.setText(controllerProdutos.produto.getNomeGenerico());
-		labContInd.setText(controllerProdutos.produto.getNomeGenerico());
-		labEfeitCol.setText(controllerProdutos.produto.getNomeGenerico());
-		labFormaFarm.setText(controllerProdutos.produto.getNomeGenerico());
-		labIndica.setText(controllerProdutos.produto.getNomeGenerico());
-		labLabotor.setText(controllerProdutos.produto.getNomeGenerico());
-		labLote.setText(controllerProdutos.produto.getNomeGenerico());
-		labRegistANVISA.setText(controllerProdutos.produto.getNomeGenerico());
-		labPrincAt.setText(controllerProdutos.produto.getNomeGenerico());
-	
+		labConcent.setText(controllerProdutos.produto.getConcentracao());
+		labContInd.setText(controllerProdutos.produto.getContraInd());
+		labEfeitCol.setText(controllerProdutos.produto.getEfeitosColaterais());
+		labFormaFarm.setText(controllerProdutos.produto.getFormaFarmaceutica());
+		labIndica.setText(controllerProdutos.produto.getIndicacoes());
+		labLabotor.setText(controllerProdutos.produto.getLaboratorio());
+		labLote.setText(controllerProdutos.produto.getLote());
+		labRegistANVISA.setText(controllerProdutos.produto.getRegistroAnvisa());
+		labPrincAt.setText(controllerProdutos.produto.getPrincAtivo());
 	}
 
 }
