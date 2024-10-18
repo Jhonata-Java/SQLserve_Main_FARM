@@ -4,9 +4,7 @@ module Sistema_BluePen {
 	requires javafx.fxml;
 	requires javafx.base;
 	requires javafx.graphics;
-	requires org.apache.pdfbox;
-	requires org.apache.commons.logging;
-	//requires pdfbox.app;
+
 	
 	exports packageController;
 	exports packageModel;

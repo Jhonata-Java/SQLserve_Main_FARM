@@ -6,17 +6,6 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.pdmodel.PDPage;
-import org.apache.pdfbox.pdmodel.PDPageContentStream;
-import org.apache.pdfbox.pdmodel.font.PDFont;
-import org.apache.pdfbox.pdmodel.font.PDFontFactory;
-import org.apache.pdfbox.pdmodel.font.PDMMType1Font;
-import org.apache.pdfbox.pdmodel.font.PDType1CFont;
-import org.apache.pdfbox.pdmodel.font.PDType1Font;
-import org.apache.commons.logging.LogFactory;
-import org.apache.pdfbox.pdmodel.font.Standard14Fonts.FontName;
-
 import application.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -124,12 +113,9 @@ public class controllerProdutos implements Initializable {
 	void btCadastrar(ActionEvent event) throws IOException {
 		produtoEditar = null;
 		Main.TelaCadastroProduto();
-<<<<<<< HEAD
-    }
-=======
+    
 		CarregarInfTable();
 	}
->>>>>>> branch 'master' of https://github.com/Jhonata-Java/Sistema-FARM.git
 
 	@FXML
 	void btDashboard(ActionEvent event) {
@@ -273,73 +259,7 @@ public class controllerProdutos implements Initializable {
 	}
 
 	public void ActionBtImprimirPDF(ActionEvent event, Produto produto, Stage stage) {
-		FileChooser fileChooser = new FileChooser();
-		fileChooser.setTitle("Salvar Produto em PDF");
-
-		// Define a extensão de arquivo como PDF
-		fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Arquivos PDF", "*.pdf"));
-
-		// Pede ao usuário para escolher o local para salvar o PDF
-		File file = fileChooser.showSaveDialog(stage);
-		if (file != null) {
-			try {
-				// Cria um documento PDF
-				PDDocument document = new PDDocument();
-				PDPage page = new PDPage();
-				document.addPage(page);
-
-				// Inicia o fluxo de conteúdo da página
-				PDPageContentStream contentStream = new PDPageContentStream(document, page);
-
-// Define a fonte e tamanho do texto
-//				contentStream.setFont(, 12);
-	
-				contentStream.beginText();
-				contentStream.setLeading(14.5f); // Espaçamento entre linhas
-				contentStream.newLineAtOffset(50, 750); // Posição inicial do texto na página
-
-				contentStream.showText("Nome Comercial: " + produto.getNomeComecial());
-				contentStream.newLine();
-				contentStream.showText("Nome Genérico: " + produto.getNomeGenerico());
-				contentStream.newLine();
-				contentStream.showText("Categoria: " + produto.getCategoria());
-				contentStream.newLine();
-				contentStream.showText("Forma Farmacêutica: " + produto.getFormaFarmaceutica());
-				contentStream.newLine();
-				contentStream.showText("Concentração: " + produto.getConcentracao());
-				contentStream.newLine();
-				contentStream.showText("Dosagem: " + produto.getDosagem());
-				contentStream.newLine();
-				contentStream.showText("Estoque: " + produto.getEstoque());
-				contentStream.newLine();
-				contentStream.showText("Preço Unitário: " + produto.getPreocoUN());
-				contentStream.newLine();
-				contentStream.showText("Data de Fabricação: " + produto.getDataFab());
-				contentStream.newLine();
-				contentStream.showText("Data de Validade: " + produto.getDataVal());
-				contentStream.newLine();
-				contentStream.showText("Registro ANVISA: " + produto.getRegistroAnvisa());
-				contentStream.newLine();
-				contentStream.showText("Lote: " + produto.getLote());
-				contentStream.newLine();
-				contentStream.showText("Localização: " + produto.getEndereco());
-				contentStream.newLine();
-				contentStream.showText("Principio Ativo: " + produto.getPrincAtivo());
-				contentStream.newLine();
-
-				// Finaliza o fluxo de texto
-				contentStream.endText();
-				contentStream.close();
-
-				// Salva o documento no local selecionado pelo usuário
-				document.save(file);
-				document.close();
-
-				showAlert("Sucesso", "PDF salvo com sucesso!");
-			} catch (IOException e) {
-				showAlert("Erro", "Erro ao salvar PDF: " + e.getMessage());
-			}
-		}
+		
 	}
 
 	// Método auxiliar para exibir alertas
