@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 import packageConnecting.ConnectionDATABASE;
 
 public class Main extends Application {
-
+//comentario
 	private static Stage stage;
 	private static Scene login;
 	private static Scene dashboard;

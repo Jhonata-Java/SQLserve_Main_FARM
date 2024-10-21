@@ -167,7 +167,7 @@
                </graphic></Button>
             <Pane layoutX="170.0" layoutY="265.0" prefHeight="307.0" prefWidth="290.0" style="-fx-background-color: white; -fx-background-radius: 10;">
                <children>
-                  <Label layoutX="14.0" layoutY="21.0" text="Estoque acabando" textFill="#3c42ff">
+                  <Label layoutX="14.0" layoutY="21.0" text="Medicamentos que o estoque está acabando" textFill="#3c42ff">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font>
@@ -184,7 +184,7 @@
             </Pane>
             <Pane layoutX="492.0" layoutY="265.0" prefHeight="307.0" prefWidth="290.0" style="-fx-background-color: white; -fx-background-radius: 10;">
                <children>
-                  <Label layoutX="14.0" layoutY="23.0" text="Próximo a vencer" textFill="#3c42ff">
+                  <Label layoutX="14.0" layoutY="23.0" text="Medicametos próximos do vencimento" textFill="#3c42ff">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font>
