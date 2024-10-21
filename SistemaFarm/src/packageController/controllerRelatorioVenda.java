@@ -1,22 +1,25 @@
 package packageController;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import application.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import packageControle.ProdutoDAO;
-import packageModel.Produto;
+import packageControle.CompraDAO;
+import packageModel.Compra;
 import packageModel.Venda;
 
-public class controllerRelatorioVenda {
+public class controllerRelatorioVenda implements Initializable {
 
     @FXML
     private Button btCadastrar;
@@ -49,32 +52,32 @@ public class controllerRelatorioVenda {
     private Button btSair;
 
     @FXML
-    private TableColumn<Produto,String> columnDataVenda;
+    private TableColumn<Compra,String> columnDataVenda;
 
     @FXML
-    private TableColumn<Produto,String> columnFarmaceutico;
+    private TableColumn<Compra,String> columnFarmaceutico;
 
     @FXML
-    private TableColumn<Produto,String> columnID;
+    private TableColumn<Compra,String> columnID;
 
     @FXML
-    private TableColumn<Produto,String> columnPrecoTotal;
+    private TableColumn<Compra,String> columnPrecoTotal;
 
     @FXML
-    private TableColumn<Produto,String> columnProduto;
+    private TableColumn<Compra,String> columnProduto;
 
     @FXML
-    private TableColumn<Produto,String> columnQuantidade;
+    private TableColumn<Compra,String> columnQuantidade;
 
     @FXML
-    private TableView<Produto> tabela;
+    private TableView<Compra> tabela;
 
     @FXML
     private TextField txtPesquisar;
     
-    private ObservableList<Produto> ArrayProduto;
     public static Venda CompraEditar = new Venda();
-    private ProdutoDAO produto = new ProdutoDAO();
+    private CompraDAO compra = new CompraDAO();
+    private ObservableList<Compra> ArrayCompra;
     
     @FXML
     void btCadastrar(ActionEvent event) throws IOException {
@@ -110,6 +113,15 @@ public class controllerRelatorioVenda {
     @FXML
     void btPesquisar(ActionEvent event) {
 
+    	columnDataVenda.setCellValueFactory(new PropertyValueFactory<>("dataCompra"));
+    	columnFarmaceutico.setCellValueFactory(new PropertyValueFactory<>("idVendedor"));
+       	columnID.setCellValueFactory(new PropertyValueFactory<>("idCompra"));
+    	columnPrecoTotal.setCellValueFactory(new PropertyValueFactory<>("valorTotal"));
+    	columnProduto.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
+    	columnQuantidade.setCellValueFactory(new PropertyValueFactory<>("quantidade"));
+
+		tabela.setItems(ArrayCompra);
+		tabela.refresh();
     }
 
     @FXML
@@ -129,7 +141,7 @@ public class controllerRelatorioVenda {
     
     public void CarregarTable() {
 
-    	ArrayProduto = FXCollections.observableArrayList(produto.read());
+    	ArrayCompra = FXCollections.observableArrayList(compra.read());
 
     	columnDataVenda.setText(controllerProdutos.compra.getDataVenda());
     	columnFarmaceutico.setCellValueFactory(new PropertyValueFactory<>("idFornecedor"));
@@ -139,7 +151,13 @@ public class controllerRelatorioVenda {
     	columnQuantidade.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
     	
 
-    	tabela.setItems(ArrayProduto);
+    	tabela.setItems(ArrayCompra);
     }
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated method stub
+		CarregarTable();
+	}
 
 }
