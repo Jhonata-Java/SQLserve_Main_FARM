@@ -131,6 +131,7 @@ public class Main extends Application {
 		cadRegistra.centerOnScreen();
 	}
 
+	//metodo cadastrar fornecedor
 	public static void TelaCadastraFornecedor() throws IOException {
 		FXMLLoader CadFornecedor = new FXMLLoader();
 		CadFornecedor.setLocation(Main.class.getResource("/packageView/viewCadastroFornecedor.fxml"));
