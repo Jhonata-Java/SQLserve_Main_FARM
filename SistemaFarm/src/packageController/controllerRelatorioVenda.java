@@ -143,12 +143,12 @@ public class controllerRelatorioVenda implements Initializable {
 
     	ArrayCompra = FXCollections.observableArrayList(compra.read());
 
-    	columnDataVenda.setText(controllerProdutos.compra.getDataVenda());
-    	columnFarmaceutico.setCellValueFactory(new PropertyValueFactory<>("idFornecedor"));
-       	columnID.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
-    	columnPrecoTotal.setCellValueFactory(new PropertyValueFactory<>("dosagem"));
-    	columnProduto.setCellValueFactory(new PropertyValueFactory<>("estoque"));
-    	columnQuantidade.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
+    	columnDataVenda.setCellValueFactory(new PropertyValueFactory<>("dataCompra"));
+    	columnFarmaceutico.setCellValueFactory(new PropertyValueFactory<>("idVendedor"));
+       	columnID.setCellValueFactory(new PropertyValueFactory<>("idCompra"));
+    	columnPrecoTotal.setCellValueFactory(new PropertyValueFactory<>("valorTotal"));
+    	columnProduto.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
+    	columnQuantidade.setCellValueFactory(new PropertyValueFactory<>("quantidade"));
     	
 
     	tabela.setItems(ArrayCompra);

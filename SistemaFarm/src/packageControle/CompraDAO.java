@@ -73,16 +73,17 @@ public class CompraDAO {
 		ResultSet rs = null;
 		ArrayList<Compra> compra = new ArrayList<>();
 		try {
-			stmt = con.prepareStatement("SELECT*FROM Venda");
+			stmt = con.prepareStatement("SELECT*FROM Vw_ReloatorioVenda");
 			rs = stmt.executeQuery();
 
 			while (rs.next()) {
 				Compra c = new Compra();
 				c.setIdCompra(rs.getString(1));
 				c.setIdVendedor(rs.getString(2));
-				c.setQuantidade(rs.getString(3));
-				c.setDataCompra(rs.getString(4));
-				c.setValorTotal(rs.getString(5));
+				c.setIdProduto(rs.getString(3));
+				c.setQuantidade(rs.getString(4));
+				c.setDataCompra(rs.getString(5));
+				c.setValorTotal(rs.getString(6));
 			
 				compra.add(c);
 			}
