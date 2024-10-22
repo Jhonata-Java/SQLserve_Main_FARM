@@ -4,6 +4,10 @@ module Sistema_BluePen {
 	requires javafx.fxml;
 	requires javafx.base;
 	requires javafx.graphics;
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/Jhonata-Java/Sistema-FARM.git
 	
 	exports packageController;
 	exports packageModel;

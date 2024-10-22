@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 import packageConnecting.ConnectionDATABASE;
 
 public class Main extends Application {
-
+//comentario
 	private static Stage stage;
 	private static Scene login;
 	private static Scene dashboard;
@@ -131,6 +131,7 @@ public class Main extends Application {
 		cadRegistra.centerOnScreen();
 	}
 
+	//metodo cadastrar fornecedor
 	public static void TelaCadastraFornecedor() throws IOException {
 		FXMLLoader CadFornecedor = new FXMLLoader();
 		CadFornecedor.setLocation(Main.class.getResource("/packageView/viewCadastroFornecedor.fxml"));
