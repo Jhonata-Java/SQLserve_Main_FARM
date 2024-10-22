@@ -74,7 +74,7 @@ public class controllerRelatorioVenda implements Initializable {
 
     @FXML
     private TextField txtPesquisar;
-    
+    //comenlol6
     public static Venda CompraEditar = new Venda();
     private CompraDAO compra = new CompraDAO();
     private ObservableList<Compra> ArrayCompra;
