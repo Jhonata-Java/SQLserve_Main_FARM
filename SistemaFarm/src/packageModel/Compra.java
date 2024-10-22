@@ -3,7 +3,7 @@ package packageModel;
 public class Compra {
 	private String idCompra;
 	private String idVendedor;
-	private String idFornecedor;
+	private String idProduto;
 	private String quantidade;
 	private String dataCompra;
 	private String valorTotal;
@@ -12,15 +12,15 @@ public class Compra {
 	public Compra() {
 		super();
 	}
-	public Compra(String idCompra, String idVendedor, String idFornecedor, String quantidade, String dataCompra,
-			String valorTotal) {
+	public Compra(String idCompra, String idVendedor, String quantidade, String dataCompra,
+			String valorTotal, String idProduto) {
 		super();
 		this.idCompra = idCompra;
 		this.idVendedor = idVendedor;
-		this.idFornecedor = idFornecedor;
 		this.quantidade = quantidade;
 		this.dataCompra = dataCompra;
 		this.valorTotal = valorTotal;
+		this.idProduto = idProduto;
 	}
 	public String getIdCompra() {
 		return idCompra;
@@ -33,12 +33,6 @@ public class Compra {
 	}
 	public void setIdVendedor(String idVendedor) {
 		this.idVendedor = idVendedor;
-	}
-	public String getIdFornecedor() {
-		return idFornecedor;
-	}
-	public void setIdFornecedor(String idFornecedor) {
-		this.idFornecedor = idFornecedor;
 	}
 	public String getQuantidade() {
 		return quantidade;
@@ -57,5 +51,11 @@ public class Compra {
 	}
 	public void setValorTotal(String valorTotal) {
 		this.valorTotal = valorTotal;
+	}
+	public String getIdProduto() {
+		return idProduto;
+	}
+	public void setIdProduto(String idProduto) {
+		this.idProduto = idProduto;
 	}
 }

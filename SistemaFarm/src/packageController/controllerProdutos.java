@@ -1,11 +1,9 @@
 package packageController;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
-
 import application.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -19,8 +17,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.text.Font;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import packageControle.ProdutoDAO;
 import packageModel.Produto;
@@ -113,8 +109,9 @@ public class controllerProdutos implements Initializable {
 	void btCadastrar(ActionEvent event) throws IOException {
 		produtoEditar = null;
 		Main.TelaCadastroProduto();
+	
     
-		CarregarInfTable();
+		CarregarInfoTable();
 	}
 
 	@FXML
@@ -133,7 +130,7 @@ public class controllerProdutos implements Initializable {
 			produtoEditar = tabela.getItems().get(i);
 			Main.TelaCadastroProduto();
 		}
-		CarregarInfTable();
+		CarregarInfoTable();
 	}
 
 	@FXML
@@ -160,7 +157,7 @@ public class controllerProdutos implements Initializable {
 				Alert mensagemDeExclusao = new Alert(Alert.AlertType.INFORMATION);
 				mensagemDeExclusao.setContentText("Produto excluido com sucesso!!!");
 				mensagemDeExclusao.show();
-				CarregarInfTable();
+				CarregarInfoTable();
 			}
 		}
 	}
@@ -177,7 +174,7 @@ public class controllerProdutos implements Initializable {
 
 	@FXML
 	void btImprimir(ActionEvent event) {
-		ActionBtImprimirPDF(event, produto, null);
+		
 	}
 
 	@FXML
@@ -186,7 +183,6 @@ public class controllerProdutos implements Initializable {
 		
 	}
 
-	//METODO DE LIMPAR
 	@FXML
 	void btLimpar(ActionEvent event) {
 		txtPesquisar.setText("");
@@ -226,7 +222,7 @@ public class controllerProdutos implements Initializable {
 		tabela.refresh();
 	}
 
-	public void CarregarInfTable() {
+	public void CarregarInfoTable() {
 		ArrayProduto = FXCollections.observableArrayList(produtos.read());
 
 		columnCod.setCellValueFactory(new PropertyValueFactory<>("codigo"));
@@ -249,13 +245,13 @@ public class controllerProdutos implements Initializable {
 
 	@FXML
 	void btAtualizar(ActionEvent event) {
-		CarregarInfTable();
+		CarregarInfoTable();
 	}
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
-		CarregarInfTable();
+		CarregarInfoTable();
 	}
 
 	public void ActionBtImprimirPDF(ActionEvent event, Produto produto, Stage stage) {

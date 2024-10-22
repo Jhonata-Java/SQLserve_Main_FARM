@@ -75,7 +75,6 @@ public class controllerInfoProduto  implements Initializable {
 		labLote.setText(controllerProdutos.produto.getLote());
 		labRegistANVISA.setText(controllerProdutos.produto.getRegistroAnvisa());
 		labPrincAt.setText(controllerProdutos.produto.getPrincAtivo());
-	
 	}
 
 }
