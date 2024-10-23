@@ -22,30 +22,28 @@
          <children>
             <Pane layoutX="166.0" layoutY="25.0" prefHeight="82.0" prefWidth="641.0" style="-fx-background-radius: 10; -fx-background-color: #FFFFFF;">
                <children>
-                  <TextField fx:id="txtPesquisar" layoutX="14.0" layoutY="26.0" prefHeight="30.0" prefWidth="300.0" promptText="Pesquisar" />
-                  <Button fx:id="btLimpar" layoutX="285.0" layoutY="29.0" mnemonicParsing="false" onAction="#btLimpar" prefHeight="25.0" prefWidth="23.0" style="-fx-background-color: white;" text="X" textFill="#817d7d">
+                  <TextField fx:id="txtPesquisar" layoutX="14.0" layoutY="26.0" prefHeight="30.0" prefWidth="334.0" promptText="Pesquisar" />
+                  <Button fx:id="btLimpar" layoutX="321.0" layoutY="29.0" mnemonicParsing="false" onAction="#btLimpar" prefHeight="25.0" prefWidth="23.0" style="-fx-background-color: white;" text="X" textFill="#817d7d">
                      <font>
                         <Font name="Arial" size="9.0" />
                      </font>
                   </Button>
-                  <GridPane layoutX="360.0" layoutY="29.0" prefHeight="26.0" prefWidth="290.0">
+                  <GridPane layoutX="388.0" layoutY="28.0" prefHeight="26.0" prefWidth="239.0">
                      <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.19998779296876" minWidth="10.0" prefWidth="76.79996337890626" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="77.59997558593751" minWidth="10.0" prefWidth="75.20001220703126" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.39995117187499" minWidth="10.0" prefWidth="52.99998779296874" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="84.60002441406252" minWidth="7.200048828125006" prefWidth="84.60002441406252" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="92.79998779296875" minWidth="10.0" prefWidth="88.60001220703126" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.39995117187499" minWidth="10.0" prefWidth="70.19998779296876" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.60004882812501" minWidth="7.200048828125006" prefWidth="85.60004882812501" />
                      </columnConstraints>
                      <rowConstraints>
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Button fx:id="btCadastrar" mnemonicParsing="false" onAction="#btCadastrar" style="-fx-background-color: black;" text="Cadastrar" textFill="WHITE" />
-                        <Button fx:id="btImprimir" mnemonicParsing="false" onAction="#btImprimir" style="-fx-background-color: black;" text="Imprimir" textFill="WHITE" GridPane.columnIndex="1" />
-                        <Button fx:id="btEditar" mnemonicParsing="false" onAction="#btEditar" style="-fx-background-color: black;" text="Editar" textFill="WHITE" GridPane.columnIndex="2" />
-                        <Button fx:id="btExcluir" mnemonicParsing="false" onAction="#btExcluir" prefHeight="26.0" prefWidth="61.0" style="-fx-background-color: black;" text="Excluir" textFill="WHITE" GridPane.columnIndex="3" />
+                        <Button fx:id="btCadastrar" mnemonicParsing="false" onAction="#btCadastrar" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: black;" text="Cadastrar" textFill="WHITE" />
+                        <Button fx:id="btEditar" mnemonicParsing="false" onAction="#btEditar" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: black;" text="Editar" textFill="WHITE" GridPane.columnIndex="1" />
+                        <Button fx:id="btExcluir" mnemonicParsing="false" onAction="#btExcluir" prefHeight="26.0" prefWidth="76.0" style="-fx-background-color: black;" text="Excluir" textFill="WHITE" GridPane.columnIndex="2" />
                      </children>
                   </GridPane>
-                  <Button fx:id="btPesquisar" layoutX="321.0" layoutY="30.0" mnemonicParsing="false" onAction="#btPesquisar" prefHeight="25.0" prefWidth="1.0" style="-fx-background-color: #FFFFFF;">
+                  <Button fx:id="btPesquisar" layoutX="348.0" layoutY="29.0" mnemonicParsing="false" onAction="#btPesquisar" prefHeight="25.0" prefWidth="1.0" style="-fx-background-color: #FFFFFF;">
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -77,7 +75,7 @@
                         <TableColumn fx:id="colemnPrincAtivo" minWidth="0.0" prefWidth="84.0" text="Princípio Ativo" />
                      </columns>
                   </TableView>
-                  <Button fx:id="btInfo" alignment="TOP_RIGHT" layoutX="522.0" layoutY="10.0" mnemonicParsing="false" onAction="#btInfo" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: black;" text="Informações" textFill="WHITE">
+                  <Button fx:id="btInfo" alignment="TOP_RIGHT" layoutX="517.0" layoutY="9.0" mnemonicParsing="false" onAction="#btInfo" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: black;" text="Informações" textFill="WHITE">
                      <graphic>
                         <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                            <image>

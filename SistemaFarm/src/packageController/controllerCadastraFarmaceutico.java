@@ -1,12 +1,14 @@
 package packageController;
 
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import packageControle.FarmaceuticoDAO;
@@ -14,6 +16,12 @@ import packageModel.Farmaceutico;
 
 public class controllerCadastraFarmaceutico implements Initializable {
 
+	@FXML
+    private DatePicker DtDataCont;
+
+    @FXML
+    private DatePicker DtDataNasc;
+	
 	@FXML
 	private Button btCadastrar;
 
@@ -58,8 +66,8 @@ public class controllerCadastraFarmaceutico implements Initializable {
 			far.setCPF(textCPF.getText());
 			far.setEmail(textEmail.getText());
 			far.setTelefone(textTelefone.getText());
-			far.setDataNasc(textDataNascimento.getText());
-			far.setDataCont(textDataContratacao.getText());
+			far.setDataCont(DtDataCont.getValue().toString());
+			far.setDataNasc(DtDataNasc.getValue().toString());
 			far.setEndereco(textEnderecoResidencialCompleto.getText());
 			FarmaceuticoDAO far1 = new FarmaceuticoDAO();
 			far1.create(far);
@@ -73,8 +81,8 @@ public class controllerCadastraFarmaceutico implements Initializable {
 			far.setCPF(textCPF.getText());
 			far.setEmail(textEmail.getText());
 			far.setTelefone(textTelefone.getText());
-			far.setDataNasc(textDataNascimento.getText());
-			far.setDataCont(textDataContratacao.getText());
+			far.setDataCont(DtDataCont.getValue().toString());
+			far.setDataNasc(DtDataNasc.getValue().toString());
 			far.setEndereco(textEnderecoResidencialCompleto.getText());
 			FarmaceuticoDAO far1 = new FarmaceuticoDAO();
 			far1.update(far);
@@ -90,8 +98,6 @@ public class controllerCadastraFarmaceutico implements Initializable {
 		textCPF.setText("");
 		textEmail.setText("");
 		textTelefone.setText("");
-		textDataNascimento.setText("");
-		textDataContratacao.setText("");
 		textEnderecoResidencialCompleto.setText("");
 
 		Stage stage = (Stage) btCancelar.getScene().getWindow();
@@ -106,6 +112,10 @@ public class controllerCadastraFarmaceutico implements Initializable {
 			textCPF.setText(controllerFarmaceutico.farmaceuticoEditar.getCPF());
 			textEmail.setText(controllerFarmaceutico.farmaceuticoEditar.getEmail());
 			textTelefone.setText(controllerFarmaceutico.farmaceuticoEditar.getTelefone());
+			LocalDate localdateNasc = LocalDate.parse(controllerFarmaceutico.farmaceuticoEditar.getDataNasc());
+	    	DtDataNasc.setValue(localdateNasc);
+	    	LocalDate localdateCont = LocalDate.parse(controllerFarmaceutico.farmaceuticoEditar.getDataCont());
+	    	DtDataCont.setValue(localdateCont);
 			textDataNascimento.setText(controllerFarmaceutico.farmaceuticoEditar.getDataNasc());
 			textDataContratacao.setText(controllerFarmaceutico.farmaceuticoEditar.getDataCont());
 			textEnderecoResidencialCompleto.setText(controllerFarmaceutico.farmaceuticoEditar.getEndereco());

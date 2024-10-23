@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -71,7 +72,6 @@
                         <Font name="Arial" size="12.0" />
                      </font>
                   </Text>
-                  <TextField fx:id="textPreca" layoutX="41.0" layoutY="245.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
                   <TextField fx:id="textPrincAtivo" layoutX="292.0" layoutY="245.0" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" />
                   <TextField fx:id="textLab" layoutX="524.0" layoutY="245.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
                   <Text layoutX="523.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Laboratório">
@@ -84,12 +84,7 @@
                         <Font name="Arial" size="12.0" />
                      </font>
                   </Text>
-                  <Text layoutX="42.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precauções">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="textRegistroANVISA" layoutX="41.0" layoutY="310.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
+                  <TextField fx:id="textRegistroANVISA" layoutX="41.0" layoutY="245.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
                   <TextField fx:id="textCodigoBar" layoutX="292.0" layoutY="310.0" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" />
                   <TextField fx:id="textLote" layoutX="524.0" layoutY="310.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
                   <Text layoutX="524.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lote">
@@ -102,15 +97,13 @@
                         <Font name="Arial" size="12.0" />
                      </font>
                   </Text>
-                  <Text layoutX="41.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro ANVISA">
+                  <Text layoutX="41.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro ANVISA">
                      <font>
                         <Font name="Arial" size="12.0" />
                      </font>
                   </Text>
-                  <TextField fx:id="textDataF" layoutX="41.0" layoutY="382.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
-                  <TextField fx:id="textDataVal" layoutX="292.0" layoutY="382.0" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" />
                   <TextField fx:id="textPrecoUn" layoutX="524.0" layoutY="382.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
-                  <Text layoutX="37.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de fabricação">
+                  <Text layoutX="45.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de fabricação">
                      <font>
                         <Font name="Arial" size="12.0" />
                      </font>
@@ -125,15 +118,9 @@
                         <Font name="Arial" size="12.0" />
                      </font>
                   </Text>
-                  <TextField fx:id="textDataComp" layoutX="41.0" layoutY="450.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
-                  <TextField fx:id="textQuant" layoutX="292.0" layoutY="450.0" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" />
+                  <TextField fx:id="textQuant" layoutX="42.0" layoutY="450.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
                   <TextField fx:id="textTarja" layoutX="524.0" layoutY="450.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
-                  <Text layoutX="41.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data da Compra">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="292.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade">
+                  <Text layoutX="41.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade">
                      <font>
                         <Font name="Arial" size="12.0" />
                      </font>
@@ -143,18 +130,20 @@
                         <Font name="Arial" size="12.0" />
                      </font>
                   </Text>
-                  <TextField fx:id="textTipoUn" layoutX="41.0" layoutY="505.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
-                  <Text layoutX="47.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo Unitário">
+                  <TextField fx:id="textTipoUn" layoutX="41.0" layoutY="310.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
+                  <Text layoutX="42.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo Unitário">
                      <font>
                         <Font name="Arial" size="12.0" />
                      </font>
                   </Text>
-                  <TextField fx:id="textLocalizacao" layoutX="292.0" layoutY="505.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" />
-                  <Text layoutX="291.0" layoutY="494.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Localização">
+                  <TextField fx:id="textLocalizacao" layoutX="292.0" layoutY="450.0" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" />
+                  <Text layoutX="288.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Localização">
                      <font>
                         <Font name="Arial" size="12.0" />
                      </font>
                   </Text>
+                  <DatePicker fx:id="DtDataFab" layoutX="41.0" layoutY="382.0" prefHeight="25.0" prefWidth="233.0" />
+                  <DatePicker fx:id="DtDataVal" layoutX="291.0" layoutY="382.0" prefHeight="25.0" prefWidth="214.0" />
                </children>
             </Pane>
             <ImageView fitHeight="70.0" fitWidth="828.0" pickOnBounds="true" preserveRatio="true">
