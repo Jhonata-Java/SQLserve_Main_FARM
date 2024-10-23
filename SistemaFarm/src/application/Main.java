@@ -7,6 +7,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import packageConnecting.ConnectionDATABASE;
@@ -47,6 +48,9 @@ public class Main extends Application {
 
 			Parent fxmlRelatorioVenda = FXMLLoader.load(getClass().getResource("/packageView/viewRelatorioVenda.fxml"));
 			relatorioVenda = new Scene(fxmlRelatorioVenda);
+			
+			stage.getIcons().add(new Image(getClass().getResourceAsStream("/packageIcons/Instagram post - 1.png")));
+			stage.setResizable(false);
 
 			primaryStage.setScene(login);
 			primaryStage.show();
