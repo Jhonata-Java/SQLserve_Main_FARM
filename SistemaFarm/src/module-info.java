@@ -1,4 +1,4 @@
-module SistemaFarm {
+module Sistema_BluePen {
 	requires javafx.controls;
 	requires java.sql;
 	requires javafx.fxml;
