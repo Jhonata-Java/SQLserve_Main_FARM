@@ -5,7 +5,6 @@ module Sistema_BluePen {
 	requires javafx.base;
 	requires javafx.graphics;
 
-	
 	exports packageController;
 	exports packageModel;
 	exports packageControle;
@@ -13,6 +12,5 @@ module Sistema_BluePen {
 	opens packageController to javafx.fxml, pdfbox.app, commons.logging ;
 	opens packageModel to javafx.fxml;
 	opens packageControle to javafx.fxml;
-
 	opens application to javafx.graphics, javafx.fxml;
 }
