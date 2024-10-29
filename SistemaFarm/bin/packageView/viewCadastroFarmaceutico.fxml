@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -55,15 +56,12 @@
                                     <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <TextField fx:id="textDataNascimento" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1">
-                                       <font>
-                                          <Font name="Arial" size="12.0" />
-                                       </font></TextField>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Nascimento">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
                                     </Text>
+                                    <DatePicker fx:id="DtDataNasc" prefHeight="26.0" prefWidth="214.0" GridPane.rowIndex="1" />
                                  </children>
                               </GridPane>
                               <GridPane>
@@ -75,15 +73,12 @@
                                     <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <TextField fx:id="textDataContratacao" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1">
-                                       <font>
-                                          <Font name="Arial" size="12.0" />
-                                       </font></TextField>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Contratação">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
                                     </Text>
+                                    <DatePicker fx:id="DtDataCont" prefHeight="26.0" prefWidth="230.0" GridPane.rowIndex="1" />
                                  </children>
                               </GridPane>
                            </children>
