@@ -42,7 +42,7 @@
                   <TableColumn fx:id="tcPrecoTotal2" minWidth="0.0" prefWidth="94.40005493164062" text="Preço Total" />
                </columns>
             </TableView>
-            <Button fx:id="btAdicionar" layoutX="374.0" layoutY="183.0" mnemonicParsing="false" onAction="#btAdicionar" style="-fx-background-color: #000000;" text="Adicionar" textFill="WHITE" />
+            <Button fx:id="btAdicionar" layoutX="374.0" layoutY="183.0" mnemonicParsing="false" onAction="#ActionbtAdicionar" style="-fx-background-color: #000000;" text="Adicionar" textFill="WHITE" />
             <HBox layoutX="14.0" layoutY="163.0" spacing="15.0" />
             <HBox layoutX="12.0" layoutY="39.0" prefHeight="41.0" prefWidth="540.0" spacing="20.0">
                <children>
@@ -220,8 +220,8 @@
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Text>
-            <TextField fx:id="txtResultadoPesquisa" layoutX="9.0" layoutY="182.0" onAction="#txtResultadoPesquisa" prefHeight="27.0" prefWidth="305.0" promptText="Pesquisar produto" style="-fx-border-color: D9D9D9; -fx-background-insets: 99999; -fx-border-radius: 5;" />
-            <Button fx:id="btPesquisar" layoutX="331.0" layoutY="183.0" mnemonicParsing="false" onAction="#btPesquisar" style="-fx-background-insets: 99999;">
+            <TextField fx:id="txtResultadoPesquisa" layoutX="9.0" layoutY="182.0" prefHeight="27.0" prefWidth="305.0" promptText="Pesquisar produto" style="-fx-border-color: D9D9D9; -fx-background-insets: 99999; -fx-border-radius: 5;" />
+            <Button fx:id="btPesquisar" layoutX="331.0" layoutY="183.0" mnemonicParsing="false" onAction="#ActionbtPesquisarProduto" style="-fx-background-insets: 99999;">
                <graphic>
                   <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -230,7 +230,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btExcluir" layoutX="162.0" layoutY="313.0" mnemonicParsing="false" onAction="#btExcluir" style="-fx-background-color: blue;" text="Excluir produto" textFill="WHITE" />
+            <Button fx:id="btExcluir" layoutX="162.0" layoutY="313.0" mnemonicParsing="false" onAction="#ActionbtExcluir" style="-fx-background-color: blue;" text="Excluir produto" textFill="WHITE" />
          </children>
       </Pane>
       <Pane layoutX="614.0" layoutY="77.0" prefHeight="227.0" prefWidth="143.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">
@@ -256,7 +256,7 @@
                </font></Text>
             <VBox layoutX="9.0" layoutY="134.0" spacing="20.0">
                <children>
-                  <Button fx:id="btConfirmarVenda" alignment="BOTTOM_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#btConfirmarVenda" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: #000000;" text="Confirmar Venda" textFill="WHITE">
+                  <Button fx:id="btConfirmarVenda" alignment="BOTTOM_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#ActionbtConfirmarVenda" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: #000000;" text="Confirmar Venda" textFill="WHITE">
                      <graphic>
                         <ImageView fitHeight="16.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -265,7 +265,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="btCancelarVenda" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#btCancelarVenda" prefHeight="27.0" prefWidth="126.0" style="-fx-background-color: #767676;" text="Cancelar">
+                  <Button fx:id="btCancelarVenda" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#ActionbtCancelarVenda" prefHeight="27.0" prefWidth="126.0" style="-fx-background-color: #767676;" text="Cancelar">
                      <graphic>
                         <ImageView fitHeight="7.0" fitWidth="7.0" pickOnBounds="true" preserveRatio="true">
                            <image>

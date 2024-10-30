@@ -96,6 +96,7 @@ public class controllerDashboard  implements Initializable {
 
     @FXML
     void btCadastrarFarmaceutico(ActionEvent event)throws IOException  {
+    	controllerFarmaceutico.farmaceuticoEditar = null;
          Main.TelaCadastraFarmaceutico();
     }
 
@@ -106,6 +107,7 @@ public class controllerDashboard  implements Initializable {
 
     @FXML
     void btCadastrarProduto(ActionEvent event)throws IOException {
+    	controllerProdutos.produtoEditar = null;
     	Main.TelaCadastroProduto() ;
     }
 

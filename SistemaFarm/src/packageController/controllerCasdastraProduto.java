@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import packageControle.ProdutoDAO;
@@ -35,11 +36,11 @@ public class controllerCasdastraProduto implements Initializable {
 	@FXML
 	private TextField textDataComp;
 
-	@FXML
-	private TextField textDataF;
+    @FXML
+    private DatePicker DtDataFab;
 
-	@FXML
-	private TextField textDataVal;
+    @FXML
+    private DatePicker DtDataVal;;
 
 	@FXML
 	private TextField textDose;
@@ -102,8 +103,8 @@ public class controllerCasdastraProduto implements Initializable {
 			produto.setEstoque(textQuant.getText());
 			produto.setPreocoUN(textPrecoUn.getText());
 			produto.setTipoUN(textTipoUn.getText());
-			produto.setDataFab(textDataF.getText());
-			produto.setDataFab(textDataVal.getText());
+			produto.setDataFab(DtDataFab.getValue().toString());
+			produto.setDataFab(DtDataVal.getValue().toString());
 			produto.setRegistroAnvisa(textRegistroANVISA.getText());
 			produto.setLote(textLote.getText());
 			produto.setEndereco(textLocalizacao.getText());
@@ -131,8 +132,8 @@ public class controllerCasdastraProduto implements Initializable {
 			produto.setEstoque(textQuant.getText());
 			produto.setPreocoUN(textPrecoUn.getText());
 			produto.setTipoUN(textTipoUn.getText());
-			produto.setDataFab(textDataF.getText());
-			produto.setDataFab(textDataVal.getText());
+			produto.setDataFab(DtDataFab.getValue().toString());
+			produto.setDataFab(DtDataVal.getValue().toString());
 			produto.setRegistroAnvisa(textRegistroANVISA.getText());
 			produto.setLote(textLote.getText());
 			produto.setEndereco(textLocalizacao.getText());
@@ -152,29 +153,6 @@ public class controllerCasdastraProduto implements Initializable {
 
 	@FXML
 	void btCancelar(ActionEvent event) {
-		textNomeC.setText("");
-		textNomeG.setText("");
-		textCat.setText("");
-		textFormaF.setText("");
-		textConc.setText("");
-		textDose.setText("");
-		textCodigoBar.setText("");
-		textQuant.setText("");
-		textPrecoUn.setText("");
-		textTipoUn.setText("");
-		textDataF.setText("");
-		textDataVal.setText("");
-		textRegistroANVISA.setText("");
-		textLote.setText("");
-		textLocalizacao.setText("");
-		textPrincAtivo.setText("");
-		textInd.setText("");
-		textContraind.setText("");
-		textEfeitosCol.setText("");
-		textLab.setText("");
-		
-		controllerProdutos.produtoEditar = null;
-
 		Stage stage = (Stage) btCancelar.getScene().getWindow();
 		stage.close();
 	}
@@ -193,8 +171,8 @@ public class controllerCasdastraProduto implements Initializable {
 		textQuant.setText(controllerProdutos.produtoEditar.getEstoque());
 		textPrecoUn.setText(controllerProdutos.produtoEditar.getPreocoUN());
 		textTipoUn.setText(controllerProdutos.produtoEditar.getTipoUN());
-		textDataF.setText(controllerProdutos.produtoEditar.getDataFab());
-		textDataVal.setText(controllerProdutos.produtoEditar.getDataVal());
+//		DtDataFab.setText(controllerProdutos.produtoEditar.getDataFab());
+//		DtDataVal.setText(controllerProdutos.produtoEditar.getDataVal());
 		textRegistroANVISA.setText(controllerProdutos.produtoEditar.getRegistroAnvisa());
 		textLote.setText(controllerProdutos.produtoEditar.getLote());
 		textLocalizacao.setText(controllerProdutos.produtoEditar.getEndereco());
