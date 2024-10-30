@@ -173,7 +173,7 @@ public class controllerRegistrarVenda {
     @FXML
     void ActionbtPesquisarProduto(MouseEvent event) {
     	ArrayProduto = FXCollections.observableArrayList(produtoDAO.search(txtResultadoPesquisa.getText()));
-    	
+    	//GUGAS DA GALERA
     			tcID1.setCellValueFactory(new PropertyValueFactory<>("Codigo"));
     			tcProduto1.setCellValueFactory(new PropertyValueFactory<>("Nome"));
     			tcQuantidade1.setCellValueFactory(new PropertyValueFactory<>("estoque"));
