@@ -116,7 +116,6 @@ public class Main extends Application {
 		cadProduto.setScene(scene2);
 		cadProduto.centerOnScreen();
 		cadProduto.showAndWait();
-		cadProduto.centerOnScreen();
 
 	}
 
