@@ -64,7 +64,7 @@ public class FornecedorDAO {
 		PreparedStatement stmt = null;
 
 		try {
-			stmt = con.prepareStatement("DELETE FROM Fornecedor WHERE codigo = ?");
+			stmt = con.prepareStatement("DELETE FROM Fornecedor WHERE CNPJ = ?");
 			stmt.setString(1, CNPJ);
 			stmt.executeUpdate();
 		} catch (SQLException e) {
