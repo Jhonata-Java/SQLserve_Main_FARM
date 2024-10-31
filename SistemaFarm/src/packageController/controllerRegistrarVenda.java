@@ -128,7 +128,6 @@ public class controllerRegistrarVenda {
     	if (btAdicionar != null && txtCodigo != null && txtProduto != null && txtQuantidade != null
 				&& txtDesconto != null) {
     		CarregarTabelaProdutosSelecionados();
-    		//CARREGAR PRODUTOS
 		}
     }
 
