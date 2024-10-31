@@ -20,24 +20,23 @@ public class ProdutoDAO {
 		PreparedStatement comandoSQL = null;
 		
 		try {
-			comandoSQL = conexão.prepareStatement("INSERT INTO Produto VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+			comandoSQL = conexão.prepareStatement("INSERT INTO Produto VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
-			comandoSQL.setString(1,p.getIdFornecedor());
-			comandoSQL.setString(2,p.getNomeComecial());
-			comandoSQL.setString(3,p.getNomeGenerico());
-			comandoSQL.setString(4,p.getCategoria());
-			comandoSQL.setString(5,p.getFormaFarmaceutica());
-			comandoSQL.setString(6,p.getConcentracao());
-			comandoSQL.setString(7,p.getDosagem());
-			comandoSQL.setString(8,p.getCodigo());
-			comandoSQL.setString(9,p.getEstoque());
-			comandoSQL.setString(10,p.getPreocoUN());
-			comandoSQL.setString(11,p.getTipoUN());
-			comandoSQL.setString(12,p.getDataFab());
-			comandoSQL.setString(13,p.getDataVal());
-			comandoSQL.setString(14,p.getRegistroAnvisa());
-			comandoSQL.setString(15,p.getLote());
-			comandoSQL.setString(16,p.getEndereco());
+			comandoSQL.setString(1,p.getNomeComecial());
+			comandoSQL.setString(2,p.getNomeGenerico());
+			comandoSQL.setString(3,p.getCategoria());
+			comandoSQL.setString(4,p.getFormaFarmaceutica());
+			comandoSQL.setString(5,p.getConcentracao());
+			comandoSQL.setString(6,p.getDosagem());
+			comandoSQL.setString(7,p.getCodigo());
+			comandoSQL.setString(8,p.getEstoque());
+			comandoSQL.setString(9,p.getPreocoUN());
+			comandoSQL.setString(10,p.getTipoUN());
+			comandoSQL.setString(11,p.getDataFab());
+			comandoSQL.setString(12,p.getDataVal());
+			comandoSQL.setString(13,p.getRegistroAnvisa());
+			comandoSQL.setString(14,p.getLote());
+			comandoSQL.setString(15,p.getEndereco());
 			
 			
 			comandoSQL.executeUpdate();
@@ -65,23 +64,22 @@ public class ProdutoDAO {
 			{
 				Produto p = new Produto();
 				p.setIdProduto(rs.getString(1));
-				p.setIdFornecedor(rs.getString(2));
-				p.setNomeComecial(rs.getString(3));
-				p.setNomeGenerico(rs.getString(4));
-				p.setCategoria(rs.getString(5));
-				p.setFormaFarmaceutica(rs.getString(6));
-				p.setConcentracao(rs.getString(7));		//coloca as informações dentro do array cliente
-				p.setDosagem(rs.getString(8));
-				p.setCodigo(rs.getString(9));
-				p.setEstoque(rs.getString(10));
-				p.setPreocoUN(rs.getString(11));
-				p.setTipoUN(rs.getString(12));
-				p.setDataFab(rs.getString(13));
-				p.setDataVal(rs.getString(14));
-				p.setRegistroAnvisa(rs.getString(15));
-				p.setLote(rs.getString(16));
-				p.setEndereco(rs.getString(17));
-				p.setPrincAtivo(rs.getString(18));
+				p.setNomeComecial(rs.getString(2));
+				p.setNomeGenerico(rs.getString(3));
+				p.setCategoria(rs.getString(4));
+				p.setFormaFarmaceutica(rs.getString(5));
+				p.setConcentracao(rs.getString(6));		//coloca as informações dentro do array cliente
+				p.setDosagem(rs.getString(7));
+				p.setCodigo(rs.getString(8));
+				p.setEstoque(rs.getString(9));
+				p.setPreocoUN(rs.getString(10));
+				p.setTipoUN(rs.getString(11));
+				p.setDataFab(rs.getString(12));
+				p.setDataVal(rs.getString(13));
+				p.setRegistroAnvisa(rs.getString(14));
+				p.setLote(rs.getString(15));
+				p.setEndereco(rs.getString(16));
+				p.setPrincAtivo(rs.getString(17));
 
 				produto.add(p);
 			}
@@ -101,23 +99,22 @@ public class ProdutoDAO {
 		
 		try {
 			comandoSQL = conexão.prepareStatement("UPDATE Produto SET idFornecedor = ?,  nomeComercial = ?, nomeGenerico = ?, categoria = ?, formaFarmaceutica = ?, concentracao = ?,dosagem = ?, codigo = ?, estoque = ?, precoUn = ?, tipoUn = ?,dataFab = ?,dataVal = ?, registroAnvisa = ?, lote = ?, endereco = ?  WHERE codigo = ?");
-			comandoSQL.setString(1,p.getIdFornecedor());
-			comandoSQL.setString(2,p.getNomeComecial());
-			comandoSQL.setString(3,p.getNomeGenerico());
-			comandoSQL.setString(4,p.getCategoria());
-			comandoSQL.setString(5,p.getFormaFarmaceutica());
-			comandoSQL.setString(6,p.getConcentracao());
-			comandoSQL.setString(7,p.getDosagem());
-			comandoSQL.setString(8,p.getCodigo());
-			comandoSQL.setString(9,p.getEstoque());
-			comandoSQL.setString(10,p.getPreocoUN());
-			comandoSQL.setString(11,p.getTipoUN());
-			comandoSQL.setString(12,p.getDataFab());
-			comandoSQL.setString(13,p.getDataVal());
-			comandoSQL.setString(14,p.getRegistroAnvisa());
-			comandoSQL.setString(15,p.getLote());
-			comandoSQL.setString(16,p.getEndereco());
-			comandoSQL.setString(17,p.getCodigo());
+			comandoSQL.setString(1,p.getNomeComecial());
+			comandoSQL.setString(2,p.getNomeGenerico());
+			comandoSQL.setString(3,p.getCategoria());
+			comandoSQL.setString(4,p.getFormaFarmaceutica());
+			comandoSQL.setString(5,p.getConcentracao());
+			comandoSQL.setString(6,p.getDosagem());
+			comandoSQL.setString(7,p.getCodigo());
+			comandoSQL.setString(8,p.getEstoque());
+			comandoSQL.setString(9,p.getPreocoUN());
+			comandoSQL.setString(10,p.getTipoUN());
+			comandoSQL.setString(11,p.getDataFab());
+			comandoSQL.setString(12,p.getDataVal());
+			comandoSQL.setString(13,p.getRegistroAnvisa());
+			comandoSQL.setString(14,p.getLote());
+			comandoSQL.setString(15,p.getEndereco());
+			comandoSQL.setString(16,p.getCodigo());
 			
 			comandoSQL.executeUpdate();
 		} catch (SQLException e) {
@@ -169,23 +166,23 @@ public class ProdutoDAO {
 			{
 				Produto p = new Produto();
 				p.setIdProduto(rs.getString(1));
-				p.setIdFornecedor(rs.getString(2));
-				p.setNomeComecial(rs.getString(3));
-				p.setNomeGenerico(rs.getString(4));
-				p.setCategoria(rs.getString(5));
-				p.setFormaFarmaceutica(rs.getString(6));
-				p.setConcentracao(rs.getString(7));		//coloca as informações dentro do array cliente
-				p.setDosagem(rs.getString(8));
-				p.setCodigo(rs.getString(9));
-				p.setEstoque(rs.getString(10));
-				p.setPreocoUN(rs.getString(11));
-				p.setTipoUN(rs.getString(12));
-				p.setDataFab(rs.getString(13));
-				p.setDataVal(rs.getString(14));
-				p.setRegistroAnvisa(rs.getString(15));
-				p.setLote(rs.getString(16));
-				p.setEndereco(rs.getString(17));
-				p.setPrincAtivo(rs.getString(18));
+				p.setNomeComecial(rs.getString(2));
+				p.setNomeGenerico(rs.getString(3));
+				p.setCategoria(rs.getString(4));
+				p.setFormaFarmaceutica(rs.getString(5));
+				p.setConcentracao(rs.getString(6));
+				p.setDosagem(rs.getString(7));
+				p.setCodigo(rs.getString(8));
+				p.setEstoque(rs.getString(9));
+				p.setPreocoUN(rs.getString(10));
+				p.setTipoUN(rs.getString(11));
+				p.setDataFab(rs.getString(12));
+				p.setDataVal(rs.getString(13));
+				p.setRegistroAnvisa(rs.getString(14));
+				p.setLote(rs.getString(15));
+				p.setEndereco(rs.getString(16));
+				p.setPrincAtivo(rs.getString(17));
+
 				produto.add(p);
 			}
 			
@@ -236,23 +233,22 @@ public class ProdutoDAO {
 			{
 				Produto p = new Produto();
 				p.setIdProduto(rs.getString(1));
-				p.setIdFornecedor(rs.getString(2));
-				p.setNomeComecial(rs.getString(3));
-				p.setNomeGenerico(rs.getString(4));
-				p.setCategoria(rs.getString(5));
-				p.setFormaFarmaceutica(rs.getString(6));
-				p.setConcentracao(rs.getString(7));
-				p.setDosagem(rs.getString(8));
-				p.setCodigo(rs.getString(9));
-				p.setEstoque(rs.getString(10));
-				p.setPreocoUN(rs.getString(11));
-				p.setTipoUN(rs.getString(12));
-				p.setDataFab(rs.getString(13));
-				p.setDataVal(rs.getString(14));
-				p.setRegistroAnvisa(rs.getString(15));
-				p.setLote(rs.getString(16));
-				p.setEndereco(rs.getString(17));
-				p.setPrincAtivo(rs.getString(18));
+				p.setNomeComecial(rs.getString(2));
+				p.setNomeGenerico(rs.getString(3));
+				p.setCategoria(rs.getString(4));
+				p.setFormaFarmaceutica(rs.getString(5));
+				p.setConcentracao(rs.getString(6));
+				p.setDosagem(rs.getString(7));
+				p.setCodigo(rs.getString(8));
+				p.setEstoque(rs.getString(9));
+				p.setPreocoUN(rs.getString(10));
+				p.setTipoUN(rs.getString(11));
+				p.setDataFab(rs.getString(12));
+				p.setDataVal(rs.getString(13));
+				p.setRegistroAnvisa(rs.getString(14));
+				p.setLote(rs.getString(15));
+				p.setEndereco(rs.getString(16));
+				p.setPrincAtivo(rs.getString(17));
 
 				produto.add(p);
 			}
@@ -281,24 +277,23 @@ public class ProdutoDAO {
 			{
 				Produto p = new Produto();
 				p.setIdProduto(rs.getString(1));
-				p.setIdFornecedor(rs.getString(2));
-				p.setNomeComecial(rs.getString(3));
-				p.setNomeGenerico(rs.getString(4));
-				p.setCategoria(rs.getString(5));
-				p.setFormaFarmaceutica(rs.getString(6));
-				p.setConcentracao(rs.getString(7));
-				p.setDosagem(rs.getString(8));
-				p.setCodigo(rs.getString(9));
-				p.setEstoque(rs.getString(10));
-				p.setPreocoUN(rs.getString(11));
-				p.setTipoUN(rs.getString(12));
-				p.setDataFab(rs.getString(13));
-				p.setDataVal(rs.getString(14));
-				p.setRegistroAnvisa(rs.getString(15));
-				p.setLote(rs.getString(16));
-				p.setEndereco(rs.getString(17));
-				p.setPrincAtivo(rs.getString(18));
-				
+				p.setNomeComecial(rs.getString(2));
+				p.setNomeGenerico(rs.getString(3));
+				p.setCategoria(rs.getString(4));
+				p.setFormaFarmaceutica(rs.getString(5));
+				p.setConcentracao(rs.getString(6));
+				p.setDosagem(rs.getString(7));
+				p.setCodigo(rs.getString(8));
+				p.setEstoque(rs.getString(9));
+				p.setPreocoUN(rs.getString(10));
+				p.setTipoUN(rs.getString(11));
+				p.setDataFab(rs.getString(12));
+				p.setDataVal(rs.getString(13));
+				p.setRegistroAnvisa(rs.getString(14));
+				p.setLote(rs.getString(15));
+				p.setEndereco(rs.getString(16));
+				p.setPrincAtivo(rs.getString(17));
+
 				produto.add(p);
 			}
 			

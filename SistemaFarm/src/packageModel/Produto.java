@@ -3,7 +3,6 @@ package packageModel;
 public class Produto {
 	
 	private String idProduto;
-	private String idFornecedor;
 	private String nomeComecial;
 	private String nomeGenerico;
 	private String categoria;
@@ -29,13 +28,12 @@ public class Produto {
 		super();
 	}
 
-	public Produto(String idProduto, String idFornecedor, String nomeComecial, String nomeGenerico, String categoria,
+	public Produto(String idProduto, String nomeComecial, String nomeGenerico, String categoria,
 			String formaFarmaceutica, String concentracao, String dosagem, String codigo, String estoque,
 			String preocoUN, String tipoUN, String dataFab, String dataVal, String registroAnvisa, String lote,
 			String endereco, String princAtivo, String indicacoes, String contraInd, String efeitosColaterais, String laboratorio) {
 		super();
 		this.idProduto = idProduto;
-		this.idFornecedor = idFornecedor;
 		this.nomeComecial = nomeComecial;
 		this.nomeGenerico = nomeGenerico;
 		this.categoria = categoria;
@@ -66,14 +64,7 @@ public class Produto {
 		this.idProduto = idProduto;
 	}
 
-	public String getIdFornecedor() {
-		return idFornecedor;
-	}
-
-	public void setIdFornecedor(String idFornecedor) {
-		this.idFornecedor = idFornecedor;
-	}
-
+	
 	public String getNomeComecial() {
 		return nomeComecial;
 	}

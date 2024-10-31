@@ -36,11 +36,11 @@ public class controllerCasdastraProduto implements Initializable {
 	@FXML
 	private TextField textDataComp;
 
-    @FXML
-    private DatePicker DtDataFab;
+	@FXML
+	private DatePicker DtDataFab;
 
-    @FXML
-    private DatePicker DtDataVal;;
+	@FXML
+	private DatePicker DtDataVal;;
 
 	@FXML
 	private TextField textDose;
@@ -80,7 +80,7 @@ public class controllerCasdastraProduto implements Initializable {
 
 	@FXML
 	private TextField textTipoUn;
-	
+
 	@FXML
 	private TextField textLocalizacao;
 	@FXML
@@ -88,7 +88,7 @@ public class controllerCasdastraProduto implements Initializable {
 
 	@FXML
 	private TextField textTarja;
-	
+
 	@FXML
 	void btCadastrar(ActionEvent event) {
 		if (controllerProdutos.produtoEditar == null) {
@@ -104,7 +104,7 @@ public class controllerCasdastraProduto implements Initializable {
 			produto.setPreocoUN(textPrecoUn.getText());
 			produto.setTipoUN(textTipoUn.getText());
 			produto.setDataFab(DtDataFab.getValue().toString());
-			produto.setDataFab(DtDataVal.getValue().toString());
+			produto.setDataVal(DtDataVal.getValue().toString());
 			produto.setRegistroAnvisa(textRegistroANVISA.getText());
 			produto.setLote(textLote.getText());
 			produto.setEndereco(textLocalizacao.getText());
@@ -120,8 +120,9 @@ public class controllerCasdastraProduto implements Initializable {
 			Stage stage = (Stage) btCancelar.getScene().getWindow();
 			stage.close();
 		} else {
+			
 			Produto produto = new Produto();
-
+			
 			produto.setNomeComecial(textNomeC.getText());
 			produto.setNomeGenerico(textNomeG.getText());
 			produto.setCategoria(textCat.getText());
@@ -133,7 +134,7 @@ public class controllerCasdastraProduto implements Initializable {
 			produto.setPreocoUN(textPrecoUn.getText());
 			produto.setTipoUN(textTipoUn.getText());
 			produto.setDataFab(DtDataFab.getValue().toString());
-			produto.setDataFab(DtDataVal.getValue().toString());
+			produto.setDataVal(DtDataVal.getValue().toString());
 			produto.setRegistroAnvisa(textRegistroANVISA.getText());
 			produto.setLote(textLote.getText());
 			produto.setEndereco(textLocalizacao.getText());
@@ -160,27 +161,27 @@ public class controllerCasdastraProduto implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
-		if(controllerProdutos.produtoEditar != null) {
-		textNomeC.setText(controllerProdutos.produtoEditar.getNomeComecial());
-		textNomeG.setText(controllerProdutos.produtoEditar.getNomeGenerico());
-		textCat.setText(controllerProdutos.produtoEditar.getCategoria());
-		textFormaF.setText(controllerProdutos.produtoEditar.getFormaFarmaceutica());
-		textConc.setText(controllerProdutos.produtoEditar.getConcentracao());
-		textDose.setText(controllerProdutos.produtoEditar.getDosagem());
-		textCodigoBar.setText(controllerProdutos.produtoEditar.getCodigo());
-		textQuant.setText(controllerProdutos.produtoEditar.getEstoque());
-		textPrecoUn.setText(controllerProdutos.produtoEditar.getPreocoUN());
-		textTipoUn.setText(controllerProdutos.produtoEditar.getTipoUN());
+		if (controllerProdutos.produtoEditar != null) {
+			textNomeC.setText(controllerProdutos.produtoEditar.getNomeComecial());
+			textNomeG.setText(controllerProdutos.produtoEditar.getNomeGenerico());
+			textCat.setText(controllerProdutos.produtoEditar.getCategoria());
+			textFormaF.setText(controllerProdutos.produtoEditar.getFormaFarmaceutica());
+			textConc.setText(controllerProdutos.produtoEditar.getConcentracao());
+			textDose.setText(controllerProdutos.produtoEditar.getDosagem());
+			textCodigoBar.setText(controllerProdutos.produtoEditar.getCodigo());
+			textQuant.setText(controllerProdutos.produtoEditar.getEstoque());
+			textPrecoUn.setText(controllerProdutos.produtoEditar.getPreocoUN());
+			textTipoUn.setText(controllerProdutos.produtoEditar.getTipoUN());
 //		DtDataFab.setText(controllerProdutos.produtoEditar.getDataFab());
 //		DtDataVal.setText(controllerProdutos.produtoEditar.getDataVal());
-		textRegistroANVISA.setText(controllerProdutos.produtoEditar.getRegistroAnvisa());
-		textLote.setText(controllerProdutos.produtoEditar.getLote());
-		textLocalizacao.setText(controllerProdutos.produtoEditar.getEndereco());
-		textPrincAtivo.setText(controllerProdutos.produtoEditar.getPrincAtivo());
-		textInd.setText(controllerProdutos.produtoEditar.getIndicacoes());
-		textContraind.setText(controllerProdutos.produtoEditar.getContraInd());
-		textEfeitosCol.setText(controllerProdutos.produtoEditar.getEfeitosColaterais());
-		textLab.setText(controllerProdutos.produtoEditar.getLaboratorio());
+			textRegistroANVISA.setText(controllerProdutos.produtoEditar.getRegistroAnvisa());
+			textLote.setText(controllerProdutos.produtoEditar.getLote());
+			textLocalizacao.setText(controllerProdutos.produtoEditar.getEndereco());
+			textPrincAtivo.setText(controllerProdutos.produtoEditar.getPrincAtivo());
+			textInd.setText(controllerProdutos.produtoEditar.getIndicacoes());
+			textContraind.setText(controllerProdutos.produtoEditar.getContraInd());
+			textEfeitosCol.setText(controllerProdutos.produtoEditar.getEfeitosColaterais());
+			textLab.setText(controllerProdutos.produtoEditar.getLaboratorio());
 		}
 	}
 }
