@@ -24,6 +24,7 @@ public class Produto {
 	private String contraInd;
 	private String efeitosColaterais;
 	private String laboratorio;
+	private String tarja;
 
 	public Produto() {
 		super();
@@ -64,14 +65,6 @@ public class Produto {
 
 	public void setIdProduto(String idProduto) {
 		this.idProduto = idProduto;
-	}
-
-	public String getIdFornecedor() {
-		return idFornecedor;
-	}
-
-	public void setIdFornecedor(String idFornecedor) {
-		this.idFornecedor = idFornecedor;
 	}
 
 	public String getNomeComecial() {
@@ -230,5 +223,13 @@ public class Produto {
 	
 	public void setLaboratorio(String laboratorio) {
 		this.laboratorio = laboratorio;
+	}
+
+	public String getTarja() {
+		return tarja;
+	}
+
+	public void setTarja(String tarja) {
+		this.tarja = tarja;
 	}
 }
