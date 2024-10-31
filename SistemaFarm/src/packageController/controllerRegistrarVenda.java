@@ -128,6 +128,7 @@ public class controllerRegistrarVenda {
     	if (btAdicionar != null && txtCodigo != null && txtProduto != null && txtQuantidade != null
 				&& txtDesconto != null) {
     		CarregarTabelaProdutosSelecionados();
+    		//CARREGAR PRODUTOS
 		}
     }
 
@@ -180,7 +181,8 @@ public class controllerRegistrarVenda {
     			tcDataValidade1.setCellValueFactory(new PropertyValueFactory<>("DataVal"));
     			tcDataFabricacao1.setCellValueFactory(new PropertyValueFactory<>("DataFab"));
     			tcPrecoUnitario1.setCellValueFactory(new PropertyValueFactory<>("PrecoUnit"));
-    			
+    		
+    			//CARREGAR E SETAR NA TABELA
     			tbProdutoParaselecionar.setItems(ArrayProduto);
     			tbProdutoParaselecionar.refresh();
     }
