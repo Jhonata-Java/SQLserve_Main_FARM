@@ -110,7 +110,6 @@ public class controllerFornecedor implements Initializable{
     	tabelaFor.setItems(ArrayFornecedor);
     }
 
-
     @FXML
     void ActionBtEditar(ActionEvent event) throws IOException{
     	
@@ -126,7 +125,6 @@ public class controllerFornecedor implements Initializable{
     	CarregarTableFornecedor();
     }
     
-
     @FXML
     void ActionBtExcluir(ActionEvent event) {
     	int i = tabelaFor.getSelectionModel().getSelectedIndex();
@@ -188,9 +186,9 @@ public class controllerFornecedor implements Initializable{
     @FXML
     void ActionBtLimpar(ActionEvent event) {
     	txtPesquisar.setText("");
+    	CarregarTableFornecedor();
     }
     
-
     @FXML
     void ActionbtFarmaceuticos(ActionEvent event) {
     	Main.changeScreen("vendedor");
@@ -219,7 +217,7 @@ public class controllerFornecedor implements Initializable{
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
-		CarregarTableFornecedor();
+		CarregarTableFornecedor();	
 	}
 
 }

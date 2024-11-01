@@ -3,7 +3,6 @@ package packageModel;
 public class Produto {
 	
 	private String idProduto;
-	private String idFornecedor;
 	private String nomeComecial;
 	private String nomeGenerico;
 	private String categoria;
@@ -24,18 +23,18 @@ public class Produto {
 	private String contraInd;
 	private String efeitosColaterais;
 	private String laboratorio;
+	private String tarja;
 
 	public Produto() {
 		super();
 	}
 
-	public Produto(String idProduto, String idFornecedor, String nomeComecial, String nomeGenerico, String categoria,
+	public Produto(String idProduto, String nomeComecial, String nomeGenerico, String categoria,
 			String formaFarmaceutica, String concentracao, String dosagem, String codigo, String estoque,
 			String preocoUN, String tipoUN, String dataFab, String dataVal, String registroAnvisa, String lote,
 			String endereco, String princAtivo, String indicacoes, String contraInd, String efeitosColaterais, String laboratorio) {
 		super();
 		this.idProduto = idProduto;
-		this.idFornecedor = idFornecedor;
 		this.nomeComecial = nomeComecial;
 		this.nomeGenerico = nomeGenerico;
 		this.categoria = categoria;
@@ -64,14 +63,6 @@ public class Produto {
 
 	public void setIdProduto(String idProduto) {
 		this.idProduto = idProduto;
-	}
-
-	public String getIdFornecedor() {
-		return idFornecedor;
-	}
-
-	public void setIdFornecedor(String idFornecedor) {
-		this.idFornecedor = idFornecedor;
 	}
 
 	public String getNomeComecial() {
@@ -230,5 +221,13 @@ public class Produto {
 	
 	public void setLaboratorio(String laboratorio) {
 		this.laboratorio = laboratorio;
+	}
+
+	public String getTarja() {
+		return tarja;
+	}
+
+	public void setTarja(String tarja) {
+		this.tarja = tarja;
 	}
 }

@@ -116,8 +116,6 @@ public class controllerCadastraFarmaceutico implements Initializable {
 	    	DtDataNasc.setValue(localdateNasc);
 	    	LocalDate localdateCont = LocalDate.parse(controllerFarmaceutico.farmaceuticoEditar.getDataCont());
 	    	DtDataCont.setValue(localdateCont);
-			textDataNascimento.setText(controllerFarmaceutico.farmaceuticoEditar.getDataNasc());
-			textDataContratacao.setText(controllerFarmaceutico.farmaceuticoEditar.getDataCont());
 			textEnderecoResidencialCompleto.setText(controllerFarmaceutico.farmaceuticoEditar.getEndereco());
 		}
 	}
