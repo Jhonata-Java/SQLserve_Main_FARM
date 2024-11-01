@@ -22,7 +22,7 @@
                <children>
                   <Pane prefHeight="110.0" prefWidth="166.0">
                      <children>
-                        <ImageView fitHeight="24.0" fitWidth="102.0" layoutX="24.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="24.0" fitWidth="102.0" layoutX="24.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../packageIcons/FARM.png" />
                            </image>
@@ -167,34 +167,34 @@
                </graphic></Button>
             <Pane layoutX="170.0" layoutY="265.0" prefHeight="307.0" prefWidth="290.0" style="-fx-background-color: white; -fx-background-radius: 10;">
                <children>
-                  <Label layoutX="14.0" layoutY="21.0" text="Medicamentos que o estoque está acabandor" textFill="#3c42ff">
+                  <Label layoutX="18.0" layoutY="23.0" text="Medicamentos que o estoque está acabando" textFill="#3c42ff">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font>
                   </Label>
-                  <TableView fx:id="tabelaEstoque" layoutY="56.0" prefHeight="238.0" prefWidth="290.0" style="-fx-border-radius: 10;">
+                  <TableView fx:id="tabelaEstoque" layoutY="38.0" prefHeight="271.0" prefWidth="290.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/semlinhas.css">
                      <columns>
-                        <TableColumn fx:id="columnID1" prefWidth="52.0" text="ID" />
-                        <TableColumn fx:id="columnNome1" prefWidth="55.199951171875" text="Nome" />
-                        <TableColumn fx:id="columnQuantidade" prefWidth="87.20001220703125" text="Quantidade" />
-                        <TableColumn fx:id="columnLocalizacao1" minWidth="9.5999755859375" prefWidth="100.0" text="Localização" />
+                        <TableColumn fx:id="columnID1" prefWidth="50.0" text="ID" />
+                        <TableColumn fx:id="columnNome1" prefWidth="70.0" text="Nome" />
+                        <TableColumn fx:id="columnQuantidade" prefWidth="70.0" text="Quantidade" />
+                        <TableColumn fx:id="columnLocalizacao1" minWidth="9.5999755859375" prefWidth="70.0" text="Localização" />
                      </columns>
                   </TableView>
                </children>
             </Pane>
             <Pane layoutX="492.0" layoutY="265.0" prefHeight="307.0" prefWidth="290.0" style="-fx-background-color: white; -fx-background-radius: 10;">
                <children>
-                  <Label layoutX="14.0" layoutY="23.0" text="Medicametos próximos do vencimento" textFill="#3c42ff">
+                  <Label layoutX="34.0" layoutY="22.0" text="Medicametos próximos do vencimento" textFill="#3c42ff">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font>
                   </Label>
-                  <TableView fx:id="tabelaVencer" layoutY="56.0" prefHeight="238.0" prefWidth="290.0" style="-fx-border-radius: 10;">
+                  <TableView fx:id="tabelaVencer" layoutY="37.0" prefHeight="271.0" prefWidth="290.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/semlinhas.css">
                      <columns>
-                        <TableColumn fx:id="columnID2" prefWidth="46.39996337890625" text="ID" />
-                        <TableColumn fx:id="columnNome2" prefWidth="81.60003662109375" text="Nome" />
-                        <TableColumn fx:id="columnVencimento" prefWidth="70.39996337890625" text="Vencimento" />
-                        <TableColumn fx:id="columnLocalizacao2" minWidth="9.5999755859375" prefWidth="90.4000244140625" text="Localização" />
+                        <TableColumn fx:id="columnID2" prefWidth="50.0" text="ID" />
+                        <TableColumn fx:id="columnNome2" text="Nome" />
+                        <TableColumn fx:id="columnVencimento" text="Vencimento" />
+                        <TableColumn fx:id="columnLocalizacao2" minWidth="9.5999755859375" text="Localização" />
                      </columns>
                   </TableView>
                </children>

@@ -17,7 +17,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Stage;
 import packageControle.ProdutoDAO;
 import packageModel.Produto;
 import packageModel.Venda;
@@ -109,8 +108,6 @@ public class controllerProdutos implements Initializable {
 	void btCadastrar(ActionEvent event) throws IOException {
 		produtoEditar = null;
 		Main.TelaCadastroProduto();
-	
-    
 		CarregarInfoTable();
 	}
 
@@ -161,7 +158,6 @@ public class controllerProdutos implements Initializable {
 			}
 		}
 	}
-
 	@FXML
 	void btFarmaceuticos(ActionEvent event) {
 		Main.changeScreen("vendedor");
@@ -178,31 +174,36 @@ public class controllerProdutos implements Initializable {
 	}
 
 	@FXML
-	void btInfo(ActionEvent event) {
-		Main.changeScreen("produtoInfo");
-		
-	}
+    void ActionBtInfor(ActionEvent event) throws IOException {
+		if (tabela.getSelectionModel().getSelectedIndex() == -1) {
+			Alert mensagemDeErro = new Alert(Alert.AlertType.INFORMATION);
+			mensagemDeErro.setContentText("Selecione um produto primeiro");
+			mensagemDeErro.show();
+		} else {
+			int i = tabela.getSelectionModel().getSelectedIndex();
+			produto = tabela.getItems().get(i);
+			Main.TelaInfoProduto();
+		}
+		CarregarInfoTable();
+    }
 
 	@FXML
 	void btLimpar(ActionEvent event) {
 		txtPesquisar.setText("");
+		CarregarInfoTable();
 	}
-
 	@FXML
 	void btProdutos(ActionEvent event) {
 		Main.changeScreen("produto");
 	}
-
 	@FXML
 	void btRelatorioVendas(ActionEvent event) {
 		Main.changeScreen("relatorioVenda");
 	}
-
 	@FXML
 	void btSair(ActionEvent event) {
 		Main.changeScreen("dashboard");
 	}
-
 	@FXML
 	void btPesquisar(ActionEvent event) {
 		ArrayProduto = FXCollections.observableArrayList(produtos.search(txtPesquisar.getText()));
@@ -222,7 +223,7 @@ public class controllerProdutos implements Initializable {
 		tabela.refresh();
 	}
 
-	public void CarregarInfoTable() {
+	public  void CarregarInfoTable() {
 		ArrayProduto = FXCollections.observableArrayList(produtos.read());
 
 		columnCod.setCellValueFactory(new PropertyValueFactory<>("codigo"));
@@ -252,18 +253,5 @@ public class controllerProdutos implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		CarregarInfoTable();
-	}
-
-	public void ActionBtImprimirPDF(ActionEvent event, Produto produto, Stage stage) {
-		
-	}
-
-	// Método auxiliar para exibir alertas
-	private void showAlert(String title, String message) {
-		Alert alert = new Alert(Alert.AlertType.INFORMATION);
-		alert.setTitle(title);
-		alert.setHeaderText(null);
-		alert.setContentText(message);
-		alert.showAndWait();
 	}
 }

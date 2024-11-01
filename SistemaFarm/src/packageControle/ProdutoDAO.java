@@ -20,7 +20,7 @@ public class ProdutoDAO {
 		PreparedStatement comandoSQL = null;
 		
 		try {
-			comandoSQL = conexão.prepareStatement("INSERT INTO Produto VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+			comandoSQL = conexão.prepareStatement("INSERT INTO Produto VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
 			comandoSQL.setString(1,p.getNomeComecial());
 			comandoSQL.setString(2,p.getNomeGenerico());
@@ -38,9 +38,11 @@ public class ProdutoDAO {
 			comandoSQL.setString(14,p.getLote());
 			comandoSQL.setString(15,p.getEndereco());
 			comandoSQL.setString(16,p.getPrincAtivo());
-			comandoSQL.setString(17,p.getContraInd());
-			comandoSQL.setString(18,p.getEfeitosColaterais());
-			comandoSQL.setString(19,p.getLaboratorio());
+			comandoSQL.setString(17,p.getIndicacoes());
+			comandoSQL.setString(18,p.getContraInd());
+			comandoSQL.setString(19,p.getEfeitosColaterais());
+			comandoSQL.setString(20,p.getLaboratorio());
+			comandoSQL.setString(21,p.getTarja());
 			
 			
 			comandoSQL.executeUpdate();
@@ -84,6 +86,11 @@ public class ProdutoDAO {
 				p.setLote(rs.getString(15));
 				p.setEndereco(rs.getString(16));
 				p.setPrincAtivo(rs.getString(17));
+				p.setIndicacoes(rs.getString(18));
+				p.setContraInd(rs.getString(19));
+				p.setEfeitosColaterais(rs.getString(20));
+				p.setLaboratorio(rs.getString(21));
+				p.setTarja(rs.getString(22));
 
 				produto.add(p);
 			}
@@ -102,7 +109,9 @@ public class ProdutoDAO {
 		PreparedStatement comandoSQL = null;
 		
 		try {
-			comandoSQL = conexão.prepareStatement("UPDATE Produto SET idFornecedor = ?,  nomeComercial = ?, nomeGenerico = ?, categoria = ?, formaFarmaceutica = ?, concentracao = ?,dosagem = ?, codigo = ?, estoque = ?, precoUn = ?, tipoUn = ?,dataFab = ?,dataVal = ?, registroAnvisa = ?, lote = ?, endereco = ?  WHERE codigo = ?");
+			comandoSQL = conexão.prepareStatement("UPDATE Produto SET nomeComercial = ?, nomeGenerico = ?, categoria = ?, formaFarmaceutica = ?, concentracao = ?,dosagem = ?, codigo = ?,"
+					+ " estoque = ?, precoUn = ?, tipoUn = ?,dataFab = ?,dataVal = ?, registroAnvisa = ?, lote = ?, endereco = ?, princAtivo = ?, Indicacoes = ?, contraInd = ?,"
+					+ "  efeitosColaterais = ?, laboratorio = ?, tarja = ? WHERE codigo = ?");
 			comandoSQL.setString(1,p.getNomeComecial());
 			comandoSQL.setString(2,p.getNomeGenerico());
 			comandoSQL.setString(3,p.getCategoria());
@@ -118,13 +127,13 @@ public class ProdutoDAO {
 			comandoSQL.setString(13,p.getRegistroAnvisa());
 			comandoSQL.setString(14,p.getLote());
 			comandoSQL.setString(15,p.getEndereco());
-			comandoSQL.setString(16,p.getPrincAtivo());
-			comandoSQL.setString(17,p.getContraInd());
-			comandoSQL.setString(18,p.getEfeitosColaterais());
-			comandoSQL.setString(19,p.getLaboratorio());
-			
-			comandoSQL.setString(17,p.getCodigo());
-			
+			comandoSQL.setString(16,p.getIndicacoes());
+			comandoSQL.setString(17,p.getPrincAtivo());
+			comandoSQL.setString(18,p.getContraInd());
+			comandoSQL.setString(19,p.getEfeitosColaterais());
+			comandoSQL.setString(20,p.getLaboratorio());
+			comandoSQL.setString(21,p.getTarja());
+			comandoSQL.setString(22,p.getCodigo());
 			
 			comandoSQL.executeUpdate();
 		} catch (SQLException e) {
@@ -142,7 +151,7 @@ public class ProdutoDAO {
 		PreparedStatement comandoSQL = null;
 		
 		try {
-			comandoSQL = conexão.prepareStatement("DELETE FROM Produto  WHERE codigo = ?");
+			comandoSQL = conexão.prepareStatement("DELETE FROM Produto WHERE codigo = ?");
 			comandoSQL.setString(1, codigo);
 			comandoSQL.executeUpdate();
 			
@@ -180,7 +189,7 @@ public class ProdutoDAO {
 				p.setNomeGenerico(rs.getString(3));
 				p.setCategoria(rs.getString(4));
 				p.setFormaFarmaceutica(rs.getString(5));
-				p.setConcentracao(rs.getString(6));
+				p.setConcentracao(rs.getString(6));		//coloca as informações dentro do array cliente
 				p.setDosagem(rs.getString(7));
 				p.setCodigo(rs.getString(8));
 				p.setEstoque(rs.getString(9));
@@ -192,7 +201,11 @@ public class ProdutoDAO {
 				p.setLote(rs.getString(15));
 				p.setEndereco(rs.getString(16));
 				p.setPrincAtivo(rs.getString(17));
-
+				p.setIndicacoes(rs.getString(18));
+				p.setContraInd(rs.getString(19));
+				p.setEfeitosColaterais(rs.getString(20));
+				p.setLaboratorio(rs.getString(21));
+				p.setTarja(rs.getString(22));
 				produto.add(p);
 			}
 			
@@ -247,7 +260,7 @@ public class ProdutoDAO {
 				p.setNomeGenerico(rs.getString(3));
 				p.setCategoria(rs.getString(4));
 				p.setFormaFarmaceutica(rs.getString(5));
-				p.setConcentracao(rs.getString(6));
+				p.setConcentracao(rs.getString(6));		//coloca as informações dentro do array cliente
 				p.setDosagem(rs.getString(7));
 				p.setCodigo(rs.getString(8));
 				p.setEstoque(rs.getString(9));
@@ -259,6 +272,11 @@ public class ProdutoDAO {
 				p.setLote(rs.getString(15));
 				p.setEndereco(rs.getString(16));
 				p.setPrincAtivo(rs.getString(17));
+				p.setIndicacoes(rs.getString(18));
+				p.setContraInd(rs.getString(19));
+				p.setEfeitosColaterais(rs.getString(20));
+				p.setLaboratorio(rs.getString(21));
+				p.setTarja(rs.getString(22));
 
 				produto.add(p);
 			}
@@ -291,7 +309,7 @@ public class ProdutoDAO {
 				p.setNomeGenerico(rs.getString(3));
 				p.setCategoria(rs.getString(4));
 				p.setFormaFarmaceutica(rs.getString(5));
-				p.setConcentracao(rs.getString(6));
+				p.setConcentracao(rs.getString(6));		//coloca as informações dentro do array cliente
 				p.setDosagem(rs.getString(7));
 				p.setCodigo(rs.getString(8));
 				p.setEstoque(rs.getString(9));
@@ -303,7 +321,12 @@ public class ProdutoDAO {
 				p.setLote(rs.getString(15));
 				p.setEndereco(rs.getString(16));
 				p.setPrincAtivo(rs.getString(17));
-
+				p.setIndicacoes(rs.getString(18));
+				p.setContraInd(rs.getString(19));
+				p.setEfeitosColaterais(rs.getString(20));
+				p.setLaboratorio(rs.getString(21));
+				p.setTarja(rs.getString(22));
+				
 				produto.add(p);
 			}
 			
