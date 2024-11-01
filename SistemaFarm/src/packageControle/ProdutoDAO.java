@@ -37,6 +37,10 @@ public class ProdutoDAO {
 			comandoSQL.setString(13,p.getRegistroAnvisa());
 			comandoSQL.setString(14,p.getLote());
 			comandoSQL.setString(15,p.getEndereco());
+			comandoSQL.setString(16,p.getPrincAtivo());
+			comandoSQL.setString(17,p.getContraInd());
+			comandoSQL.setString(18,p.getEfeitosColaterais());
+			comandoSQL.setString(19,p.getLaboratorio());
 			
 			
 			comandoSQL.executeUpdate();
@@ -114,7 +118,13 @@ public class ProdutoDAO {
 			comandoSQL.setString(13,p.getRegistroAnvisa());
 			comandoSQL.setString(14,p.getLote());
 			comandoSQL.setString(15,p.getEndereco());
-			comandoSQL.setString(16,p.getCodigo());
+			comandoSQL.setString(16,p.getPrincAtivo());
+			comandoSQL.setString(17,p.getContraInd());
+			comandoSQL.setString(18,p.getEfeitosColaterais());
+			comandoSQL.setString(19,p.getLaboratorio());
+			
+			comandoSQL.setString(17,p.getCodigo());
+			
 			
 			comandoSQL.executeUpdate();
 		} catch (SQLException e) {
