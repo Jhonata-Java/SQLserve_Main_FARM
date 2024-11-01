@@ -9,57 +9,61 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 
-public class controllerInfoProduto  implements Initializable {
+public class controllerInfoProduto implements Initializable {
 
 	@FXML
-    private Button btImprimir;
+	private Button btImprimir;
 
-    @FXML
-    private Button btSair;
+	@FXML
+	private Button btSair;
 
-    @FXML
-    private Label labCodigoBarras;
+	@FXML
+	private Label labCodigoBarras;
 
-    @FXML
-    private Label labConcent;
+	@FXML
+	private Label labConcent;
 
-    @FXML
-    private Label labContInd;
+	@FXML
+	private Label labContInd;
 
-    @FXML
-    private Label labEfeitCol;
+	@FXML
+    private TextArea AreaEfeiCola;
 
-    @FXML
-    private Label labFormaFarm;
+	@FXML
+	private Label labFormaFarm;
 
-    @FXML
-    private Label labIndica;
+	@FXML
+	private Label labIndica;
 
-    @FXML
-    private Label labLabotor;
+	@FXML
+	private Label labLabotor;
 
-    @FXML
-    private Label labLote;
+	@FXML
+	private Label labLote;
 
-    @FXML
-    private Label labNomeG;
+	@FXML
+	private Label labNomeG;
 
-    @FXML
-    private Label labPrincAt;
+	@FXML
+	private Label labPrincAt;
 
-    @FXML
-    private Label labRegistANVISA;
+	@FXML
+	private Label labRegistANVISA;
 
-    @FXML
-    void btImprimir(ActionEvent event) {
+	@FXML
+	private Label labTarja;
 
-    }
+	@FXML
+	void btImprimir(ActionEvent event) {
 
-    @FXML
-    void btSair(ActionEvent event) {
-    	Main.changeScreen("produto");
-    }
+	}
+
+	@FXML
+	void btSair(ActionEvent event) {
+		Main.changeScreen("produto");
+	}
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -68,13 +72,13 @@ public class controllerInfoProduto  implements Initializable {
 		labCodigoBarras.setText(controllerProdutos.produto.getCodigo());
 		labConcent.setText(controllerProdutos.produto.getConcentracao());
 		labContInd.setText(controllerProdutos.produto.getContraInd());
-		labEfeitCol.setText(controllerProdutos.produto.getEfeitosColaterais());
+		AreaEfeiCola.setText(controllerProdutos.produto.getEfeitosColaterais());
 		labFormaFarm.setText(controllerProdutos.produto.getFormaFarmaceutica());
 		labIndica.setText(controllerProdutos.produto.getIndicacoes());
 		labLabotor.setText(controllerProdutos.produto.getLaboratorio());
 		labLote.setText(controllerProdutos.produto.getLote());
 		labRegistANVISA.setText(controllerProdutos.produto.getRegistroAnvisa());
 		labPrincAt.setText(controllerProdutos.produto.getPrincAtivo());
+		labTarja.setText(controllerProdutos.produto.getTarja());
 	}
-
 }

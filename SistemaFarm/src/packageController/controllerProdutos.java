@@ -177,10 +177,18 @@ public class controllerProdutos implements Initializable {
 	}
 
 	@FXML
-	void btInfo(ActionEvent event) {
-		Main.changeScreen("produtoInfo");
-		
-	}
+    void ActionBtInfor(ActionEvent event) throws IOException {
+		if (tabela.getSelectionModel().getSelectedIndex() == -1) {
+			Alert mensagemDeErro = new Alert(Alert.AlertType.INFORMATION);
+			mensagemDeErro.setContentText("Selecione um produto primeiro");
+			mensagemDeErro.show();
+		} else {
+			int i = tabela.getSelectionModel().getSelectedIndex();
+			produto = tabela.getItems().get(i);
+			Main.TelaInfoProduto();
+		}
+		CarregarInfoTable();
+    }
 
 	@FXML
 	void btLimpar(ActionEvent event) {
@@ -221,7 +229,7 @@ public class controllerProdutos implements Initializable {
 		tabela.refresh();
 	}
 
-	public void CarregarInfoTable() {
+	public  void CarregarInfoTable() {
 		ArrayProduto = FXCollections.observableArrayList(produtos.read());
 
 		columnCod.setCellValueFactory(new PropertyValueFactory<>("codigo"));

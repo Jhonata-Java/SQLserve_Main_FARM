@@ -100,7 +100,7 @@ public class controllerCasdastraProduto implements Initializable {
 			produto.setPreocoUN(textPrecoUn.getText());
 			produto.setTipoUN(textTipoUn.getText());
 			produto.setDataFab(DtDataFab.getValue().toString());
-			produto.setDataFab(DtDataVal.getValue().toString());
+			produto.setDataVal(DtDataVal.getValue().toString());
 			produto.setRegistroAnvisa(textRegistroANVISA.getText());
 			produto.setLote(textLote.getText());
 			produto.setEndereco(textLocalizacao.getText());
@@ -130,7 +130,7 @@ public class controllerCasdastraProduto implements Initializable {
 			produto.setPreocoUN(textPrecoUn.getText());
 			produto.setTipoUN(textTipoUn.getText());
 			produto.setDataFab(DtDataFab.getValue().toString());
-			produto.setDataFab(DtDataVal.getValue().toString());
+			produto.setDataVal(DtDataVal.getValue().toString());
 			produto.setRegistroAnvisa(textRegistroANVISA.getText());
 			produto.setLote(textLote.getText());
 			produto.setEndereco(textLocalizacao.getText());

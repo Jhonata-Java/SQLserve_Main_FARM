@@ -109,7 +109,7 @@ public class ProdutoDAO {
 		PreparedStatement comandoSQL = null;
 		
 		try {
-			comandoSQL = conexão.prepareStatement("UPDATE Produto SET idFornecedor = ?,  nomeComercial = ?, nomeGenerico = ?, categoria = ?, formaFarmaceutica = ?, concentracao = ?,dosagem = ?, codigo = ?,"
+			comandoSQL = conexão.prepareStatement("UPDATE Produto SET nomeComercial = ?, nomeGenerico = ?, categoria = ?, formaFarmaceutica = ?, concentracao = ?,dosagem = ?, codigo = ?,"
 					+ " estoque = ?, precoUn = ?, tipoUn = ?,dataFab = ?,dataVal = ?, registroAnvisa = ?, lote = ?, endereco = ?, princAtivo = ?, Indicacoes = ?, contraInd = ?,"
 					+ "  efeitosColaterais = ?, laboratorio = ?, tarja = ? WHERE codigo = ?");
 			comandoSQL.setString(1,p.getNomeComecial());
