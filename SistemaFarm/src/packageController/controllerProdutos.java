@@ -108,8 +108,6 @@ public class controllerProdutos implements Initializable {
 	void btCadastrar(ActionEvent event) throws IOException {
 		produtoEditar = null;
 		Main.TelaCadastroProduto();
-	
-    
 		CarregarInfoTable();
 	}
 
@@ -160,7 +158,6 @@ public class controllerProdutos implements Initializable {
 			}
 		}
 	}
-
 	@FXML
 	void btFarmaceuticos(ActionEvent event) {
 		Main.changeScreen("vendedor");
@@ -193,23 +190,20 @@ public class controllerProdutos implements Initializable {
 	@FXML
 	void btLimpar(ActionEvent event) {
 		txtPesquisar.setText("");
+		CarregarInfoTable();
 	}
-
 	@FXML
 	void btProdutos(ActionEvent event) {
 		Main.changeScreen("produto");
 	}
-
 	@FXML
 	void btRelatorioVendas(ActionEvent event) {
 		Main.changeScreen("relatorioVenda");
 	}
-
 	@FXML
 	void btSair(ActionEvent event) {
 		Main.changeScreen("dashboard");
 	}
-
 	@FXML
 	void btPesquisar(ActionEvent event) {
 		ArrayProduto = FXCollections.observableArrayList(produtos.search(txtPesquisar.getText()));
