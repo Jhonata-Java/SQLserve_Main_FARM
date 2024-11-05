@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="780.0" style="-fx-background-color: #EAEEF0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="packageController.controllerRegistrarVenda">
+   <children>
+      <Pane layoutX="32.0" layoutY="77.0" prefHeight="563.0" prefWidth="563.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">
+         <children>
+            <TableView fx:id="tbProdutoParaselecionar" layoutX="10.0" layoutY="228.0" prefHeight="73.0" prefWidth="547.0">
+              <columns>
+                <TableColumn fx:id="tcID1" prefWidth="69.59997749328613" text="ID" />
+                <TableColumn fx:id="tcProduto1" prefWidth="73.59996795654297" text="Produto" />
+                  <TableColumn fx:id="tcQuantidade1" prefWidth="48.00006103515625" text="Qt" />
+                  <TableColumn fx:id="tcDataValidade1" prefWidth="112.79998779296875" text="Data de Validade" />
+                  <TableColumn fx:id="tcDataFabricacao1" prefWidth="125.5999755859375" text="Data de Fabricação" />
+                  <TableColumn fx:id="tcPrecoUnitario1" prefWidth="115.80001831054688" text="Preço Unitário" />
+              </columns>
+            </TableView>
+            <Button fx:id="btAdicionar" layoutX="374.0" layoutY="183.0" mnemonicParsing="false" onAction="#ActionbtAdicionar" style="-fx-background-color: #000000;" text="Adicionar" textFill="WHITE" />
+            <HBox layoutX="14.0" layoutY="163.0" spacing="15.0" />
+            <HBox layoutX="12.0" layoutY="39.0" prefHeight="41.0" prefWidth="540.0" spacing="20.0">
+               <children>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField fx:id="txtIDFarmaceutico" prefHeight="27.0" style="-fx-border-color: D9D9D9; -fx-background-insets: 99999; -fx-border-radius: 5;" GridPane.rowIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID Farmacêutico">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="10.0" layoutY="10.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField fx:id="txtNomeFarmaceutico" prefHeight="27.0" style="-fx-border-color: D9D9D9; -fx-background-insets: 99999; -fx-border-radius: 5;" GridPane.rowIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome farmacêutico">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField fx:id="txtCPFFarmaceutico" prefHeight="27.0" style="-fx-border-color: D9D9D9; -fx-background-insets: 99999; -fx-border-radius: 5;" GridPane.rowIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CPF Farmacêutico">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField fx:id="txtDataCompra" style="-fx-border-color: D9D9D9; -fx-background-insets: 99999; -fx-border-radius: 5;" GridPane.rowIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data da Compra">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+            <HBox alignment="BASELINE_LEFT" layoutX="12.0" layoutY="121.0" prefHeight="42.0" prefWidth="540.0" spacing="20.0">
+               <children>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField fx:id="txtCodigo" style="-fx-border-color: D9D9D9; -fx-background-insets: 99999; -fx-border-radius: 5;" GridPane.rowIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Código">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField fx:id="txtProduto" style="-fx-border-color: D9D9D9; -fx-background-insets: 99999; -fx-border-radius: 5;" GridPane.rowIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Produto">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField fx:id="txtQuantidade" onKeyTyped="#definirDesconto" prefHeight="27.0" style="-fx-border-color: D9D9D9; -fx-background-insets: 99999; -fx-border-radius: 5;" GridPane.rowIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="241.0" layoutY="10.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField fx:id="txtPrecoUnitario" style="-fx-border-color: D9D9D9; -fx-background-insets: 99999; -fx-border-radius: 5;" GridPane.rowIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Preço Unitário">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField fx:id="txtDesconto" prefHeight="27.0" style="-fx-border-color: D9D9D9; -fx-background-insets: 99999; -fx-border-radius: 5;" GridPane.rowIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Desconto">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+            <Text fill="#3c42ff" layoutX="15.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produtos">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="#3c42ff" layoutX="15.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produtos selecionados">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="#3c42ff" layoutX="15.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dados farmacêutico">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtResultadoPesquisa" layoutX="9.0" layoutY="182.0" prefHeight="27.0" prefWidth="305.0" promptText="Pesquisar produto" style="-fx-border-color: D9D9D9; -fx-background-insets: 99999; -fx-border-radius: 5;" />
+            <Button fx:id="btPesquisar" layoutX="331.0" layoutY="183.0" mnemonicParsing="false" onAction="#ActionbtPesquisarProduto" style="-fx-background-insets: 99999;">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../packageIcons/Search.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btExcluir" layoutX="162.0" layoutY="313.0" mnemonicParsing="false" onAction="#ActionbtExcluir" style="-fx-background-color: blue;" text="Excluir produto" textFill="WHITE" />
+            <VBox layoutX="12.0" layoutY="349.0" prefHeight="200.0" prefWidth="540.0">
+               <children>
+                  <ScrollPane fx:id="ScrollLista" prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane layoutX="614.0" layoutY="77.0" prefHeight="227.0" prefWidth="143.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">
+         <children>
+            <Text fontSmoothingType="LCD" layoutX="15.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Text>
+            <VBox layoutX="9.0" layoutY="134.0" spacing="20.0">
+               <children>
+                  <Button fx:id="btConfirmarVenda" alignment="BOTTOM_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#ActionbtConfirmarVenda" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: #000000;" text="Confirmar Venda" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../packageIcons/Check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btCancelarVenda" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#ActionbtCancelarVenda" prefHeight="27.0" prefWidth="126.0" style="-fx-background-color: #767676;" text="Cancelar">
+                     <graphic>
+                        <ImageView fitHeight="7.0" fitWidth="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../packageIcons/Icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <Label fx:id="txtValorTotal" alignment="CENTER" layoutX="15.0" layoutY="69.0" prefHeight="45.0" prefWidth="114.0" style="-fx-border-color: #D9D9D9; -fx-border-radius: 5;">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <Text fill="#3c42ff" layoutX="15.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dados da venda">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <ImageView fitHeight="71.0" fitWidth="780.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../packageIcons/BarraRegistraerVenda.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

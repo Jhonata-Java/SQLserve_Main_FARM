@@ -26,16 +26,7 @@ public class controllerInfoProduto implements Initializable {
 	private Label labConcent;
 
 	@FXML
-	private Label labContInd;
-
-	@FXML
-    private TextArea AreaEfeiCola;
-
-	@FXML
 	private Label labFormaFarm;
-
-	@FXML
-	private Label labIndica;
 
 	@FXML
 	private Label labLabotor;
@@ -56,9 +47,13 @@ public class controllerInfoProduto implements Initializable {
 	private Label labTarja;
 
 	@FXML
-	void btImprimir(ActionEvent event) {
+	private TextArea AreaEfeiCola;
 
-	}
+	@FXML
+	private TextArea labContInd;
+
+	@FXML
+	private TextArea labIndica;
 
 	@FXML
 	void btSair(ActionEvent event) {

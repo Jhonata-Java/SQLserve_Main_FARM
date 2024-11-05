@@ -16,7 +16,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
 import packageControle.ProdutoDAO;
 import packageModel.Produto;
 
@@ -132,8 +131,8 @@ public class controllerDashboard  implements Initializable {
     }
 
     @FXML
-    void btRegistraVenda(ActionEvent event) {
-    	 Main.changeScreen("registraVenda");
+    void btRegistraVenda(ActionEvent event) throws IOException {
+    	Main.TelaRegistraVenda();
     }
 
     @FXML
