@@ -23,23 +23,19 @@
          <children>
             <TableView fx:id="tbProdutoParaselecionar" layoutX="10.0" layoutY="228.0" prefHeight="73.0" prefWidth="547.0">
               <columns>
-                <TableColumn fx:id="tcID1" prefWidth="69.59997749328613" text="ID" />
-                <TableColumn fx:id="tcProduto1" prefWidth="73.59996795654297" text="Produto" />
-                  <TableColumn fx:id="tcQuantidade1" prefWidth="48.00006103515625" text="Qt" />
-                  <TableColumn fx:id="tcDataValidade1" prefWidth="112.79998779296875" text="Data de Validade" />
-                  <TableColumn fx:id="tcDataFabricacao1" prefWidth="125.5999755859375" text="Data de Fabricação" />
-                  <TableColumn fx:id="tcPrecoUnitario1" prefWidth="115.80001831054688" text="Preço Unitário" />
+                <TableColumn fx:id="tcID1" prefWidth="39.199981689453125" text="ID" />
+                <TableColumn fx:id="tcProduto1" prefWidth="335.99999237060547" text="Produto" />
+                  <TableColumn fx:id="tcQuantidade1" minWidth="0.0" prefWidth="64.0" text="Qt" />
+                  <TableColumn fx:id="tcPrecoUnitario1" minWidth="0.0" prefWidth="107.20004272460938" text="Preço Unitário" />
               </columns>
             </TableView>
             <TableView fx:id="tbProdutoSelecionado" layoutX="10.0" layoutY="359.0" prefHeight="196.0" prefWidth="547.0">
                <columns>
                   <TableColumn fx:id="tcID2" prefWidth="27.199983596801758" text="ID" />
-                  <TableColumn fx:id="tcProduto2" prefWidth="77.5999984741211" text="Produto" />
-                  <TableColumn fx:id="tcQuantidade2" prefWidth="33.5999755859375" text="Qt" />
-                  <TableColumn fx:id="tcDataValidade2" minWidth="3.20001220703125" prefWidth="120.0" text="Data de Validade" />
-                  <TableColumn fx:id="tcDataFabricacao2" prefWidth="126.4000244140625" text="Data de Fabricação" />
-                  <TableColumn fx:id="tcPrecoUnitario2" minWidth="0.0" prefWidth="100.79998779296875" text="Preço Unitário" />
-                  <TableColumn fx:id="tcPrecoTotal2" minWidth="0.0" prefWidth="94.40005493164062" text="Preço Total" />
+                  <TableColumn fx:id="tcProduto2" prefWidth="283.1999740600586" text="Produto" />
+                  <TableColumn fx:id="tcQuantidade2" prefWidth="48.0" text="Qt" />
+                  <TableColumn fx:id="tcPrecoUnitario2" minWidth="0.0" prefWidth="92.79998779296875" text="Preço Unitário" />
+                  <TableColumn fx:id="tcPrecoTotal2" minWidth="0.0" prefWidth="95.20004272460938" text="Preço Total" />
                </columns>
             </TableView>
             <Button fx:id="btAdicionar" layoutX="374.0" layoutY="183.0" mnemonicParsing="false" onAction="#ActionbtAdicionar" style="-fx-background-color: #000000;" text="Adicionar" textFill="WHITE" />
