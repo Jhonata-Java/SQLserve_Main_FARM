@@ -131,8 +131,8 @@ public class controllerDashboard  implements Initializable {
     }
 
     @FXML
-    void btRegistraVenda(ActionEvent event) {
-    	 Main.changeScreen("registraVenda");
+    void btRegistraVenda(ActionEvent event) throws IOException {
+    	Main.TelaRegistraVenda();
     }
 
     @FXML
