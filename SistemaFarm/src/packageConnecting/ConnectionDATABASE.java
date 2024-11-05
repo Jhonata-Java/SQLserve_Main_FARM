@@ -16,7 +16,6 @@ public class ConnectionDATABASE {
 	public static Connection getConnection() {
 		try {
 			Class.forName(Driver);
-			System.out.println("Conexão Estabelecida");
 			return DriverManager.getConnection(URL, User, password);
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
@@ -28,7 +27,6 @@ public class ConnectionDATABASE {
 		try {
 			if(con != null){
 				con.close();
-				System.out.println("Conexão Fechada!");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
