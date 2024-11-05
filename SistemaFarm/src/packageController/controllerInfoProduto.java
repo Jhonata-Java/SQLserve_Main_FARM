@@ -55,6 +55,7 @@ public class controllerInfoProduto implements Initializable {
 	@FXML
 	private TextArea labIndica;
 
+	
 	@FXML
 	void btSair(ActionEvent event) {
 		Main.changeScreen("produto");
