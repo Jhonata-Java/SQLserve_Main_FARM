@@ -177,7 +177,6 @@
                         <TextArea fx:id="AreaEfeiCola" prefHeight="122.0" prefWidth="358.0" style="-fx-background-radius: 10; -fx-background-color: #f0f2f5;" GridPane.rowIndex="1" />
                      </children>
                   </GridPane>
-                  <Button fx:id="btImprimir" layoutX="624.0" layoutY="502.0" mnemonicParsing="false" onAction="#btImprimir" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: black;" text="Imprimir" textFill="WHITE" />
                   <Button fx:id="btSair" layoutX="714.0" layoutY="502.0" mnemonicParsing="false" onAction="#btSair" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: red;" text="Sair" textFill="WHITE" />
                   <GridPane layoutX="29.0" layoutY="169.0">
                      <columnConstraints>
