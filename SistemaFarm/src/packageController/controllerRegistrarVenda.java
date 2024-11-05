@@ -2,6 +2,7 @@ package packageController;
 
 import java.util.Optional;
 
+import application.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -14,7 +15,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -135,6 +135,8 @@ public class controllerRegistrarVenda {
     void ActionbtCancelarVenda(ActionEvent event) {
     	Stage stage = (Stage) btCancelarVenda.getScene().getWindow();
 		stage.close();
+		
+		Main.changeScreen("dashboard");
     }
 
     @FXML
