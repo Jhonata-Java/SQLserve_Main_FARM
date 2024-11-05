@@ -1,12 +1,16 @@
 package packageController;
 
+import java.net.URL;
+import java.time.LocalDate;
 import java.util.Optional;
+import java.util.ResourceBundle;
 
 import application.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -19,131 +23,147 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import packageControle.CompraDAO;
-import packageControle.FarmaceuticoDAO;
 import packageControle.ProdutoDAO;
 import packageModel.Compra;
-import packageModel.Farmaceutico;
 import packageModel.Produto;
 
-public class controllerRegistrarVenda {
+public class controllerRegistrarVenda implements Initializable {
 
-    @FXML
-    private Button btAdicionar;
+	@FXML
+	private Button btAdicionar;
 
-    @FXML
-    private Button btCancelarVenda;
+	@FXML
+	private Button btCancelarVenda;
 
-    @FXML
-    private Button btConfirmarVenda;
+	@FXML
+	private Button btConfirmarVenda;
 
-    @FXML
-    private Button btExcluir;
+	@FXML
+	private Button btExcluir;
 
-    @FXML
-    private Button btPesquisar;
+	@FXML
+	private Button btPesquisar;
 
-    @FXML
-    private TableView<Produto> tbProdutoParaselecionar;
+	@FXML
+	private TableView<Produto> tbProdutoParaselecionar;
 
-    @FXML
-    private TableView<Compra> tbProdutoSelecionado;
+	@FXML
+	private TableView<Compra> tbProdutoSelecionado;
 
-    @FXML
-    private TableColumn<Produto, String> tcDataFabricacao1;
+	@FXML
+	private TableColumn<Produto, String> tcDataFabricacao1;
 
-    @FXML
-    private TableColumn<Compra, String> tcDataFabricacao2;
+	@FXML
+	private TableColumn<Compra, String> tcDataFabricacao2;
 
-    @FXML
-    private TableColumn<Produto, String> tcDataValidade1;
+	@FXML
+	private TableColumn<Produto, String> tcDataValidade1;
 
-    @FXML
-    private TableColumn<Compra, String> tcDataValidade2;
+	@FXML
+	private TableColumn<Compra, String> tcDataValidade2;
 
-    @FXML
-    private TableColumn<Produto, String> tcID1;
+	@FXML
+	private TableColumn<Produto, String> tcID1;
 
-    @FXML
-    private TableColumn<Compra, String> tcID2;
+	@FXML
+	private TableColumn<Compra, String> tcID2;
 
-    @FXML
-    private TableColumn<Compra, String> tcPrecoTotal2;
+	@FXML
+	private TableColumn<Compra, String> tcPrecoTotal2;
 
-    @FXML
-    private TableColumn<Produto, String> tcPrecoUnitario1;
+	@FXML
+	private TableColumn<Produto, String> tcPrecoUnitario1;
 
-    @FXML
-    private TableColumn<Compra, String> tcPrecoUnitario2;
+	@FXML
+	private TableColumn<Compra, String> tcPrecoUnitario2;
 
-    @FXML
-    private TableColumn<Produto, String> tcProduto1;
+	@FXML
+	private TableColumn<Produto, String> tcProduto1;
 
-    @FXML
-    private TableColumn<Compra, String> tcProduto2;
+	@FXML
+	private TableColumn<Compra, String> tcProduto2;
 
-    @FXML
-    private TableColumn<Produto, String> tcQuantidade1;
+	@FXML
+	private TableColumn<Produto, String> tcQuantidade1;
 
-    @FXML
-    private TableColumn<Compra, String> tcQuantidade2;
+	@FXML
+	private TableColumn<Compra, String> tcQuantidade2;
 
-    @FXML
-    private TextField txtCPFFarmaceutico;
+	@FXML
+	private TextField txtCPFFarmaceutico;
 
-    @FXML
-    private TextField txtCodigo;
+	@FXML
+	private TextField txtCodigo;
 
-    @FXML
-    private TextField txtDataCompra;
+	@FXML
+	private TextField txtDataCompra;
 
-    @FXML
-    private TextField txtDesconto;
+	@FXML
+	private TextField txtDesconto;
 
-    @FXML
-    private TextField txtIDFarmaceutico;
+	@FXML
+	private TextField txtIDFarmaceutico;
 
-    @FXML
-    private TextField txtNomeFarmaceutico;
+	@FXML
+	private TextField txtNomeFarmaceutico;
 
-    @FXML
-    private TextField txtPrecoUnitario;
+	@FXML
+	private TextField txtPrecoUnitario;
 
-    @FXML
-    private TextField txtProduto;
+	@FXML
+	private TextField txtProduto;
 
-    @FXML
-    private TextField txtQuantidade;
+	@FXML
+	private TextField txtQuantidade;
 
-    @FXML
-    private TextField txtResultadoPesquisa;
+	@FXML
+	private TextField txtResultadoPesquisa;
 
-    @FXML
-    private Label txtValorTotal;
-    
-    Produto produto = new Produto();
+	@FXML
+	private Label txtValorTotal;
+
+	Produto produto = new Produto();
 	public ObservableList<Produto> ArrayProduto;
 	public ObservableList<Compra> ArrayCompra;
 	public static ProdutoDAO produtoDAO = new ProdutoDAO();
 
-    @FXML
-    void ActionbtAdicionar(ActionEvent event) {
-    	if (btAdicionar != null && txtCodigo != null && txtProduto != null && txtQuantidade != null
+	@FXML
+	void ActionbtAdicionar(ActionEvent event) {
+		if (btAdicionar != null && txtCodigo != null && txtProduto != null && txtQuantidade != null
 				&& txtDesconto != null) {
-    		CarregarTabelaProdutosSelecionados();
+			tcID2.setCellValueFactory(new PropertyValueFactory<>(txtCodigo.getText()));
+			tcProduto2.setCellValueFactory(new PropertyValueFactory<>(txtProduto.getText()));
+			tcQuantidade2.setCellValueFactory(new PropertyValueFactory<>(txtQuantidade.getText()));
+			tcPrecoUnitario2.setCellValueFactory(new PropertyValueFactory<>(txtPrecoUnitario.getText()));
+
+			double PrecoTotal;
+			double quantidade = Double.parseDouble(txtQuantidade.getText());
+
+			if (quantidade < 30) {
+				PrecoTotal = Double.parseDouble(txtPrecoUnitario.getText())
+						* Double.parseDouble(txtQuantidade.getText());
+			} else {
+				PrecoTotal = (Double.parseDouble(txtPrecoUnitario.getText())
+						* Double.parseDouble(txtQuantidade.getText())) * 0.85;
+			}
+
+			tcPrecoTotal2.setCellValueFactory(new PropertyValueFactory<>(Double.toString(PrecoTotal)));
+	
+			//PRECO TOTAL ACUMULA SEM QUE PRECISE ADICONAR NA TABELA E DEPOIS REGSITRA O VALOR FINAL 
 		}
-    }
+	}
 
-    @FXML
-    void ActionbtCancelarVenda(ActionEvent event) {
-    	Stage stage = (Stage) btCancelarVenda.getScene().getWindow();
+	@FXML
+	void ActionbtCancelarVenda(ActionEvent event) {
+		Stage stage = (Stage) btCancelarVenda.getScene().getWindow();
 		stage.close();
-		
-		Main.changeScreen("dashboard");
-    }
 
-    @FXML
-    void ActionbtConfirmarVenda(ActionEvent event) {
-    	if (produto != null && txtCPFFarmaceutico != null) {
+		Main.changeScreen("dashboard");
+	}
+
+	@FXML
+	void ActionbtConfirmarVenda(ActionEvent event) {
+		if (produto != null && txtCPFFarmaceutico != null) {
 			Alert mensagemDeAviso = new Alert(Alert.AlertType.CONFIRMATION);
 			mensagemDeAviso.setContentText(
 					"Deseja realmente Salvar a venda para o farmacêutico : " + txtNomeFarmaceutico.getText());
@@ -167,46 +187,54 @@ public class controllerRegistrarVenda {
 				mensagemDeExclusao.show();
 			}
 		}
-    }
+	}
 
-    @FXML
-    void ActionbtExcluir(ActionEvent event) {
-    	
-    }
+	@FXML
+	void ActionbtExcluir(ActionEvent event) {
 
-    @FXML
-    void ActionbtPesquisarProduto(MouseEvent event) {
-    	ArrayProduto = FXCollections.observableArrayList(produtoDAO.search(txtResultadoPesquisa.getText()));
-    	//GUGAS DA GALERA
-    			tcID1.setCellValueFactory(new PropertyValueFactory<>("Codigo"));
-    			tcProduto1.setCellValueFactory(new PropertyValueFactory<>("Nome"));
-    			tcQuantidade1.setCellValueFactory(new PropertyValueFactory<>("estoque"));
-    			tcDataValidade1.setCellValueFactory(new PropertyValueFactory<>("DataVal"));
-    			tcDataFabricacao1.setCellValueFactory(new PropertyValueFactory<>("DataFab"));
-    			tcPrecoUnitario1.setCellValueFactory(new PropertyValueFactory<>("PrecoUnit"));
-    		
-    			//CARREGAR E SETAR NA TABELA
-    			tbProdutoParaselecionar.setItems(ArrayProduto);
-    			tbProdutoParaselecionar.refresh();
-    }
+	}
 
-    @FXML
-    void definirDesconto(KeyEvent event) {
-
-    }
-    void CarregarTabelaProdutosSelecionados() {
-		// AVALIAR PROCESSO - ESSE METODO DEVE CARREGAR AS INFORMAÇÕES A MEDIDA EM QUE
-		// EU INSIRO UM NOVO
-		// PRODUTO A MINHA LISTA DE COMPRA
-		tcID2.setCellValueFactory(new PropertyValueFactory<>("nome"));
-		tcProduto2.setCellValueFactory(new PropertyValueFactory<>("Nome"));
+	@FXML
+	void ActionbtPesquisarProduto(MouseEvent event) {
+		ArrayProduto = FXCollections.observableArrayList(produtoDAO.search(txtResultadoPesquisa.getText()));
+		// GUGAS DA GALERA
+		tcID1.setCellValueFactory(new PropertyValueFactory<>("Codigo"));
+		tcProduto1.setCellValueFactory(new PropertyValueFactory<>("Nome"));
 		tcQuantidade1.setCellValueFactory(new PropertyValueFactory<>("estoque"));
-		tcDataValidade1.setCellValueFactory(new PropertyValueFactory<>("DataVal"));
-		tcDataFabricacao1.setCellValueFactory(new PropertyValueFactory<>("DataFab"));
-    }
+
+		tcPrecoUnitario1.setCellValueFactory(new PropertyValueFactory<>("PrecoUnit"));
+
+		// CARREGAR E SETAR NA TABELA
+		tbProdutoParaselecionar.setItems(ArrayProduto);
+		tbProdutoParaselecionar.refresh();
+	}
+
+	@FXML
+	void definirDesconto(KeyEvent event) {
+		if (txtQuantidade.getText() != "" && txtQuantidade.getText() != null) {
+
+			double precoTotal = (Double.parseDouble(txtPrecoUnitario.getText())
+					* Double.parseDouble(txtQuantidade.getText()));
+
+			precoTotal = precoTotal * 0.85;
+			Double desconto = precoTotal * 0.15;
+			txtDesconto.setText(Double.toString(desconto));
+
+		}
+	}
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated method stub
+		LocalDate dataAtual = LocalDate.now();
+
+		txtCPFFarmaceutico.setText(controllerLogin.farmaceutico.getCPF());
+		txtNomeFarmaceutico.setText(controllerLogin.farmaceutico.getNome());
+		txtIDFarmaceutico.setText(controllerLogin.farmaceutico.getIdVendedor());
+		txtDataCompra.setText(dataAtual.toString());
+
+	}
 }
-
-
 
 //public class controllerRegistrarVenda implements Initializable {
 //
@@ -443,4 +471,3 @@ public class controllerRegistrarVenda {
 //
 //	}
 //}
-
