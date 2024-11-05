@@ -15,7 +15,7 @@ public class FarmaceuticoDAO {
 		PreparedStatement stmt = null;
 
 		try {
-			stmt = con.prepareStatement("INSERT INTO Vendedor(nome, CPF, email, telefone, dataNasc, dataCont, Endereco) VALUES (?, ?, ?, ?, ?, ?, ?)");
+			stmt = con.prepareStatement("INSERT INTO Vendedor VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 			stmt.setString(1, v.getNome());
 			stmt.setString(2, v.getCPF());
 			stmt.setString(3, v.getEmail());
@@ -23,6 +23,7 @@ public class FarmaceuticoDAO {
 			stmt.setString(5, v.getDataNasc());
 			stmt.setString(6, v.getDataCont());
 			stmt.setString(7, v.getEndereco());
+			stmt.setString(8, v.getCRF());
 
 			stmt.executeUpdate();
 			System.out.println("FOI INSERIDO!");
@@ -38,7 +39,7 @@ public class FarmaceuticoDAO {
 		PreparedStatement stmt = null;
 
 		try {
-			stmt = con.prepareStatement("UPDATE Vendedor SET nome = ?, CPF = ?, email = ?, telefone = ?, dataNasc = ?, dataCont = ?, Endereco = ? WHERE CPF = ?");
+			stmt = con.prepareStatement("UPDATE Vendedor SET nome = ?, CPF = ?, email = ?, telefone = ?, dataNasc = ?, dataCont = ?, Endereco = ?, crf = ? WHERE CPF = ?");
 			stmt.setString(1, v.getNome());
 			stmt.setString(2, v.getCPF());
 			stmt.setString(3, v.getEmail());
@@ -46,7 +47,9 @@ public class FarmaceuticoDAO {
 			stmt.setString(5, v.getDataNasc());
 			stmt.setString(6, v.getDataCont());
 			stmt.setString(7, v.getEndereco());
-			stmt.setString(8, v.getCPF());
+			stmt.setString(8, v.getCRF());
+
+			stmt.setString(9, v.getCPF());
 
 			stmt.executeUpdate();
 			System.out.println("FOI ATUALIZADO");
@@ -78,10 +81,11 @@ public class FarmaceuticoDAO {
 		ResultSet rs = null;
 		Farmaceutico farmaceutico = new Farmaceutico();
 		try {
-			stmt = con.prepareStatement("SELECT*FROM Vendedor WHERE senha = ? AND CPF = ? OR email = ?");
+			stmt = con.prepareStatement("SELECT*FROM Vendedor WHERE senha = ? AND CPF = ? OR email = ? OR crf = ?");
 			stmt.setString(1, password);
 			stmt.setString(2, user);
 			stmt.setString(3, user);
+			stmt.setString(4, user);
 			rs = stmt.executeQuery();
 
 			while (rs.next()) {
@@ -96,6 +100,7 @@ public class FarmaceuticoDAO {
 				v.setTotalVend(rs.getString(8));
 				v.setEndereco(rs.getString(9));
 				v.setPassword(rs.getString(10));
+				v.setCRF(rs.getString(11));
 				
 				farmaceutico = v;
 			}
@@ -127,6 +132,7 @@ public class FarmaceuticoDAO {
 				v.setDataCont(rs.getString(7));
 				v.setTotalVend(rs.getString(8));
 				v.setEndereco(rs.getString(9));
+				v.setCRF(rs.getString(10));
 				farmaceutico.add(v);
 			}
 		} catch (SQLException e) {
@@ -144,9 +150,10 @@ public class FarmaceuticoDAO {
 		ResultSet rs = null;
 		ArrayList<Farmaceutico> farmaceutico = new ArrayList<>();
 		try {
-			stmt = con.prepareStatement("SELECT*FROM Vendedor WHERE Nome LIKE ? OR idVendedor LIKE ?");
+			stmt = con.prepareStatement("SELECT*FROM Vendedor WHERE Nome LIKE ? OR idVendedor LIKE ? OR crf LIKE ?");
 			stmt.setString(1, search);
 			stmt.setString(2, search);
+			stmt.setString(3, search);
 			rs = stmt.executeQuery();
 
 			while (rs.next()) {
@@ -160,6 +167,7 @@ public class FarmaceuticoDAO {
 				v.setDataCont(rs.getString(7));
 				v.setTotalVend(rs.getString(8));
 				v.setEndereco(rs.getString(9));
+				v.setCRF(rs.getString(10));
 				farmaceutico.add(v);
 			}
 		} catch (SQLException e) {

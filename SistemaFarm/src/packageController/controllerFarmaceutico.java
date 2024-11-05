@@ -48,7 +48,9 @@ public class controllerFarmaceutico implements Initializable{
     
     @FXML
     private TableColumn<Farmaceutico, String> ColumnTotalVend;
-
+    
+    @FXML
+    private TableColumn<Farmaceutico, String> ColumnCRF;
 
     @FXML
     private Button btCadastrar;
@@ -162,6 +164,7 @@ public class controllerFarmaceutico implements Initializable{
 		ColumnContra.setCellValueFactory(new PropertyValueFactory<>("dataCont"));
 		ColumnEndereco.setCellValueFactory(new PropertyValueFactory<>("endereco"));
 		ColumnTotalVend.setCellValueFactory(new PropertyValueFactory<>("totalVend"));
+		ColumnCRF.setCellValueFactory(new PropertyValueFactory<>("crf"));
 		
 		tabelaFarmaceutico.setItems(ArrayFarmaceutico);
 		tabelaFarmaceutico.refresh();
@@ -170,6 +173,7 @@ public class controllerFarmaceutico implements Initializable{
     @FXML
     void ActionBtLimpar(ActionEvent event) {
     	txtPesquisar.setText("");
+    	CarregarTableFarmaceudico();
     }
     
     public void CarregarTableFarmaceudico() {
@@ -184,13 +188,9 @@ public class controllerFarmaceutico implements Initializable{
     	ColumnContra.setCellValueFactory(new PropertyValueFactory<>("dataCont"));
     	ColumnEndereco.setCellValueFactory(new PropertyValueFactory<>("endereco"));
     	ColumnTotalVend.setCellValueFactory(new PropertyValueFactory<>("totalVend"));
+    	ColumnCRF.setCellValueFactory(new PropertyValueFactory<>("crf"));
     	
     	tabelaFarmaceutico.setItems(ArrayFarmaceutico);
-    }
-    
-    @FXML
-    void ActionBtImprimir(ActionEvent event) {
-    	
     }
     
     @FXML

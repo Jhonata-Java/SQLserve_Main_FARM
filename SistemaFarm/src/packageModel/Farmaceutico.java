@@ -12,12 +12,13 @@ public class Farmaceutico {
 	private String TotalVend;
 	private String Endereco;
 	private String Password;
+	private String CRF;
 	
 	public Farmaceutico() {
 		super();
 	}
 	public Farmaceutico(String idVendedor, String nome, String cPF, String email, String telefone, String dataNasc,
-			String dataCont, String totalVend, String endereco, String password) {
+			String dataCont, String totalVend, String endereco, String password , String crf) {
 		super();
 		this.idVendedor = idVendedor;
 		Nome = nome;
@@ -29,6 +30,7 @@ public class Farmaceutico {
 		TotalVend = totalVend;
 		Endereco = endereco;
 		Password = password;
+		CRF = crf;
 	}
 	public String getIdVendedor() {
 		return idVendedor;
@@ -38,6 +40,12 @@ public class Farmaceutico {
 		this.idVendedor = idVendedor;
 	}
 
+	public String getCRF() {
+		return CRF;
+	}
+	public void setCRF(String cRF) {
+		CRF = cRF;
+	}
 	public String getNome() {
 		return Nome;
 	}

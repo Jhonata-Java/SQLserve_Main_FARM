@@ -19,14 +19,14 @@
          <children>
             <Pane layoutX="166.0" layoutY="25.0" prefHeight="82.0" prefWidth="641.0" style="-fx-background-radius: 10; -fx-background-color: #FFFFFF;">
                <children>
-                  <TextField fx:id="txtPesquisar" layoutX="14.0" layoutY="26.0" prefHeight="30.0" prefWidth="396.0" promptText="Pesquisar" />
-                  <Button fx:id="btCadastrar" layoutX="458.0" layoutY="29.0" mnemonicParsing="false" onAction="#btCadastrar" style="-fx-background-color: black;" text="Cadastrar" textFill="WHITE" />
-                  <Button fx:id="btLimpar" layoutX="380.0" layoutY="29.0" mnemonicParsing="false" onAction="#btLimpar" prefHeight="25.0" prefWidth="23.0" style="-fx-background-color: white;" text="X" textFill="#817d7d">
+                  <TextField fx:id="txtPesquisar" layoutX="14.0" layoutY="26.0" prefHeight="30.0" prefWidth="497.0" promptText="Pesquisar" />
+                  <Button fx:id="btCadastrar" layoutX="550.0" layoutY="29.0" mnemonicParsing="false" onAction="#btCadastrar" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: black;" text="Cadastrar" textFill="WHITE" />
+                  <Button fx:id="btLimpar" layoutX="482.0" layoutY="29.0" mnemonicParsing="false" onAction="#btLimpar" prefHeight="25.0" prefWidth="23.0" style="-fx-background-color: white;" text="X" textFill="#817d7d">
                      <font>
                         <Font name="Arial" size="9.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btPesquisar" layoutX="410.0" layoutY="26.0" mnemonicParsing="false" onAction="#btPesquisar" prefHeight="30.0" prefWidth="29.0" style="-fx-background-color: white;">
+                  <Button fx:id="btPesquisar" layoutX="511.0" layoutY="26.0" mnemonicParsing="false" onAction="#btPesquisar" prefHeight="30.0" prefWidth="29.0" style="-fx-background-color: white;">
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -35,7 +35,6 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="btImprimir" layoutX="543.0" layoutY="29.0" mnemonicParsing="false" onAction="#btImprimir" style="-fx-background-color: black;" text="Impimir" textFill="WHITE" />
                </children>
             </Pane>
             <Pane layoutX="166.0" layoutY="117.0" prefHeight="502.0" prefWidth="641.0" style="-fx-background-color: white; -fx-background-radius: 10;">
@@ -45,7 +44,7 @@
                         <Font name="Arial Bold" size="12.0" />
                      </font>
                   </Label>
-                  <TableView fx:id="tabela" layoutY="43.0" prefHeight="445.0" prefWidth="641.0" style="-fx-border-radius: 20;">
+                  <TableView fx:id="tabela" layoutY="43.0" prefHeight="445.0" prefWidth="641.0" style="-fx-border-radius: 20;" stylesheets="@../packageStyle/semlinhas.css">
                      <columns>
                         <TableColumn fx:id="columnID" prefWidth="49.60003662109375" text="ID" />
                         <TableColumn fx:id="columnFarmaceutico" prefWidth="121.60003662109375" text="Farmacêutico" />

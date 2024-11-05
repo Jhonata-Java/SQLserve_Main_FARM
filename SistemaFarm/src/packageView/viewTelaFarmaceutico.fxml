@@ -61,18 +61,19 @@
                         <Font name="Arial Bold" size="12.0" />
                      </font>
                   </Label>
-                  <TableView fx:id="tabelaFarmaceutico" layoutY="43.0" prefHeight="445.0" prefWidth="641.0" style="-fx-border-radius: 10;">
+                  <TableView fx:id="tabelaFarmaceutico" layoutY="43.0" prefHeight="445.0" prefWidth="641.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/semlinhas.css">
                      <columns>
-                        <TableColumn fx:id="ColumnID" prefWidth="48.0" text="ID" />
-                        <TableColumn fx:id="ColumnNome" prefWidth="81.5999755859375" text="Nome" />
+                        <TableColumn fx:id="ColumnID" prefWidth="42.4000244140625" text="ID" />
+                        <TableColumn fx:id="ColumnNome" prefWidth="87.199951171875" text="Nome" />
                         <TableColumn minWidth="0.0" prefWidth="0.0" text="CNPJ" />
-                        <TableColumn fx:id="ColumnCPF" prefWidth="60.0" text="CPF" />
-                        <TableColumn fx:id="ColumnEmail" prefWidth="73.60003662109375" text="E-mail" />
-                        <TableColumn fx:id="ColumnTelefone" minWidth="0.0" prefWidth="93.60000610351562" text="Telefone" />
-                        <TableColumn fx:id="ColumnNacimento" minWidth="0.0" prefWidth="62.4000244140625" text="Data de Nascimento" />
-                        <TableColumn fx:id="ColumnContra" minWidth="0.0" prefWidth="91.199951171875" text="Data de Contratação" />
-                        <TableColumn fx:id="ColumnTotalVend" minWidth="0.0" prefWidth="62.4000244140625" text="Total Vendido" />
-                        <TableColumn fx:id="ColumnEndereco" minWidth="0.0" prefWidth="65.7999267578125" text="Endereço" />
+                        <TableColumn fx:id="ColumnCPF" prefWidth="40.0" text="CPF" />
+                        <TableColumn fx:id="ColumnEmail" prefWidth="73.5999755859375" text="E-mail" />
+                        <TableColumn fx:id="ColumnTelefone" minWidth="0.0" prefWidth="85.5999755859375" text="Telefone" />
+                        <TableColumn fx:id="ColumnNacimento" minWidth="0.0" prefWidth="54.400054931640625" text="Data de Nascimento" />
+                        <TableColumn fx:id="ColumnContra" minWidth="0.0" prefWidth="68.0" text="Data de Contratação" />
+                        <TableColumn fx:id="ColumnTotalVend" minWidth="0.0" prefWidth="65.59991455078125" text="Total Vendido" />
+                        <TableColumn fx:id="ColumnEndereco" minWidth="0.0" prefWidth="77.5999755859375" text="Endereço" />
+                        <TableColumn fx:id="ColumnCRF" minWidth="0.0" prefWidth="77.5999755859375" text="CRF" />
                      </columns>
                   </TableView>
                </children>

@@ -102,9 +102,10 @@ public class CompraDAO {
 		ResultSet rs = null;
 		ArrayList<Compra> compra = new ArrayList<>();
 		try {
-			stmt = con.prepareStatement("SELECT*FROM Venda WHERE idVenda LIKE ? OR dataVenda LIKE ?");
+			stmt = con.prepareStatement("SELECT*FROM Vw_RelatorioVenda WHERE idVenda LIKE ? OR dataVenda LIKE ? OR idVendedor LIKE ?");
 			stmt.setString(1, search);
 			stmt.setString(2, search);
+			stmt.setString(3, search);
 			rs = stmt.executeQuery();
 
 			while (rs.next()) {
