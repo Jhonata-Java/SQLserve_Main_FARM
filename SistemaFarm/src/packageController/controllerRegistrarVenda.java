@@ -19,8 +19,10 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import packageControle.CompraDAO;
+import packageControle.FarmaceuticoDAO;
 import packageControle.ProdutoDAO;
 import packageModel.Compra;
+import packageModel.Farmaceutico;
 import packageModel.Produto;
 
 public class controllerRegistrarVenda {
@@ -169,7 +171,7 @@ public class controllerRegistrarVenda {
 
     @FXML
     void ActionbtExcluir(ActionEvent event) {
-
+    	
     }
 
     @FXML

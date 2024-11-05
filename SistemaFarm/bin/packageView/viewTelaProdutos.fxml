@@ -61,7 +61,7 @@
                         <Font name="Arial Bold" size="12.0" />
                      </font>
                   </Label>
-                  <TableView fx:id="tabela" layoutY="43.0" prefHeight="457.0" prefWidth="641.0" style="-fx-border-radius: 10;">
+                  <TableView fx:id="tabela" layoutY="43.0" prefHeight="457.0" prefWidth="641.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/semlinhas.css">
                      <columns>
                         <TableColumn fx:id="columnID" prefWidth="49.60003662109375" text="ID" />
                         <TableColumn fx:id="columnNomeC" prefWidth="45.5999755859375" text="Nome Comercial" />
