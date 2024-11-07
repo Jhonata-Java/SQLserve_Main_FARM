@@ -58,8 +58,6 @@ public class controllerCadastraFarmaceutico implements Initializable {
 	@FXML
 	private TextField textTelefone;
 
-	@FXML
-	private TextField textCRF;
 
 	@FXML
 	void ActionBtCadastrar(ActionEvent event) {
@@ -72,7 +70,6 @@ public class controllerCadastraFarmaceutico implements Initializable {
 			far.setDataCont(DtDataCont.getValue().toString());
 			far.setDataNasc(DtDataNasc.getValue().toString());
 			far.setEndereco(textEndereco.getText());
-			far.setCRFFarmaeutico(textCRF.getText());
 			FarmaceuticoDAO far1 = new FarmaceuticoDAO();
 			far1.create(far);
 
@@ -87,7 +84,6 @@ public class controllerCadastraFarmaceutico implements Initializable {
 			far.setDataCont(DtDataCont.getValue().toString());
 			far.setDataNasc(DtDataNasc.getValue().toString());
 			far.setEndereco(textEndereco.getText());
-			far.setCRFFarmaeutico(textCRF.getText());
 			FarmaceuticoDAO far1 = new FarmaceuticoDAO();
 			far1.update(far);
 
@@ -103,7 +99,6 @@ public class controllerCadastraFarmaceutico implements Initializable {
 		textEmail.setText("");
 		textTelefone.setText("");
 		textEndereco.setText("");
-		textCRF.setText("");
 
 		Stage stage = (Stage) btCancelar.getScene().getWindow();
 		stage.close();
@@ -122,7 +117,6 @@ public class controllerCadastraFarmaceutico implements Initializable {
 			LocalDate localdateCont = LocalDate.parse(controllerFarmaceutico.farmaceuticoEditar.getDataCont());
 			DtDataCont.setValue(localdateCont);
 			textEndereco.setText(controllerFarmaceutico.farmaceuticoEditar.getEndereco());
-			textCRF.setText(controllerFarmaceutico.farmaceuticoEditar.getCRFFarmaeutico());
 		}
 	}
 }

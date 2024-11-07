@@ -82,10 +82,9 @@
                         <TableColumn fx:id="ColumnEmail" prefWidth="72.800048828125" text="E-mail" />
                         <TableColumn fx:id="ColumnTelefone" minWidth="0.0" prefWidth="74.39996337890625" text="Telefone" />
                         <TableColumn fx:id="ColumnNacimento" minWidth="0.0" prefWidth="92.79998779296875" text="Data de Nascimento" />
-                        <TableColumn fx:id="ColumnContra" minWidth="0.0" prefWidth="138.4000244140625" text="Data de Contratação" />
-                        <TableColumn fx:id="ColumnTotalVend" minWidth="0.0" prefWidth="103.99993896484375" text="Total Vendido" />
-                        <TableColumn fx:id="ColumnEndereco" minWidth="0.0" prefWidth="76.0" text="Endereço" />
-                        <TableColumn fx:id="ColumnCrf" minWidth="0.0" prefWidth="64.0" text="CRF" />
+                        <TableColumn fx:id="ColumnContra" minWidth="0.0" prefWidth="162.39996337890625" text="Data de Contratação" />
+                        <TableColumn fx:id="ColumnTotalVend" minWidth="0.0" prefWidth="116.00006103515625" text="Total Vendido" />
+                        <TableColumn fx:id="ColumnEndereco" minWidth="0.0" prefWidth="96.800048828125" text="Endereço" />
                      </columns>
                   </TableView>
                </children>

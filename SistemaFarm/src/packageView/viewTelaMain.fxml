@@ -173,7 +173,7 @@
             </Label>
             <Pane layoutX="170.0" layoutY="265.0" prefHeight="304.0" prefWidth="379.0" style="-fx-background-color: white; -fx-background-radius: 10;">
                <children>
-                  <Label layoutX="9.0" layoutY="11.0" text="Medicamentos que o estoque está acabando" textFill="#3c42ff">
+                  <Label layoutX="9.0" layoutY="11.0" text="Medicamentos com baixo estoque" textFill="#3c42ff">
                      <font>
                         <Font name="Arial Bold" size="17.0" />
                      </font>

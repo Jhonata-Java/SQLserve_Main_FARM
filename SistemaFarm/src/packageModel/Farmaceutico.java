@@ -12,21 +12,7 @@ public class Farmaceutico {
 	private String TotalVend;
 	private String Endereco;
 	private String Password;
-	private String CRFFarmaeutico;
 	
-	public String getCRFFarmaeutico() {
-		return CRFFarmaeutico;
-	}
-	
-	public void setCRFFarmaeutico(String cRFFarmaeutico) {
-		CRFFarmaeutico = cRFFarmaeutico;
-	}
-
-	// Construtor para inicializar a propriedade crf (opcional)
-    public void initializableCRFFarmaeutico(String cRFFarmaeutico) {
-        this.CRFFarmaeutico = cRFFarmaeutico;
-    }
-
 	public Farmaceutico() {
 		super();
 	}
@@ -44,7 +30,6 @@ public class Farmaceutico {
 		TotalVend = totalVend;
 		Endereco = endereco;
 		Password = password;
-		CRFFarmaeutico = cRFFarmaeutico;
 	}
 
 	public String getIdVendedor() {
@@ -127,4 +112,5 @@ public class Farmaceutico {
 		Password = password;
 	}
 
+	
 }
