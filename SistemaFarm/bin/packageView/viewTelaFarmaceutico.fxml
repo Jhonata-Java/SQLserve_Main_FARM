@@ -85,7 +85,7 @@
                         <TableColumn fx:id="ColumnContra" minWidth="0.0" prefWidth="138.4000244140625" text="Data de Contratação" />
                         <TableColumn fx:id="ColumnTotalVend" minWidth="0.0" prefWidth="103.99993896484375" text="Total Vendido" />
                         <TableColumn fx:id="ColumnEndereco" minWidth="0.0" prefWidth="76.0" text="Endereço" />
-                        <TableColumn fx:id="ColumnCRF" minWidth="0.0" prefWidth="64.0" text="CRF" />
+                        <TableColumn fx:id="ColumnCrf" minWidth="0.0" prefWidth="64.0" text="CRF" />
                      </columns>
                   </TableView>
                </children>

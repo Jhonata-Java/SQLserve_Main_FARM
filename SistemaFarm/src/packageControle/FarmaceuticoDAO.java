@@ -15,7 +15,8 @@ public class FarmaceuticoDAO {
 		PreparedStatement stmt = null;
 
 		try {
-			stmt = con.prepareStatement("INSERT INTO Vendedor VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+			stmt = con.prepareStatement("INSERT INTO Vendedor(nome,CPF,email,telefone,dataNasc,dataCont,totalVend,endereco,crf) "
+					+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 			stmt.setString(1, v.getNome());
 			stmt.setString(2, v.getCPF());
 			stmt.setString(3, v.getEmail());
@@ -23,7 +24,7 @@ public class FarmaceuticoDAO {
 			stmt.setString(5, v.getDataNasc());
 			stmt.setString(6, v.getDataCont());
 			stmt.setString(7, v.getEndereco());
-			stmt.setString(8, v.getCRF());
+			stmt.setString(8, v.getCRFFarmaeutico());
 
 			stmt.executeUpdate();
 			System.out.println("FOI INSERIDO!");
@@ -47,7 +48,7 @@ public class FarmaceuticoDAO {
 			stmt.setString(5, v.getDataNasc());
 			stmt.setString(6, v.getDataCont());
 			stmt.setString(7, v.getEndereco());
-			stmt.setString(8, v.getCRF());
+			stmt.setString(8, v.getCRFFarmaeutico());
 
 			stmt.setString(9, v.getCPF());
 
@@ -100,7 +101,7 @@ public class FarmaceuticoDAO {
 				v.setTotalVend(rs.getString(8));
 				v.setEndereco(rs.getString(9));
 				v.setPassword(rs.getString(10));
-				v.setCRF(rs.getString(11));
+				v.setCRFFarmaeutico(rs.getString(11));
 				
 				farmaceutico = v;
 			}
@@ -132,7 +133,7 @@ public class FarmaceuticoDAO {
 				v.setDataCont(rs.getString(7));
 				v.setTotalVend(rs.getString(8));
 				v.setEndereco(rs.getString(9));
-				v.setCRF(rs.getString(10));
+				v.setCRFFarmaeutico(rs.getString(10));
 				farmaceutico.add(v);
 			}
 		} catch (SQLException e) {
@@ -167,7 +168,7 @@ public class FarmaceuticoDAO {
 				v.setDataCont(rs.getString(7));
 				v.setTotalVend(rs.getString(8));
 				v.setEndereco(rs.getString(9));
-				v.setCRF(rs.getString(10));
+				v.setCRFFarmaeutico(rs.getString(10));
 				farmaceutico.add(v);
 			}
 		} catch (SQLException e) {

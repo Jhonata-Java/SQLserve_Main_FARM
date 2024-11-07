@@ -1,7 +1,7 @@
 package packageModel;
 
 public class Farmaceutico {
-	
+
 	private String idVendedor;
 	private String Nome;
 	private String CPF;
@@ -12,13 +12,27 @@ public class Farmaceutico {
 	private String TotalVend;
 	private String Endereco;
 	private String Password;
-	private String CRF;
+	private String CRFFarmaeutico;
 	
+	public String getCRFFarmaeutico() {
+		return CRFFarmaeutico;
+	}
+	
+	public void setCRFFarmaeutico(String cRFFarmaeutico) {
+		CRFFarmaeutico = cRFFarmaeutico;
+	}
+
+	// Construtor para inicializar a propriedade crf (opcional)
+    public void initializableCRFFarmaeutico(String cRFFarmaeutico) {
+        this.CRFFarmaeutico = cRFFarmaeutico;
+    }
+
 	public Farmaceutico() {
 		super();
 	}
+
 	public Farmaceutico(String idVendedor, String nome, String cPF, String email, String telefone, String dataNasc,
-			String dataCont, String totalVend, String endereco, String password , String crf) {
+			String dataCont, String totalVend, String endereco, String password, String cRFFarmaeutico) {
 		super();
 		this.idVendedor = idVendedor;
 		Nome = nome;
@@ -30,8 +44,9 @@ public class Farmaceutico {
 		TotalVend = totalVend;
 		Endereco = endereco;
 		Password = password;
-		CRF = crf;
+		CRFFarmaeutico = cRFFarmaeutico;
 	}
+
 	public String getIdVendedor() {
 		return idVendedor;
 	}
@@ -40,12 +55,6 @@ public class Farmaceutico {
 		this.idVendedor = idVendedor;
 	}
 
-	public String getCRF() {
-		return CRF;
-	}
-	public void setCRF(String cRF) {
-		CRF = cRF;
-	}
 	public String getNome() {
 		return Nome;
 	}
@@ -118,6 +127,4 @@ public class Farmaceutico {
 		Password = password;
 	}
 
-	
-	
 }
