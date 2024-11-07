@@ -163,7 +163,6 @@ public class controllerFarmaceutico implements Initializable {
 		ColumnContra.setCellValueFactory(new PropertyValueFactory<>("dataCont"));
 		ColumnEndereco.setCellValueFactory(new PropertyValueFactory<>("endereco"));
 		ColumnTotalVend.setCellValueFactory(new PropertyValueFactory<>("totalVend"));
-		ColumnCrf.setCellValueFactory(new PropertyValueFactory<>("crf"));
 
 		tabelaFarmaceutico.setItems(ArrayFarmaceutico);
 		tabelaFarmaceutico.refresh();
@@ -187,7 +186,6 @@ public class controllerFarmaceutico implements Initializable {
 		ColumnContra.setCellValueFactory(new PropertyValueFactory<>("dataCont"));
 		ColumnEndereco.setCellValueFactory(new PropertyValueFactory<>("endereco"));
 		ColumnTotalVend.setCellValueFactory(new PropertyValueFactory<>("totalVend"));
-		ColumnCrf.setCellValueFactory(new PropertyValueFactory<>("crf"));
 
 		tabelaFarmaceutico.setItems(ArrayFarmaceutico);
 	}
