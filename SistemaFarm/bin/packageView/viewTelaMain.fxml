@@ -9,6 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
@@ -16,9 +17,9 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="packageController.controllerDashboard">
    <children>
-      <Pane layoutY="-1.0" prefHeight="634.0" prefWidth="828.0" style="-fx-background-color: #eaeef0;">
+      <Pane layoutY="-1.0" prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: #eaeef0;">
          <children>
-            <VBox prefHeight="634.0" prefWidth="149.0" style="-fx-background-color: #FFFFFF;">
+            <VBox prefHeight="646.0" prefWidth="149.0" style="-fx-background-color: #FFFFFF;">
                <children>
                   <Pane prefHeight="110.0" prefWidth="166.0">
                      <children>
@@ -94,30 +95,30 @@
                   </Pane>
                </children>
             </VBox>
-            <Pane layoutX="170.0" layoutY="27.0" prefHeight="58.0" prefWidth="612.0">
+            <Pane layoutX="170.0" layoutY="27.0" prefHeight="58.0" prefWidth="806.0">
                <children>
-                  <ImageView fitHeight="63.0" fitWidth="612.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="311.0" fitWidth="803.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../packageIcons/DEGRADE.png" />
+                        <Image url="@../packageIcons/Frame%2012%20(3).png" />
                      </image>
                   </ImageView>
-                  <FlowPane layoutX="14.0" layoutY="9.0" orientation="VERTICAL" prefHeight="40.0" prefWidth="90.0">
+                  <FlowPane layoutX="53.0" layoutY="12.0" orientation="VERTICAL" prefHeight="48.0" prefWidth="134.0">
                      <children>
                         <Label text="Seja bem-vindo(a)" textFill="WHITE">
                            <font>
-                              <Font name="Arial" size="11.0" />
+                              <Font name="Arial" size="13.0" />
                            </font>
                         </Label>
                         <Label fx:id="labelNome" text="Raphaela" textFill="WHITE">
                            <font>
-                              <Font name="Arial Bold" size="18.0" />
+                              <Font name="Arial Bold" size="22.0" />
                            </font>
                         </Label>
                      </children>
                   </FlowPane>
-                  <Button fx:id="btRegistraVenda" layoutX="473.0" layoutY="17.0" mnemonicParsing="false" onAction="#btRegistraVenda" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: white;" text="Registrar venda">
+                  <Button fx:id="btRegistraVenda" layoutX="634.0" layoutY="17.0" mnemonicParsing="false" onAction="#btRegistraVenda" prefHeight="30.0" prefWidth="153.0" style="-fx-background-color: white;" text="Registrar venda">
                      <font>
-                        <Font name="System Bold" size="11.0" />
+                        <Font name="Arial Bold" size="14.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="17.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
@@ -129,81 +130,85 @@
                   </Button>
                </children>
             </Pane>
-            <Label layoutX="170.0" layoutY="97.0" prefHeight="25.0" prefWidth="90.0" text="Guia rápido">
+            <Label layoutX="170.0" layoutY="97.0" prefHeight="25.0" prefWidth="112.0" text="Guia rápido">
                <font>
-                  <Font name="Arial Bold" size="16.0" />
+                  <Font name="Arial Bold" size="18.0" />
                </font>
             </Label>
-            <Button fx:id="btCadastrarProduto" alignment="CENTER" contentDisplay="CENTER" layoutX="170.0" layoutY="135.0" mnemonicParsing="false" onAction="#btCadastrarProduto" prefHeight="71.0" prefWidth="3.0" style="-fx-background-insets: 999;" text=" ">
-               <graphic>
-                  <ImageView fitHeight="70.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../packageIcons/BotaoCadastrarProduto.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button fx:id="btCadastrarFornecedor" alignment="CENTER" contentDisplay="CENTER" layoutX="374.0" layoutY="135.0" mnemonicParsing="false" onAction="#btCadastrarFornecedor" style="-fx-background-insets: 999;" text=" ">
-               <graphic>
-                  <ImageView fitHeight="63.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../packageIcons/BotaoCadastrarFornecedor.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Label layoutX="170.0" layoutY="216.0" prefHeight="25.0" prefWidth="102.0" text="Atualizações">
-               <font>
-                  <Font name="Arial Bold" size="16.0" />
-               </font>
-            </Label>
-            <Button fx:id="btCadastrarFarmaceutico" alignment="CENTER" contentDisplay="CENTER" layoutX="578.0" layoutY="135.0" mnemonicParsing="false" onAction="#btCadastrarFarmaceutico" style="-fx-background-insets: 999;" text=" ">
-               <graphic>
-                  <ImageView fitHeight="70.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../packageIcons/BotaoCadastrarFarmaceutico.png" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
-            <Pane layoutX="170.0" layoutY="265.0" prefHeight="307.0" prefWidth="290.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+            <HBox layoutX="167.0" layoutY="130.0" prefHeight="83.0" prefWidth="807.0" spacing="50.0">
                <children>
-<<<<<<< HEAD
-                  <Label layoutX="9.0" layoutY="11.0" text="Medicamentos com baixo estoque" textFill="#3c42ff">
-=======
-                  <Label layoutX="18.0" layoutY="23.0" text="Medicamentos que o estoque está acabando" textFill="#3c42ff">
->>>>>>> branch 'master' of https://github.com/Jhonata-Java/Sistema-FARM.git
+                  <Button fx:id="btCadastrarProduto" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btCadastrarProduto" prefHeight="83.0" prefWidth="217.0" style="-fx-background-insets: 999;" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="73.0" fitWidth="282.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../packageIcons/BotaoCadastrarProduto.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btCadastrarFornecedor" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btCadastrarFornecedor" prefHeight="83.0" prefWidth="217.0" style="-fx-background-insets: 999;" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="73.0" fitWidth="282.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../packageIcons/BotaoCadastrarFornecedor.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btCadastrarFarmaceutico" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btCadastrarFarmaceutico" prefHeight="83.0" prefWidth="264.0" style="-fx-background-insets: 999;" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="73.0" fitWidth="282.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../packageIcons/BotaoCadastrarFarmaceutico.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <Label layoutX="170.0" layoutY="216.0" prefHeight="25.0" prefWidth="115.0" text="Atualizações">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <Pane layoutX="170.0" layoutY="265.0" prefHeight="304.0" prefWidth="379.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <children>
+                  <Label layoutX="9.0" layoutY="11.0" text="Medicamentos que o estoque está acabando" textFill="#3c42ff">
                      <font>
-                        <Font name="Arial Bold" size="12.0" />
+                        <Font name="Arial Bold" size="17.0" />
                      </font>
                   </Label>
-                  <TableView fx:id="tabelaEstoque" layoutY="38.0" prefHeight="271.0" prefWidth="290.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/semlinhas.css">
+                  <TableView fx:id="tabelaEstoque" layoutY="38.0" prefHeight="271.0" prefWidth="369.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/semlinhas.css">
                      <columns>
-                        <TableColumn fx:id="columnID1" prefWidth="50.0" text="ID" />
-                        <TableColumn fx:id="columnNome1" prefWidth="70.0" text="Nome" />
-                        <TableColumn fx:id="columnQuantidade" prefWidth="70.0" text="Quantidade" />
-                        <TableColumn fx:id="columnLocalizacao1" minWidth="9.5999755859375" prefWidth="70.0" text="Localização" />
+                        <TableColumn fx:id="columnID1" prefWidth="40.79997253417969" text="ID" />
+                        <TableColumn fx:id="columnNome1" prefWidth="107.20004272460938" text="Nome" />
+                        <TableColumn fx:id="columnQuantidade" prefWidth="90.13336181640625" text="Quantidade" />
+                        <TableColumn fx:id="columnLocalizacao1" minWidth="9.5999755859375" prefWidth="108.53326416015625" text="Localização" />
                      </columns>
                   </TableView>
                </children>
             </Pane>
-            <Pane layoutX="492.0" layoutY="265.0" prefHeight="307.0" prefWidth="290.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+            <Pane layoutX="585.0" layoutY="263.0" prefHeight="304.0" prefWidth="379.0" style="-fx-background-color: white; -fx-background-radius: 10;">
                <children>
-                  <Label layoutX="34.0" layoutY="22.0" text="Medicametos próximos do vencimento" textFill="#3c42ff">
+                  <Label layoutX="14.0" layoutY="13.0" text="Medicametos próximos do vencimento" textFill="#3c42ff">
                      <font>
-                        <Font name="Arial Bold" size="12.0" />
+                        <Font name="Arial Bold" size="17.0" />
                      </font>
                   </Label>
-                  <TableView fx:id="tabelaVencer" layoutY="37.0" prefHeight="271.0" prefWidth="290.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/semlinhas.css">
+                  <TableView fx:id="tabelaVencer" layoutY="37.0" prefHeight="271.0" prefWidth="381.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/semlinhas.css">
                      <columns>
-                        <TableColumn fx:id="columnID2" prefWidth="50.0" text="ID" />
-                        <TableColumn fx:id="columnNome2" text="Nome" />
-                        <TableColumn fx:id="columnVencimento" text="Vencimento" />
-                        <TableColumn fx:id="columnLocalizacao2" minWidth="9.5999755859375" text="Localização" />
+                        <TableColumn fx:id="columnID2" prefWidth="38.66668701171875" text="ID" />
+                        <TableColumn fx:id="columnNome2" prefWidth="123.7332763671875" text="Nome" />
+                        <TableColumn fx:id="columnVencimento" prefWidth="89.33331298828125" text="Validade" />
+                        <TableColumn fx:id="columnLocalizacao2" minWidth="9.5999755859375" prefWidth="110.13330078125" text="Localização" />
                      </columns>
                   </TableView>
                </children>
             </Pane>
-            <Hyperlink fx:id="btAtualizar" layoutX="276.0" layoutY="217.0" onAction="#Atualizar" text="Atualizar" textFill="#8e8e8e" />
+            <Hyperlink fx:id="btAtualizar" layoutX="287.0" layoutY="218.0" onAction="#Atualizar" text="Atualizar" textFill="#8e8e8e">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Hyperlink>
          </children></Pane>
    </children>
 </AnchorPane>

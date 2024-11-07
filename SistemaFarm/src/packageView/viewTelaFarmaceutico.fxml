@@ -66,15 +66,13 @@
                         <TableColumn fx:id="ColumnID" prefWidth="42.4000244140625" text="ID" />
                         <TableColumn fx:id="ColumnNome" prefWidth="87.199951171875" text="Nome" />
                         <TableColumn minWidth="0.0" prefWidth="0.0" text="CNPJ" />
-<<<<<<< HEAD
-                        <TableColumn fx:id="ColumnCPF" prefWidth="52.79998779296875" text="CPF" />
-                        <TableColumn fx:id="ColumnEmail" prefWidth="72.800048828125" text="E-mail" />
-                        <TableColumn fx:id="ColumnTelefone" minWidth="0.0" prefWidth="74.39996337890625" text="Telefone" />
-                        <TableColumn fx:id="ColumnNacimento" minWidth="0.0" prefWidth="92.79998779296875" text="Data de Nascimento" />
-                        <TableColumn fx:id="ColumnContra" minWidth="0.0" prefWidth="162.39996337890625" text="Data de Contratação" />
-                        <TableColumn fx:id="ColumnTotalVend" minWidth="0.0" prefWidth="116.00006103515625" text="Total Vendido" />
-                        <TableColumn fx:id="ColumnEndereco" minWidth="0.0" prefWidth="96.800048828125" text="Endereço" />
-=======
+                        <TableColumn fx:id="ColumnCPF" prefWidth="63.20001220703125" text="CPF" />
+                        <TableColumn fx:id="ColumnEmail" prefWidth="64.79998779296875" text="E-mail" />
+                        <TableColumn fx:id="ColumnTelefone" minWidth="0.0" prefWidth="0.0" text="Telefone" />
+                        <TableColumn fx:id="ColumnNacimento" minWidth="0.0" prefWidth="84.79998779296875" text="Data de Nascimento" />
+                        <TableColumn fx:id="ColumnContra" minWidth="0.0" prefWidth="144.79998779296875" text="Data de Contratação" />
+                        <TableColumn fx:id="ColumnTotalVend" minWidth="0.0" prefWidth="132.0" text="Total Vendido" />
+                        <TableColumn fx:id="ColumnEndereco" minWidth="0.0" prefWidth="187.2000732421875" text="Endereço" />
                         <TableColumn fx:id="ColumnCPF" prefWidth="40.0" text="CPF" />
                         <TableColumn fx:id="ColumnEmail" prefWidth="73.5999755859375" text="E-mail" />
                         <TableColumn fx:id="ColumnTelefone" minWidth="0.0" prefWidth="85.5999755859375" text="Telefone" />
@@ -83,7 +81,6 @@
                         <TableColumn fx:id="ColumnTotalVend" minWidth="0.0" prefWidth="65.59991455078125" text="Total Vendido" />
                         <TableColumn fx:id="ColumnEndereco" minWidth="0.0" prefWidth="77.5999755859375" text="Endereço" />
                         <TableColumn fx:id="ColumnCRF" minWidth="0.0" prefWidth="77.5999755859375" text="CRF" />
->>>>>>> branch 'master' of https://github.com/Jhonata-Java/Sistema-FARM.git
                      </columns>
                   </TableView>
                </children>

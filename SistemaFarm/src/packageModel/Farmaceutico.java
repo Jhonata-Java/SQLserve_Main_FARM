@@ -12,13 +12,13 @@ public class Farmaceutico {
 	private String TotalVend;
 	private String Endereco;
 	private String Password;
-	
+
 	public Farmaceutico() {
 		super();
 	}
 
 	public Farmaceutico(String idVendedor, String nome, String cPF, String email, String telefone, String dataNasc,
-			String dataCont, String totalVend, String endereco, String password, String cRFFarmaeutico) {
+			String dataCont, String totalVend, String endereco, String password) {
 		super();
 		this.idVendedor = idVendedor;
 		Nome = nome;
@@ -112,5 +112,4 @@ public class Farmaceutico {
 		Password = password;
 	}
 
-	
 }

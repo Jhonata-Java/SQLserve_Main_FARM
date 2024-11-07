@@ -58,7 +58,6 @@ public class controllerCadastraFarmaceutico implements Initializable {
 	@FXML
 	private TextField textTelefone;
 
-
 	@FXML
 	void ActionBtCadastrar(ActionEvent event) {
 		if (controllerFarmaceutico.farmaceuticoEditar == null) {

@@ -15,8 +15,8 @@ public class FarmaceuticoDAO {
 		PreparedStatement stmt = null;
 
 		try {
-			stmt = con.prepareStatement("INSERT INTO Vendedor(nome,CPF,email,telefone,dataNasc,dataCont,totalVend,endereco) "
-					+ "VALUES (?, ?, ?, ?, ?, ?, ?)");
+			stmt = con.prepareStatement("INSERT INTO Vendedor(nome,CPF,email,telefone,dataNasc,dataCont,endereco,) "
+					+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 			stmt.setString(1, v.getNome());
 			stmt.setString(2, v.getCPF());
 			stmt.setString(3, v.getEmail());
@@ -24,7 +24,6 @@ public class FarmaceuticoDAO {
 			stmt.setString(5, v.getDataNasc());
 			stmt.setString(6, v.getDataCont());
 			stmt.setString(7, v.getEndereco());
-
 			stmt.executeUpdate();
 			System.out.println("FOI INSERIDO!");
 		} catch (SQLException e) {
@@ -97,7 +96,8 @@ public class FarmaceuticoDAO {
 				v.setDataCont(rs.getString(7));
 				v.setTotalVend(rs.getString(8));
 				v.setEndereco(rs.getString(9));
-				v.setPassword(rs.getString(10));		
+				v.setPassword(rs.getString(10));
+				
 				farmaceutico = v;
 			}
 		} catch (SQLException e) {
@@ -145,10 +145,9 @@ public class FarmaceuticoDAO {
 		ResultSet rs = null;
 		ArrayList<Farmaceutico> farmaceutico = new ArrayList<>();
 		try {
-			stmt = con.prepareStatement("SELECT*FROM Vendedor WHERE Nome LIKE ? OR idVendedor LIKE ? OR crf LIKE ?");
+			stmt = con.prepareStatement("SELECT*FROM Vendedor WHERE Nome LIKE ? OR idVendedor LIKE ? ");
 			stmt.setString(1, search);
 			stmt.setString(2, search);
-			stmt.setString(3, search);
 			rs = stmt.executeQuery();
 
 			while (rs.next()) {
