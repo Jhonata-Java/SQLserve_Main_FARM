@@ -18,20 +18,17 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="packageController.controllerFarmaceutico">
    <children>
-      <Pane prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: #eaeef0;">
+      <Pane prefHeight="634.0" prefWidth="828.0" style="-fx-background-color: #eaeef0;">
          <children>
-            <Pane layoutX="166.0" layoutY="25.0" prefHeight="82.0" prefWidth="823.0" style="-fx-background-radius: 10; -fx-background-color: #FFFFFF;">
+            <Pane layoutX="166.0" layoutY="25.0" prefHeight="82.0" prefWidth="641.0" style="-fx-background-radius: 10; -fx-background-color: #FFFFFF;">
                <children>
-                  <TextField fx:id="txtPesquisar" layoutX="14.0" layoutY="26.0" prefHeight="30.0" prefWidth="488.0" promptText="Pesquisar">
-                     <font>
-                        <Font name="Arial" size="14.0" />
-                     </font></TextField>
-                  <Button fx:id="btLimpar" layoutX="474.0" layoutY="29.0" mnemonicParsing="false" onAction="#ActionBtLimpar" prefHeight="25.0" prefWidth="23.0" style="-fx-background-color: white;" text="X" textFill="#817d7d">
+                  <TextField fx:id="txtPesquisar" layoutX="14.0" layoutY="26.0" prefHeight="30.0" prefWidth="334.0" promptText="Pesquisar" />
+                  <Button fx:id="btLimpar" layoutX="320.0" layoutY="29.0" mnemonicParsing="false" onAction="#ActionBtLimpar" prefHeight="25.0" prefWidth="23.0" style="-fx-background-color: white;" text="X" textFill="#817d7d">
                      <font>
                         <Font name="Arial" size="9.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btPesquisar" layoutX="504.0" layoutY="27.0" mnemonicParsing="false" onAction="#ActionBtPesquisar" prefHeight="25.0" prefWidth="1.0" style="-fx-background-color: #FFFFFF;">
+                  <Button fx:id="btPesquisar" layoutX="348.0" layoutY="28.0" mnemonicParsing="false" onAction="#ActionBtPesquisar" prefHeight="25.0" prefWidth="1.0" style="-fx-background-color: #FFFFFF;">
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -40,7 +37,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <GridPane layoutX="558.0" layoutY="28.0" prefHeight="26.0" prefWidth="251.0">
+                  <GridPane layoutX="387.0" layoutY="27.0" prefHeight="26.0" prefWidth="242.0">
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
@@ -50,34 +47,26 @@
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Button fx:id="btEditar" mnemonicParsing="false" onAction="#ActionBtEditar" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: black;" text="Editar" textFill="WHITE" GridPane.columnIndex="1">
-                           <font>
-                              <Font name="Arial" size="14.0" />
-                           </font></Button>
-                        <Button fx:id="btCadastrar" mnemonicParsing="false" onAction="#ActionBtCadastrar" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: black;" text="Cadastrar" textFill="WHITE">
-                           <font>
-                              <Font name="Arial" size="14.0" />
-                           </font></Button>
-                        <Button fx:id="btExcluir" mnemonicParsing="false" onAction="#ActionBtExcluir" prefHeight="26.0" prefWidth="76.0" style="-fx-background-color: black;" text="Excluir" textFill="WHITE" GridPane.columnIndex="2">
-                           <font>
-                              <Font name="Arial" size="14.0" />
-                           </font></Button>
+                        <Button fx:id="btEditar" mnemonicParsing="false" onAction="#ActionBtEditar" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: black;" text="Editar" textFill="WHITE" GridPane.columnIndex="1" />
+                        <Button fx:id="btCadastrar" mnemonicParsing="false" onAction="#ActionBtCadastrar" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: black;" text="Cadastrar" textFill="WHITE" />
+                        <Button fx:id="btExcluir" mnemonicParsing="false" onAction="#ActionBtExcluir" prefHeight="26.0" prefWidth="76.0" style="-fx-background-color: black;" text="Excluir" textFill="WHITE" GridPane.columnIndex="2" />
                      </children>
                   </GridPane>
                </children>
             </Pane>
-            <Pane layoutX="166.0" layoutY="117.0" prefHeight="510.0" prefWidth="817.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+            <Pane layoutX="166.0" layoutY="117.0" prefHeight="502.0" prefWidth="641.0" style="-fx-background-color: white; -fx-background-radius: 10;">
                <children>
                   <Label layoutX="14.0" layoutY="14.0" text="Farmacêuticos cadastrados" textFill="#3c42ff">
                      <font>
-                        <Font name="Arial Bold" size="14.0" />
+                        <Font name="Arial Bold" size="12.0" />
                      </font>
                   </Label>
-                  <TableView fx:id="tabelaFarmaceutico" layoutY="43.0" prefHeight="461.0" prefWidth="823.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/semlinhas.css">
+                  <TableView fx:id="tabelaFarmaceutico" layoutY="43.0" prefHeight="445.0" prefWidth="641.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/semlinhas.css">
                      <columns>
-                        <TableColumn fx:id="ColumnID" prefWidth="33.60003662109375" text="ID" />
-                        <TableColumn fx:id="ColumnNome" prefWidth="96.79994201660156" text="Nome" />
+                        <TableColumn fx:id="ColumnID" prefWidth="42.4000244140625" text="ID" />
+                        <TableColumn fx:id="ColumnNome" prefWidth="87.199951171875" text="Nome" />
                         <TableColumn minWidth="0.0" prefWidth="0.0" text="CNPJ" />
+<<<<<<< HEAD
                         <TableColumn fx:id="ColumnCPF" prefWidth="52.79998779296875" text="CPF" />
                         <TableColumn fx:id="ColumnEmail" prefWidth="72.800048828125" text="E-mail" />
                         <TableColumn fx:id="ColumnTelefone" minWidth="0.0" prefWidth="74.39996337890625" text="Telefone" />
@@ -85,13 +74,23 @@
                         <TableColumn fx:id="ColumnContra" minWidth="0.0" prefWidth="162.39996337890625" text="Data de Contratação" />
                         <TableColumn fx:id="ColumnTotalVend" minWidth="0.0" prefWidth="116.00006103515625" text="Total Vendido" />
                         <TableColumn fx:id="ColumnEndereco" minWidth="0.0" prefWidth="96.800048828125" text="Endereço" />
+=======
+                        <TableColumn fx:id="ColumnCPF" prefWidth="40.0" text="CPF" />
+                        <TableColumn fx:id="ColumnEmail" prefWidth="73.5999755859375" text="E-mail" />
+                        <TableColumn fx:id="ColumnTelefone" minWidth="0.0" prefWidth="85.5999755859375" text="Telefone" />
+                        <TableColumn fx:id="ColumnNacimento" minWidth="0.0" prefWidth="54.400054931640625" text="Data de Nascimento" />
+                        <TableColumn fx:id="ColumnContra" minWidth="0.0" prefWidth="68.0" text="Data de Contratação" />
+                        <TableColumn fx:id="ColumnTotalVend" minWidth="0.0" prefWidth="65.59991455078125" text="Total Vendido" />
+                        <TableColumn fx:id="ColumnEndereco" minWidth="0.0" prefWidth="77.5999755859375" text="Endereço" />
+                        <TableColumn fx:id="ColumnCRF" minWidth="0.0" prefWidth="77.5999755859375" text="CRF" />
+>>>>>>> branch 'master' of https://github.com/Jhonata-Java/Sistema-FARM.git
                      </columns>
                   </TableView>
                </children>
             </Pane>
          </children>
       </Pane>
-      <VBox layoutX="2.0" layoutY="-2.0" prefHeight="644.0" prefWidth="150.0" style="-fx-background-color: #FFFFFF;">
+      <VBox layoutX="2.0" layoutY="-2.0" prefHeight="634.0" prefWidth="149.0" style="-fx-background-color: #FFFFFF;">
          <children>
             <Pane prefHeight="110.0" prefWidth="166.0">
                <children>

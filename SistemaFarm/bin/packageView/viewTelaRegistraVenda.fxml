@@ -21,21 +21,21 @@
    <children>
       <Pane layoutX="32.0" layoutY="77.0" prefHeight="563.0" prefWidth="563.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">
          <children>
-            <TableView fx:id="tbProdutoParaselecionar" layoutX="10.0" layoutY="228.0" prefHeight="105.0" prefWidth="540.0">
+            <TableView fx:id="tbProdutoParaselecionar" layoutX="10.0" layoutY="228.0" prefHeight="73.0" prefWidth="547.0">
               <columns>
                 <TableColumn fx:id="tcID1" prefWidth="39.199981689453125" text="ID" />
-                <TableColumn fx:id="tcProduto1" prefWidth="217.60002899169922" text="Produto" />
-                  <TableColumn fx:id="tcQuantidade1" minWidth="0.0" prefWidth="138.4000244140625" text="Qt" />
-                  <TableColumn fx:id="tcPrecoUnitario1" minWidth="0.0" prefWidth="140.80001831054688" text="Preço Unitário" />
+                <TableColumn fx:id="tcProduto1" prefWidth="335.99999237060547" text="Produto" />
+                  <TableColumn fx:id="tcQuantidade1" minWidth="0.0" prefWidth="64.0" text="Qt" />
+                  <TableColumn fx:id="tcPrecoUnitario1" minWidth="0.0" prefWidth="107.20004272460938" text="Preço Unitário" />
               </columns>
             </TableView>
-            <TableView fx:id="tbProdutoSelecionado" layoutX="10.0" layoutY="379.0" prefHeight="176.0" prefWidth="540.0">
+            <TableView fx:id="tbProdutoSelecionado" layoutX="10.0" layoutY="359.0" prefHeight="196.0" prefWidth="547.0">
                <columns>
-                  <TableColumn fx:id="tcID2" prefWidth="44.000030517578125" text="ID" />
-                  <TableColumn fx:id="tcProduto2" prefWidth="199.99996185302734" text="Produto" />
-                  <TableColumn fx:id="tcQuantidade2" prefWidth="50.39996337890625" text="Qt" />
-                  <TableColumn fx:id="tcPrecoUnitario2" minWidth="0.0" prefWidth="106.4000244140625" text="Preço Unitário" />
-                  <TableColumn fx:id="tcPrecoTotal2" minWidth="0.0" prefWidth="136.80001831054688" text="Preço Total" />
+                  <TableColumn fx:id="tcID2" prefWidth="27.199983596801758" text="ID" />
+                  <TableColumn fx:id="tcProduto2" prefWidth="283.1999740600586" text="Produto" />
+                  <TableColumn fx:id="tcQuantidade2" prefWidth="48.0" text="Qt" />
+                  <TableColumn fx:id="tcPrecoUnitario2" minWidth="0.0" prefWidth="92.79998779296875" text="Preço Unitário" />
+                  <TableColumn fx:id="tcPrecoTotal2" minWidth="0.0" prefWidth="95.20004272460938" text="Preço Total" />
                </columns>
             </TableView>
             <Button fx:id="btAdicionar" layoutX="374.0" layoutY="183.0" mnemonicParsing="false" onAction="#ActionbtAdicionar" style="-fx-background-color: #000000;" text="Adicionar" textFill="WHITE" />
@@ -206,7 +206,7 @@
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Text>
-            <Text fill="#3c42ff" layoutX="15.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produtos selecionados">
+            <Text fill="#3c42ff" layoutX="15.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produtos selecionados">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
@@ -226,7 +226,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btExcluir" layoutX="162.0" layoutY="344.0" mnemonicParsing="false" onAction="#ActionbtExcluir" style="-fx-background-color: blue;" text="Excluir produto" textFill="WHITE" />
+            <Button fx:id="btExcluir" layoutX="162.0" layoutY="313.0" mnemonicParsing="false" onAction="#ActionbtExcluir" style="-fx-background-color: blue;" text="Excluir produto" textFill="WHITE" />
          </children>
       </Pane>
       <Pane layoutX="614.0" layoutY="77.0" prefHeight="227.0" prefWidth="143.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">

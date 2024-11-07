@@ -2,49 +2,48 @@
     -fx-padding: 10;
     -fx-background-color: transparent;
     -fx-border-color: transparent;
-    -fx-table-cell-border-color: #d3d3d3; /* Cor das linhas divisórias das células */
-    -fx-table-header-border-color: #d3d3d3; /* Cor das linhas do cabeçalho */
+    -fx-table-cell-border-color: #d3d3d3; /* Define a cor das linhas divisoras */
+    -fx-table-header-border-color: #d3d3d3; /* Define a cor das linhas do cabeçalho */
     -fx-cell-size: 24; /* Tamanho normal das células */
 }
 
 .table-view .column-header {
     -fx-background-color: transparent;
     -fx-padding: 5 10;
-    -fx-font-size: 12px; /* Tamanho da fonte no cabeçalho */
-    -fx-alignment: center; /* Alinha o texto ao centro do cabeçalho */
+    -fx-font-size: 12px; /* Ajusta o tamanho da fonte do cabeçalho */
 }
 
 .table-view .table-row-cell {
-    -fx-padding: 0; /* Remove padding extra */
-    -fx-background-color: transparent; /* Deixa o fundo transparente nas células */
+    -fx-padding: 5 10;
+    -fx-background-color: transparent;
 }
 
 .table-view .table-cell {
-    -fx-padding: 0; /* Remove padding extra */
-    -fx-background-color: transparent; /* Deixa o fundo transparente nas células */
-    -fx-font-size: 12px; /* Tamanho da fonte nas células */
-    -fx-border-color: #d3d3d3; /* Cor das linhas divisórias das células */
-    -fx-border-width: 0 0 1 0; /* Linha divisória fina na parte inferior das células */
+    -fx-padding: 5 10;
+    -fx-background-color: transparent;
+    -fx-font-size: 12px; /* Ajusta o tamanho da fonte das células */
+    -fx-border-color: #d3d3d3; /* Define a cor das linhas divisoras das células */
+    -fx-border-width: 0 0 1 0; /* Define uma linha divisória fina apenas na parte inferior das células */
 }
 
 /* Estilo para a célula selecionada */
 .table-view .table-row-cell:selected {
-    -fx-background-color: lightgray; /* Cor de fundo da célula selecionada */
+    -fx-background-color: lightgray; /* Ajusta a cor de fundo da seleção */
 }
 
 .table-view .table-row-cell:focused {
-    -fx-background-color: lightgray; /* Cor de fundo quando a célula está em foco */
+    -fx-background-color: lightgray; /* Ajusta a cor de fundo quando a célula está em foco */
 }
 
 .table-view .table-cell:selected {
-    -fx-background-color: lightgray; /* Cor de fundo da célula selecionada */
+    -fx-background-color: lightgray; /* Ajusta a cor de fundo da célula selecionada */
 }
 
 .table-view .table-cell:focused {
-    -fx-background-color: lightgray; /* Cor de fundo da célula em foco */
+    -fx-background-color: lightgray; /* Ajusta a cor de fundo da célula em foco */
 }
 
 /* Estilo para a célula ao passar o mouse */
 .table-view .table-cell:hover {
-    -fx-background-color: lightgray; /* Cor de fundo ao passar o mouse sobre a célula */
+    -fx-background-color: lightgray; /* Ajusta a cor de fundo ao passar o mouse */
 }
