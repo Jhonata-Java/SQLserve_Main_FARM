@@ -198,6 +198,8 @@ public class controllerRegistrarVenda implements Initializable {
 
 	@FXML
 	void ActionbtExcluir(ActionEvent event) {
+		
+		
 	}
 
 	@FXML
