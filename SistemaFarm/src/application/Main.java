@@ -3,7 +3,6 @@ package application;
 import java.io.IOException;
 import java.sql.Connection;
 
-import javafx.animation.FadeTransition;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,7 +10,6 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 import packageConnecting.ConnectionDATABASE;
 
 public class Main extends Application {
@@ -53,74 +51,43 @@ public class Main extends Application {
             stage.getIcons().add(new Image(getClass().getResourceAsStream("/packageIcons/Instagram post - 1.png")));
             stage.setResizable(false);
 
-            // Aplica transição de desvanecimento para a tela de login
+            // Define a cena inicial como tela de login
             stage.setScene(login);
             stage.show();
-            fadeIn(fxmlLogin);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    // Método para realizar a transição de desvanecimento (fade-in)
-    public static void fadeIn(Parent sceneRoot) {
-        FadeTransition fadeIn = new FadeTransition(Duration.seconds(0.1), sceneRoot); // 0.1 segundos
-        fadeIn.setFromValue(0);  // Começa invisível
-        fadeIn.setToValue(1);    // Fica completamente visível
-        fadeIn.play();
-    }
-
-    // Método para realizar a transição de desvanecimento (fade-out)
-    public static void fadeOut(Parent sceneRoot) {
-        FadeTransition fadeOut = new FadeTransition(Duration.seconds(0.1), sceneRoot); // 0.1 segundos
-        fadeOut.setFromValue(1);  // Começa visível
-        fadeOut.setToValue(0);    // Desvanece até ficar invisível
-        fadeOut.play();
-    }
-
-    // Método de troca de tela com transição apenas para login e dashboard
+    // Método de troca de tela sem transição
     public static void changeScreen(String tela) {
-        // Verifica se a tela de destino é login ou dashboard para aplicar a transição
-        if (tela.equals("login") || tela.equals("dashboard")) {
-            fadeOut(stage.getScene().getRoot()); // Aplica fade-out na tela atual
-
-            // Configura o fade-in na nova tela após a transição
-            FadeTransition fadeIn = new FadeTransition(Duration.seconds(0.1));
-            fadeIn.setNode(stage.getScene().getRoot());
-            fadeIn.setFromValue(0);
-            fadeIn.setToValue(1);
-
-
-            fadeIn.setOnFinished(event -> {
-                // Troca a cena para login ou dashboard conforme necessário
-                if (tela.equals("login")) {
-                    stage.setScene(login);
-                } else if (tela.equals("dashboard")) {
-                    stage.setScene(dashboard);
+        switch (tela) {
+            case "login":
+                stage.setScene(login);
+                break;
+            case "dashboard":
+                try {
+                    TelaHome();
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-            });
-
-            fadeIn.play();
-        } else {
-            // Para outras telas, realiza a troca direta sem transição
-            switch (tela) {
-                case "vendedor":
-                    stage.setScene(vendedor);
-                    break;
-                case "produto":
-                    stage.setScene(produto);
-                    break;
-                case "fornecedor":
-                    stage.setScene(fornecedor);
-                    break;
-                case "registraVenda":
-                    stage.setScene(registraVenda);
-                    break;
-                case "relatorioVenda":
-                    stage.setScene(relatorioVenda);
-                    break;
-            }
+                break;
+            case "vendedor":
+                stage.setScene(vendedor);
+                break;
+            case "produto":
+                stage.setScene(produto);
+                break;
+            case "fornecedor":
+                stage.setScene(fornecedor);
+                break;
+            case "registraVenda":
+                stage.setScene(registraVenda);
+                break;
+            case "relatorioVenda":
+                stage.setScene(relatorioVenda);
+                break;
         }
     }
 
@@ -132,7 +99,6 @@ public class Main extends Application {
         dashboard = new Scene(TelaHome);
 
         stage.setScene(dashboard);
-        fadeIn(TelaHome);
         stage.setResizable(false);
         stage.centerOnScreen();
         stage.show();
