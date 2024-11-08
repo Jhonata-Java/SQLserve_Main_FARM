@@ -38,7 +38,7 @@
                   <TableColumn fx:id="tcPrecoTotal2" minWidth="0.0" prefWidth="136.80001831054688" text="Preço Total" />
                </columns>
             </TableView>
-            <Button fx:id="btAdicionar" layoutX="374.0" layoutY="183.0" mnemonicParsing="false" onAction="#ActionbtAdicionar" style="-fx-background-color: #000000;" text="Adicionar" textFill="WHITE" />
+            <Button fx:id="btAdicionar" layoutX="485.0" layoutY="183.0" mnemonicParsing="false" onAction="#ActionbtAdicionar" style="-fx-background-color: #000000;" text="Adicionar" textFill="WHITE" />
             <HBox layoutX="14.0" layoutY="163.0" spacing="15.0" />
             <HBox layoutX="12.0" layoutY="39.0" prefHeight="41.0" prefWidth="540.0" spacing="20.0">
                <children>
@@ -216,8 +216,8 @@
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Text>
-            <TextField fx:id="txtResultadoPesquisa" layoutX="9.0" layoutY="182.0" prefHeight="27.0" prefWidth="305.0" promptText="Pesquisar produto" style="-fx-border-color: D9D9D9; -fx-background-insets: 99999; -fx-border-radius: 5;" />
-            <Button fx:id="btPesquisar" layoutX="331.0" layoutY="183.0" mnemonicParsing="false" onAction="#ActionbtPesquisarProduto" style="-fx-background-insets: 99999;">
+            <TextField fx:id="txtResultadoPesquisa" layoutX="13.0" layoutY="182.0" prefHeight="29.0" prefWidth="408.0" promptText="Pesquisar produto" style="-fx-border-color: D9D9D9; -fx-background-insets: 99999; -fx-border-radius: 5;" />
+            <Button fx:id="btPesquisar" layoutX="423.0" layoutY="183.0" mnemonicParsing="false" onAction="#ActionbtPesquisarProduto" style="-fx-background-insets: 99999;">
                <graphic>
                   <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -227,6 +227,7 @@
                </graphic>
             </Button>
             <Button fx:id="btExcluir" layoutX="162.0" layoutY="344.0" mnemonicParsing="false" onAction="#ActionbtExcluir" style="-fx-background-color: blue;" text="Excluir produto" textFill="WHITE" />
+            <Button fx:id="BtLimpar" layoutX="390.0" layoutY="184.0" mnemonicParsing="false" onAction="#BtLimpar" prefHeight="5.0" prefWidth="23.0" style="-fx-background-color: white;" text="X" />
          </children>
       </Pane>
       <Pane layoutX="614.0" layoutY="77.0" prefHeight="227.0" prefWidth="143.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">

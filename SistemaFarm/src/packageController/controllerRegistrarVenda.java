@@ -120,6 +120,9 @@ public class controllerRegistrarVenda implements Initializable {
 	private TextField txtResultadoPesquisa;
 
 	@FXML
+	private Button BtLimpar;
+
+	@FXML
 	private Label txtValorTotal;
 
 	Produto produto = new Produto();
@@ -136,7 +139,7 @@ public class controllerRegistrarVenda implements Initializable {
 	void ActionbtAdicionar(ActionEvent event) {
 		if (btAdicionar != null && txtCodigo != null && txtProduto != null && txtQuantidade != null
 				&& txtDesconto != null) {
-			
+
 		}
 		CarregarProduto();
 		txtCodigo.setText("");
@@ -198,7 +201,12 @@ public class controllerRegistrarVenda implements Initializable {
 	@FXML
 	void ActionbtPesquisarProduto(ActionEvent event) {
 		ArrayProduto = FXCollections.observableArrayList(produtoDAO.search(txtResultadoPesquisa.getText()));
-		CarregarInfoTable();
+		CarregarProduto();
+	}
+
+	@FXML
+	void BtLimpar(ActionEvent event) {
+		txtResultadoPesquisa.setText("");
 	}
 
 	@FXML
@@ -217,7 +225,7 @@ public class controllerRegistrarVenda implements Initializable {
 						* Double.parseDouble(txtQuantidade.getText())) * 0.15;
 				desconto = precoTotal * 0.15;
 				txtDesconto.setText(Double.toString(desconto));
-				txtValorTotal.setText("R$" + Double.toString(precoTotal));
+				txtValorTotal.setText(Double.toString(precoTotal));
 
 			}
 		}
@@ -238,19 +246,19 @@ public class controllerRegistrarVenda implements Initializable {
 
 	public void CarregarProduto() {
 		ArrayProdutoSelecionado = FXCollections.observableArrayList(ArrayProduto);
-		
+
 		String cod = txtCodigo.getText();
 		String prod = txtProduto.getText();
 		String quant = txtQuantidade.getText();
 		String prec = Double.toString(((Double.parseDouble(produto.getPreocoUN()) * 100.0) / 100.0));
-		String prectotal =Double.toString(precoTotal);
-		
+		String prectotal = Double.toString(precoTotal);
+
 		tcID2.setCellValueFactory(new PropertyValueFactory<>(cod));
 		tcProduto2.setCellValueFactory(new PropertyValueFactory<>(prod));
 		tcQuantidade2.setCellValueFactory(new PropertyValueFactory<>(quant));
 		tcPrecoUnitario2.setCellValueFactory(new PropertyValueFactory<>(prec));
 		tcPrecoTotal2.setCellValueFactory(new PropertyValueFactory<>(prectotal));
-		
+
 		tbProdutoParaselecionar.setItems(ArrayProdutoSelecionado);
 		tbProdutoParaselecionar.refresh();
 		PrecoFinal += precoTotal;
