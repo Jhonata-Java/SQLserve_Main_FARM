@@ -123,6 +123,9 @@ public class controllerRegistrarVenda implements Initializable {
 	private Button BtLimpar;
 
 	@FXML
+	private TextField textFieldDecimal;
+
+	@FXML
 	private Label txtValorTotal;
 
 	Produto produto = new Produto();
@@ -201,12 +204,20 @@ public class controllerRegistrarVenda implements Initializable {
 	@FXML
 	void ActionbtPesquisarProduto(ActionEvent event) {
 		ArrayProduto = FXCollections.observableArrayList(produtoDAO.search(txtResultadoPesquisa.getText()));
-		CarregarProduto();
+
+		tcID1.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
+		tcProduto1.setCellValueFactory(new PropertyValueFactory<>("nomeComecial"));
+		tcPrecoUnitario1.setCellValueFactory(new PropertyValueFactory<>("preocoUN"));
+		tcQuantidade1.setCellValueFactory(new PropertyValueFactory<>("estoque"));
+
+		tbProdutoParaselecionar.setItems(ArrayProduto);
+		tbProdutoParaselecionar.refresh();
 	}
 
 	@FXML
 	void BtLimpar(ActionEvent event) {
 		txtResultadoPesquisa.setText("");
+		CarregarInfoTable();
 	}
 
 	@FXML
