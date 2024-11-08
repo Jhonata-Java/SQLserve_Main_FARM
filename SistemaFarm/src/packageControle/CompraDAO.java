@@ -15,10 +15,10 @@ public class CompraDAO {
 		PreparedStatement stmt = null;
 
 		try {
-			stmt = con.prepareStatement("INSERT INTO Venda (idVendedor, quantidade,dataVenda,precoTotal) VALUES(?, ?, ?, ?)");
+			stmt = con.prepareStatement("INSERT INTO Venda VALUES(?, ?, ? , GETDATE(),?)");
 			stmt.setString(1, c.getIdVendedor());
-			stmt.setString(2, c.getQuantidade());
-			stmt.setString(3, c.getDataCompra());
+			stmt.setString(2, c.getIdProduto());
+			stmt.setString(3, c.getQuantidade());
 			stmt.setString(4, c.getValorTotal());
 
 			stmt.executeUpdate();

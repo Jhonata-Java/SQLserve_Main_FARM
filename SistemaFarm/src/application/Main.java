@@ -91,6 +91,7 @@ public class Main extends Application {
             fadeIn.setFromValue(0);
             fadeIn.setToValue(1);
 
+
             fadeIn.setOnFinished(event -> {
                 // Troca a cena para login ou dashboard conforme necessário
                 if (tela.equals("login")) {
@@ -122,12 +123,6 @@ public class Main extends Application {
             }
         }
     }
-
-    private static Stage cadProduto;
-    private static Stage cadRegistra;
-    private static Stage cadFornecedor;
-    private static Stage cadVendedor;
-    private static Stage infoProd;
 
     // Tela Principal (Dashboard)
     public static void TelaHome() throws IOException {
