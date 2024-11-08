@@ -267,6 +267,11 @@
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Text>
+            <Label fx:id="txtValorTotal1" alignment="CENTER" layoutX="19.0" layoutY="69.0" prefHeight="13.0" prefWidth="19.0" text="R$">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
       <ImageView fitHeight="71.0" fitWidth="780.0" pickOnBounds="true" preserveRatio="true">

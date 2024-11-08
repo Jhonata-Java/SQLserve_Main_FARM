@@ -109,7 +109,6 @@ public class Main extends Application {
 		ProdutoCadastro.setLocation(Main.class.getResource("/packageView/viewCadastroProduto.fxml"));
 		Parent cadastroProdu = ProdutoCadastro.load();
 		Scene scene2 = new Scene(cadastroProdu);
-
 		cadProduto = new Stage();
 		cadProduto.setTitle("Cadastro/Edição Produto - FARM");
 		cadProduto.initModality(Modality.WINDOW_MODAL);

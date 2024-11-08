@@ -156,7 +156,8 @@ public class controllerRegistrarVenda implements Initializable {
 
 	@FXML
 	void ActionbtConfirmarVenda(ActionEvent event) {
-		if (produto != null && txtCPFFarmaceutico != null) {
+		if (produto != null && txtCPFFarmaceutico != null && btAdicionar != null && txtCodigo != null
+				&& txtProduto != null && txtQuantidade != null && txtDesconto != null) {
 			Alert mensagemDeAviso = new Alert(Alert.AlertType.CONFIRMATION);
 			mensagemDeAviso.setContentText(
 					"Deseja realmente Salvar a venda para o farmacêutico : " + txtNomeFarmaceutico.getText());
@@ -171,7 +172,14 @@ public class controllerRegistrarVenda implements Initializable {
 				Compra compra = new Compra();
 				compra.setIdVendedor(txtIDFarmaceutico.getText());
 				compra.setIdProduto(produto.getIdProduto());
+				compra.setQuantidade(txtQuantidade.getText());
+				compra.setValorTotal((Double.toString(precoTotal)));
+				txtCodigo.setText("");
+				txtProduto.setText("");
+				txtQuantidade.setText("");
+				txtPrecoUnitario.setText("");
 				compraDAO.create(compra);
+				CarregarInfoTable();
 				// compra.setQuantidade(); EM ANDAMENTO
 
 			} else {
@@ -202,11 +210,15 @@ public class controllerRegistrarVenda implements Initializable {
 			if (quantidade < 5) {
 				precoTotal = Double.parseDouble(txtPrecoUnitario.getText())
 						* Double.parseDouble(txtQuantidade.getText());
+
+				txtValorTotal.setText(Double.toString(precoTotal));
 			} else {
 				precoTotal = (Double.parseDouble(txtPrecoUnitario.getText())
 						* Double.parseDouble(txtQuantidade.getText())) * 0.15;
 				desconto = precoTotal * 0.15;
-				txtDesconto.setText(Double.toString(Math.round((desconto * 100.0) / 100.0)));
+				txtDesconto.setText(Double.toString(desconto));
+				txtValorTotal.setText("R$" + Double.toString(precoTotal));
+
 			}
 		}
 	}
@@ -227,37 +239,32 @@ public class controllerRegistrarVenda implements Initializable {
 	public void CarregarProduto() {
 		ArrayProdutoSelecionado = FXCollections.observableArrayList(ArrayProduto);
 		
-		tcID2.setCellValueFactory(new PropertyValueFactory<>(txtCodigo.getText()));
-		tcProduto2.setCellValueFactory(new PropertyValueFactory<>(txtProduto.getText()));
-		tcQuantidade2.setCellValueFactory(new PropertyValueFactory<>(txtQuantidade.getText()));
-		tcPrecoUnitario2.setCellValueFactory(new PropertyValueFactory<>(
-				Double.toString(((Double.parseDouble(produto.getPreocoUN()) * 100.0) / 100.0))));
-		tcPrecoTotal2.setCellValueFactory(new PropertyValueFactory<>(Double.toString(precoTotal)));
-
+		String cod = txtCodigo.getText();
+		String prod = txtProduto.getText();
+		String quant = txtQuantidade.getText();
+		String prec = Double.toString(((Double.parseDouble(produto.getPreocoUN()) * 100.0) / 100.0));
+		String prectotal =Double.toString(precoTotal);
+		
+		tcID2.setCellValueFactory(new PropertyValueFactory<>(cod));
+		tcProduto2.setCellValueFactory(new PropertyValueFactory<>(prod));
+		tcQuantidade2.setCellValueFactory(new PropertyValueFactory<>(quant));
+		tcPrecoUnitario2.setCellValueFactory(new PropertyValueFactory<>(prec));
+		tcPrecoTotal2.setCellValueFactory(new PropertyValueFactory<>(prectotal));
+		
 		tbProdutoParaselecionar.setItems(ArrayProdutoSelecionado);
 		tbProdutoParaselecionar.refresh();
 		PrecoFinal += precoTotal;
 
 	}
-//	
-//	public void CarregarProduto(ObservableList produtos) {
-//		ArrayProdutoSelecionado = FXCollections.observableArrayList(produtos);
-//
-//		tcID2.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
-//		tcProduto2.setCellValueFactory(new PropertyValueFactory<>("nomeComecial"));
-//		tcPrecoUnitario2.setCellValueFactory(new PropertyValueFactory<>("preocoUN"));
-//		tcQuantidade2.setCellValueFactory(new PropertyValueFactory<>("estoque"));
-//
-//		tbProdutoParaselecionar.setItems(ArrayProdutoSelecionado);
-//		
-//
-//	}
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		LocalDate dataAtual = LocalDate.now();
 		CarregarInfoTable();
+		txtQuantidade.setText("0");
+		txtValorTotal.setText("0.0");
+
 		txtCPFFarmaceutico.setText(controllerLogin.farmaceutico.getCPF());
 		txtNomeFarmaceutico.setText(controllerLogin.farmaceutico.getNome());
 		txtIDFarmaceutico.setText(controllerLogin.farmaceutico.getIdVendedor());
@@ -268,9 +275,9 @@ public class controllerRegistrarVenda implements Initializable {
 				int i = tbProdutoParaselecionar.getSelectionModel().getSelectedIndex();
 				produto = tbProdutoParaselecionar.getItems().get(i);
 				txtCodigo.setText(produto.getIdProduto());
-				Double.toString(Math.round((Double.parseDouble(produto.getPreocoUN()) * 100.0) / 100.0));
-				txtPrecoUnitario.setText(
-						Double.toString(Math.round((Double.parseDouble(produto.getPreocoUN()) * 100.0) / 100.0)));
+				// Double.toString(Math.round((Double.parseDouble(produto.getPreocoUN()) *
+				// 100.0) / 100.0));
+				txtPrecoUnitario.setText(produto.getPreocoUN().toString());
 				txtProduto.setText(produto.getNomeComecial());
 
 			}
