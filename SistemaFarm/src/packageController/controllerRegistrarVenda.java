@@ -2,6 +2,7 @@ package packageController;
 
 import java.net.URL;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -48,7 +49,7 @@ public class controllerRegistrarVenda implements Initializable {
 	private TableView<Produto> tbProdutoParaselecionar;
 
 	@FXML
-	private TableView<Compra> tbProdutoSelecionado;
+	private TableView<Produto> tbProdutoSelecionado;
 
 	@FXML
 	private TableColumn<Produto, String> tcDataFabricacao1;
@@ -131,6 +132,7 @@ public class controllerRegistrarVenda implements Initializable {
 	Produto produto = new Produto();
 	public ObservableList<Produto> ArrayProduto;
 	public ObservableList<Produto> ArrayProdutoSelecionado;
+	public ObservableList<Produto> ProdutosTabela;
 	public ObservableList<Compra> ArrayCompra;
 	public static ProdutoDAO produtoDAO = new ProdutoDAO();
 
@@ -143,13 +145,28 @@ public class controllerRegistrarVenda implements Initializable {
 		if (btAdicionar != null && txtCodigo != null && txtProduto != null && txtQuantidade != null
 				&& txtDesconto != null) {
 
+			Produto prod = new Produto();
+			prod.setIdProduto(txtCodigo.getText());
+			prod.setIdProduto(txtProduto.getText());
+			prod.setEstoque(txtQuantidade.getText());
+			prod.setPreocoUN(txtPrecoUnitario.getText());
+			
+			ProdutosTabela = FXCollections.observableArrayList(prod);
+			
+			
+			tcID2.setCellValueFactory(new PropertyValueFactory<>(txtCodigo.getText()));
+			tcProduto2.setCellValueFactory(new PropertyValueFactory<>(txtProduto.getText()));
+			tcQuantidade2.setCellValueFactory(new PropertyValueFactory<>(txtQuantidade.getText()));
+			tcPrecoUnitario2.setCellValueFactory(new PropertyValueFactory<>(txtPrecoUnitario.getText()));
+			tcPrecoTotal2.setCellValueFactory(new PropertyValueFactory<>(Double.toString(precoTotal)));
+
+			tbProdutoSelecionado.setItems(ProdutosTabela);
+			tbProdutoSelecionado.refresh();
+			PrecoFinal += precoTotal;
+
+			
 		}
-		CarregarProduto();
-		txtCodigo.setText("");
-		txtProduto.setText("");
-		txtQuantidade.setText("");
-		txtPrecoUnitario.setText("");
-		System.out.println(PrecoFinal);
+		
 	}
 
 	@FXML
@@ -295,8 +312,6 @@ public class controllerRegistrarVenda implements Initializable {
 				int i = tbProdutoParaselecionar.getSelectionModel().getSelectedIndex();
 				produto = tbProdutoParaselecionar.getItems().get(i);
 				txtCodigo.setText(produto.getIdProduto());
-				// Double.toString(Math.round((Double.parseDouble(produto.getPreocoUN()) *
-				// 100.0) / 100.0));
 				txtPrecoUnitario.setText(produto.getPreocoUN().toString());
 				txtProduto.setText(produto.getNomeComecial());
 

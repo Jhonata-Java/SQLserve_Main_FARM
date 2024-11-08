@@ -24,6 +24,10 @@ public class Produto {
 	private String efeitosColaterais;
 	private String laboratorio;
 	private String tarja;
+	
+	private String teste;
+
+	
 
 	public Produto() {
 		super();
@@ -32,7 +36,7 @@ public class Produto {
 	public Produto(String idProduto, String nomeComecial, String nomeGenerico, String categoria,
 			String formaFarmaceutica, String concentracao, String dosagem, String codigo, String estoque,
 			String preocoUN, String tipoUN, String dataFab, String dataVal, String registroAnvisa, String lote,
-			String endereco, String princAtivo, String indicacoes, String contraInd, String efeitosColaterais, String laboratorio) {
+			String endereco, String princAtivo, String indicacoes, String contraInd, String efeitosColaterais, String laboratorio,  String teste) {
 		super();
 		this.idProduto = idProduto;
 		this.nomeComecial = nomeComecial;
@@ -55,6 +59,7 @@ public class Produto {
 		this.contraInd = contraInd;
 		this.efeitosColaterais = efeitosColaterais;
 		this.laboratorio = laboratorio;
+		this.teste = teste;
 	}
 
 	public String getIdProduto() {
@@ -229,5 +234,10 @@ public class Produto {
 
 	public void setTarja(String tarja) {
 		this.tarja = tarja;
+	}
+	
+	public void getMedicamento(String medicamento) {
+		
+		
 	}
 }
