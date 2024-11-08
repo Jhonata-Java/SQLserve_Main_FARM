@@ -214,7 +214,7 @@ public class controllerRegistrarVenda implements Initializable {
 		tbProdutoParaselecionar.setItems(ArrayProduto);
 		tbProdutoParaselecionar.refresh();
 	}
-
+//SEI LA TO ESCREVENDO QUALQUER COISA
 	@FXML
 	void BtLimpar(ActionEvent event) {
 		txtResultadoPesquisa.setText("");
