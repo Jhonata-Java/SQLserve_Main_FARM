@@ -118,7 +118,7 @@
             </Pane>
             <Pane prefHeight="67.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="btDashboard" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#btDashboard" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Dashboard" textFill="#857e7e">
+                  <Button fx:id="btDashboard" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#btDashboard" onMouseExited="#ActionMouseOUTDash" onMouseMoved="#ActionMouseINDash" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Dashboard" textFill="#857e7e">
                      <font>
                         <Font name="Arial" size="12.0" />
                      </font>
@@ -137,7 +137,7 @@
             </Pane>
             <Pane layoutX="10.0" layoutY="164.0" prefHeight="64.0" prefWidth="124.0">
                <children>
-                  <Button fx:id="btFornecedor" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#btFornecedor" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Fornecedor" textFill="#857e7e">
+                  <Button fx:id="btFornecedor" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#btFornecedor" onMouseExited="#ActionMouseOUTFor" onMouseMoved="#ActionMouseINFor" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Fornecedor" textFill="#857e7e">
                      <font>
                         <Font name="Arial" size="12.0" />
                      </font>
@@ -146,7 +146,7 @@
             </Pane>
             <Pane layoutX="10.0" layoutY="231.0" prefHeight="67.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="btFarmaceuticos" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="13.0" mnemonicParsing="false" onAction="#btFarmaceuticos" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Farmaceuticos" textFill="#857e7e">
+                  <Button fx:id="btFarmaceuticos" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="13.0" layoutY="13.0" mnemonicParsing="false" onAction="#btFarmaceuticos" onMouseExited="#ActionMouseOUTFar" onMouseMoved="#ActionMouseINFar" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Farmaceuticos" textFill="#857e7e">
                      <font>
                         <Font name="Arial" size="12.0" />
                      </font>
@@ -155,7 +155,7 @@
             </Pane>
             <Pane layoutX="10.0" layoutY="298.0" prefHeight="67.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="btRelatorioVendas" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="15.0" layoutY="13.0" mnemonicParsing="false" onAction="#btRelatorioVendas" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Relatorio de vendas" textFill="#857e7e">
+                  <Button fx:id="btRelatorioVendas" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="15.0" layoutY="13.0" mnemonicParsing="false" onAction="#btRelatorioVendas" onMouseExited="#ActionMouseOUTRela" onMouseMoved="#ActionMouseINRela" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;" text="Relatorio de vendas" textFill="#857e7e">
                      <font>
                         <Font name="Arial" size="12.0" />
                      </font>

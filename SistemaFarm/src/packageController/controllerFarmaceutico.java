@@ -17,6 +17,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import packageControle.FarmaceuticoDAO;
 import packageModel.Farmaceutico;
 
@@ -189,6 +190,45 @@ public class controllerFarmaceutico implements Initializable {
 
 		tabelaFarmaceutico.setItems(ArrayFarmaceutico);
 	}
+	 @FXML
+	    void ActionMouseINDash(MouseEvent event) {
+		   btDashboard.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
+	    }
+
+	    @FXML
+	    void ActionMouseOUTDash(MouseEvent event) {
+			   btDashboard.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
+	    }
+
+	    @FXML
+	    void ActionMouseINRela(MouseEvent event) {
+	    	btRelatorioVendas.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
+	    }
+
+	    @FXML
+	    void ActionMouseOUTRela(MouseEvent event) {
+	    	btRelatorioVendas.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
+	    }
+	    
+	    @FXML
+	    void ActionMouseINPro(MouseEvent event) {
+	    	btProdutos.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
+	    }
+	    
+	    @FXML
+	    void ActionMouseOUTPro(MouseEvent event) {
+	    	btProdutos.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
+	    }
+
+	    @FXML
+	    void ActionMouseINFor(MouseEvent event) {
+	    	btFornecedor.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
+	    }
+
+	    @FXML
+	    void ActionMouseOUTFor(MouseEvent event) {
+	    	btFornecedor.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
+	    }
 
 	@FXML
 	void ActionBtFornecedor(ActionEvent event) {

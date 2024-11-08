@@ -16,6 +16,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import packageControle.ProdutoDAO;
 import packageModel.Produto;
 
@@ -35,9 +36,6 @@ public class controllerDashboard  implements Initializable {
 
     @FXML
     private Button btDashboard;
-
-    @FXML
-    private Button btFarmaceutico;
 
     @FXML
     private Button btFarmaceuticos;
@@ -170,6 +168,45 @@ public class controllerDashboard  implements Initializable {
     	columnNome2.setCellValueFactory(new PropertyValueFactory<>("nomeComecial"));
     	columnVencimento.setCellValueFactory(new PropertyValueFactory<>("dataVal"));
     	tabelaVencer.setItems(ArrayProdutos);
+    }
+    @FXML
+    void ActionMouseINFar(MouseEvent event) {
+	   btFarmaceuticos.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
+    }
+
+    @FXML
+    void ActionMouseOUTFar(MouseEvent event) {
+    	btFarmaceuticos.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
+    }
+
+    @FXML
+    void ActionMouseINRela(MouseEvent event) {
+    	btRelatorioVendas.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
+    }
+
+    @FXML
+    void ActionMouseOUTRela(MouseEvent event) {
+    	btRelatorioVendas.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
+    }
+    
+    @FXML
+    void ActionMouseINPro(MouseEvent event) {
+    	btProdutos.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
+    }
+    
+    @FXML
+    void ActionMouseOUTPro(MouseEvent event) {
+    	btProdutos.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
+    }
+
+    @FXML
+    void ActionMouseINFor(MouseEvent event) {
+    	btFornecedor.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
+    }
+
+    @FXML
+    void ActionMouseOUTFor(MouseEvent event) {
+    	btFornecedor.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
     }
     
 	@Override

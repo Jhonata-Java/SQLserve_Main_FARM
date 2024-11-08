@@ -17,6 +17,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import packageControle.ProdutoDAO;
 import packageModel.Produto;
 import packageModel.Venda;
@@ -243,6 +244,45 @@ public class controllerProdutos implements Initializable {
 		tabela.setItems(ArrayProduto);
 
 	}
+	@FXML
+    void ActionMouseINDash(MouseEvent event) {
+	   btDashboard.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
+    }
+
+    @FXML
+    void ActionMouseOUTDash(MouseEvent event) {
+		   btDashboard.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
+    }
+
+    @FXML
+    void ActionMouseINFar(MouseEvent event) {
+    	btFarmaceuticos.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
+    }
+
+    @FXML
+    void ActionMouseOUTFar(MouseEvent event) {
+    	btFarmaceuticos.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
+    }
+    
+    @FXML
+    void ActionMouseINFor(MouseEvent event) {
+    	btFornecedor.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
+    }
+    
+    @FXML
+    void ActionMouseOUTFor(MouseEvent event) {
+    	btFornecedor.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
+    }
+
+    @FXML
+    void ActionMouseINRela(MouseEvent event) {
+    	btRelatorioVendas.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
+    }
+
+    @FXML
+    void ActionMouseOUTRela(MouseEvent event) {
+    	btRelatorioVendas.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
+    }
 
 	@FXML
 	void btAtualizar(ActionEvent event) {

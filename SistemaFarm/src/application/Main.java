@@ -3,6 +3,7 @@ package application;
 import java.io.IOException;
 import java.sql.Connection;
 
+import javafx.animation.FadeTransition;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,183 +11,227 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import packageConnecting.ConnectionDATABASE;
 
 public class Main extends Application {
-//comentario
-	private static Stage stage;
-	private static Scene login;
-	private static Scene dashboard;
-	private static Scene vendedor;
-	private static Scene produto;
-	private static Scene fornecedor;
-	private static Scene registraVenda;
-	private static Scene relatorioVenda;
 
-	@Override
-	public void start(Stage primaryStage) {
-		try {
-			stage = primaryStage;
+    private static Stage stage;
+    private static Scene login;
+    private static Scene dashboard;
+    private static Scene vendedor;
+    private static Scene produto;
+    private static Scene fornecedor;
+    private static Scene registraVenda;
+    private static Scene relatorioVenda;
 
-			primaryStage.setTitle("FARM");
+    @Override
+    public void start(Stage primaryStage) {
+        try {
+            stage = primaryStage;
+            stage.setTitle("FARM");
 
-			Parent fxmlLogin = FXMLLoader.load(getClass().getResource("/packageView/viewTelaLogin.fxml"));
-			login = new Scene(fxmlLogin);
+            // Carregar as cenas
+            Parent fxmlLogin = FXMLLoader.load(getClass().getResource("/packageView/viewTelaLogin.fxml"));
+            login = new Scene(fxmlLogin);
 
-			Parent fxmlMain = FXMLLoader.load(getClass().getResource("/packageView/viewTelaFarmaceutico.fxml"));
-			vendedor = new Scene(fxmlMain);
+            Parent fxmlMain = FXMLLoader.load(getClass().getResource("/packageView/viewTelaFarmaceutico.fxml"));
+            vendedor = new Scene(fxmlMain);
 
-			Parent fxmlProduto = FXMLLoader.load(getClass().getResource("/packageView/viewTelaProdutos.fxml"));
-			produto = new Scene(fxmlProduto);
+            Parent fxmlProduto = FXMLLoader.load(getClass().getResource("/packageView/viewTelaProdutos.fxml"));
+            produto = new Scene(fxmlProduto);
 
-			Parent fxmlFornecedor = FXMLLoader.load(getClass().getResource("/packageView/viewTelaFornecedor.fxml"));
-			fornecedor = new Scene(fxmlFornecedor);
+            Parent fxmlFornecedor = FXMLLoader.load(getClass().getResource("/packageView/viewTelaFornecedor.fxml"));
+            fornecedor = new Scene(fxmlFornecedor);
 
-			Parent fxmlRegistraVenda = FXMLLoader
-					.load(getClass().getResource("/packageView/viewTelaRegistraVenda.fxml"));
-			registraVenda = new Scene(fxmlRegistraVenda);
+            Parent fxmlRegistraVenda = FXMLLoader.load(getClass().getResource("/packageView/viewTelaRegistraVenda.fxml"));
+            registraVenda = new Scene(fxmlRegistraVenda);
 
-			Parent fxmlRelatorioVenda = FXMLLoader.load(getClass().getResource("/packageView/viewRelatorioVenda.fxml"));
-			relatorioVenda = new Scene(fxmlRelatorioVenda);
-			
-			stage.getIcons().add(new Image(getClass().getResourceAsStream("/packageIcons/Instagram post - 1.png")));
-			stage.setResizable(false);
+            Parent fxmlRelatorioVenda = FXMLLoader.load(getClass().getResource("/packageView/viewRelatorioVenda.fxml"));
+            relatorioVenda = new Scene(fxmlRelatorioVenda);
 
-			primaryStage.setScene(login);
-			primaryStage.show();
+            stage.getIcons().add(new Image(getClass().getResourceAsStream("/packageIcons/Instagram post - 1.png")));
+            stage.setResizable(false);
 
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+            // Aplica transição de desvanecimento para a tela de login
+            stage.setScene(login);
+            stage.show();
+            fadeIn(fxmlLogin);
 
-	public static void changeScreen(String tela) {
-		if (tela.equals("login")) {
-			stage.setScene(login);
-			stage.centerOnScreen();
-		} else if (tela.equals("dashboard")) {
-			stage.setScene(dashboard);
-			stage.centerOnScreen();
-		} else if (tela.equals("vendedor")) {
-			stage.setScene(vendedor);
-			stage.centerOnScreen();
-		} else if (tela.equals("produto")) {
-			stage.setScene(produto);
-			stage.centerOnScreen();
-		} else if (tela.equals("fornecedor")) {
-			stage.setScene(fornecedor);
-			stage.centerOnScreen();
-		} else if (tela.equals("registraVenda")) {
-			stage.setScene(registraVenda);
-			stage.centerOnScreen();
-		} else if (tela.equals("relatorioVenda")) {
-			stage.setScene(relatorioVenda);
-			stage.centerOnScreen();
-		}
-	}
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
-	private static Stage cadProduto;
-	private static Stage cadRegistra;
-	private static Stage cadFornecedor;
-	private static Stage cadVendedor;
-	private static Stage infoProd;
+    // Método para realizar a transição de desvanecimento (fade-in)
+    public static void fadeIn(Parent sceneRoot) {
+        FadeTransition fadeIn = new FadeTransition(Duration.seconds(0.1), sceneRoot); // 0.1 segundos
+        fadeIn.setFromValue(0);  // Começa invisível
+        fadeIn.setToValue(1);    // Fica completamente visível
+        fadeIn.play();
+    }
 
-	public static void TelaHome() throws IOException {
+    // Método para realizar a transição de desvanecimento (fade-out)
+    public static void fadeOut(Parent sceneRoot) {
+        FadeTransition fadeOut = new FadeTransition(Duration.seconds(0.1), sceneRoot); // 0.1 segundos
+        fadeOut.setFromValue(1);  // Começa visível
+        fadeOut.setToValue(0);    // Desvanece até ficar invisível
+        fadeOut.play();
+    }
 
-		FXMLLoader fxmlHome = new FXMLLoader();
-		fxmlHome.setLocation(Main.class.getResource("/packageView/viewTelaMain.fxml"));
-		Parent TelaHome = fxmlHome.load();
-		dashboard = new Scene(TelaHome);
-		stage.setScene(dashboard);
-		stage.setResizable(false);
-		stage.centerOnScreen();
-		stage.show();
+    // Método de troca de tela com transição apenas para login e dashboard
+    public static void changeScreen(String tela) {
+        // Verifica se a tela de destino é login ou dashboard para aplicar a transição
+        if (tela.equals("login") || tela.equals("dashboard")) {
+            fadeOut(stage.getScene().getRoot()); // Aplica fade-out na tela atual
 
-	}
+            // Configura o fade-in na nova tela após a transição
+            FadeTransition fadeIn = new FadeTransition(Duration.seconds(0.1));
+            fadeIn.setNode(stage.getScene().getRoot());
+            fadeIn.setFromValue(0);
+            fadeIn.setToValue(1);
 
-	public static void TelaCadastroProduto() throws IOException {
-		FXMLLoader ProdutoCadastro = new FXMLLoader();
-		ProdutoCadastro.setLocation(Main.class.getResource("/packageView/viewCadastroProduto.fxml"));
-		Parent cadastroProdu = ProdutoCadastro.load();
-		Scene scene2 = new Scene(cadastroProdu);
+            fadeIn.setOnFinished(event -> {
+                // Troca a cena para login ou dashboard conforme necessário
+                if (tela.equals("login")) {
+                    stage.setScene(login);
+                } else if (tela.equals("dashboard")) {
+                    stage.setScene(dashboard);
+                }
+            });
 
-		cadProduto = new Stage();
-		cadProduto.setTitle("Cadastro/Edição Produto - FARM");
-		cadProduto.initModality(Modality.WINDOW_MODAL);
-		cadProduto.setScene(scene2);
-		cadProduto.centerOnScreen();
-		cadProduto.showAndWait();
+            fadeIn.play();
+        } else {
+            // Para outras telas, realiza a troca direta sem transição
+            switch (tela) {
+                case "vendedor":
+                    stage.setScene(vendedor);
+                    break;
+                case "produto":
+                    stage.setScene(produto);
+                    break;
+                case "fornecedor":
+                    stage.setScene(fornecedor);
+                    break;
+                case "registraVenda":
+                    stage.setScene(registraVenda);
+                    break;
+                case "relatorioVenda":
+                    stage.setScene(relatorioVenda);
+                    break;
+            }
+        }
+    }
 
-	}
+    private static Stage cadProduto;
+    private static Stage cadRegistra;
+    private static Stage cadFornecedor;
+    private static Stage cadVendedor;
+    private static Stage infoProd;
 
-	public static void TelaRegistraVenda() throws IOException {
-		FXMLLoader registraVenda = new FXMLLoader();
-		registraVenda.setLocation(Main.class.getResource("/packageView/viewTelaRegistraVenda.fxml"));
-		Parent cadastroVenda = registraVenda.load();
-		Scene scene2 = new Scene(cadastroVenda);
+    // Tela Principal (Dashboard)
+    public static void TelaHome() throws IOException {
+        FXMLLoader fxmlHome = new FXMLLoader();
+        fxmlHome.setLocation(Main.class.getResource("/packageView/viewTelaMain.fxml"));
+        Parent TelaHome = fxmlHome.load();
+        dashboard = new Scene(TelaHome);
 
-		cadRegistra = new Stage();
-		cadRegistra.setTitle("Registra Venda - FARM");
-		cadRegistra.initModality(Modality.WINDOW_MODAL);
-		cadRegistra.setScene(scene2);
-		cadRegistra.centerOnScreen();
-		cadRegistra.showAndWait();
-		cadRegistra.centerOnScreen();
-	}
+        stage.setScene(dashboard);
+        fadeIn(TelaHome);
+        stage.setResizable(false);
+        stage.centerOnScreen();
+        stage.show();
+    }
 
-	//metodo cadastrar fornecedor
-	public static void TelaCadastraFornecedor() throws IOException {
-		FXMLLoader CadFornecedor = new FXMLLoader();
-		CadFornecedor.setLocation(Main.class.getResource("/packageView/viewCadastroFornecedor.fxml"));
-		Parent cadastroProdu = CadFornecedor.load();
-		Scene scene2 = new Scene(cadastroProdu);
+    // Tela de Cadastro Produto
+    public static void TelaCadastroProduto() throws IOException {
+        FXMLLoader ProdutoCadastro = new FXMLLoader();
+        ProdutoCadastro.setLocation(Main.class.getResource("/packageView/viewCadastroProduto.fxml"));
+        Parent cadastroProdu = ProdutoCadastro.load();
+        Scene scene2 = new Scene(cadastroProdu);
 
-		cadFornecedor = new Stage();
-		cadFornecedor.setTitle("Cadastra Fornecedor - FARM");
-		cadFornecedor.initModality(Modality.WINDOW_MODAL);
-		cadFornecedor.setScene(scene2);
-		cadFornecedor.centerOnScreen();
-		cadFornecedor.showAndWait();
-		cadFornecedor.centerOnScreen();
+        Stage cadProduto = new Stage(); // cria um novo Stage cada vez que o método é chamado
+        cadProduto.setTitle("Cadastro/Edição Produto - FARM");
+        cadProduto.initModality(Modality.APPLICATION_MODAL);
+        cadProduto.setScene(scene2);
+        cadProduto.centerOnScreen();
 
-	}
+        cadProduto.showAndWait();
+    }
 
-	public static void TelaCadastraFarmaceutico() throws IOException {
-		FXMLLoader CadVendedor = new FXMLLoader();
-		CadVendedor.setLocation(Main.class.getResource("/packageView/viewCadastroFarmaceutico.fxml"));
-		Parent cadastroProdu = CadVendedor.load();
-		Scene scene2 = new Scene(cadastroProdu);
+    // Tela de Cadastro Venda
+    public static void TelaRegistraVenda() throws IOException {
+        FXMLLoader registraVenda = new FXMLLoader();
+        registraVenda.setLocation(Main.class.getResource("/packageView/viewTelaRegistraVenda.fxml"));
+        Parent cadastroVenda = registraVenda.load();
+        Scene scene2 = new Scene(cadastroVenda);
 
-		cadVendedor = new Stage();
-		cadVendedor.setTitle("Cadastra Farmacêutico - FARM");
-		cadVendedor.initModality(Modality.WINDOW_MODAL);
-		cadVendedor.setScene(scene2);
-		cadVendedor.centerOnScreen();
-		cadVendedor.showAndWait();
-		cadVendedor.centerOnScreen();
-	}
+        Stage cadRegistra = new Stage();
+        cadRegistra.setTitle("Registra Venda - FARM");
+        cadRegistra.initModality(Modality.APPLICATION_MODAL);
+        cadRegistra.setScene(scene2);
+        cadRegistra.centerOnScreen();
 
-	public static void TelaInfoProduto() throws IOException {
-		FXMLLoader InfoPRODUT = new FXMLLoader();
-		InfoPRODUT.setLocation(Main.class.getResource("/packageView/viewTelaInfoExtraProdutos.fxml"));
-		Parent infoProdu = InfoPRODUT.load();
-		Scene scene2 = new Scene(infoProdu);
+        cadRegistra.showAndWait();
+    }
 
-		infoProd = new Stage();
-		infoProd.initModality(Modality.WINDOW_MODAL);
-		infoProd.setScene(scene2);
-		infoProd.centerOnScreen();
-		infoProd.showAndWait();
-		infoProd.centerOnScreen();
-	}
+    // Tela de Cadastro Fornecedor
+    public static void TelaCadastraFornecedor() throws IOException {
+        FXMLLoader CadFornecedor = new FXMLLoader();
+        CadFornecedor.setLocation(Main.class.getResource("/packageView/viewCadastroFornecedor.fxml"));
+        Parent cadastroProdu = CadFornecedor.load();
+        Scene scene2 = new Scene(cadastroProdu);
 
-	public static void main(String[] args) {
-		Connection con = ConnectionDATABASE.getConnection();
-		ConnectionDATABASE.closeConnection(con);
+        Stage cadFornecedor = new Stage();
+        cadFornecedor.setTitle("Cadastra Fornecedor - FARM");
+        cadFornecedor.initModality(Modality.APPLICATION_MODAL);
+        cadFornecedor.setScene(scene2);
+        cadFornecedor.centerOnScreen();
 
-		launch(args);
-	}
+        cadFornecedor.showAndWait();
+    }
+
+    // Tela de Cadastro Farmacêutico
+    public static void TelaCadastraFarmaceutico() throws IOException {
+        FXMLLoader CadVendedor = new FXMLLoader();
+        CadVendedor.setLocation(Main.class.getResource("/packageView/viewCadastroFarmaceutico.fxml"));
+        Parent cadastroProdu = CadVendedor.load();
+        Scene scene2 = new Scene(cadastroProdu);
+
+        Stage cadVendedor = new Stage();
+        cadVendedor.setTitle("Cadastra Farmacêutico - FARM");
+        cadVendedor.initModality(Modality.APPLICATION_MODAL);
+        cadVendedor.setScene(scene2);
+        cadVendedor.centerOnScreen();
+
+        cadVendedor.showAndWait();
+    }
+
+    // Tela de Info Produto
+    public static void TelaInfoProduto() throws IOException {
+        FXMLLoader InfoPRODUT = new FXMLLoader();
+        InfoPRODUT.setLocation(Main.class.getResource("/packageView/viewTelaInfoExtraProdutos.fxml"));
+        Parent infoProdu = InfoPRODUT.load();
+        Scene scene2 = new Scene(infoProdu);
+
+        Stage infoProd = new Stage();
+        infoProd.initModality(Modality.APPLICATION_MODAL);
+        infoProd.setScene(scene2);
+        infoProd.centerOnScreen();
+
+        infoProd.showAndWait();
+    }
+
+    public static void main(String[] args) {
+        Connection con = ConnectionDATABASE.getConnection();
+        ConnectionDATABASE.closeConnection(con);
+
+        launch(args);
+    }
 }
+
+
+
 
 //ArrayList<Fornecedor> fornecedor = new ArrayList<>();
 //FornecedorDAO cp = new FornecedorDAO();

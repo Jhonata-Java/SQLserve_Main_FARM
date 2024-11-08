@@ -15,6 +15,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import packageControle.CompraDAO;
 import packageModel.Compra;
 import packageModel.Venda;
@@ -148,6 +149,45 @@ public class controllerRelatorioVenda implements Initializable {
 
 		tabela.setItems(ArrayCompra);
 	}
+	 @FXML
+	    void ActionMouseINDash(MouseEvent event) {
+		   btDashboard.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
+	    }
+
+	    @FXML
+	    void ActionMouseOUTDash(MouseEvent event) {
+			   btDashboard.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
+	    }
+
+	    @FXML
+	    void ActionMouseINFar(MouseEvent event) {
+	    	btFarmaceuticos.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
+	    }
+
+	    @FXML
+	    void ActionMouseOUTFar(MouseEvent event) {
+	    	btFarmaceuticos.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
+	    }
+	    
+	    @FXML
+	    void ActionMouseINPro(MouseEvent event) {
+	    	btProdutos.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
+	    }
+	    
+	    @FXML
+	    void ActionMouseOUTPro(MouseEvent event) {
+	    	btProdutos.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
+	    }
+
+	    @FXML
+	    void ActionMouseINFor(MouseEvent event) {
+	    	btFornecedor.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
+	    }
+
+	    @FXML
+	    void ActionMouseOUTFor(MouseEvent event) {
+	    	btFornecedor.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
+	    }
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
