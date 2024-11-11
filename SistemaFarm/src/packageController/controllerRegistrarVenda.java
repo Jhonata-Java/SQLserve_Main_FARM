@@ -1,5 +1,6 @@
 package packageController;
 
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -149,7 +150,7 @@ public class controllerRegistrarVenda implements Initializable {
 	}
 
 	@FXML
-	void ActionbtConfirmarVenda(ActionEvent event) {
+	void ActionbtConfirmarVenda(ActionEvent event) throws IOException {
 		if (produto != null && txtCPFFarmaceutico != null && btAdicionar != null && txtCodigo != null
 				&& txtProduto != null && txtQuantidade != null && txtDesconto != null) {
 			Alert mensagemDeAviso = new Alert(Alert.AlertType.CONFIRMATION);
@@ -176,6 +177,23 @@ public class controllerRegistrarVenda implements Initializable {
 				CarregarInfoTable();
 				// compra.setQuantidade(); EM ANDAMENTO
 				
+				Alert mensagemConfimacao = new Alert(Alert.AlertType.CONFIRMATION);
+				mensagemConfimacao.setContentText(
+						"Deseja realmente Salvar a venda para o farmacêutico : " + txtNomeFarmaceutico.getText());
+
+				Optional<ButtonType> confirmar = mensagemConfimacao.showAndWait();
+				
+				
+				if (confirmar.isPresent() && confirmar.get() == ButtonType.OK) {
+					Main.TelaRegistraVenda();
+				}
+				else {
+					Stage stage = (Stage) btCancelarVenda.getScene().getWindow();
+					stage.close();
+
+					Main.changeScreen("dashboard");
+				}
+				
 				
 
 			} else {
@@ -199,7 +217,7 @@ public class controllerRegistrarVenda implements Initializable {
 		tbProdutoParaselecionar.setItems(ArrayProduto);
 		tbProdutoParaselecionar.refresh();
 	}
-//SEI LA TO ESCREVENDO QUALQUER COISA
+
 	@FXML
 	void BtLimpar(ActionEvent event) {
 		txtResultadoPesquisa.setText("");
@@ -241,26 +259,6 @@ public class controllerRegistrarVenda implements Initializable {
 
 	}
 
-	public void CarregarProduto() {
-		ArrayProdutoSelecionado = FXCollections.observableArrayList(ArrayProduto);
-
-		String cod = txtCodigo.getText();
-		String prod = txtProduto.getText();
-		String quant = txtQuantidade.getText();
-		String prec = Double.toString(((Double.parseDouble(produto.getPreocoUN()) * 100.0) / 100.0));
-		String prectotal = Double.toString(precoTotal);
-
-		tcID2.setCellValueFactory(new PropertyValueFactory<>(cod));
-		tcProduto2.setCellValueFactory(new PropertyValueFactory<>(prod));
-		tcQuantidade2.setCellValueFactory(new PropertyValueFactory<>(quant));
-		tcPrecoUnitario2.setCellValueFactory(new PropertyValueFactory<>(prec));
-		tcPrecoTotal2.setCellValueFactory(new PropertyValueFactory<>(prectotal));
-
-		tbProdutoParaselecionar.setItems(ArrayProdutoSelecionado);
-		tbProdutoParaselecionar.refresh();
-		PrecoFinal += precoTotal;
-
-	}
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
