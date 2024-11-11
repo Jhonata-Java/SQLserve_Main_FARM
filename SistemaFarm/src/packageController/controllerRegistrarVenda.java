@@ -141,35 +141,6 @@ public class controllerRegistrarVenda implements Initializable {
 	double precoTotal;
 
 	@FXML
-	void ActionbtAdicionar(ActionEvent event) {
-		if (btAdicionar != null && txtCodigo != null && txtProduto != null && txtQuantidade != null
-				&& txtDesconto != null) {
-
-			Produto prod = new Produto();
-			prod.setIdProduto(txtCodigo.getText());
-			prod.setIdProduto(txtProduto.getText());
-			prod.setEstoque(txtQuantidade.getText());
-			prod.setPreocoUN(txtPrecoUnitario.getText());
-			
-			ProdutosTabela = FXCollections.observableArrayList(prod);
-			
-			
-			tcID2.setCellValueFactory(new PropertyValueFactory<>(txtCodigo.getText()));
-			tcProduto2.setCellValueFactory(new PropertyValueFactory<>(txtProduto.getText()));
-			tcQuantidade2.setCellValueFactory(new PropertyValueFactory<>(txtQuantidade.getText()));
-			tcPrecoUnitario2.setCellValueFactory(new PropertyValueFactory<>(txtPrecoUnitario.getText()));
-			tcPrecoTotal2.setCellValueFactory(new PropertyValueFactory<>(Double.toString(precoTotal)));
-
-			tbProdutoSelecionado.setItems(ProdutosTabela);
-			tbProdutoSelecionado.refresh();
-			PrecoFinal += precoTotal;
-
-			
-		}
-		
-	}
-
-	@FXML
 	void ActionbtCancelarVenda(ActionEvent event) {
 		Stage stage = (Stage) btCancelarVenda.getScene().getWindow();
 		stage.close();
@@ -204,6 +175,8 @@ public class controllerRegistrarVenda implements Initializable {
 				compraDAO.create(compra);
 				CarregarInfoTable();
 				// compra.setQuantidade(); EM ANDAMENTO
+				
+				
 
 			} else {
 				Alert mensagemDeExclusao = new Alert(Alert.AlertType.ERROR);
@@ -213,11 +186,6 @@ public class controllerRegistrarVenda implements Initializable {
 		}
 	}
 
-	@FXML
-	void ActionbtExcluir(ActionEvent event) {
-		
-		
-	}
 
 	@FXML
 	void ActionbtPesquisarProduto(ActionEvent event) {
