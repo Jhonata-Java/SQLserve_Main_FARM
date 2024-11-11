@@ -84,7 +84,7 @@ public class FarmaceuticoDAO {
 			stmt.setString(2, user);
 			stmt.setString(3, user);
 			rs = stmt.executeQuery();
-
+			System.out.println("Teste");
 			while (rs.next()) {
 				Farmaceutico v = new Farmaceutico();
 				v.setIdVendedor(rs.getString(1));

@@ -141,9 +141,11 @@ public class controllerRegistrarVenda implements Initializable {
 	double desconto;
 	double precoTotal;
 
+
 	@FXML
 	void ActionbtCancelarVenda(ActionEvent event) {
-		Stage stage = (Stage) btCancelarVenda.getScene().getWindow();
+		Stage stage;
+		stage = (Stage) btCancelarVenda.getScene().getWindow();
 		stage.close();
 
 		Main.changeScreen("dashboard");
@@ -151,8 +153,8 @@ public class controllerRegistrarVenda implements Initializable {
 
 	@FXML
 	void ActionbtConfirmarVenda(ActionEvent event) throws IOException {
-		if (produto != null && txtCPFFarmaceutico != null && btAdicionar != null && txtCodigo != null
-				&& txtProduto != null && txtQuantidade != null && txtDesconto != null) {
+		if (produto != null && txtCPFFarmaceutico != null && txtCodigo != null && txtProduto != null
+				&& txtQuantidade != null) {
 			Alert mensagemDeAviso = new Alert(Alert.AlertType.CONFIRMATION);
 			mensagemDeAviso.setContentText(
 					"Deseja realmente Salvar a venda para o farmacêutico : " + txtNomeFarmaceutico.getText());
@@ -169,41 +171,32 @@ public class controllerRegistrarVenda implements Initializable {
 				compra.setIdProduto(produto.getIdProduto());
 				compra.setQuantidade(txtQuantidade.getText());
 				compra.setValorTotal((Double.toString(precoTotal)));
-				txtCodigo.setText("");
-				txtProduto.setText("");
-				txtQuantidade.setText("");
-				txtPrecoUnitario.setText("");
 				compraDAO.create(compra);
-				CarregarInfoTable();
-				// compra.setQuantidade(); EM ANDAMENTO
-				
-				Alert mensagemConfimacao = new Alert(Alert.AlertType.CONFIRMATION);
-				mensagemConfimacao.setContentText(
-						"Deseja realmente Salvar a venda para o farmacêutico : " + txtNomeFarmaceutico.getText());
 
-				Optional<ButtonType> confirmar = mensagemConfimacao.showAndWait();
-				
-				
-				if (confirmar.isPresent() && confirmar.get() == ButtonType.OK) {
-					Main.TelaRegistraVenda();
-				}
-				else {
-					Stage stage = (Stage) btCancelarVenda.getScene().getWindow();
-					stage.close();
-
-					Main.changeScreen("dashboard");
-				}
-				
-				
-
-			} else {
-				Alert mensagemDeExclusao = new Alert(Alert.AlertType.ERROR);
-				mensagemDeExclusao.setContentText("Error ao salvar. Informações incompletas");
-				mensagemDeExclusao.show();
 			}
-		}
-	}
 
+		} else {
+			Alert mensagemDeExclusao = new Alert(Alert.AlertType.ERROR);
+			mensagemDeExclusao.setContentText("Error ao salvar. Informações incompletas");
+			mensagemDeExclusao.show();
+		}
+		Alert mensagemDeConfirmacao = new Alert(Alert.AlertType.CONFIRMATION);
+		mensagemDeConfirmacao.setContentText(
+				"Deseja realizar outra venda");
+
+		Optional<ButtonType> confirmacao = mensagemDeConfirmacao.showAndWait();
+
+		if (confirmacao.isPresent() && confirmacao.get() == ButtonType.OK) {
+			Main.TelaRegistraVenda();
+
+		} else {
+			Stage stage = (Stage) btCancelarVenda.getScene().getWindow();
+			stage.close();
+
+			Main.changeScreen("dashboard");
+		}
+
+	}
 
 	@FXML
 	void ActionbtPesquisarProduto(ActionEvent event) {
@@ -258,7 +251,6 @@ public class controllerRegistrarVenda implements Initializable {
 		tbProdutoParaselecionar.refresh();
 
 	}
-
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
