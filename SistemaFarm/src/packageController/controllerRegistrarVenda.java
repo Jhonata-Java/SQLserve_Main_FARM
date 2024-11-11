@@ -186,9 +186,10 @@ public class controllerRegistrarVenda implements Initializable {
 
 		Optional<ButtonType> confirmacao = mensagemDeConfirmacao.showAndWait();
 
-		if (confirmacao.isPresent() && confirmacao.get() == ButtonType.OK) {
+		if (confirmacao.isPresent() && confirmacao.get() == ButtonType.OK) {		
+			Stage stage = (Stage) btConfirmarVenda.getScene().getWindow();
+			stage.close();		
 			Main.TelaRegistraVenda();
-
 		} else {
 			Stage stage = (Stage) btCancelarVenda.getScene().getWindow();
 			stage.close();
