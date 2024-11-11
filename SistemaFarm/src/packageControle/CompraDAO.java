@@ -10,6 +10,27 @@ import packageConnecting.ConnectionDATABASE;
 import packageModel.Compra;
 
 public class CompraDAO {
+	
+	/*
+	 * 
+	SELECT 
+    v.nome, 
+    COUNT(*) AS totalVend,          -- Conta o número de vendas
+    SUM(va.precoTotal) AS totalValor -- Soma o valor das vendas
+FROM Vendedor v
+JOIN Venda va ON va.idVendedor = v.idVendedor  
+GROUP BY v.nome;
+	
+	
+	
+SELECT SUM(precoTotal) AS totalVendas
+FROM Venda;
+	
+	
+	*/
+	
+	
+	
 	public void create(Compra c) {
 		Connection con = ConnectionDATABASE.getConnection();
 		PreparedStatement stmt = null;
