@@ -295,8 +295,6 @@ public class controllerRegistrarVenda implements Initializable {
 				int i = tbProdutoParaselecionar.getSelectionModel().getSelectedIndex();
 				produto = tbProdutoParaselecionar.getItems().get(i);
 				txtCodigo.setText(produto.getIdProduto());
-				// Double.toString(Math.round((Double.parseDouble(produto.getPreocoUN()) *
-				// 100.0) / 100.0));
 				txtPrecoUnitario.setText(produto.getPreocoUN().toString());
 				txtProduto.setText(produto.getNomeComecial());
 
