@@ -13,6 +13,8 @@ public class CompraDAO {
 	
 	/*
 	 * 
+	 * 
+	- funcionario que ma
 	SELECT 
     v.nome, 
     COUNT(*) AS totalVend,          -- Conta o número de vendas
@@ -22,10 +24,14 @@ JOIN Venda va ON va.idVendedor = v.idVendedor
 GROUP BY v.nome;
 	
 	
-	
+	-Todal vendido no mes 
 SELECT SUM(precoTotal) AS totalVendas
 FROM Venda;
-	
+
+
+	-Quantidade de Produtos cadastrados
+	SELECT COUNT(*) AS total_medicamentos
+FROM Produto;
 	
 	*/
 	

@@ -23,7 +23,7 @@
                <children>
                   <Button fx:id="btCadastrar" layoutX="618.0" layoutY="493.0" mnemonicParsing="false" onAction="#ActionBtCadastrar" style="-fx-background-color: black;" text="Cadastrar" textFill="WHITE" />
                   <Button fx:id="btCancelar" layoutX="695.0" layoutY="493.0" mnemonicParsing="false" onAction="#ActionBtCancelar" style="-fx-background-color: red;" text="Cancelar" textFill="WHITE" />
-                  <VBox layoutX="33.0" layoutY="14.0" spacing="25.0">
+                  <VBox layoutX="33.0" layoutY="14.0" prefWidth="722.0" spacing="25.0">
                      <children>
                         <HBox spacing="20.0">
                            <children>
@@ -94,12 +94,12 @@
                                     <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nacionaldiade">
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
                                     </Text>
-                                    <TextField fx:id="textNacionalidade" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1">
+                                    <TextField fx:id="textEmail" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font></TextField>
@@ -134,75 +134,11 @@
                                     <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <TextField fx:id="textCargaHorario" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1">
-                                       <font>
-                                          <Font name="Arial" size="12.0" />
-                                       </font></TextField>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Carga horária">
-                                       <font>
-                                          <Font name="Arial" size="12.0" />
-                                       </font>
-                                    </Text>
-                                 </children>
-                              </GridPane>
-                           </children>
-                        </HBox>
-                        <HBox spacing="20.0">
-                           <children>
-                              <GridPane>
-                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                                 </columnConstraints>
-                                 <rowConstraints>
-                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
-                                 <children>
-                                    <TextField fx:id="textTelefone" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1">
+                                    <TextField fx:id="textTelefone" prefHeight="26.0" prefWidth="232.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font></TextField>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone">
-                                       <font>
-                                          <Font name="Arial" size="12.0" />
-                                       </font>
-                                    </Text>
-                                 </children>
-                              </GridPane>
-                              <GridPane>
-                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                                 </columnConstraints>
-                                 <rowConstraints>
-                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
-                                 <children>
-                                    <TextField fx:id="textEmail" prefHeight="26.0" prefWidth="214.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1">
-                                       <font>
-                                          <Font name="Arial" size="12.0" />
-                                       </font></TextField>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail ">
-                                       <font>
-                                          <Font name="Arial" size="12.0" />
-                                       </font>
-                                    </Text>
-                                 </children>
-                              </GridPane>
-                              <GridPane>
-                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                                 </columnConstraints>
-                                 <rowConstraints>
-                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
-                                 <children>
-                                    <TextField fx:id="textSenha" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1">
-                                       <font>
-                                          <Font name="Arial" size="12.0" />
-                                       </font></TextField>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Senha">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
@@ -222,12 +158,12 @@
                                     <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <TextField fx:id="textCRF" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1">
+                                    <TextField fx:id="textSenha" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 5;" GridPane.rowIndex="1">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
                                     </TextField>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CRF">
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Senha">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>

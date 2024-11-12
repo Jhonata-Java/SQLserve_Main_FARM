@@ -17,7 +17,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import packageControle.FarmaceuticoDAO;
 import packageControle.ProdutoDAO;
+import packageModel.Farmaceutico;
 import packageModel.Produto;
 
 public class controllerDashboard  implements Initializable {
@@ -81,6 +83,9 @@ public class controllerDashboard  implements Initializable {
 
     @FXML
     private Label labelNome;
+    
+    @FXML
+    private Label labelNomeFuncio;
 
     @FXML
     private TableView<Produto> tabelaEstoque;
@@ -209,10 +214,14 @@ public class controllerDashboard  implements Initializable {
     	btFornecedor.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
     }
     
+   
+    
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
+		
 		labelNome.setText(controllerLogin.farmaceutico.getNome());
+		labelNomeFuncio.setText(FarmaceuticoDAO.maiorVenda().toString());
 		CarregarTableEstoque();
     	CarregarTableVencer();
 	}
