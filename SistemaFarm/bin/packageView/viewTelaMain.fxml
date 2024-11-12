@@ -99,7 +99,7 @@
                <children>
                   <ImageView fitHeight="225.0" fitWidth="807.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../packageIcons/Frame%2083%20(1).png" />
+                        <Image url="@../packageIcons/Capa.png" />
                      </image>
                   </ImageView>
                   <FlowPane layoutX="69.0" layoutY="24.0" orientation="VERTICAL" prefHeight="48.0" prefWidth="221.0">

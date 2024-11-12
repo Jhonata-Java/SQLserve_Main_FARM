@@ -278,4 +278,7 @@ public class controllerRegistrarVenda implements Initializable {
 		});
 
 	}
+	
+	
+	//comnetnair4o3mesdizofvnrslifdlfiuesrnultbguydsbuilwrnlwt4g
 }

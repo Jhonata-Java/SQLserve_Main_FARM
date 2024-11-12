@@ -86,6 +86,15 @@ public class controllerDashboard  implements Initializable {
     
     @FXML
     private Label labelNomeFuncio;
+    
+    @FXML
+    private Label lbFaturamento;
+
+    @FXML
+    private Label lbFuncionarioVenda;
+
+    @FXML
+    private Label lbMedicamentos;
 
     @FXML
     private TableView<Produto> tabelaEstoque;
