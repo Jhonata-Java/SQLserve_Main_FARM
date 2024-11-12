@@ -78,13 +78,13 @@
                   </Label>
                   <TableView fx:id="tabela" layoutY="39.0" prefHeight="461.0" prefWidth="823.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/semlinhas.css">
                      <columns>
-                        <TableColumn fx:id="columnID" prefWidth="39.200042724609375" text="ID" />
+                        <TableColumn fx:id="columnID" prefWidth="39.200042724609375" style="-fx-alignment: CENTER;" text="ID" />
                         <TableColumn fx:id="columnNomeC" prefWidth="104.79997253417969" text="Nome Comercial" />
-                        <TableColumn fx:id="columnCod" minWidth="0.0" prefWidth="61.600006103515625" text="Codigo" />
-                        <TableColumn fx:id="columnDose" prefWidth="74.66677856445312" text="Dosagem" />
-                        <TableColumn fx:id="columnEst" prefWidth="67.199951171875" text="Estoque" />
-                        <TableColumn fx:id="columnPrecoUn" minWidth="0.0" prefWidth="101.86663818359375" text="Preco Unitario" />
-                        <TableColumn fx:id="columnTipoUn" minWidth="0.0" prefWidth="96.26666259765625" text="Tipo Unitario" />
+                        <TableColumn fx:id="columnCod" minWidth="0.0" prefWidth="71.20001220703125" text="Codigo" />
+                        <TableColumn fx:id="columnDose" prefWidth="78.4000244140625" text="Dosagem" />
+                        <TableColumn fx:id="columnEst" prefWidth="66.4000244140625" style="-fx-alignment: CENTER;" text="Estoque" />
+                        <TableColumn fx:id="columnPrecoUn" minWidth="0.0" prefWidth="100.79998779296875" style="-fx-alignment: CENTER;" text="Preco Unitario" />
+                        <TableColumn fx:id="columnTipoUn" minWidth="0.0" prefWidth="88.0" style="-fx-alignment: CENTER;" text="Tipo Unitario" />
                         <TableColumn fx:id="columnDataF" minWidth="0.0" prefWidth="88.2667236328125" text="Data Fabricação" />
                         <TableColumn fx:id="columnDataV" minWidth="0.0" prefWidth="81.066650390625" text="Data Validade" />
                         <TableColumn fx:id="colemnPrincAtivo" minWidth="0.0" prefWidth="103.4666748046875" text="Princípio Ativo" />

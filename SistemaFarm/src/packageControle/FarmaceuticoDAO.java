@@ -9,6 +9,8 @@ import packageConnecting.ConnectionDATABASE;
 import packageModel.Farmaceutico;
 
 public class FarmaceuticoDAO {
+	
+	static String nome;
 
 	public void create(Farmaceutico v) {
 		Connection con = ConnectionDATABASE.getConnection();
@@ -178,11 +180,15 @@ public class FarmaceuticoDAO {
 		return farmaceutico;
 	}
 
-	public static Farmaceutico maiorVenda() {
+	
+	public static String maiorVenda() {
+
 		Connection con = ConnectionDATABASE.getConnection();
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
-		Farmaceutico v = new Farmaceutico();
+		//Farmaceutico v = new Farmaceutico(); 
+		
+		
 		try {
 			stmt = con.prepareStatement("SELECT v.nome\r\n" + "FROM Vendedor v\r\n"
 					+ "JOIN Venda va ON va.idVendedor = v.idVendedor\r\n" + "GROUP BY v.nome\r\n"
@@ -193,7 +199,7 @@ public class FarmaceuticoDAO {
 			rs = stmt.executeQuery();
 
 			while (rs.next()) {
-				v.setNome(rs.getString(1));
+				nome = (rs.getString(1));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -201,7 +207,7 @@ public class FarmaceuticoDAO {
 		} finally {
 			ConnectionDATABASE.closeConnection(con, stmt, rs);
 		}
-		return v;
+		return nome;
 	}
 
 

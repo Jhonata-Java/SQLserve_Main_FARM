@@ -3,7 +3,6 @@ package packageController;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import application.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -11,13 +10,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.util.Callback;
 import packageControle.CompraDAO;
 import packageModel.Compra;
+import packageModel.Produto;
 import packageModel.Venda;
 
 public class controllerRelatorioVenda implements Initializable {
@@ -192,6 +194,31 @@ public class controllerRelatorioVenda implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
+		// Formata a coluna "columnPrecoUn" para exibir valores com duas casas decimais
+		columnPrecoTotal.setCellFactory(new Callback<TableColumn<Compra, String>, TableCell<Compra, String>>() {
+					@Override
+					public TableCell<Compra, String> call(TableColumn<Compra, String> param) {
+						return new TableCell<Compra, String>() {
+							@Override
+							protected void updateItem(String item, boolean empty) {
+								super.updateItem(item, empty);
+								if (empty || item == null) {
+									setText(null);
+								} else {
+									try {
+										// Converte o valor para Double e formata com 2 casas decimais
+										Double valorDouble = Double.parseDouble(item);
+										setText(String.format("%.2f", valorDouble));
+									} catch (NumberFormatException e) {
+										// Em caso de erro de conversão, exibe o valor como está
+										setText(item);
+									}
+								}
+							}
+						};
+					}
+				});
+
 		CarregarTable();
 	}
 

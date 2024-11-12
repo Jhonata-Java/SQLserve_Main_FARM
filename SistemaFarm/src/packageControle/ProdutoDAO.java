@@ -13,6 +13,8 @@ import packageModel.Produto;
 
 
 public class ProdutoDAO {
+	
+	static String MedicamentoTotal;
 
 	public void create(Produto p )
 	{
@@ -338,4 +340,27 @@ public class ProdutoDAO {
 		}
 		return produto;
 	}
+	
+	public static String MedicamentosTotais() {
+		Connection con = ConnectionDATABASE.getConnection();
+		PreparedStatement stmt = null;
+		ResultSet rs = null;		
+		
+		try {
+			stmt = con.prepareStatement("SELECT COUNT(*) AS total_medicamentos\r\n"
+					+ "FROM Produto;");
+			rs = stmt.executeQuery();
+
+			while (rs.next()) {
+				MedicamentoTotal = (rs.getString(1));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			ConnectionDATABASE.closeConnection(con, stmt, rs);
+		}
+		return MedicamentoTotal;
+	}
+	
 }

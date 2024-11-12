@@ -128,17 +128,17 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Label fx:id="lbMedicamentos" layoutX="28.0" layoutY="130.0" prefHeight="36.0" prefWidth="124.0" text=" " textFill="WHITE">
+                  <Label fx:id="lbMedicamentos" layoutX="28.0" layoutY="130.0" prefHeight="36.0" prefWidth="209.0" text=" " textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="27.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lbFuncionarioVenda" layoutX="297.0" layoutY="130.0" prefHeight="36.0" prefWidth="124.0" text=" " textFill="WHITE">
+                  <Label fx:id="lbFuncionarioVenda" layoutX="297.0" layoutY="130.0" prefHeight="36.0" prefWidth="209.0" text=" " textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="27.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lbFaturamento" layoutX="565.0" layoutY="130.0" prefHeight="36.0" prefWidth="124.0" text=" " textFill="WHITE">
+                  <Label fx:id="lbFaturamento" layoutX="565.0" layoutY="130.0" prefHeight="36.0" prefWidth="209.0" text=" " textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="27.0" />
                      </font>
@@ -198,7 +198,7 @@
                         <TableColumn fx:id="columnID2" prefWidth="38.66668701171875" text="ID" />
                         <TableColumn fx:id="columnNome2" prefWidth="123.7332763671875" text="Nome" />
                         <TableColumn fx:id="columnVencimento" prefWidth="89.33331298828125" text="Validade" />
-                        <TableColumn fx:id="columnLocalizacao2" minWidth="9.5999755859375" prefWidth="110.13330078125" text="Localização" />
+                        <TableColumn fx:id="columnLocalizacao2" minWidth="9.5999755859375" prefWidth="127.39996337890625" text="Localização" />
                      </columns>
                   </TableView>
                   <Label layoutX="14.0" layoutY="18.0" text="Medicamentos que o estoque está acabando" textFill="#3c42ff">
@@ -211,7 +211,7 @@
                         <TableColumn fx:id="columnID1" prefWidth="40.79997253417969" text="ID" />
                         <TableColumn fx:id="columnNome1" prefWidth="107.20004272460938" text="Nome" />
                         <TableColumn fx:id="columnQuantidade" prefWidth="90.13336181640625" text="Quantidade" />
-                        <TableColumn fx:id="columnLocalizacao1" minWidth="9.5999755859375" prefWidth="108.53326416015625" text="Localização" />
+                        <TableColumn fx:id="columnLocalizacao1" minWidth="9.5999755859375" prefWidth="139.0" text="Localização" />
                      </columns>
                   </TableView>
                </children>

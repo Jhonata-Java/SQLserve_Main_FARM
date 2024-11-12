@@ -224,17 +224,17 @@ public class controllerRegistrarVenda implements Initializable {
 
 			double quantidade = Double.parseDouble(txtQuantidade.getText());
 
-			if (quantidade < 5) {
+			if (quantidade < 15) {
 				precoTotal = Double.parseDouble(txtPrecoUnitario.getText())
 						* Double.parseDouble(txtQuantidade.getText());
 
 				txtValorTotal.setText(Double.toString(precoTotal));
 			} else {
 				precoTotal = (Double.parseDouble(txtPrecoUnitario.getText())
-						* Double.parseDouble(txtQuantidade.getText())) * 0.15;
+						* Double.parseDouble(txtQuantidade.getText()));
 				desconto = precoTotal * 0.15;
 				txtDesconto.setText(Double.toString(desconto));
-				txtValorTotal.setText(Double.toString(precoTotal));
+				txtValorTotal.setText(Double.toString(precoTotal - desconto));
 
 			}
 		}

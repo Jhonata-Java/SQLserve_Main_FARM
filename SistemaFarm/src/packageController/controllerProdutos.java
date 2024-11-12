@@ -13,11 +13,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.util.Callback;
 import packageControle.ProdutoDAO;
 import packageModel.Produto;
 import packageModel.Venda;
@@ -102,7 +104,7 @@ public class controllerProdutos implements Initializable {
 	private TextField txtPesquisar;
 
 	private ObservableList<Produto> ArrayProduto;
-	private ProdutoDAO produtos = new ProdutoDAO();
+	private ProdutoDAO produtoDAO = new ProdutoDAO();
 	public static Produto produtoEditar = new Produto();
 	static Produto produto = new Produto();
 	static Venda compra = new Venda();
@@ -161,6 +163,7 @@ public class controllerProdutos implements Initializable {
 			}
 		}
 	}
+
 	@FXML
 	void btFarmaceuticos(ActionEvent event) {
 		Main.changeScreen("vendedor");
@@ -173,11 +176,11 @@ public class controllerProdutos implements Initializable {
 
 	@FXML
 	void btImprimir(ActionEvent event) {
-		
+
 	}
 
 	@FXML
-    void ActionBtInfor(ActionEvent event) throws IOException {
+	void ActionBtInfor(ActionEvent event) throws IOException {
 		if (tabela.getSelectionModel().getSelectedIndex() == -1) {
 			Alert mensagemDeErro = new Alert(Alert.AlertType.INFORMATION);
 			mensagemDeErro.setContentText("Selecione um produto primeiro");
@@ -188,28 +191,32 @@ public class controllerProdutos implements Initializable {
 			Main.TelaInfoProduto();
 		}
 		CarregarInfoTable();
-    }
+	}
 
 	@FXML
 	void btLimpar(ActionEvent event) {
 		txtPesquisar.setText("");
 		CarregarInfoTable();
 	}
+
 	@FXML
 	void btProdutos(ActionEvent event) {
 		Main.changeScreen("produto");
 	}
+
 	@FXML
 	void btRelatorioVendas(ActionEvent event) {
 		Main.changeScreen("relatorioVenda");
 	}
+
 	@FXML
 	void btSair(ActionEvent event) {
 		Main.changeScreen("dashboard");
 	}
+
 	@FXML
 	void btPesquisar(ActionEvent event) {
-		ArrayProduto = FXCollections.observableArrayList(produtos.search(txtPesquisar.getText()));
+		ArrayProduto = FXCollections.observableArrayList(produtoDAO.search(txtPesquisar.getText()));
 
 		colemnPrincAtivo.setCellValueFactory(new PropertyValueFactory<>("princAtivo"));
 		columnCod.setCellValueFactory(new PropertyValueFactory<>("codigo"));
@@ -226,8 +233,8 @@ public class controllerProdutos implements Initializable {
 		tabela.refresh();
 	}
 
-	public  void CarregarInfoTable() {
-		ArrayProduto = FXCollections.observableArrayList(produtos.read());
+	public void CarregarInfoTable() {
+		ArrayProduto = FXCollections.observableArrayList(produtoDAO.read());
 
 		columnCod.setCellValueFactory(new PropertyValueFactory<>("codigo"));
 		columnDataF.setCellValueFactory(new PropertyValueFactory<>("dataFab"));
@@ -236,7 +243,6 @@ public class controllerProdutos implements Initializable {
 		columnEst.setCellValueFactory(new PropertyValueFactory<>("estoque"));
 		columnID.setCellValueFactory(new PropertyValueFactory<>("idProduto"));
 		columnNomeC.setCellValueFactory(new PropertyValueFactory<>("nomeComercial"));
-		columnPrecoUn.setCellValueFactory(new PropertyValueFactory<>("precoUn"));
 		columnTipoUn.setCellValueFactory(new PropertyValueFactory<>("TipoUn"));
 		columnNomeC.setCellValueFactory(new PropertyValueFactory<>("nomeComecial"));
 		columnPrecoUn.setCellValueFactory(new PropertyValueFactory<>("preocoUN"));
@@ -244,47 +250,51 @@ public class controllerProdutos implements Initializable {
 		colemnPrincAtivo.setCellValueFactory(new PropertyValueFactory<>("princAtivo"));
 
 		tabela.setItems(ArrayProduto);
-
 	}
+
 	@FXML
-    void ActionMouseINDash(MouseEvent event) {
-	   btDashboard.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
-    }
+	void ActionMouseINDash(MouseEvent event) {
+		btDashboard.setStyle(
+				"-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
+	}
 
-    @FXML
-    void ActionMouseOUTDash(MouseEvent event) {
-		   btDashboard.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
-    }
+	@FXML
+	void ActionMouseOUTDash(MouseEvent event) {
+		btDashboard.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
+	}
 
-    @FXML
-    void ActionMouseINFar(MouseEvent event) {
-    	btFarmaceuticos.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
-    }
+	@FXML
+	void ActionMouseINFar(MouseEvent event) {
+		btFarmaceuticos.setStyle(
+				"-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
+	}
 
-    @FXML
-    void ActionMouseOUTFar(MouseEvent event) {
-    	btFarmaceuticos.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
-    }
-    
-    @FXML
-    void ActionMouseINFor(MouseEvent event) {
-    	btFornecedor.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
-    }
-    
-    @FXML
-    void ActionMouseOUTFor(MouseEvent event) {
-    	btFornecedor.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
-    }
+	@FXML
+	void ActionMouseOUTFar(MouseEvent event) {
+		btFarmaceuticos.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
+	}
 
-    @FXML
-    void ActionMouseINRela(MouseEvent event) {
-    	btRelatorioVendas.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
-    }
+	@FXML
+	void ActionMouseINFor(MouseEvent event) {
+		btFornecedor.setStyle(
+				"-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
+	}
 
-    @FXML
-    void ActionMouseOUTRela(MouseEvent event) {
-    	btRelatorioVendas.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
-    }
+	@FXML
+	void ActionMouseOUTFor(MouseEvent event) {
+		btFornecedor.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
+	}
+
+	@FXML
+	void ActionMouseINRela(MouseEvent event) {
+		btRelatorioVendas.setStyle(
+				"-fx-background-color: #FFFFFF; -fx-text-fill: #0009ff; -fx-font-weight: bold; -fx-border-color: #0009ff;-fx-border-radius: 10;");
+	}
+
+	@FXML
+	void ActionMouseOUTRela(MouseEvent event) {
+		btRelatorioVendas.setStyle("-fx-background-color: #FFFFFF; -fx-text-fill: #9c9c9c;");
+	}
 
 	@FXML
 	void btAtualizar(ActionEvent event) {
@@ -293,8 +303,33 @@ public class controllerProdutos implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
+		// Carrega informações na tabela
 		CarregarInfoTable();
-	
+
+
+		// Formata a coluna "columnPrecoUn" para exibir valores com duas casas decimais
+		columnPrecoUn.setCellFactory(new Callback<TableColumn<Produto, String>, TableCell<Produto, String>>() {
+			@Override
+			public TableCell<Produto, String> call(TableColumn<Produto, String> param) {
+				return new TableCell<Produto, String>() {
+					@Override
+					protected void updateItem(String item, boolean empty) {
+						super.updateItem(item, empty);
+						if (empty || item == null) {
+							setText(null);
+						} else {
+							try {
+								// Converte o valor para Double e formata com 2 casas decimais
+								Double valorDouble = Double.parseDouble(item);
+								setText(String.format("%.2f", valorDouble));
+							} catch (NumberFormatException e) {
+								// Em caso de erro de conversão, exibe o valor como está
+								setText(item);
+							}
+						}
+					}
+				};
+			}
+		});
 	}
 }
