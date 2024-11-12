@@ -11,8 +11,12 @@ import packageModel.Compra;
 
 public class CompraDAO {
 	
+	static String faturamento;
+	
 	/*
 	 * 
+	 * 
+	- funcionario que ma
 	SELECT 
     v.nome, 
     COUNT(*) AS totalVend,          -- Conta o número de vendas
@@ -22,10 +26,14 @@ JOIN Venda va ON va.idVendedor = v.idVendedor
 GROUP BY v.nome;
 	
 	
-	
+	-Todal vendido no mes 
 SELECT SUM(precoTotal) AS totalVendas
 FROM Venda;
-	
+
+
+	-Quantidade de Produtos cadastrados
+	SELECT COUNT(*) AS total_medicamentos
+FROM Produto;
 	
 	*/
 	
@@ -145,6 +153,28 @@ FROM Venda;
 			ConnectionDATABASE.closeConnection(con, stmt, rs);
 		}
 		return compra;
+	}
+	
+	public static String Faturamento() {
+		Connection con = ConnectionDATABASE.getConnection();
+		PreparedStatement stmt = null;
+		ResultSet rs = null;		
+		
+		try {
+			stmt = con.prepareStatement("SELECT SUM(precoTotal) AS totalVendas\r\n"
+					+ "FROM Venda;");
+			rs = stmt.executeQuery();
+
+			while (rs.next()) {
+				faturamento = (rs.getString(1));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			ConnectionDATABASE.closeConnection(con, stmt, rs);
+		}
+		return faturamento;
 	}
 
 	

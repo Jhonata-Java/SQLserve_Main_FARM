@@ -98,6 +98,8 @@ public class controllerProdutos implements Initializable {
 	@FXML
 	private Button btPesquisar;
 
+	
+	
 	@FXML
 	private TextField txtPesquisar;
 
@@ -303,6 +305,7 @@ public class controllerProdutos implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// Carrega informações na tabela
 		CarregarInfoTable();
+
 
 		// Formata a coluna "columnPrecoUn" para exibir valores com duas casas decimais
 		columnPrecoUn.setCellFactory(new Callback<TableColumn<Produto, String>, TableCell<Produto, String>>() {

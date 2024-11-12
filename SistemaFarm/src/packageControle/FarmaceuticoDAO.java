@@ -9,14 +9,16 @@ import packageConnecting.ConnectionDATABASE;
 import packageModel.Farmaceutico;
 
 public class FarmaceuticoDAO {
+	
+	static String nome;
 
 	public void create(Farmaceutico v) {
 		Connection con = ConnectionDATABASE.getConnection();
 		PreparedStatement stmt = null;
 
 		try {
-			stmt = con.prepareStatement("INSERT INTO Vendedor(nome,CPF,email,telefone,dataNasc,dataCont,endereco,) "
-					+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+			stmt = con.prepareStatement("INSERT INTO Vendedor(nome,CPF,email,telefone,dataNasc,dataCont,endereco) "
+					+ "VALUES (?, ?, ?, ?, ?, ?, ?)");
 			stmt.setString(1, v.getNome());
 			stmt.setString(2, v.getCPF());
 			stmt.setString(3, v.getEmail());
@@ -171,4 +173,42 @@ public class FarmaceuticoDAO {
 		}
 		return farmaceutico;
 	}
+	
+	public static String maiorVenda() {
+		Connection con = ConnectionDATABASE.getConnection();
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+		//Farmaceutico v = new Farmaceutico(); 
+		
+		
+		try {
+			stmt = con.prepareStatement("SELECT v.nome\r\n"
+					+ "FROM Vendedor v\r\n"
+					+ "JOIN Venda va ON va.idVendedor = v.idVendedor\r\n"
+					+ "GROUP BY v.nome\r\n"
+					+ "HAVING SUM(va.precoTotal) = (\r\n"
+					+ "    SELECT MAX(totalVendas)\r\n"
+					+ "    FROM (\r\n"
+					+ "        SELECT SUM(va.precoTotal) AS totalVendas\r\n"
+					+ "        FROM Venda va\r\n"
+					+ "        JOIN Vendedor v ON va.idVendedor = v.idVendedor\r\n"
+					+ "        GROUP BY v.nome\r\n"
+					+ "    ) AS subconsulta\r\n"
+					+ ");\r\n"
+					+ "");
+			rs = stmt.executeQuery();
+
+			while (rs.next()) {
+				nome = (rs.getString(1));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			ConnectionDATABASE.closeConnection(con, stmt, rs);
+		}
+		return nome;
+	}
+	
+	
 }
