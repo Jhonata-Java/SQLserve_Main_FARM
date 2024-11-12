@@ -227,8 +227,8 @@ public class controllerDashboard  implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
-		System.out.println(FarmaceuticoDAO.maiorVenda());
 		labelNome.setText(controllerLogin.farmaceutico.getNome());
+		labelNomeFuncio.setText(FarmaceuticoDAO.maiorVenda().toString());
 		lbFuncionarioVenda.setText(FarmaceuticoDAO.maiorVenda());
 		lbFaturamento.setText("R$" + CompraDAO.Faturamento());
 		lbMedicamentos.setText(ProdutoDAO.MedicamentosTotais());
