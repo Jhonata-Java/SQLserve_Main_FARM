@@ -94,7 +94,7 @@ public class controllerFarmaceutico implements Initializable {
 
 	private ObservableList<Farmaceutico> ArrayFarmaceutico;
 
-	private FarmaceuticoDAO farmaceutico = new FarmaceuticoDAO();
+	static  FarmaceuticoDAO farmaceutico = new FarmaceuticoDAO();
 
 	public static Farmaceutico farmaceuticoEditar = new Farmaceutico();
 

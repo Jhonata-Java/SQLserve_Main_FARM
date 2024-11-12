@@ -96,6 +96,8 @@ public class controllerProdutos implements Initializable {
 	@FXML
 	private Button btPesquisar;
 
+	
+	
 	@FXML
 	private TextField txtPesquisar;
 
@@ -293,5 +295,6 @@ public class controllerProdutos implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		CarregarInfoTable();
+	
 	}
 }
