@@ -130,12 +130,12 @@
                   </Button>
                </children>
             </Pane>
-            <Label layoutX="169.0" layoutY="239.0" prefHeight="25.0" prefWidth="112.0" text="Guia rápido">
+            <Label layoutX="169.0" layoutY="138.0" prefHeight="25.0" prefWidth="112.0" text="Guia rápido">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font>
             </Label>
-            <HBox layoutX="170.0" layoutY="281.0" prefHeight="83.0" prefWidth="807.0" spacing="50.0">
+            <HBox layoutX="170.0" layoutY="180.0" prefHeight="83.0" prefWidth="807.0" spacing="50.0">
                <children>
                   <Button fx:id="btCadastrarProduto" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btCadastrarProduto" prefHeight="83.0" prefWidth="217.0" style="-fx-background-insets: 999;" text=" ">
                      <graphic>
@@ -166,12 +166,12 @@
                   </Button>
                </children>
             </HBox>
-            <Label layoutX="170.0" layoutY="365.0" prefHeight="25.0" prefWidth="115.0" text="Atualizações">
+            <Label layoutX="176.0" layoutY="295.0" prefHeight="25.0" prefWidth="115.0" text="Atualizações">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font>
             </Label>
-            <Pane layoutX="169.0" layoutY="405.0" prefHeight="222.0" prefWidth="379.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+            <Pane layoutX="175.0" layoutY="335.0" prefHeight="222.0" prefWidth="379.0" style="-fx-background-color: white; -fx-background-radius: 10;">
                <children>
                   <Label layoutX="9.0" layoutY="11.0" text="Medicamentos que o estoque está acabando" textFill="#3c42ff">
                      <font>
@@ -188,7 +188,7 @@
                   </TableView>
                </children>
             </Pane>
-            <Pane layoutX="587.0" layoutY="405.0" prefHeight="222.0" prefWidth="379.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+            <Pane layoutX="593.0" layoutY="335.0" prefHeight="222.0" prefWidth="379.0" style="-fx-background-color: white; -fx-background-radius: 10;">
                <children>
                   <Label layoutX="14.0" layoutY="13.0" text="Medicametos próximos do vencimento" textFill="#3c42ff">
                      <font>
@@ -205,11 +205,10 @@
                   </TableView>
                </children>
             </Pane>
-            <Hyperlink fx:id="btAtualizar" layoutX="285.0" layoutY="366.0" onAction="#Atualizar" text="Atualizar" textFill="#8e8e8e">
+            <Hyperlink fx:id="btAtualizar" layoutX="291.0" layoutY="296.0" onAction="#Atualizar" text="Atualizar" textFill="#8e8e8e">
                <font>
                   <Font name="Arial" size="14.0" />
                </font></Hyperlink>
-            <Pane layoutX="170.0" layoutY="104.0" prefHeight="110.0" prefWidth="200.0" />
          </children></Pane>
    </children>
 </AnchorPane>

@@ -72,10 +72,10 @@
                   </Label>
                   <TableView fx:id="tabelaFor" layoutY="43.0" prefHeight="445.0" prefWidth="817.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/semlinhas.css">
                      <columns>
-                        <TableColumn fx:id="ColumnID" prefWidth="34.399993896484375" text="ID" />
+                        <TableColumn fx:id="ColumnID" prefWidth="34.399993896484375" style="-fx-alignment: CENTER;" text="ID" />
                         <TableColumn fx:id="ColumnNome" prefWidth="93.59996032714844" text="Nome" />
                         <TableColumn fx:id="ColumnCNPJ" minWidth="0.0" prefWidth="76.00006103515625" text="CNPJ" />
-                        <TableColumn fx:id="ColumnInscricaoEstadual" minWidth="0.0" prefWidth="123.20001220703125" text="Inscrição Estadual" />
+                        <TableColumn fx:id="ColumnInscricaoEstadual" minWidth="0.0" prefWidth="123.20001220703125" style="-fx-alignment: CENTER;" text="Inscrição Estadual" />
                         <TableColumn fx:id="ColumnResponsavel" minWidth="0.0" prefWidth="92.0" text="Responsável" />
                         <TableColumn fx:id="ColumnRamoAtua" minWidth="0.0" prefWidth="127.20001220703125" text="Ramo de Atuação" />
                         <TableColumn fx:id="ColumnEmail" minWidth="0.0" prefWidth="84.79998779296875" text="E-mail" />

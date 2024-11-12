@@ -52,12 +52,12 @@
                   </Label>
                   <TableView fx:id="tabela" layoutY="43.0" prefHeight="461.0" prefWidth="823.0" style="-fx-border-radius: 20;" stylesheets="@../packageStyle/semlinhas.css">
                      <columns>
-                        <TableColumn fx:id="columnID" minWidth="0.0" prefWidth="60.79998779296875" text="ID" />
+                        <TableColumn fx:id="columnID" minWidth="0.0" prefWidth="60.79998779296875" style="-fx-alignment: CENTER;" text="ID" />
                         <TableColumn fx:id="columnFarmaceutico" prefWidth="220.8000030517578" text="Farmacêutico" />
                         <TableColumn fx:id="columnProduto" prefWidth="119.99996948242188" text="Produto" />
-                        <TableColumn fx:id="columnQuantidade" prefWidth="144.79998779296875" text="Quantidade" />
-                        <TableColumn fx:id="columnDataVenda" prefWidth="127.99993896484375" text="Data da Venda" />
-                        <TableColumn fx:id="columnPrecoTotal" minWidth="0.0" prefWidth="131.99993896484375" text="Preço Total" />
+                        <TableColumn fx:id="columnQuantidade" prefWidth="144.79998779296875" style="-fx-alignment: CENTER;" text="Quantidade" />
+                        <TableColumn fx:id="columnDataVenda" prefWidth="127.99993896484375" style="-fx-alignment: CENTER;" text="Data da Venda" />
+                        <TableColumn fx:id="columnPrecoTotal" minWidth="0.0" prefWidth="131.99993896484375" style="-fx-alignment: CENTER;" text="Preço Total" />
                      </columns>
                   </TableView>
                </children>

@@ -63,7 +63,7 @@
                   </Label>
                   <TableView fx:id="tabelaFarmaceutico" layoutY="43.0" prefHeight="445.0" prefWidth="811.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/semlinhas.css">
                      <columns>
-                        <TableColumn fx:id="ColumnID" prefWidth="42.4000244140625" text="ID" />
+                        <TableColumn fx:id="ColumnID" prefWidth="42.4000244140625" style="-fx-alignment: CENTER;" text="ID" />
                         <TableColumn fx:id="ColumnNome" prefWidth="87.199951171875" text="Nome" />
                         <TableColumn fx:id="ColumnCPF" prefWidth="76.79998779296875" text="CPF" />
                         <TableColumn fx:id="ColumnEndereco" minWidth="0.0" prefWidth="97.60003662109375" text="Endereço" />
@@ -71,7 +71,7 @@
                         <TableColumn fx:id="ColumnTelefone" minWidth="0.0" prefWidth="88.79998779296875" text="Telefone" />
                         <TableColumn fx:id="ColumnNacimento" minWidth="0.0" prefWidth="106.4000244140625" text="Data de Nascimento" />
                         <TableColumn fx:id="ColumnContra" minWidth="0.0" prefWidth="109.5999755859375" text="Data de Contratação" />
-                        <TableColumn fx:id="ColumnTotalVend" minWidth="0.0" prefWidth="106.4000244140625" text="Total Vendido" />
+                        <TableColumn fx:id="ColumnTotalVend" minWidth="0.0" prefWidth="106.4000244140625" style="-fx-alignment: CENTER;" text="Total Vendido" />
                      </columns>
                   </TableView>
                </children>
