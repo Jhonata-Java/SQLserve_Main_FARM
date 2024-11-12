@@ -35,14 +35,12 @@ public class FarmaceuticoDAO {
 			ConnectionDATABASE.closeConnection(con, stmt);
 		}
 	}
-
-	public void update(Farmaceutico v) {
+	public void update(Farmaceutico v){
 		Connection con = ConnectionDATABASE.getConnection();
 		PreparedStatement stmt = null;
 
 		try {
-			stmt = con.prepareStatement(
-					"UPDATE Vendedor SET nome = ?, CPF = ?, email = ?, telefone = ?, dataNasc = ?, dataCont = ?, Endereco = ? WHERE CPF = ?");
+			stmt = con.prepareStatement("UPDATE Vendedor SET nome = ?, CPF = ?, email = ?, telefone = ?, dataNasc = ?, dataCont = ?, Endereco = ? WHERE CPF = ?");
 			stmt.setString(1, v.getNome());
 			stmt.setString(2, v.getCPF());
 			stmt.setString(3, v.getEmail());
@@ -62,7 +60,6 @@ public class FarmaceuticoDAO {
 			ConnectionDATABASE.closeConnection(con, stmt);
 		}
 	}
-
 	public void delete(String CPF) {
 		Connection con = ConnectionDATABASE.getConnection();
 		PreparedStatement stmt = null;
@@ -78,7 +75,6 @@ public class FarmaceuticoDAO {
 			ConnectionDATABASE.closeConnection(con, stmt);
 		}
 	}
-
 	public Farmaceutico autenticarUser(String user, String password) {
 		Connection con = ConnectionDATABASE.getConnection();
 		PreparedStatement stmt = null;
@@ -103,7 +99,7 @@ public class FarmaceuticoDAO {
 				v.setTotalVend(rs.getString(8));
 				v.setEndereco(rs.getString(9));
 				v.setPassword(rs.getString(10));
-
+				
 				farmaceutico = v;
 			}
 		} catch (SQLException e) {
@@ -114,7 +110,6 @@ public class FarmaceuticoDAO {
 		}
 		return farmaceutico;
 	}
-
 	public ArrayList<Farmaceutico> read() {
 		Connection con = ConnectionDATABASE.getConnection();
 		PreparedStatement stmt = null;
@@ -145,9 +140,8 @@ public class FarmaceuticoDAO {
 		}
 		return farmaceutico;
 	}
-
 	public ArrayList<Farmaceutico> search(String search) {
-		search = "%" + search + "%";
+		search = "%"+search+"%";
 		Connection con = ConnectionDATABASE.getConnection();
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -179,10 +173,8 @@ public class FarmaceuticoDAO {
 		}
 		return farmaceutico;
 	}
-
 	
 	public static String maiorVenda() {
-
 		Connection con = ConnectionDATABASE.getConnection();
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -190,12 +182,20 @@ public class FarmaceuticoDAO {
 		
 		
 		try {
-			stmt = con.prepareStatement("SELECT v.nome\r\n" + "FROM Vendedor v\r\n"
-					+ "JOIN Venda va ON va.idVendedor = v.idVendedor\r\n" + "GROUP BY v.nome\r\n"
-					+ "HAVING SUM(va.precoTotal) = (\r\n" + "    SELECT MAX(totalVendas)\r\n" + "    FROM (\r\n"
-					+ "        SELECT SUM(va.precoTotal) AS totalVendas\r\n" + "        FROM Venda va\r\n"
-					+ "        JOIN Vendedor v ON va.idVendedor = v.idVendedor\r\n" + "        GROUP BY v.nome\r\n"
-					+ "    ) AS subconsulta\r\n" + ");\r\n" + "");
+			stmt = con.prepareStatement("SELECT v.nome\r\n"
+					+ "FROM Vendedor v\r\n"
+					+ "JOIN Venda va ON va.idVendedor = v.idVendedor\r\n"
+					+ "GROUP BY v.nome\r\n"
+					+ "HAVING SUM(va.precoTotal) = (\r\n"
+					+ "    SELECT MAX(totalVendas)\r\n"
+					+ "    FROM (\r\n"
+					+ "        SELECT SUM(va.precoTotal) AS totalVendas\r\n"
+					+ "        FROM Venda va\r\n"
+					+ "        JOIN Vendedor v ON va.idVendedor = v.idVendedor\r\n"
+					+ "        GROUP BY v.nome\r\n"
+					+ "    ) AS subconsulta\r\n"
+					+ ");\r\n"
+					+ "");
 			rs = stmt.executeQuery();
 
 			while (rs.next()) {
@@ -209,6 +209,6 @@ public class FarmaceuticoDAO {
 		}
 		return nome;
 	}
-
-
+	
+	
 }
