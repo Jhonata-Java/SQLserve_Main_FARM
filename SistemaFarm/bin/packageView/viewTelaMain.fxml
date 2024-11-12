@@ -195,7 +195,7 @@
                   </Label>
                   <TableView fx:id="tabelaVencer" layoutX="422.0" layoutY="44.0" prefHeight="179.0" prefWidth="381.0" style="-fx-border-radius: 10;">
                      <columns>
-                        <TableColumn fx:id="columnID2" prefWidth="38.66668701171875" text="ID" />
+                        <TableColumn fx:id="columnID2" prefWidth="38.66668701171875" style="-fx-alignment: CENTER;" text="ID" />
                         <TableColumn fx:id="columnNome2" prefWidth="123.7332763671875" text="Nome" />
                         <TableColumn fx:id="columnVencimento" prefWidth="89.33331298828125" text="Validade" />
                         <TableColumn fx:id="columnLocalizacao2" minWidth="9.5999755859375" prefWidth="127.39996337890625" text="Localização" />
@@ -208,9 +208,9 @@
                   </Label>
                   <TableView fx:id="tabelaEstoque" layoutX="14.0" layoutY="44.0" prefHeight="179.0" prefWidth="379.0" style="-fx-border-radius: 10;">
                      <columns>
-                        <TableColumn fx:id="columnID1" prefWidth="40.79997253417969" text="ID" />
+                        <TableColumn fx:id="columnID1" prefWidth="40.79997253417969" style="-fx-alignment: CENTER;" text="ID" />
                         <TableColumn fx:id="columnNome1" prefWidth="107.20004272460938" text="Nome" />
-                        <TableColumn fx:id="columnQuantidade" prefWidth="90.13336181640625" text="Quantidade" />
+                        <TableColumn fx:id="columnQuantidade" prefWidth="90.13336181640625" style="-fx-alignment: CENTER;" text="Quantidade" />
                         <TableColumn fx:id="columnLocalizacao1" minWidth="9.5999755859375" prefWidth="139.0" text="Localização" />
                      </columns>
                   </TableView>
