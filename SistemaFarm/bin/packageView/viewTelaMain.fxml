@@ -19,7 +19,7 @@
    <children>
       <Pane layoutY="-1.0" prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: #eaeef0;">
          <children>
-            <VBox prefHeight="646.0" prefWidth="149.0" style="-fx-background-color: #FFFFFF;">
+            <VBox prefHeight="650.0" prefWidth="149.0" style="-fx-background-color: #FFFFFF;">
                <children>
                   <Pane prefHeight="110.0" prefWidth="166.0">
                      <children>
@@ -95,28 +95,28 @@
                   </Pane>
                </children>
             </VBox>
-            <Pane layoutX="170.0" layoutY="27.0" prefHeight="83.0" prefWidth="806.0">
+            <Pane layoutX="172.0" layoutY="14.0" prefHeight="226.0" prefWidth="806.0">
                <children>
-                  <ImageView fitHeight="83.0" fitWidth="803.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="225.0" fitWidth="807.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../packageIcons/barraGradient.png" />
+                        <Image url="@../packageIcons/Frame%2083%20(1).png" />
                      </image>
                   </ImageView>
-                  <FlowPane layoutX="76.0" layoutY="22.0" orientation="VERTICAL" prefHeight="40.0" prefWidth="134.0">
+                  <FlowPane layoutX="69.0" layoutY="24.0" orientation="VERTICAL" prefHeight="48.0" prefWidth="221.0">
                      <children>
-                        <Label text="Seja bem-vindo(a)" textFill="WHITE">
+                        <Label text="Seja bem-vindo(a)..." textFill="WHITE">
                            <font>
                               <Font name="Arial" size="10.0" />
                            </font>
                         </Label>
-                        <Label fx:id="labelNome" text="Raphaela" textFill="WHITE">
+                        <Label fx:id="labelNome" prefHeight="36.0" prefWidth="138.0" text="Raphaela" textFill="WHITE">
                            <font>
-                              <Font name="Arial Bold" size="18.0" />
+                              <Font name="Arial Bold" size="23.0" />
                            </font>
                         </Label>
                      </children>
                   </FlowPane>
-                  <Button fx:id="btRegistraVenda" layoutX="639.0" layoutY="27.0" mnemonicParsing="false" onAction="#btRegistraVenda" prefHeight="30.0" prefWidth="153.0" style="-fx-background-color: white;" text="Registrar venda">
+                  <Button fx:id="btRegistraVenda" layoutX="627.0" layoutY="24.0" mnemonicParsing="false" onAction="#btRegistraVenda" prefHeight="30.0" prefWidth="153.0" style="-fx-background-color: white;" text="Registrar saída">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font>
@@ -128,14 +128,29 @@
                         </ImageView>
                      </graphic>
                   </Button>
+                  <Label fx:id="lbMedicamentos" layoutX="28.0" layoutY="130.0" prefHeight="36.0" prefWidth="124.0" text=" " textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbFuncionarioVenda" layoutX="297.0" layoutY="130.0" prefHeight="36.0" prefWidth="124.0" text=" " textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbFaturamento" layoutX="565.0" layoutY="130.0" prefHeight="36.0" prefWidth="124.0" text=" " textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="27.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
-            <Label layoutX="169.0" layoutY="239.0" prefHeight="25.0" prefWidth="112.0" text="Guia rápido">
+            <Label layoutX="171.0" layoutY="248.0" prefHeight="25.0" prefWidth="89.0" text="Guia rápido">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font>
             </Label>
-            <HBox layoutX="170.0" layoutY="281.0" prefHeight="83.0" prefWidth="807.0" spacing="50.0">
+            <HBox layoutX="170.0" layoutY="273.0" prefHeight="83.0" prefWidth="807.0" spacing="50.0">
                <children>
                   <Button fx:id="btCadastrarProduto" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btCadastrarProduto" prefHeight="83.0" prefWidth="217.0" style="-fx-background-insets: 999;" text=" ">
                      <graphic>
@@ -166,19 +181,32 @@
                   </Button>
                </children>
             </HBox>
-            <Label layoutX="170.0" layoutY="365.0" prefHeight="25.0" prefWidth="115.0" text="Atualizações">
+            <Label layoutX="172.0" layoutY="363.0" prefHeight="25.0" prefWidth="102.0" text="Atualizações">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font>
             </Label>
-            <Pane layoutX="169.0" layoutY="405.0" prefHeight="222.0" prefWidth="379.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+            <Pane layoutX="174.0" layoutY="402.0" prefHeight="234.0" prefWidth="803.0" style="-fx-background-color: white; -fx-background-radius: 10;">
                <children>
-                  <Label layoutX="9.0" layoutY="11.0" text="Medicamentos que o estoque está acabando" textFill="#3c42ff">
+                  <Label layoutX="422.0" layoutY="18.0" text="Medicametos próximos do vencimento" textFill="#3c42ff">
                      <font>
-                        <Font name="Arial Bold" size="17.0" />
+                        <Font name="Arial Bold" size="11.0" />
                      </font>
                   </Label>
-                  <TableView fx:id="tabelaEstoque" layoutY="38.0" prefHeight="198.0" prefWidth="369.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/semlinhas.css">
+                  <TableView fx:id="tabelaVencer" layoutX="422.0" layoutY="44.0" prefHeight="179.0" prefWidth="381.0" style="-fx-border-radius: 10;">
+                     <columns>
+                        <TableColumn fx:id="columnID2" prefWidth="38.66668701171875" text="ID" />
+                        <TableColumn fx:id="columnNome2" prefWidth="123.7332763671875" text="Nome" />
+                        <TableColumn fx:id="columnVencimento" prefWidth="89.33331298828125" text="Validade" />
+                        <TableColumn fx:id="columnLocalizacao2" minWidth="9.5999755859375" prefWidth="110.13330078125" text="Localização" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="14.0" layoutY="18.0" text="Medicamentos que o estoque está acabando" textFill="#3c42ff">
+                     <font>
+                        <Font name="Arial Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tabelaEstoque" layoutX="14.0" layoutY="44.0" prefHeight="179.0" prefWidth="379.0" style="-fx-border-radius: 10;">
                      <columns>
                         <TableColumn fx:id="columnID1" prefWidth="40.79997253417969" text="ID" />
                         <TableColumn fx:id="columnNome1" prefWidth="107.20004272460938" text="Nome" />
@@ -188,28 +216,10 @@
                   </TableView>
                </children>
             </Pane>
-            <Pane layoutX="587.0" layoutY="405.0" prefHeight="222.0" prefWidth="379.0" style="-fx-background-color: white; -fx-background-radius: 10;">
-               <children>
-                  <Label layoutX="14.0" layoutY="13.0" text="Medicametos próximos do vencimento" textFill="#3c42ff">
-                     <font>
-                        <Font name="Arial Bold" size="17.0" />
-                     </font>
-                  </Label>
-                  <TableView fx:id="tabelaVencer" layoutY="37.0" prefHeight="178.0" prefWidth="381.0" style="-fx-border-radius: 10;" stylesheets="@../packageStyle/semlinhas.css">
-                     <columns>
-                        <TableColumn fx:id="columnID2" prefWidth="38.66668701171875" text="ID" />
-                        <TableColumn fx:id="columnNome2" prefWidth="123.7332763671875" text="Nome" />
-                        <TableColumn fx:id="columnVencimento" prefWidth="89.33331298828125" text="Validade" />
-                        <TableColumn fx:id="columnLocalizacao2" minWidth="9.5999755859375" prefWidth="110.13330078125" text="Localização" />
-                     </columns>
-                  </TableView>
-               </children>
-            </Pane>
-            <Hyperlink fx:id="btAtualizar" layoutX="285.0" layoutY="366.0" onAction="#Atualizar" text="Atualizar" textFill="#8e8e8e">
+            <Hyperlink fx:id="btAtualizar" layoutX="279.0" layoutY="364.0" onAction="#Atualizar" text="Atualizar" textFill="#8e8e8e">
                <font>
                   <Font name="Arial" size="14.0" />
                </font></Hyperlink>
-            <Pane layoutX="170.0" layoutY="104.0" prefHeight="110.0" prefWidth="200.0" />
          </children></Pane>
    </children>
 </AnchorPane>
