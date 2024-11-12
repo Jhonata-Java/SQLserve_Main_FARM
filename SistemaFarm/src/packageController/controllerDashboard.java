@@ -230,6 +230,7 @@ public class controllerDashboard  implements Initializable {
 		// TODO Auto-generated method stub
 		
 		labelNome.setText(controllerLogin.farmaceutico.getNome());
+		System.out.println(FarmaceuticoDAO.maiorVenda().toString());
 		labelNomeFuncio.setText(FarmaceuticoDAO.maiorVenda().toString());
 		CarregarTableEstoque();
     	CarregarTableVencer();
