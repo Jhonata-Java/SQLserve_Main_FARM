@@ -11,6 +11,8 @@ import packageModel.Compra;
 
 public class CompraDAO {
 	
+	static String faturamento;
+	
 	/*
 	 * 
 	 * 
@@ -151,6 +153,28 @@ FROM Produto;
 			ConnectionDATABASE.closeConnection(con, stmt, rs);
 		}
 		return compra;
+	}
+	
+	public static String Faturamento() {
+		Connection con = ConnectionDATABASE.getConnection();
+		PreparedStatement stmt = null;
+		ResultSet rs = null;		
+		
+		try {
+			stmt = con.prepareStatement("SELECT SUM(precoTotal) AS totalVendas\r\n"
+					+ "FROM Venda;");
+			rs = stmt.executeQuery();
+
+			while (rs.next()) {
+				faturamento = (rs.getString(1));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			ConnectionDATABASE.closeConnection(con, stmt, rs);
+		}
+		return faturamento;
 	}
 
 	
